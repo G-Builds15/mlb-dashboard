@@ -493,9 +493,8 @@ def main():
     data = build_output(games, props_by_game)
     write_odds_file(data)
 
-    # 5. Inject starters into slate_data.js
-    print("\n[+] Injecting starters into slate_data.js...")
-    inject_starters_into_slate(starters)
+    # 5. Starters embedded in mlb_dashboard.html — slate_data.js not used
+    print('\n[+] Starters written to games_data.js for reference')
 
     print("\n" + "=" * 55)
     print("Done.")
@@ -507,3 +506,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+  
