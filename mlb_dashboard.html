@@ -1737,7 +1737,7 @@ const BULLPEN_CSS = `
 `;
 </script>
 <script src="games_data.js" onerror="console.warn('run odds_fetcher.py')"></script>
-<script src="odds_integration.js" onerror="console.warn('missing')">
+<script src="odds_integration.js" onerror="console.warn('missing')"></script>
 // ─────────────────────────────────────────────
 // BUILD DROPDOWN FROM slate_data.js games object
 // Runs on page load — no hardcoded game keys
@@ -1789,7 +1789,12 @@ function buildDropdown() {
 }
 
 // Auto-init on page load
-document.addEventListener('DOMContentLoaded', buildDropdown);
+// Fire immediately if DOM already ready, otherwise wait
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', buildDropdown);
+} else {
+  buildDropdown();
+}
 
 </script>
 </body>
