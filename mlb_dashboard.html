@@ -1581,16 +1581,9 @@ function tryInjectLiveOdds(key) {
   const homeAbbr = parts[1].toUpperCase();
   const now = new Date();
 
-  // Look up commence time from ODDS_DATA
-  const TEAM_MAP = {
-    'NYY':'New York Yankees','BAL':'Baltimore Orioles','BOS':'Boston Red Sox',
-    'TB':'Tampa Bay Rays','TOR':'Toronto Blue Jays','SF':'San Francisco Giants',
-    'HOU':'Houston Astros','ATH':'Athletics','MIL':'Milwaukee Brewers',
-    'ATL':'Atlanta Braves','NYM':'New York Mets','CWS':'Chicago White Sox',
-    'STL':'St. Louis Cardinals','PHI':'Philadelphia Phillies',
-  };
-  const homeFull = TEAM_MAP[homeAbbr] || homeAbbr;
-  const awayFull = TEAM_MAP[awayAbbr] || awayAbbr;
+  // Use the full TEAM_NAME_MAP defined in odds_integration section
+  const homeFull = TEAM_NAME_MAP[homeAbbr] || homeAbbr;
+  const awayFull = TEAM_NAME_MAP[awayAbbr] || awayAbbr;
   const liveGame = ODDS_DATA.games.find(g =>
     (g.home.includes(homeFull) || g.home === homeAbbr) &&
     (g.away.includes(awayFull) || g.away === awayAbbr)
