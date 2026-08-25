@@ -531,7 +531,11 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 <div id="panels"></div>
 
+
+
+
 <script>
+
 // SLATE DATA — update daily
 // slate_data.js — Aug 25, 2026
 // Rewrite daily. Shell (mlb_dashboard.html / index.html) never changes.
@@ -2583,8 +2587,9 @@ if (document.readyState === 'loading') {
   renderStrip();
 }
 
-</script>
-<script>
+
+
+
 // ODDS INTEGRATION — injects live lines from games_data.js
 /**
  * Odds Integration Module
@@ -2597,8 +2602,6 @@ if (document.readyState === 'loading') {
  *    *
  * Then call injectLiveOdds() after loadGame() renders a panel.
  */
-
-'use strict';
 
 // ─────────────────────────────────────────────
 // TEAM NAME NORMALISATION
@@ -2854,11 +2857,13 @@ function injectLiveOdds(awayAbbr, homeAbbr) {
   document.head.appendChild(style);
 })();
 
-</script>
-<script>
+
+
+
 // After ODDS_DATA is loaded, patch live odds into already-rendered cards
 // We hook into the existing tryInjectLiveOdds which is called by loadGame
 // Nothing extra needed — tryInjectLiveOdds already checks for ODDS_DATA
+
 </script>
 <script src="games_data.js" onerror="console.warn('games_data.js not found — run odds_fetcher.py')"></script>
 
