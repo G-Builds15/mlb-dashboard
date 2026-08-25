@@ -5,7 +5,6 @@ MLB Odds Fetcher
 Pulls today's confirmed starters (MLB Stats API) and live lines +
 player props (The Odds API), then writes:
   - games_data.js   (odds + props)
-  - slate_data.js   (starter names updated in place)
 
 Usage:
     python3 odds_fetcher.py
@@ -42,7 +41,6 @@ PITCHER_PROP_MARKETS = [
 
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
 ODDS_FILE  = os.path.join(OUTPUT_DIR, "games_data.js")
-SLATE_FILE = os.path.join(OUTPUT_DIR, "slate_data.js")
 
 # ─────────────────────────────────────────────────────────
 # HELPERS
@@ -410,46 +408,6 @@ def write_odds_file(data):
 
 
 # ─────────────────────────────────────────────────────────
-# INJECT STARTERS INTO slate_data.js
-# ─────────────────────────────────────────────────────────
-
-def inject_starters_into_slate(starters):
-    if not os.path.exists(SLATE_FILE):
-        print(f"  WARNING: {SLATE_FILE} not found — skipping")
-        return
-
-    with open(SLATE_FILE) as f:
-        slate = f.read()
-
-    injected = 0
-    for _, s in starters.items():
-        away = s["away"]
-        home = s["home"]
-        if not away["confirmed"] and not home["confirmed"]:
-            continue
-
-        a_str = (f"{away['name']} ({away['hand']}HP)"
-                 if away["confirmed"] else "TBD")
-        h_str = (f"{home['name']} ({home['hand']}HP)"
-                 if home["confirmed"] else "TBD")
-        starter_line = f"{a_str} vs {h_str}"
-
-        pattern   = (r'(away:"' + re.escape(s["away_team"]) +
-                     r'".*?starters:")([^"]*?)(")')
-        new_slate = re.sub(
-            pattern,
-            lambda m: m.group(1) + starter_line + m.group(3),
-            slate,
-            flags=re.DOTALL,
-        )
-        if new_slate != slate:
-            slate     = new_slate
-            injected += 1
-            print(f"  OK: {s['away_team']} @ {s['home_team']}: {starter_line}")
-
-    with open(SLATE_FILE, "w") as f:
-        f.write(slate)
-    print(f"  {injected} game(s) updated in slate_data.js")
 
 
 # ─────────────────────────────────────────────────────────
@@ -493,17 +451,14 @@ def main():
     data = build_output(games, props_by_game)
     write_odds_file(data)
 
-    # 5. Starters embedded in mlb_dashboard.html — slate_data.js not used
-    print('\n[+] Starters written to games_data.js for reference')
+    # 5. Starters are included in games_data.js output
 
     print("\n" + "=" * 55)
     print("Done.")
     print(f"  games_data.js — {len(data['games'])} games")
-    print(f"  slate_data.js — starters updated")
     print("Tip: run again ~1 hour before first pitch.")
     print("=" * 55)
 
 
 if __name__ == "__main__":
     main()
-  
