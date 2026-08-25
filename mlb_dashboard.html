@@ -2642,13 +2642,13 @@ function injectOverviewLines(liveGame) {
 
   const vals = [
     // [0] Moneyline
-    `${liveGame.home.split(' ').pop()} ${fmtOdds(r.homeML)} / ${liveGame.away.split(' ').pop()} ${fmtOdds(r.awayML)}`,
-    // [1] Run Line
-    `${r.homeSpread > 0 ? '+' : ''}${r.homeSpread} (${fmtOdds(r.homeSpreadOdds)})`,
+    `${liveGame.away.split(' ').pop()} ${fmtOdds(r.awayML)} / ${liveGame.home.split(' ').pop()} ${fmtOdds(r.homeML)}`,
+    // [1] Run Line — away -1.5 / home +1.5
+    `${liveGame.away.split(' ').pop()} ${r.awaySpread > 0 ? '+' : ''}${r.awaySpread} (${fmtOdds(r.awaySpreadOdds)})`,
     // [2] Total
-    `O/U ${r.total}`,
-    // [3] Movement — we don't have opening line from API without event history
-    `Over ${fmtOdds(r.overOdds)} · Under ${fmtOdds(r.underOdds)}`,
+    `O/U ${r.total} (Over ${fmtOdds(r.overOdds)} / Under ${fmtOdds(r.underOdds)})`,
+    // [3] Movement — live source note
+    `Live · FanDuel/DraftKings`,
   ];
 
   boxes.forEach((box, i) => {
