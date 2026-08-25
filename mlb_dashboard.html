@@ -496,7 +496,7 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 <div class="hdr">
   <span class="hdr-title">MLB Best Bets</span>
-  <span class="hdr-meta">Sat Aug 22, 2026 · 5 Games · Pull live lines via odds_fetcher.py</span>
+  <span class="hdr-meta" id="hdr-meta">Loading...</span>
   <span class="hdr-rule">Rule: Over X.5 requires X+1 to grade HIT</span>
 </div>
 
@@ -520,7 +520,7 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 <div id="panels"></div>
 
-<script src="slate_data.js"></script>
+<script>document.write('<script src="slate_data.js?v=' + Date.now() + '"><\/script>');</script>
 <script>
 // ── RENDER ─────────────────────────────────────────────
 function renderCard(c){
@@ -1745,6 +1745,19 @@ const BULLPEN_CSS = `
 function buildDropdown() {
   const sel = document.getElementById('gsel');
   sel.innerHTML = '';
+
+  // Update header with today's date and game count from slate_data.js
+  const meta = document.getElementById('hdr-meta');
+  if (meta && typeof games !== 'undefined') {
+    const today = new Date().toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric', year:'numeric'});
+    meta.textContent = today + ' · ' + Object.keys(games).length + ' Games';
+  }
+
+  if (typeof games === 'undefined' || !games) {
+    sel.innerHTML = '<option>slate_data.js not loaded</option>';
+    console.error('games not defined — slate_data.js failed to load');
+    return;
+  }
 
   const keys = Object.keys(games);
   if (!keys.length) {
