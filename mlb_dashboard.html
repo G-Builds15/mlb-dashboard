@@ -2482,7 +2482,49 @@ const BULLPEN_CSS = `
 
 
 
-// DROPDOWN + INIT
+// ── BEST BETS STRIP RENDER ──────────────────────────────
+function renderStrip() {
+  const strip = document.getElementById('strip');
+  if (!strip || typeof bestBets === 'undefined') return;
+
+  // Clear existing pills but keep the label
+  const label = strip.querySelector('.strip-lbl');
+  strip.innerHTML = '';
+  if (label) strip.appendChild(label);
+
+  bestBets.forEach(b => {
+    // Try to get live odds from ODDS_DATA
+    let liveOdds = b.odds;
+    if (typeof ODDS_DATA !== 'undefined' && b.odds === 'TBD') {
+      // Parse game teams from b.game e.g. "PIT@SD"
+      const parts = (b.game || '').split('@');
+      if (parts.length === 2) {
+        const lg = findLiveGame(parts[0].trim(), parts[1].trim());
+        if (lg && lg.lines && lg.lines.raw) {
+          const r = lg.lines.raw;
+          const pick = (b.pick || '').toLowerCase();
+          // Match prop type to raw line
+          if (pick.includes('-1.5') || pick.includes('run line')) {
+            liveOdds = fmtOdds(r.awaySpreadOdds);
+          } else if (pick.includes('+1.5')) {
+            liveOdds = fmtOdds(r.homeSpreadOdds);
+          } else if (pick.includes('over') && pick.includes('total')) {
+            liveOdds = fmtOdds(r.overOdds);
+          } else if (pick.includes('under') && pick.includes('total')) {
+            liveOdds = fmtOdds(r.underOdds);
+          }
+        }
+      }
+    }
+
+    const p = document.createElement('div');
+    p.className = 'pill';
+    p.innerHTML = `<span class="gtag">${b.game}</span><span class="pk">${b.pick}</span><span class="od">${liveOdds}</span><span class="grade ${gc(b.grade)}">${b.grade}</span>`;
+    strip.appendChild(p);
+  });
+}
+
+
 
 function buildDropdown() {
   var sel = document.getElementById('gsel');
@@ -2535,9 +2577,10 @@ document.getElementById('gsel').addEventListener('change', function(e) {
 });
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', buildDropdown);
+  document.addEventListener('DOMContentLoaded', () => { buildDropdown(); renderStrip(); });
 } else {
   buildDropdown();
+  renderStrip();
 }
 
 </script>
