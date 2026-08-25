@@ -4,10 +4,10 @@ on:
   schedule:
     - cron: '0 14 * * *'    # 10:00 AM ET daily (14:00 UTC)
     - cron: '0 21 * * *'    # 5:00 PM ET daily (21:00 UTC)
-  workflow_dispatch:          # manual trigger button in GitHub UI
+  workflow_dispatch:
 
 permissions:
-  contents: write             # allows the bot to commit and push
+  contents: write
 
 jobs:
   update:
@@ -32,11 +32,11 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python3 odds_fetcher.py
 
-      - name: Commit updated data files
+      - name: Commit updated odds file
         run: |
           git config user.email "mlb-bot@dashboard"
           git config user.name "MLB Odds Bot"
-          git add games_data.js slate_data.js
+          git add games_data.js
           git diff --staged --quiet || git commit -m "Update odds + starters $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
           
