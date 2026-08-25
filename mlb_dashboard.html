@@ -496,7 +496,7 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 <div class="hdr">
   <span class="hdr-title">MLB Best Bets</span>
-  <span class="hdr-meta" id="hdr-meta">Loading...</span>
+  <span class="hdr-meta">Sat Aug 22, 2026 · 5 Games · Pull live lines via odds_fetcher.py</span>
   <span class="hdr-rule">Rule: Over X.5 requires X+1 to grade HIT</span>
 </div>
 
@@ -504,7 +504,18 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 <div class="sel-bar">
   <label>Select Game</label>
-  <select id="gsel"></select>
+  <select id="gsel">
+  <optgroup label="── Afternoon ──">
+    <option value="tor-nyy">TOR Blue Jays @ NYY Yankees — 1:35 PM ET</option>
+    <option value="atl-mil" selected>ATL Braves @ MIL Brewers — 2:10 PM ET ★</option>
+  </optgroup>
+  <optgroup label="── Evening ──">
+    <option value="pit-lad">PIT Pirates @ LAD Dodgers — 7:15 PM ET (FOX)</option>
+    <option value="chc-sea">CHC Cubs @ SEA Mariners — 7:15 PM ET (FOX)</option>
+    <option value="sf-bos">SF Giants @ BOS Red Sox — 7:15 PM ET (FOX)</option>
+    <option value="laa-tex">LAA Angels @ TEX Rangers — 7:05 PM ET</option>
+  </optgroup>
+</select>
 </div>
 
 <div id="ghdr" class="g-hdr"></div>
@@ -521,9 +532,7 @@ select optgroup{color:var(--dim);background:var(--bg);}
 <div id="panels"></div>
 
 <script>
-// ═══════════════════════════════════════════════════
-// SLATE DATA — replace const games + bestBets daily
-// ═══════════════════════════════════════════════════
+// SLATE DATA — update daily
 // slate_data.js — Aug 25, 2026
 // Rewrite daily. Shell (mlb_dashboard.html / index.html) never changes.
 // Starters sourced from: baseballsavant.mlb.com/probable-pitchers (primary)
@@ -1264,9 +1273,13 @@ const bestBets = [
 
 
 
-// ═══════════════════════════════════════════════════
-// DASHBOARD ENGINE — do not edit
-// ═══════════════════════════════════════════════════
+// DASHBOARD ENGINE
+function gc(g){const l=g.charAt(0).toLowerCase();return l==='a'?'g-a':l==='b'?'g-b':l==='c'?'g-c':'g-d';}
+function badge(g){return`<span class="grade ${gc(g)}">${g}</span>`;}
+
+// ── GAME DATA ─────────────────────────────────────────
+
+
 function renderCard(c){
   const wxHtml     = c.wx ? `<div class="card-wx">${c.wx}</div>` : '';
   const recencyHtml = c.recency
@@ -1553,13 +1566,6 @@ function loadGame(key){
   tryInjectLiveOdds(key);
 }
 
-document.getElementById('gsel').addEventListener('change', e => {
-  loadGame(e.target.value);
-  // Reset to overview tab on game change
-  document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
-  const ovTab = document.querySelector('.tab[data-tab="overview"]');
-  if (ovTab) ovTab.classList.add('active');
-});
 
 // ── LIVE ODDS INJECTION ───────────────────────────────
 // Fires after loadGame renders panels — patches odds from games_data.js
@@ -1629,7 +1635,7 @@ document.querySelector('.tabs').addEventListener('click', e => {
   // Pitch mix: extend to tonight's games in future build
 });
 
-// Dropdown and initial game built dynamically from slate_data.js
+
 // Pitch mix wired to sf-bos when available
 
 // ═══════════════════════════════════════════════════════════
@@ -2483,61 +2489,55 @@ const BULLPEN_CSS = `
 
 
 
-// ═══════════════════════════════════════════════════
 // DROPDOWN + INIT
-// ═══════════════════════════════════════════════════
+
 function buildDropdown() {
-  const sel = document.getElementById('gsel');
+  var sel = document.getElementById('gsel');
   sel.innerHTML = '';
-
-  const meta = document.getElementById('hdr-meta');
+  var meta = document.getElementById('hdr-meta');
   if (meta) {
-    const today = new Date().toLocaleDateString('en-US',
-      {weekday:'short', month:'short', day:'numeric', year:'numeric'});
-    meta.textContent = today + ' · ' + Object.keys(games).length + ' Games';
+    var d = new Date().toLocaleDateString('en-US',
+      {weekday:'short',month:'short',day:'numeric',year:'numeric'});
+    meta.textContent = d + ' · ' + Object.keys(games).length + ' Games';
   }
-
   if (typeof games === 'undefined' || !Object.keys(games).length) {
     sel.innerHTML = '<option>No games loaded</option>';
     return;
   }
-
-  const afternoon = [], evening = [], late = [];
-  Object.keys(games).forEach(key => {
-    const h = parseInt((games[key].time||'').split(':')[0]);
-    const pm = (games[key].time||'').includes('PM');
-    const h24 = pm && h!==12 ? h+12 : (!pm && h===12 ? 0 : h);
-    if (h24 < 17) afternoon.push(key);
-    else if (h24 < 21) evening.push(key);
-    else late.push(key);
+  var afternoon=[], evening=[], late=[];
+  Object.keys(games).forEach(function(k) {
+    var t = (games[k].time||'');
+    var m = t.match(/(\d+):\d+\s*(AM|PM)/i);
+    if (!m) { evening.push(k); return; }
+    var h = parseInt(m[1]);
+    var pm = m[2].toUpperCase() === 'PM';
+    if (pm && h!==12) h+=12; else if (!pm && h===12) h=0;
+    if (h<17) afternoon.push(k); else if (h<21) evening.push(k); else late.push(k);
   });
-
-  const addGroup = (label, arr) => {
+  function addGrp(label, arr) {
     if (!arr.length) return;
-    const g = document.createElement('optgroup');
-    g.label = label;
-    arr.forEach(k => {
-      const o = document.createElement('option');
+    var grp = document.createElement('optgroup');
+    grp.label = label;
+    arr.forEach(function(k) {
+      var o = document.createElement('option');
       o.value = k;
       o.textContent = games[k].away + ' @ ' + games[k].home + ' — ' + games[k].time;
-      g.appendChild(o);
+      grp.appendChild(o);
     });
-    sel.appendChild(g);
-  };
-
-  addGroup('── Afternoon ──', afternoon);
-  addGroup('── Evening ──',   evening);
-  addGroup('── Late ──',      late);
-
-  const first = Object.keys(games)[0];
+    sel.appendChild(grp);
+  }
+  addGrp('── Afternoon ──', afternoon);
+  addGrp('── Evening ──',   evening);
+  addGrp('── Late ──',      late);
+  var first = Object.keys(games)[0];
   sel.value = first;
   loadGame(first);
 }
 
-document.getElementById('gsel').addEventListener('change', e => {
+document.getElementById('gsel').addEventListener('change', function(e) {
   loadGame(e.target.value);
-  document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
-  const ov = document.querySelector('.tab[data-tab="overview"]');
+  document.querySelectorAll('.tab').forEach(function(b){ b.classList.remove('active'); });
+  var ov = document.querySelector('.tab[data-tab="overview"]');
   if (ov) ov.classList.add('active');
 });
 
@@ -2546,6 +2546,7 @@ if (document.readyState === 'loading') {
 } else {
   buildDropdown();
 }
+
 </script>
 
 </body>
