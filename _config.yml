@@ -1,0 +1,19 @@
+# GitHub Pages config
+# Tells Jekyll to pass through JS files without processing them
+
+include:
+  - slate_data.js
+  - games_data.js
+  - odds_integration.js
+
+exclude:
+  - odds_fetcher.py
+  - "*.md"
+  - ".github"
+
+# Disable Jekyll processing on JS files
+defaults:
+  - scope:
+      path: "*.js"
+    values:
+      layout: null
