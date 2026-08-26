@@ -1629,6 +1629,17 @@ document.querySelector('.tabs').addEventListener('click', e => {
   btn.classList.add('active');
   const t = btn.dataset.tab;
   document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active', p.dataset.panel===t));
+  // Re-inject prop odds when switching to pitcher or total tab
+  if ((t === 'pitcher' || t === 'total') &&
+      typeof injectLiveOdds === 'function' &&
+      typeof ODDS_DATA !== 'undefined') {
+    const sel = document.getElementById('gsel');
+    if (sel && sel.value) {
+      const parts = sel.value.split('-');
+      if (parts.length >= 2)
+        injectLiveOdds(parts[0].toUpperCase(), parts[1].toUpperCase());
+    }
+  }
   // Pitch mix: extend to tonight's games in future build
 });
 
@@ -2487,44 +2498,75 @@ const BULLPEN_CSS = `
 
 
 // ── BEST BETS STRIP RENDER ──────────────────────────────
-function renderStrip() {
-  const strip = document.getElementById('strip');
-  if (!strip || typeof bestBets === 'undefined') return;
-
-  // Clear existing pills but keep the label
-  const label = strip.querySelector('.strip-lbl');
-  strip.innerHTML = '';
-  if (label) strip.appendChild(label);
-
-  bestBets.forEach(b => {
-    // Try to get live odds from ODDS_DATA
-    let liveOdds = b.odds;
-    if (typeof ODDS_DATA !== 'undefined' && b.odds === 'TBD') {
-      // Parse game teams from b.game e.g. "PIT@SD"
-      const parts = (b.game || '').split('@');
-      if (parts.length === 2) {
-        const lg = findLiveGame(parts[0].trim(), parts[1].trim());
-        if (lg && lg.lines && lg.lines.raw) {
-          const r = lg.lines.raw;
-          const pick = (b.pick || '').toLowerCase();
-          // Match prop type to raw line
-          if (pick.includes('-1.5') || pick.includes('run line')) {
-            liveOdds = fmtOdds(r.awaySpreadOdds);
-          } else if (pick.includes('+1.5')) {
-            liveOdds = fmtOdds(r.homeSpreadOdds);
-          } else if (pick.includes('over') && pick.includes('total')) {
-            liveOdds = fmtOdds(r.overOdds);
-          } else if (pick.includes('under') && pick.includes('total')) {
-            liveOdds = fmtOdds(r.underOdds);
-          }
-        }
-      }
+function getLiveOdds(b) {
+  if (typeof ODDS_DATA === 'undefined' || b.odds !== 'TBD') return b.odds;
+  const parts = (b.game || '').split('@');
+  if (parts.length !== 2) return b.odds;
+  const lg = findLiveGame(parts[0].trim(), parts[1].trim());
+  if (!lg || !lg.lines || !lg.lines.raw) return b.odds;
+  const r    = lg.lines.raw;
+  const pick = (b.pick || '').toLowerCase();
+  const firstName = pick.split(' ')[0].toLowerCase();
+  const playerKey = Object.keys(lg.props || {}).find(k =>
+    k.toLowerCase().includes(firstName)
+  );
+  if (playerKey) {
+    let market = null;
+    if (pick.includes('ks') || pick.includes('strikeout'))   market = 'pitcher_strikeouts';
+    else if (pick.includes('er') || pick.includes('earned')) market = 'pitcher_earned_runs';
+    else if (pick.includes('bb') || pick.includes('walk'))   market = 'pitcher_walks';
+    else if (pick.includes('out'))                           market = 'pitcher_outs';
+    else if (pick.includes('hit'))                           market = 'pitcher_hits_allowed';
+    if (market && lg.props[playerKey][market]) {
+      const pd = lg.props[playerKey][market];
+      return pick.includes('over') ? pd.overStr : pd.underStr;
     }
+  }
+  if (pick.includes('-1.5'))                                return fmtOdds(r.awaySpreadOdds);
+  if (pick.includes('+1.5'))                                return fmtOdds(r.homeSpreadOdds);
+  if (pick.includes('over') && pick.includes('total'))      return fmtOdds(r.overOdds);
+  if (pick.includes('under') && pick.includes('total'))     return fmtOdds(r.underOdds);
+  return b.odds;
+}
 
-    const p = document.createElement('div');
-    p.className = 'pill';
-    p.innerHTML = `<span class="gtag">${b.game}</span><span class="pk">${b.pick}</span><span class="od">${liveOdds}</span><span class="grade ${gc(b.grade)}">${b.grade}</span>`;
-    strip.appendChild(p);
+function renderStrip() {
+  const grid = document.getElementById('bb-grid');
+  if (!grid || typeof bestBets === 'undefined') return;
+  grid.innerHTML = '';
+
+  const gradeOrder = {'A+':0,'A':1,'A-':2,'B+':3,'B':4,'B-':5,'C+':6,'C':7};
+  const sorted = [...bestBets].sort((a,b) =>
+    (gradeOrder[a.grade]||9) - (gradeOrder[b.grade]||9));
+
+  sorted.forEach(b => {
+    const liveOdds = getLiveOdds(b);
+    const card = document.createElement('div');
+    card.className = 'bb-card';
+    const parts = (b.game||'').split('@');
+    if (parts.length === 2) {
+      const away = parts[0].trim().toUpperCase();
+      const home = parts[1].trim().toUpperCase();
+      const key = Object.keys(games).find(k => {
+        const g = games[k];
+        return (g.away.toUpperCase().includes(away) || away.includes(g.away.split(' ').pop().toUpperCase())) &&
+               (g.home.toUpperCase().includes(home) || home.includes(g.home.split(' ').pop().toUpperCase()));
+      });
+      if (key) card.onclick = () => {
+        document.getElementById('gsel').value = key;
+        loadGame(key);
+        document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+        const ov = document.querySelector('.tab[data-tab="overview"]');
+        if (ov) ov.classList.add('active');
+      };
+    }
+    card.innerHTML = `
+      <div class="bb-card-top">
+        <span class="bb-game">${b.game}</span>
+        <span class="grade ${gc(b.grade)}">${b.grade}</span>
+      </div>
+      <div class="bb-pick">${b.pick}</div>
+      <div class="bb-odds">${liveOdds}</div>`;
+    grid.appendChild(card);
   });
 }
 
