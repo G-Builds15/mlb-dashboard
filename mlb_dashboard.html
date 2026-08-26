@@ -24,15 +24,20 @@ html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,s
 .hdr-rule{margin-left:auto;font-size:10px;color:var(--amber);font-family:monospace;}
 
 /* BEST BETS STRIP */
-.strip{background:var(--bg);border-bottom:1px solid var(--border);padding:0 18px;height:38px;display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none;}
-.strip::-webkit-scrollbar{display:none;}
-.strip-lbl{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding-right:10px;border-right:1px solid var(--border);margin-right:4px;white-space:nowrap;}
-.pill{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--border);padding:4px 10px;white-space:nowrap;font-size:11px;}
-.pill .gtag{font-family:monospace;font-size:9px;color:var(--dim);}
-.pill .pk{font-weight:700;color:var(--text);}
-.pill .odds{font-family:monospace;font-size:10px;color:var(--gold);}
-
-/* SELECTOR */
+.strip{padding:0;border-bottom:1px solid var(--border);background:var(--bg);}
+.strip-lbl{display:none;}
+.bb-table{width:100%;border-collapse:collapse;}
+.bb-table thead tr{background:var(--surface);border-bottom:1px solid var(--border);}
+.bb-table thead th{font-family:monospace;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);padding:6px 10px;text-align:left;}
+.bb-table thead th.th-r{text-align:right;}
+.bb-row{border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;}
+.bb-row:hover{background:var(--surface);}
+.bb-row:last-child{border-bottom:none;}
+.bb-row td{padding:5px 10px;vertical-align:middle;}
+.bb-td-grade{width:40px;}
+.bb-td-game{font-family:monospace;font-size:9px;color:var(--dim);white-space:nowrap;width:72px;}
+.bb-td-pick{font-size:12px;font-weight:600;color:var(--text);}
+.bb-td-odds{font-family:monospace;font-size:11px;color:var(--gold);text-align:right;white-space:nowrap;width:58px;}
 .sel-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
 .sel-bar label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);}
 select{background:var(--bg);color:var(--text);border:1px solid var(--border-hi);padding:6px 28px 6px 10px;font-family:monospace;font-size:11px;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%238891A4' d='M5 6L0 0h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;min-width:320px;}
@@ -500,8 +505,8 @@ select optgroup{color:var(--dim);background:var(--bg);}
   <span class="hdr-rule">Rule: Over X.5 requires X+1 to grade HIT</span>
 </div>
 
-<div class="strip" id="strip"><span class="strip-lbl">Best Bets</span><div class="bb-grid" id="bb-grid"></div></div>
-  
+<div class="s<div class="strip" id="strip"><table class="bb-table" id="bb-grid"><thead><tr><th>Grade</th><th>Game</th><th>Pick</th><th class="th-r">Odds</th></tr></thead><tbody id="bb-body"></tbody></table></div></div>
+
 <div class="sel-bar">
   <label>Select Game</label>
   <select id="gsel">
@@ -2500,58 +2505,53 @@ const BULLPEN_CSS = `
 // ── BEST BETS STRIP RENDER ──────────────────────────────
 function getLiveOdds(b) {
   if (typeof ODDS_DATA === 'undefined' || b.odds !== 'TBD') return b.odds;
-  const parts = (b.game || '').split('@');
+  const parts = (b.game||'').split('@');
   if (parts.length !== 2) return b.odds;
   const lg = findLiveGame(parts[0].trim(), parts[1].trim());
-  if (!lg || !lg.lines || !lg.lines.raw) return b.odds;
-  const r    = lg.lines.raw;
-  const pick = (b.pick || '').toLowerCase();
-  const firstName = pick.split(' ')[0].toLowerCase();
-  const playerKey = Object.keys(lg.props || {}).find(k =>
-    k.toLowerCase().includes(firstName)
-  );
+  if (!lg) return b.odds;
+  const r = lg.lines && lg.lines.raw ? lg.lines.raw : null;
+  const pick = (b.pick||'').toLowerCase();
+  const tok = pick.split(' ')[0];
+  const playerKey = Object.keys(lg.props||{}).find(k => k.toLowerCase().includes(tok));
   if (playerKey) {
-    let market = null;
-    if (pick.includes('ks') || pick.includes('strikeout'))   market = 'pitcher_strikeouts';
-    else if (pick.includes('er') || pick.includes('earned')) market = 'pitcher_earned_runs';
-    else if (pick.includes('bb') || pick.includes('walk'))   market = 'pitcher_walks';
-    else if (pick.includes('out'))                           market = 'pitcher_outs';
-    else if (pick.includes('hit'))                           market = 'pitcher_hits_allowed';
-    if (market && lg.props[playerKey][market]) {
-      const pd = lg.props[playerKey][market];
+    let mkt = null;
+    if (pick.includes('ks')||pick.includes('strikeout'))   mkt='pitcher_strikeouts';
+    else if (pick.includes(' er')||pick.includes('earned')) mkt='pitcher_earned_runs';
+    else if (pick.includes(' bb')||pick.includes('walk'))   mkt='pitcher_walks';
+    else if (pick.includes('out'))                          mkt='pitcher_outs';
+    else if (pick.includes('hit'))                          mkt='pitcher_hits_allowed';
+    if (mkt && lg.props[playerKey][mkt]) {
+      const pd = lg.props[playerKey][mkt];
       return pick.includes('over') ? pd.overStr : pd.underStr;
     }
   }
-  if (pick.includes('-1.5'))                                return fmtOdds(r.awaySpreadOdds);
-  if (pick.includes('+1.5'))                                return fmtOdds(r.homeSpreadOdds);
-  if (pick.includes('over') && pick.includes('total'))      return fmtOdds(r.overOdds);
-  if (pick.includes('under') && pick.includes('total'))     return fmtOdds(r.underOdds);
+  if (!r) return b.odds;
+  if (pick.includes('-1.5'))                               return fmtOdds(r.awaySpreadOdds);
+  if (pick.includes('+1.5'))                               return fmtOdds(r.homeSpreadOdds);
+  if (pick.includes('over')&&pick.includes('total'))       return fmtOdds(r.overOdds);
+  if (pick.includes('under')&&pick.includes('total'))      return fmtOdds(r.underOdds);
   return b.odds;
 }
 
 function renderStrip() {
-  const grid = document.getElementById('bb-grid');
-  if (!grid || typeof bestBets === 'undefined') return;
-  grid.innerHTML = '';
-
-  const gradeOrder = {'A+':0,'A':1,'A-':2,'B+':3,'B':4,'B-':5,'C+':6,'C':7};
-  const sorted = [...bestBets].sort((a,b) =>
-    (gradeOrder[a.grade]||9) - (gradeOrder[b.grade]||9));
-
+  const tbody = document.getElementById('bb-body');
+  if (!tbody || typeof bestBets === 'undefined') return;
+  tbody.innerHTML = '';
+  const order = {'A+':0,'A':1,'A-':2,'B+':3,'B':4,'B-':5,'C+':6,'C':7};
+  const sorted = [...bestBets].sort((a,b) => (order[a.grade]||9)-(order[b.grade]||9));
   sorted.forEach(b => {
-    const liveOdds = getLiveOdds(b);
-    const card = document.createElement('div');
-    card.className = 'bb-card';
+    const odds = getLiveOdds(b);
+    const tr = document.createElement('tr');
+    tr.className = 'bb-row';
     const parts = (b.game||'').split('@');
     if (parts.length === 2) {
-      const away = parts[0].trim().toUpperCase();
-      const home = parts[1].trim().toUpperCase();
+      const aw = parts[0].trim().toUpperCase();
+      const hw = parts[1].trim().toUpperCase();
       const key = Object.keys(games).find(k => {
         const g = games[k];
-        return (g.away.toUpperCase().includes(away) || away.includes(g.away.split(' ').pop().toUpperCase())) &&
-               (g.home.toUpperCase().includes(home) || home.includes(g.home.split(' ').pop().toUpperCase()));
+        return g.away.toUpperCase().includes(aw)||g.home.toUpperCase().includes(hw);
       });
-      if (key) card.onclick = () => {
+      if (key) tr.onclick = () => {
         document.getElementById('gsel').value = key;
         loadGame(key);
         document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -2559,14 +2559,8 @@ function renderStrip() {
         if (ov) ov.classList.add('active');
       };
     }
-    card.innerHTML = `
-      <div class="bb-card-top">
-        <span class="bb-game">${b.game}</span>
-        <span class="grade ${gc(b.grade)}">${b.grade}</span>
-      </div>
-      <div class="bb-pick">${b.pick}</div>
-      <div class="bb-odds">${liveOdds}</div>`;
-    grid.appendChild(card);
+    tr.innerHTML = `<td class="bb-td-grade"><span class="grade ${gc(b.grade)}">${b.grade}</span></td><td class="bb-td-game">${b.game}</td><td class="bb-td-pick">${b.pick}</td><td class="bb-td-odds">${odds}</td>`;
+    tbody.appendChild(tr);
   });
 }
 
