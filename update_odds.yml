@@ -1,10 +1,13 @@
-name: Update MLB Odds + Starters
+name: Update MLB Dashboard
 
 on:
   schedule:
-    - cron: '0 14 * * *'    # 10:00 AM ET daily (14:00 UTC)
-    - cron: '0 21 * * *'    # 5:00 PM ET daily (21:00 UTC)
-  workflow_dispatch:          # manual trigger button in GitHub UI
+    - cron: '0 14 * * *'    # 10:00 AM ET (14:00 UTC)
+    - cron: '0 21 * * *'    # 5:00 PM ET  (21:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update:
@@ -12,25 +15,33 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.3.0
         with:
           python-version: '3.11'
 
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run odds fetcher
+      - name: Step 1 — Pull starters + odds + pitcher stats
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python3 odds_fetcher.py
 
-      - name: Commit updated data files
+      - name: Step 2 — Build slate (grade props + leans)
+        run: python3 slate_builder.py
+
+      - name: Step 3 — Combine slate + engine → dashboard
+        run: python3 build.py
+
+      - name: Commit updated files
         run: |
           git config user.email "mlb-bot@dashboard"
-          git config user.name "MLB Odds Bot"
-          git add games_data.js slate_data.js
-          git diff --staged --quiet || git commit -m "Update odds + starters $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git config user.name "MLB Dashboard Bot"
+          git add games_data.js slate_data.js mlb_dashboard.html
+          git diff --staged --quiet || git commit -m "Auto-update $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push

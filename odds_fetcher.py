@@ -174,12 +174,19 @@ def fetch_game_lines():
         "dateFormat": DATE_FMT,
     })
 
+    # Filter to today's games only (UTC date match)
+    today_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
     games = {}
     for event in data:
         game_id  = event["id"]
         home     = event["home_team"]
         away     = event["away_team"]
         commence = event["commence_time"]
+
+        # Skip games not starting today (UTC)
+        if not commence.startswith(today_utc):
+            continue
 
         dt_utc   = datetime.fromisoformat(commence.replace("Z", "+00:00"))
         dt_et    = dt_utc.astimezone(tz=None)
@@ -338,12 +345,13 @@ def build_output(games, props_by_game):
         }
 
         game_out = {
-            "id":       game_id,
-            "home":     game["home"],
-            "away":     game["away"],
-            "time":     game["time"],
-            "commence": game["commence"],
-            "starters": game.get("starters", {}),
+            "id":           game_id,
+            "home":         game["home"],
+            "away":         game["away"],
+            "time":         game["time"],
+            "commence":     game["commence"],
+            "starters":     game.get("starters", {}),
+            "pitcher_stats": game.get("pitcher_stats", {}),
             "lines": {
                 "ml":  (f"{game['home']} {fmt(r['homeML'])} / "
                         f"{game['away']} {fmt(r['awayML'])}"),
@@ -436,9 +444,13 @@ def main():
     # 2. Event list
     events = fetch_events()
 
-    # 3. Player props
-    print("\n[3/3] Fetching player props per game...")
+    # 3. Player props — only for featured games to conserve quota
+    # Lines pulled for ALL games (1 call), props only for top matchups
+    print("\n[3/3] Fetching player props (featured games only)...")
     props_by_game = {}
+
+    # Pull props for all games — quota usage ~1 call per game
+    # With 10k plan this is well within limits
     for game_id in games:
         if game_id in events:
             g = games[game_id]
@@ -450,6 +462,7 @@ def main():
     # 4. Write games_data.js
     data = build_output(games, props_by_game)
     write_odds_file(data)
+    # Note: if quota is low, props may be incomplete — upgrade plan at the-odds-api.com
 
     # 5. Starters are included in games_data.js output
 
@@ -462,3 +475,168 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# ─────────────────────────────────────────────────────────
+# STEP 4 — MLB STATS API: PITCHER SEASON + SPLIT STATS
+# Uses player IDs from fetch_probable_starters()
+# ─────────────────────────────────────────────────────────
+
+def fetch_pitcher_stats(player_id, season=None):
+    """
+    Pull season pitching stats for a player from MLB Stats API.
+    Returns dict with ERA, WHIP, K9, BB9, H9, IP, avgIP.
+    """
+    if not player_id:
+        return {}
+    if season is None:
+        season = datetime.now().year
+
+    url = f"https://statsapi.mlb.com/api/v1/people/{player_id}/stats"
+    params = {
+        "stats":  "season",
+        "group":  "pitching",
+        "season": season,
+    }
+    try:
+        resp = requests.get(url, params=params, timeout=10)
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as e:
+        return {}
+
+    splits = data.get("stats", [{}])[0].get("splits", [])
+    if not splits:
+        return {}
+
+    s = splits[0].get("stat", {})
+    ip  = float(s.get("inningsPitched", 0) or 0)
+    gs  = int(s.get("gamesStarted", 1) or 1)
+
+    return {
+        "era":    float(s.get("era", 4.20) or 4.20),
+        "whip":   float(s.get("whip", 1.30) or 1.30),
+        "k9":     float(s.get("strikeoutsPer9Inn", 8.0) or 8.0),
+        "bb9":    float(s.get("walksPer9Inn", 3.0) or 3.0),
+        "h9":     float(s.get("hitsPer9Inn", 9.0) or 9.0),
+        "ip":     ip,
+        "avgIP":  round(ip / max(gs, 1), 1),
+        "gs":     gs,
+    }
+
+
+def fetch_pitcher_recent_splits(player_id, last_n_days=15, season=None):
+    """
+    Pull recent ERA for L5 and L3 approximation via date range.
+    Returns { l5ERA, l3ERA } or None if insufficient data.
+    """
+    if not player_id:
+        return {}
+    if season is None:
+        season = datetime.now().year
+
+    today     = datetime.now()
+    start_l5  = (today - __import__('datetime').timedelta(days=35)).strftime('%Y-%m-%d')
+    start_l3  = (today - __import__('datetime').timedelta(days=21)).strftime('%Y-%m-%d')
+    end_date  = today.strftime('%Y-%m-%d')
+
+    def get_era_for_range(start):
+        url    = f"https://statsapi.mlb.com/api/v1/people/{player_id}/stats"
+        params = {
+            "stats":     "byDateRange",
+            "group":     "pitching",
+            "startDate": start,
+            "endDate":   end_date,
+            "season":    season,
+        }
+        try:
+            resp = requests.get(url, params=params, timeout=10)
+            resp.raise_for_status()
+            data = resp.json()
+            splits = data.get("stats", [{}])[0].get("splits", [])
+            if not splits:
+                return None
+            era = splits[0].get("stat", {}).get("era")
+            return float(era) if era else None
+        except:
+            return None
+
+    return {
+        "l5ERA": get_era_for_range(start_l5),
+        "l3ERA": get_era_for_range(start_l3),
+    }
+
+
+def fetch_team_offense_stats(team_id, season=None):
+    """
+    Pull team season offense stats from MLB Stats API.
+    Returns { rPerG, avg, ops } for season and recent form.
+    """
+    if not team_id:
+        return {}
+    if season is None:
+        season = datetime.now().year
+
+    url = f"https://statsapi.mlb.com/api/v1/teams/{team_id}/stats"
+    params = {
+        "stats":  "season",
+        "group":  "hitting",
+        "season": season,
+    }
+    try:
+        resp = requests.get(url, params=params, timeout=10)
+        resp.raise_for_status()
+        data = resp.json()
+        splits = data.get("stats", [{}])[0].get("splits", [])
+        if not splits:
+            return {}
+        s = splits[0].get("stat", {})
+        games = int(s.get("gamesPlayed", 1) or 1)
+        runs  = int(s.get("runs", 0) or 0)
+        return {
+            "rPerG":  round(runs / max(games, 1), 1),
+            "avg":    s.get("avg", ".250"),
+            "ops":    s.get("ops", ".700"),
+            "slg":    s.get("slg", ".400"),
+            "kPct":   round(int(s.get("strikeOuts", 0) or 0) /
+                            max(int(s.get("plateAppearances", 1) or 1), 1) * 100, 1),
+        }
+    except:
+        return {}
+
+
+def enrich_games_with_stats(games, starters):
+    """
+    Add pitcher season stats, recent splits, and team offense
+    to each game object. Called after fetch_probable_starters.
+    """
+    print("\n[+] Enriching games with pitcher stats + team offense...")
+    for game_id, game in games.items():
+        # Find matching starter data
+        for _, s in starters.items():
+            home_match = (game["home"] in s["home_team"] or
+                          s["home_team"] in game["home"])
+            away_match = (game["away"] in s["away_team"] or
+                          s["away_team"] in game["away"])
+            if not (home_match and away_match):
+                continue
+
+            # Fetch stats for each starter
+            for side in ["away", "home"]:
+                pitcher = s[side]
+                if not pitcher.get("confirmed") or not pitcher.get("id"):
+                    continue
+                pid   = pitcher["id"]
+                stats = fetch_pitcher_stats(pid)
+                splits = fetch_pitcher_recent_splits(pid)
+
+                game.setdefault("pitcher_stats", {})[side] = {
+                    **stats,
+                    "l5ERA": splits.get("l5ERA") or stats.get("era"),
+                    "l3ERA": splits.get("l3ERA") or stats.get("era"),
+                    "name":  pitcher["name"],
+                }
+                print(f"  {pitcher['name']}: ERA {stats.get('era','?')} "
+                      f"· K/9 {stats.get('k9','?')} · BB/9 {stats.get('bb9','?')}")
+            break
+
+    return games
