@@ -25,6 +25,10 @@ html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,s
 
 /* BEST BETS STRIP */
 .strip{padding:0;border-bottom:1px solid var(--border);background:var(--bg);}
+.strip-header{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;cursor:pointer;background:var(--surface);border-bottom:1px solid var(--border);}
+.strip-header:hover{background:var(--border);}
+.strip-title{font-family:monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);}
+.strip-toggle{font-family:monospace;font-size:9px;color:var(--dim);}
 .strip-lbl{display:none;}
 .bb-table{width:100%;border-collapse:collapse;}
 .bb-table thead tr{background:var(--surface);border-bottom:1px solid var(--border);}
@@ -505,7 +509,18 @@ select optgroup{color:var(--dim);background:var(--bg);}
   <span class="hdr-rule">Rule: Over X.5 requires X+1 to grade HIT</span>
 </div>
 
-<div class="s<div class="strip" id="strip"><table class="bb-table" id="bb-grid"><thead><tr><th>Grade</th><th>Game</th><th>Pick</th><th class="th-r">Odds</th></tr></thead><tbody id="bb-body"></tbody></table></div></div>
+<div class="s<div class="strip" id="strip">
+  <div class="strip-header" id="strip-header" onclick="toggleStrip()">
+    <span class="strip-title">Best Bets</span>
+    <span class="strip-toggle" id="strip-toggle">▲ hide</span>
+  </div>
+  <div id="strip-body">
+    <table class="bb-table" id="bb-grid">
+      <thead><tr><th>Grade</th><th>Game</th><th>Pick</th><th class="th-r">Odds</th></tr></thead>
+      <tbody id="bb-body"></tbody>
+    </table>
+  </div>
+</div></div>
 
 <div class="sel-bar">
   <label>Select Game</label>
@@ -2565,6 +2580,16 @@ function renderStrip() {
 }
 
 
+
+
+function toggleStrip() {
+  const body   = document.getElementById('strip-body');
+  const toggle = document.getElementById('strip-toggle');
+  if (!body) return;
+  const hidden = body.style.display === 'none';
+  body.style.display  = hidden ? '' : 'none';
+  toggle.textContent  = hidden ? '▲ hide' : '▼ show';
+}
 
 function buildDropdown() {
   var sel = document.getElementById('gsel');
