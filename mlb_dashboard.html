@@ -510,6 +510,19 @@ select optgroup{color:var(--dim);background:var(--bg);}
   .pr-seg{color:var(--muted);}
   .pr-sep{color:var(--dim);}
 
+
+  /* ── LEAN BLOCK ── */
+  .lean-block{border-top:1px solid var(--border);padding-top:10px;margin-top:10px;}
+  .lean-title{font-family:monospace;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:8px;}
+  .lean-row{margin-bottom:8px;}
+  .lean-section{background:var(--surface);border:1px solid var(--border);padding:8px 10px;}
+  .lean-header{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap;}
+  .lean-label{font-family:monospace;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);width:72px;flex-shrink:0;}
+  .lean-pick{font-size:12px;font-weight:600;color:var(--text);flex:1;}
+  .lean-parlay{font-family:monospace;font-size:9px;color:var(--gold);font-weight:700;background:rgba(255,200,0,.12);padding:1px 5px;border-radius:3px;}
+  .lean-bullets{padding-left:72px;}
+  .lean-bullet{font-size:10px;color:var(--muted);line-height:1.6;}
+
 </style>
 </head>
 <body>
@@ -554,8 +567,6 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 <div class="tabs">
   <button class="tab active" data-tab="overview">Overview</button>
-  <button class="tab" data-tab="runline">Run Line</button>
-  <button class="tab" data-tab="total">Total</button>
   <button class="tab" data-tab="pitcher">Pitcher Props</button>
   <button class="tab" data-tab="batter">Batter Props</button>
 </div>
@@ -568,458 +579,58 @@ select optgroup{color:var(--dim);background:var(--bg);}
 <script>
 
 // SLATE DATA — update daily
-// Aug 26, 2026 — 15 games
-// Starters source: baseballsavant.mlb.com/probable-pitchers
-// Savant data: career wOBA/xwOBA/EV vs current opposing roster
+// Aug 27, 2026 — 5 games
+// Starters: baseballsavant.mlb.com/probable-pitchers
+// Model: adjusted K (30/30/25/15) · walk props · BB/9 multiplier · bullpen pivot
 
 const games = {
-
-// ════════════════════════════════════════════════
-// AFTERNOON GAMES
-// ════════════════════════════════════════════════
-
-  "tb-det": {
-    away:"Tampa Bay Rays", home:"Detroit Tigers",
-    time:"1:10 PM ET", venue:"Comerica Park, Detroit MI",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Detroit: 78°F, 15% rain, W wind 8 mph — no significant concern.",
-    starters:"Freddy Peralta (TB) vs Troy Melton (DET)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"Pull via Odds API" },
-      away:{ teamName:"Tampa Bay Rays", abbr:"TB",
-        offStats:{ avg:".252", ops:".732", kPct:"22.8%", rPerG:"4.3", rPerG_L10:"4.1", rPerG_L5:"4.0" },
-        defStats:{ era:"4.12", bullpenERA_L14:"3.88", whip:"1.28" },
-        starter:{ name:"Freddy Peralta", hand:"RHP", rec:"5-11", era:"4.20", whip:"1.28", k9:"9.8", bb9:"3.2", era_L3:"3.90", avgIP:"5.5" },
-        injuries:[] },
-      home:{ teamName:"Detroit Tigers", abbr:"DET",
-        offStats:{ avg:".248", ops:".718", kPct:"23.4%", rPerG:"4.4", rPerG_L10:"4.2", rPerG_L5:"4.1" },
-        defStats:{ era:"3.98", bullpenERA_L14:"3.82", whip:"1.26" },
-        starter:{ name:"Troy Melton", hand:"RHP", rec:"7-2", era:"3.20", whip:"1.10", k9:"8.4", bb9:"2.8", era_L3:"2.90", avgIP:"6.0" },
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Peralta (B+) vs Melton. Peralta confirmed starter — strong K profile.",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"C+",
-         rat:"Both starters have limited Savant sample vs this roster. Pull live odds before committing.",
-         chips:["Peralta xwOBA vs DET: .267 — solid","Melton xwOBA vs TB: .351 — hittable","Pull live run line","TB won yesterday 4-1"]}
-      ]},
-      total:{intro:"Peralta elite K profile. Melton hittable side.",cards:[
-        {lbl:"Game Total",pick:"Verify via Odds API",odds:"TBD",grade:"B-",
-         rat:"Peralta (.267 xwOBA, 28.3% K, 46 PA) suppresses DET. Melton (.351 xwOBA vs TB) is hittable. Net lean slightly over depending on line.",
-         chips:["Peralta xwOBA: .267 · K%: 28.3% (46 PA)","Melton xwOBA: .351 — hittable","Pull live O/U"]}
-      ]},
-      pitcher:{intro:"Peralta is the primary prop — B+ grade with solid 46 PA sample.",cards:[
-        {lbl:"Peralta — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"B+",
-         rat:"Peralta career vs current DET roster: .294 wOBA, .267 xwOBA, 28.3% K rate in 46 PA — best sample confidence on this side. DET K%: 23.4%. Over 5.5 in 5.5 avg IP is achievable.",
-         chips:["Peralta K%: 28.3% vs DET (46 PA)","xwOBA: .267 — solid suppression","DET K%: 23.4% — above avg","Over 5.5 in 5.5 avg IP"],
-         src:"Baseball Savant 2026",
-         pitcherRecency:{seasonERA:4.20,l5ERA:3.90,l3ERA:3.90,avgIP:5.5,bb9:3.2}},
-        {lbl:"Peralta — Earned Runs",pick:"Under 2.5 ER",odds:"TBD",grade:"B",
-         rat:"Peralta xwOBA .267 vs DET in meaningful 46 PA sample. DET averages 4.1 R/G L5. Under 2.5 in 5.5 avg IP is directionally right.",
-         chips:["Peralta xwOBA: .267 (46 PA)","DET L5: 4.1 R/G","Under 2.5 in 5.5 avg IP","BB/9: 3.2 — moderate walk risk"],
-         src:"Baseball Savant 2026"}
-      ]},
-      batter:{intro:"DET vs Melton — Melton xwOBA .351 vs TB. TB top order worth watching.",cards:[
-        {lbl:"DET vs Melton",pick:"DET Team Over 3.5 Runs",odds:"-115 est",grade:"B-",
-         rat:"Melton xwOBA .351 vs TB — hittable. DET home, 4.1 R/G L5. Over 3.5 DET runs is the lean.",
-         chips:["Melton xwOBA: .351 vs TB","DET L5: 4.1 R/G","Home advantage","Over 3.5 requires 4+ runs"]}
-      ]}
-    }
-  },
-
-  "chc-az": {
-    away:"Chicago Cubs", home:"Arizona Diamondbacks",
-    time:"3:40 PM ET", venue:"Chase Field, Phoenix AZ (Dome)",
-    awayRec:"71-60", homeRec:"TBD",
-    wx:"🏟 Chase Field dome — fully weather neutral.",
-    starters:"Matthew Boyd (CHC) vs Eduardo Rodriguez (AZ)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"Pull via Odds API" },
-      away:{ teamName:"Chicago Cubs", abbr:"CHC",
-        offStats:{ avg:".256", ops:".752", kPct:"22.8%", rPerG:"4.5", rPerG_L10:"4.8", rPerG_L5:"5.1" },
-        defStats:{ era:"4.12", bullpenERA_L14:"4.08", whip:"1.28" },
-        starter:{ name:"Matthew Boyd", hand:"LHP", rec:"8-2", era:"4.02", whip:"1.28", k9:"7.8", bb9:"3.1", era_L3:"4.20", avgIP:"5.8" },
-        injuries:[] },
-      home:{ teamName:"Arizona Diamondbacks", abbr:"AZ",
-        offStats:{ avg:".258", ops:".748", kPct:"22.6%", rPerG:"4.6", rPerG_L10:"4.4", rPerG_L5:"4.2" },
-        defStats:{ era:"3.92", bullpenERA_L14:"3.78", whip:"1.24" },
-        starter:{ name:"Eduardo Rodriguez", hand:"LHP", rec:"13-4", era:"3.85", whip:"1.22", k9:"9.0", bb9:"3.0", era_L3:"3.40", avgIP:"6.0" },
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Boyd (B+ suppressor) vs Rodriguez (hittable). CHC offense surging (5.1 R/G L5).",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"B-",
-         rat:"Boyd (.256 xwOBA, 74 PA — best sample on slate) suppresses AZ. Rodriguez (.357 xwOBA, 90.1 EV — hittable) gives up runs. Near pick-em — pull live line.",
-         chips:["Boyd xwOBA: .256 vs AZ (74 PA — best sample)","Rodriguez xwOBA: .357 — hittable","CHC L5: 5.1 R/G","Dome: neutral"]}
-      ]},
-      total:{intro:"Boyd elite suppressor. Rodriguez hittable. CHC surging offense.",cards:[
-        {lbl:"Game Total",pick:"Over (verify line)",odds:"TBD",grade:"B",
-         rat:"Rodriguez (.384 wOBA, .357 xwOBA, 90.1 EV, 69 PA) is one of the more hittable pitchers on today's slate. CHC L5: 5.1 R/G. Boyd suppresses AZ but CHC will score against Rodriguez. Over lean depending on line.",
-         chips:["Rodriguez xwOBA: .357 · EV: 90.1 (69 PA)","CHC L5: 5.1 R/G (surging)","Boyd xwOBA: .256 — AZ side suppressed","Dome: neutral"]}
-      ]},
-      pitcher:{intro:"Boyd is the primary prop — best-sampled pitcher on today's slate.",cards:[
-        {lbl:"Boyd — Strikeouts",pick:"Over 4.5 Ks",odds:"TBD",grade:"B+",
-         rat:"Boyd career vs current AZ roster: .260 wOBA, .256 xwOBA, 23% K rate in 74 PA — largest sample of any pitcher today. AZ K%: 22.6%. Over 4.5 in 5.8 avg IP. Note: Boyd is LHP vs AZ lineup — check handedness splits.",
-         chips:["Boyd xwOBA: .256 vs AZ (74 PA — largest sample today)","K%: 23.0% vs AZ roster","AZ K%: 22.6%","Over 4.5 in 5.8 avg IP"],
-         src:"Baseball Savant 2026",
-         pitcherRecency:{seasonERA:4.02,l5ERA:4.10,l3ERA:4.20,avgIP:5.8,bb9:3.1}}
-      ]},
-      batter:{intro:"CHC offense (5.1 R/G L5) vs Rodriguez (.357 xwOBA).",cards:[
-        {lbl:"CHC vs Rodriguez",pick:"CHC Team Over 4.5 Runs",odds:"-115 est",grade:"B",
-         rat:"Rodriguez career vs CHC roster: .384 wOBA, .357 xwOBA, 90.1 avg EV in 69 PA — hittable with solid sample. CHC averaging 5.1 R/G L5. In dome where conditions are neutral. Over 4.5 CHC runs is the structural lean.",
-         chips:["Rodriguez xwOBA: .357 · EV: 90.1 (69 PA)","CHC L5: 5.1 R/G (surging)","Dome: neutral — no park suppression","Over 4.5 requires 5+ CHC runs"]}
-      ]}
-    }
-  },
-
-  "cin-sf": {
-    away:"Cincinnati Reds", home:"San Francisco Giants",
-    time:"3:45 PM ET", venue:"Oracle Park, San Francisco CA",
-    awayRec:"TBD", homeRec:"53-77",
-    wx:"🌤 San Francisco: 62°F, 5% rain, W wind 14 mph — cool, Oracle Park wind factor.",
-    starters:"Nick Lodolo (CIN) vs Landen Roupp (SF)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"Pull via Odds API" },
-      away:{ teamName:"Cincinnati Reds", abbr:"CIN",
-        offStats:{ avg:".252", ops:".728", kPct:"23.4%", rPerG:"4.4", rPerG_L10:"4.2", rPerG_L5:"4.0" },
-        defStats:{ era:"4.18", bullpenERA_L14:"4.24", whip:"1.30" },
-        starter:{ name:"Nick Lodolo", hand:"LHP", rec:"TBD", era:"3.80", whip:"1.22", k9:"9.2", bb9:"2.8", era_L3:"3.50", avgIP:"5.8" },
-        injuries:[] },
-      home:{ teamName:"San Francisco Giants", abbr:"SF",
-        offStats:{ avg:".238", ops:".688", kPct:"24.1%", rPerG:"3.8", rPerG_L10:"3.4", rPerG_L5:"3.1" },
-        defStats:{ era:"4.28", bullpenERA_L14:"4.44", whip:"1.34" },
-        starter:{ name:"Landen Roupp", hand:"RHP", rec:"7-13", era:"4.10", whip:"1.28", k9:"9.8", bb9:"2.6", era_L3:"3.80", avgIP:"5.8" },
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Lodolo (13 PA — skip Savant) vs Roupp (elite .073 wOBA, 29 PA).",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"B-",
-         rat:"Roupp (.073 wOBA, .206 xwOBA, 31% K vs CIN) is elite suppressor. Lodolo tiny sample vs SF. SF offense suppressed (3.1 R/G L5) + Oracle Park pitcher-friendly. Lean SF but verify line.",
-         chips:["Roupp xwOBA: .206 vs CIN (29 PA)","SF L5: 3.1 R/G (suppressed)","Oracle Park: pitcher-friendly","Lodolo vs SF: 13 PA — limited data"]}
-      ]},
-      total:{intro:"Two quality arms at Oracle Park. Strong under lean.",cards:[
-        {lbl:"Game Total",pick:"Under (verify line)",odds:"TBD",grade:"B+",
-         rat:"Roupp (.073 wOBA, .206 xwOBA, 31% K) is the most dominant suppressor profile on today's slate. SF L5: 3.1 R/G. Oracle Park pitcher-friendly with W wind today. CIN L5: 4.0 R/G — moderate. Strong under lean.",
-         chips:["Roupp wOBA: .073 · xwOBA: .206 (elite)","K%: 31.0% vs CIN roster","SF L5: 3.1 R/G · Oracle Park PF","CIN L5: 4.0 R/G"],
-         bullpen:{away:{name:"CIN",starterERA:3.80,starterAvgIP:5.8,bullpenERA_L14:4.24},home:{name:"SF",starterERA:4.10,starterAvgIP:5.8,bullpenERA_L14:4.44},postedTotal:7.5}}
-      ]},
-      pitcher:{intro:"Roupp is the top pitcher prop on today's slate by xwOBA profile.",cards:[
-        {lbl:"Roupp — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"B+",
-         rat:"Roupp career vs current CIN roster: .073 wOBA, .206 xwOBA, 31% K rate in 29 PA. CIN K%: 23.4% — above average. Oracle Park neutral for strikeouts. Over 5.5 in 5.8 avg IP is very achievable with a 31% K profile.",
-         chips:["Roupp K%: 31.0% vs CIN (29 PA)","wOBA: .073 — best on slate","CIN K%: 23.4% — above avg","Over 5.5 in 5.8 avg IP"],
-         src:"Baseball Savant 2026",
-         pitcherRecency:{seasonERA:4.10,l5ERA:3.80,l3ERA:3.80,avgIP:5.8,bb9:2.6}},
-        {lbl:"Roupp — Earned Runs",pick:"Under 2.5 ER",odds:"TBD",grade:"B+",
-         rat:"Roupp xwOBA .206 vs CIN — elite contact suppression. Oracle Park with W wind adds park suppression. CIN averages 4.0 R/G L5. Under 2.5 in 5.8 avg IP is the strong lean.",
-         chips:["Roupp xwOBA: .206 (elite)","CIN L5: 4.0 R/G","Oracle Park + W wind","Under 2.5 in 5.8 avg IP"],
-         src:"Baseball Savant 2026"}
-      ]},
-      batter:{intro:"SF offense (3.1 R/G L5) vs Lodolo. Oracle Park suppresses both sides.",cards:[
-        {lbl:"Batter Note",pick:"Skip batter props — Oracle suppresses",odds:"—",grade:"C",
-         rat:"Oracle Park with W wind and Roupp's elite profile suppress SF scoring. CIN vs Lodolo (13 PA sample) is uncertain. Skip batter props.",
-         chips:["Oracle Park: pitcher-friendly","SF L5: 3.1 R/G","Roupp elite vs CIN","Skip batter props"]}
-      ]}
-    }
-  },
-
-  "cle-laa": {
-    away:"Cleveland Guardians", home:"Los Angeles Angels",
-    time:"4:07 PM ET", venue:"Angel Stadium, Anaheim CA",
-    awayRec:"TBD", homeRec:"51-79",
-    wx:"🌤 Anaheim: 84°F, 2% rain, light breeze — ideal conditions.",
-    starters:"Joey Cantillo (CLE) vs Grayson Rodriguez (LAA)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"Pull via Odds API" },
-      away:{ teamName:"Cleveland Guardians", abbr:"CLE",
-        offStats:{ avg:".254", ops:".730", kPct:"21.8%", rPerG:"4.5", rPerG_L10:"4.3", rPerG_L5:"4.2" },
-        defStats:{ era:"3.78", bullpenERA_L14:"3.64", whip:"1.20" },
-        starter:{ name:"Joey Cantillo", hand:"LHP", rec:"9-7", era:"3.85", whip:"1.22", k9:"9.4", bb9:"3.8", era_L3:"3.50", avgIP:"5.5" },
-        injuries:[] },
-      home:{ teamName:"Los Angeles Angels", abbr:"LAA",
-        offStats:{ avg:".230", ops:".670", kPct:"25.6%", rPerG:"3.4", rPerG_L10:"2.5", rPerG_L5:"2.3" },
-        defStats:{ era:"5.12", bullpenERA_L14:"5.50", whip:"1.52" },
-        starter:{ name:"Grayson Rodriguez", hand:"RHP", rec:"4-5", era:"4.50", whip:"1.38", k9:"8.2", bb9:"3.6", era_L3:"4.80", avgIP:"5.5" },
-        injuries:[{status:"OUT",player:"Mike Trout — knee"}]
-      }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Cantillo (B, small sample) vs Rodriguez (hittable, 3.8% K rate). CLE clear favorite.",cards:[
-        {lbl:"Run Line",pick:"Guardians -1.5",odds:"TBD",grade:"B",
-         rat:"LAA 51-79, Trout out, L5: 2.3 R/G. Rodriguez (3.8% K rate, .346 xwOBA vs CLE) is extremely hittable — his near-zero K rate means lots of contact against a capable CLE offense. CLE run line is the play.",
-         chips:["G.Rodriguez K%: 3.8% vs CLE (21 PA) — almost no Ks","xwOBA: .346 — hittable","LAA: 51-79 · Trout OUT · L5: 2.3 R/G","CLE L5: 4.2 R/G"]}
-      ]},
-      total:{intro:"Rodriguez hittable. LAA worst offense on slate. Under lean on LAA side.",cards:[
-        {lbl:"Game Total",pick:"Under (verify line)",odds:"TBD",grade:"B-",
-         rat:"LAA L5: 2.3 R/G — worst on today's slate. Cantillo (.221 xwOBA, 28.6% K vs LAA) suppresses further. Rodriguez hittable side offsets but LAA can't score. Net under lean.",
-         chips:["LAA L5: 2.3 R/G (worst on slate)","Cantillo xwOBA: .221 vs LAA (21 PA)","Rodriguez hittable but LAA can't score","Pull live O/U"],
-         recency:{team:"Los Angeles Angels",seasonAvg:3.4,last10Avg:2.5,last5Avg:2.3}}
-      ]},
-      pitcher:{intro:"Cantillo B — small sample flag. Rodriguez hittable but limited K upside.",cards:[
-        {lbl:"Cantillo — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"B",
-         rat:"Cantillo career vs LAA: .226 wOBA, .221 xwOBA, 28.6% K in 21 PA. Small sample caution. LAA K%: 25.6% — highest on today's slate. Over 5.5 in 5.5 avg IP against the most K-prone lineup today.",
-         chips:["Cantillo K%: 28.6% vs LAA (21 PA)","LAA K%: 25.6% — highest on slate","xwOBA: .221 — solid","⚑ Small sample — 21 PA"],
-         src:"Baseball Savant 2026",
-         pitcherRecency:{seasonERA:3.85,l5ERA:3.50,l3ERA:3.50,avgIP:5.5,bb9:3.8}}
-      ]},
-      batter:{intro:"CLE vs Rodriguez (3.8% K rate). LAA Under 2.5 Runs is the batter angle.",cards:[
-        {lbl:"LAA Offense",pick:"LAA Team Under 2.5 Runs",odds:"-115 est",grade:"B",
-         rat:"LAA averaging 2.3 R/G last 5 — worst on today's slate. Trout out. Cantillo (.221 xwOBA, 28.6% K) limits further. Under 2.5 LAA runs is the structural play.",
-         chips:["LAA L5: 2.3 R/G (worst on slate)","Trout OUT","Cantillo xwOBA: .221 vs LAA","Under 2.5 = 0-2 LAA runs"]}
-      ]}
-    }
-  },
-
-  "pit-sd": {
-    away:"Pittsburgh Pirates", home:"San Diego Padres",
-    time:"4:10 PM ET", venue:"Petco Park, San Diego CA",
-    awayRec:"64-67", homeRec:"72-58",
-    wx:"🌤 San Diego: 72°F, 3% rain, ocean breeze — ideal pitching conditions.",
-    starters:"Bubba Chandler (PIT) vs Randy Vasquez (SD)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"Pull via Odds API" },
-      away:{ teamName:"Pittsburgh Pirates", abbr:"PIT",
-        offStats:{ avg:".250", ops:".720", kPct:"23.1%", rPerG:"4.2", rPerG_L10:"3.8", rPerG_L5:"3.5" },
-        defStats:{ era:"4.38", bullpenERA_L14:"4.42", whip:"1.31" },
-        starter:{ name:"Bubba Chandler", hand:"RHP", rec:"6-8", era:"4.23", whip:"1.37", k9:"8.6", bb9:"3.8", era_L3:"3.90", avgIP:"5.5" },
-        injuries:[] },
-      home:{ teamName:"San Diego Padres", abbr:"SD",
-        offStats:{ avg:".258", ops:".748", kPct:"22.4%", rPerG:"4.6", rPerG_L10:"4.8", rPerG_L5:"5.1" },
-        defStats:{ era:"3.68", bullpenERA_L14:"3.58", whip:"1.21", closerNote:"Robert Suarez (2.12 ERA)" },
-        starter:{ name:"Randy Vasquez", hand:"RHP", rec:"9-6", era:"4.20", whip:"1.32", k9:"7.8", bb9:"3.2", era_L3:"3.80", avgIP:"5.8" },
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Vasquez (.502 wOBA vs PIT — worst on slate) vs Chandler (hittable). SD home at Petco.",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"B-",
-         rat:"Vasquez career vs PIT: .502 wOBA, .533 xwOBA, 94.8 EV, 0% K — worst contact profile on today's slate. PIT will score. Chandler (.409 xwOBA vs SD) also hittable. This could be a high-scoring game at Petco (pitcher-friendly park suppresses power). Verify line.",
-         chips:["Vasquez xwOBA: .533 vs PIT (27 PA) — worst today","Chandler xwOBA: .409 vs SD","PIT will score vs Vasquez","Petco Park: suppresses HR, not contact"]}
-      ]},
-      total:{intro:"Both pitchers hittable. Over lean but Petco suppresses run scoring.",cards:[
-        {lbl:"Game Total",pick:"Over (verify line)",odds:"TBD",grade:"B",
-         rat:"Vasquez .502 wOBA / .533 xwOBA vs PIT + Chandler .409 xwOBA vs SD = both pitchers get hit. Petco is pitcher-friendly but contact-driven offense still scores. Over lean — verify line.",
-         chips:["Vasquez xwOBA: .533 vs PIT — extreme","Chandler xwOBA: .409 vs SD — hittable","Both starters vulnerable","Petco: suppresses HR but contact scores"]}
-      ]},
-      pitcher:{intro:"Both pitchers hittable — focus on ER Over props, not K props.",cards:[
-        {lbl:"Vasquez — Earned Runs",pick:"Over 2.5 ER",odds:"TBD",grade:"B+",
-         rat:"Vasquez career vs PIT: .502 wOBA, .533 xwOBA, 94.8 avg EV, 0% K in 27 PA — PIT is making elite hard contact and he generates zero strikeouts against them. Over 2.5 ER requiring 3+ runs is extremely well-supported.",
-         chips:["Vasquez xwOBA: .533 vs PIT (27 PA)","EV: 94.8 — elite hard contact","K%: 0.0% — no outs via strikeout","Over 2.5 requires 3+ ER"],
-         src:"Baseball Savant 2026",
-         pitcherRecency:{seasonERA:4.20,l5ERA:3.80,l3ERA:3.80,avgIP:5.8,bb9:3.2}},
-        {lbl:"Chandler — Earned Runs",pick:"Over 2.5 ER",odds:"TBD",grade:"B",
-         rat:"Chandler career vs SD: .364 wOBA, .409 xwOBA, 91.3 EV in 16 PA — small sample caution but profile is clearly hittable. SD averaging 5.1 R/G L5. Over 2.5 ER is the directional lean.",
-         chips:["Chandler xwOBA: .409 vs SD (16 PA)","EV: 91.3 — hard contact","SD L5: 5.1 R/G (surging)","⚑ Small sample — 16 PA"],
-         src:"Baseball Savant 2026"}
-      ]},
-      batter:{intro:"PIT vs Vasquez (.502 wOBA) — strongest HRR environment on today's slate.",cards:[
-        {lbl:"PIT vs Vasquez — HRR",pick:"PIT top-3 Over 1.5 HRR",odds:"TBD",grade:"A-",
-         rat:"Vasquez career vs PIT: .502 wOBA, .533 xwOBA, 94.8 avg EV, 0% K in 27 PA. PIT batters are making elite contact with zero Ks — maximum baserunner environment. PIT top-3 hitters Over 1.5 HRR each is the highest-conviction batter prop on today's slate. Confirm lineup position before betting.",
-         chips:["Vasquez xwOBA: .533 vs PIT — worst on slate","EV: 94.8 · K%: 0% — extreme profile","PIT top-3 confirm lineup before betting","Over 1.5 HRR each — 2+ contributions"]},
-        {lbl:"SD vs Chandler — HRR",pick:"SD top-3 Over 1.5 HRR",odds:"TBD",grade:"B",
-         rat:"Chandler .409 xwOBA vs SD, 91.3 EV. SD averaging 5.1 R/G L5. SD 1-3 hitters in a hitter-surge environment at Petco. Over 1.5 HRR is directionally right — confirm lineup.",
-         chips:["Chandler xwOBA: .409 vs SD","SD L5: 5.1 R/G (surging)","⚑ Confirm lineup position","Over 1.5 HRR each"]}
-      ]}
-    }
-  },
-
-  "phi-sea": {
-    away:"Philadelphia Phillies", home:"Seattle Mariners",
-    time:"4:10 PM ET", venue:"T-Mobile Park, Seattle WA",
-    awayRec:"72-58", homeRec:"73-57",
-    wx:"🌤 Seattle: 70°F, 8% rain, light breeze — good conditions.",
-    starters:"Jesús Luzardo (PHI) vs Bryan Woo (SEA)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"Pull via Odds API" },
-      away:{ teamName:"Philadelphia Phillies", abbr:"PHI",
-        offStats:{ avg:".262", ops:".775", kPct:"21.4%", rPerG:"4.9", rPerG_L10:"5.1", rPerG_L5:"5.3" },
-        defStats:{ era:"3.74", bullpenERA_L14:"3.52", whip:"1.18" },
-        starter:{ name:"Jesús Luzardo", hand:"LHP", rec:"11-5", era:"3.40", whip:"1.18", k9:"10.8", bb9:"3.2", era_L3:"3.10", avgIP:"6.2" },
-        injuries:[] },
-      home:{ teamName:"Seattle Mariners", abbr:"SEA",
-        offStats:{ avg:".248", ops:".718", kPct:"22.2%", rPerG:"4.3", rPerG_L10:"4.4", rPerG_L5:"4.6" },
-        defStats:{ era:"3.52", bullpenERA_L14:"3.44", whip:"1.19" },
-        starter:{ name:"Bryan Woo", hand:"RHP", rec:"9-8", era:"3.60", whip:"1.18", k9:"9.2", bb9:"2.4", era_L3:"3.20", avgIP:"6.2" },
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Luzardo (42% K rate) vs Woo (A- suppressor, .182 wOBA vs PHI). Two elite arms.",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"B-",
-         rat:"Woo (.182 wOBA, .202 xwOBA vs PHI — A- grade) and Luzardo (.294 xwOBA, 42% K vs SEA — B+) are the two best starters on today's slate. Near pick-em — pull live line.",
-         chips:["Woo xwOBA: .202 vs PHI (32 PA) — A-","Luzardo K%: 42% vs SEA (69 PA)","Both elite — pull live odds","T-Mobile: pitcher-friendly"]}
-      ]},
-      total:{intro:"Two elite suppressor profiles. Strong under lean.",cards:[
-        {lbl:"Game Total",pick:"Under (verify line)",odds:"TBD",grade:"B+",
-         rat:"Woo (.182 wOBA, .202 xwOBA vs PHI) + Luzardo (.309 wOBA, .294 xwOBA, 42% K vs SEA) at T-Mobile Park (pitcher-friendly). PHI L5: 5.3 R/G but that's season form — Woo actively suppresses this lineup. Under is the structural lean.",
-         chips:["Woo xwOBA: .202 vs PHI — elite","Luzardo K%: 42% vs SEA (69 PA)","T-Mobile: pitcher-friendly","PHI L5: 5.3 R/G — still suppressed by Woo"],
-         bullpen:{away:{name:"PHI",starterERA:3.40,starterAvgIP:6.2,bullpenERA_L14:3.52},home:{name:"SEA",starterERA:3.60,starterAvgIP:6.2,bullpenERA_L14:3.44},postedTotal:7.5}}
-      ]},
-      pitcher:{intro:"Both pitchers are top props today. Woo is A-, Luzardo B+ (K weapon).",cards:[
-        {lbl:"Woo — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"A-",
-         rat:"Woo career vs PHI roster: .182 wOBA, .202 xwOBA, 21.9% K in 32 PA — elite suppression. PHI K%: 21.4% — average. Over 5.5 in 6.2 avg IP at pitcher-friendly T-Mobile is the top pitcher prop on today's slate.",
-         chips:["Woo xwOBA: .202 vs PHI (32 PA) — best on slate","PHI K%: 21.4% — average","T-Mobile: pitcher-friendly","Over 5.5 in 6.2 avg IP"],
-         src:"Baseball Savant 2026",
-         pitcherRecency:{seasonERA:3.60,l5ERA:3.20,l3ERA:3.20,avgIP:6.2,bb9:2.4}},
-        {lbl:"Woo — Earned Runs",pick:"Under 1.5 ER",odds:"TBD",grade:"B+",
-         rat:"Woo .182 wOBA vs PHI — elite. Under 1.5 requires 0 or 1 ER in 6.2 avg IP. T-Mobile suppresses. PHI L5 offense: 5.3 R/G but matchup-specific suppression overrides season trend.",
-         chips:["Woo xwOBA: .202 — elite","Under 1.5 = 0 or 1 ER","T-Mobile: pitcher-friendly","PHI: 5.3 R/G L5 but Woo suppresses"],
-         src:"Baseball Savant 2026"},
-        {lbl:"Luzardo — Strikeouts",pick:"Over 6.5 Ks",odds:"TBD",grade:"B+",
-         rat:"Luzardo career vs SEA: .309 wOBA, .294 xwOBA, 42% K rate in 69 PA — 42% is the highest K rate on today's slate by any pitcher with meaningful sample. Over 6.5 in 6.2 avg IP is very achievable.",
-         chips:["Luzardo K%: 42% vs SEA (69 PA) — highest on slate","xwOBA: .294","SEA K%: 22.2%","Over 6.5 in 6.2 avg IP"],
-         src:"Baseball Savant 2026",
-         pitcherRecency:{seasonERA:3.40,l5ERA:3.10,l3ERA:3.10,avgIP:6.2,bb9:3.2}}
-      ]},
-      batter:{intro:"PHI offense (5.3 R/G L5) vs Woo (.182 wOBA). Woo suppresses — skip PHI batter props.",cards:[
-        {lbl:"Batter Note",pick:"Skip — Woo suppresses PHI",odds:"—",grade:"C",
-         rat:"Woo .182 wOBA vs PHI is elite suppression. PHI batter HRR props are structurally weak against this profile. Focus on pitcher props.",
-         chips:["Woo xwOBA: .202 — elite suppressor","Skip PHI batter props","Focus on Woo pitcher props","SEA batter props also weak vs Luzardo 42% K"]}
-      ]}
-    }
-  },
-
-// ════════════════════════════════════════════════
-// EVENING GAMES
-// ════════════════════════════════════════════════
-
-  "bos-mia": {
-    away:"Boston Red Sox", home:"Miami Marlins",
-    time:"6:40 PM ET", venue:"loanDepot park, Miami FL",
-    awayRec:"71-59", homeRec:"53-78",
-    wx:"🌤 Miami: 87°F, 18% rain, SE wind 8 mph — warm, slight concern.",
-    starters:"Sonny Gray (BOS) vs Ryan Gusto (MIA)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"BOS won yesterday 7-3. Pull via Odds API." },
-      away:{ teamName:"Boston Red Sox", abbr:"BOS",
-        offStats:{ avg:".262", ops:".768", kPct:"21.2%", rPerG:"4.9", rPerG_L10:"5.2", rPerG_L5:"5.1" },
-        defStats:{ era:"3.58", bullpenERA_L14:"3.62", whip:"1.18", closerNote:"Kenley Jansen (2.44 ERA)" },
-        starter:{ name:"Sonny Gray", hand:"RHP", rec:"16-3", era:"2.55", whip:"1.12", k9:"11.0", bb9:"2.6", era_L3:"2.20", avgIP:"6.8" },
-        injuries:[] },
-      home:{ teamName:"Miami Marlins", abbr:"MIA",
-        offStats:{ avg:".228", ops:".652", kPct:"25.8%", rPerG:"3.2", rPerG_L10:"3.0", rPerG_L5:"2.8" },
-        defStats:{ era:"4.82", bullpenERA_L14:"4.90", whip:"1.44" },
-        starter:{ name:"Ryan Gusto", hand:"RHP", rec:"0-3", era:"5.80", whip:"1.52", k9:"6.8", bb9:"4.2", era_L3:"6.10", avgIP:"4.8" },
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Gray (16-3) vs Gusto (0-3, 5.80 ERA). Most lopsided pitching matchup on today's slate.",cards:[
-        {lbl:"Run Line",pick:"Red Sox -1.5",odds:"TBD",grade:"B+",
-         rat:"Gray (16-3, 2.55 ERA, L3 ERA 2.20) is the best pitcher on today's slate by season record. Gusto (0-3, 5.80 ERA, 6.10 L3 ERA) is the most hittable starter today. MIA 53-78. BOS won yesterday 7-3. Note: Gray Savant vs MIA is only 17 PA (.436 wOBA) — use season ERA not Savant for grade.",
-         chips:["Gray: 16-3, 2.55 ERA · L3 ERA: 2.20","Gusto: 0-3, 5.80 ERA · L3 ERA: 6.10","MIA: 53-78 · L5: 2.8 R/G","BOS won yesterday 7-3"]}
-      ]},
-      total:{intro:"Gray elite. Gusto very hittable. BOS will score. Under on Gray half.",cards:[
-        {lbl:"Game Total",pick:"Verify via Odds API",odds:"TBD",grade:"B",
-         rat:"Gray suppresses MIA (season ERA 2.55) — MIA side projects 2-3 runs max. BOS vs Gusto (5.80 ERA) projects 4-5 runs. Net 6.5-8 runs depending on line. Verify before committing.",
-         chips:["Gray ERA: 2.55 · MIA side suppressed","Gusto ERA: 5.80 — BOS will score","MIA L5: 2.8 R/G (suppressed)","Pull live O/U"]}
-      ]},
-      pitcher:{intro:"Gray is the top season-record prop on the slate. Gusto: skip props.",cards:[
-        {lbl:"Gray — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"B+",
-         rat:"Gray 16-3, 11.0 K/9, L3 ERA 2.20. MIA K%: 25.8% — highest on today's full slate. Over 5.5 in 6.8 avg IP against the most K-prone lineup today. Note: Savant career vs MIA only 17 PA — grade based on season K/9 and MIA lineup profile.",
-         chips:["Gray K/9: 11.0 · L3 ERA: 2.20","MIA K%: 25.8% — highest on slate","6.8 avg IP — pitches deep","⚑ Savant sample vs MIA only 17 PA"],
-         pitcherRecency:{seasonERA:2.55,l5ERA:2.30,l3ERA:2.20,avgIP:6.8,bb9:2.6}}
-      ]},
-      batter:{intro:"BOS offense (5.1 R/G L5) vs Gusto (5.80 ERA, 4.2 BB/9). Best HRR environment tonight.",cards:[
-        {lbl:"BOS vs Gusto — HRR",pick:"BOS top-3 Over 1.5 HRR",odds:"TBD",grade:"A-",
-         rat:"Gusto: 0-3, 5.80 ERA, L3 ERA 6.10, 4.2 BB/9. BOS averaging 5.1 R/G L5. BOS won yesterday 7-3. Gusto puts runners on with walks (4.2 BB/9) and gives up hard contact (xwOBA .328 vs BOS). BOS top-3 hitters Over 1.5 HRR is the top HRR play on today's slate. Confirm lineup.",
-         chips:["Gusto ERA: 5.80 · BB/9: 4.2 — walk machine","BOS L5: 5.1 R/G · won yesterday 7-3","Gusto xwOBA vs BOS: .328 (3 PA — small)","⚑ Confirm lineup before betting"]}
-      ]}
-    }
-  },
-
-  "col-wsh": {
-    away:"Colorado Rockies", home:"Washington Nationals",
-    time:"6:45 PM ET", venue:"Nationals Park, Washington DC",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Washington DC: 84°F, 22% rain, S wind 9 mph — warm, monitor radar.",
-    starters:"Tanner Gordon (COL) vs Matt Waldron (WSH)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"WSH won yesterday 1-3 (COL won). Pull via Odds API." },
-      away:{ teamName:"Colorado Rockies", abbr:"COL",
-        offStats:{ avg:".242", ops:".698", kPct:"24.8%", rPerG:"3.8", rPerG_L10:"3.5", rPerG_L5:"3.2" },
-        defStats:{ era:"5.48", bullpenERA_L14:"5.62", whip:"1.58" },
-        starter:{ name:"Tanner Gordon", hand:"RHP", rec:"0-4", era:"6.20", whip:"1.58", k9:"6.4", bb9:"4.8", era_L3:"6.80", avgIP:"4.5" },
-        injuries:[] },
-      home:{ teamName:"Washington Nationals", abbr:"WSH",
-        offStats:{ avg:".265", ops:".785", kPct:"21.4%", rPerG:"5.3", rPerG_L10:"4.8", rPerG_L5:"4.6" },
-        defStats:{ era:"4.75", bullpenERA_L14:"5.20", whip:"1.48" },
-        starter:{ name:"Matt Waldron", hand:"RHP", rec:"1-2", era:"4.80", whip:"1.42", k9:"7.2", bb9:"3.8", era_L3:"5.10", avgIP:"5.0" },
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Gordon (0-4, 6.20 ERA) vs Waldron (hittable). WSH MLB #1 offense.",cards:[
-        {lbl:"Run Line",pick:"Nationals -1.5",odds:"TBD",grade:"B",
-         rat:"Gordon (0-4, 6.80 L3 ERA, 4.8 BB/9, .249 xwOBA vs WSH) is extremely hittable despite soft Savant contact profile — walks inflate baserunners. WSH MLB #1 offense (5.3 R/G season). Waldron (.461 wOBA vs COL) hittable but COL offense is suppressed (3.2 R/G L5). WSH -1.5 is the play.",
-         chips:["Gordon ERA: 6.20 · L3 ERA: 6.80","WSH: 5.3 R/G season — MLB #1 offense","Gordon BB/9: 4.8 — walk machine","COL L5: 3.2 R/G (suppressed)"]}
-      ]},
-      total:{intro:"Both pitchers hittable. WSH MLB best offense. Over lean.",cards:[
-        {lbl:"Game Total",pick:"Over (verify line)",odds:"TBD",grade:"B",
-         rat:"Gordon (6.20 ERA, 4.8 BB/9) + Waldron (.461 wOBA vs COL, 49 PA) = both pitchers get hit. WSH MLB #1 offense (5.3 R/G). Both bullpens weak (COL 5.62, WSH 5.20 ERA L14). Strong over lean.",
-         chips:["Gordon ERA: 6.20 — extremely hittable","Waldron xwOBA: .335 vs COL (49 PA)","WSH: 5.3 R/G season · COL BP: 5.62 ERA L14","Both bullpens weak — runs pile up late"],
-         bullpen:{away:{name:"COL",starterERA:6.20,starterAvgIP:4.5,bullpenERA_L14:5.62},home:{name:"WSH",starterERA:4.80,starterAvgIP:5.0,bullpenERA_L14:5.20},postedTotal:9.0}}
-      ]},
-      pitcher:{intro:"Gordon: skip props. Waldron: hittable for ER Over.",cards:[
-        {lbl:"Waldron — Earned Runs",pick:"Over 2.5 ER",odds:"TBD",grade:"B",
-         rat:"Waldron career vs COL: .461 wOBA, .335 xwOBA, 88.1 EV in 49 PA — solid sample showing hittable profile. COL averages 3.2 R/G L5 (suppressed) but Waldron gives up contact. Over 2.5 ER is the lean.",
-         chips:["Waldron xwOBA: .335 vs COL (49 PA)","wOBA: .461 — hittable","COL L5: 3.2 R/G — still makes contact","Over 2.5 requires 3+ ER"],
-         src:"Baseball Savant 2026"}
-      ]},
-      batter:{intro:"WSH offense (5.3 R/G) vs Gordon (6.20 ERA). Strong HRR environment.",cards:[
-        {lbl:"WSH vs Gordon — HRR",pick:"WSH top-3 Over 1.5 HRR",odds:"TBD",grade:"B+",
-         rat:"Gordon: 0-4, 6.80 L3 ERA, 4.8 BB/9. WSH #1 MLB offense (5.3 R/G). Gordon's walk rate creates maximum baserunner traffic — ideal HRR environment for WSH top 3. Confirm lineup before betting.",
-         chips:["Gordon ERA: 6.20 · BB/9: 4.8 — walk machine","WSH: 5.3 R/G — MLB #1","Savant: .249 xwOBA (13 PA — small, soft contact)","⚑ Confirm WSH lineup"]}
-      ]}
-    }
-  },
 
   "hou-nyy": {
     away:"Houston Astros", home:"New York Yankees",
     time:"7:05 PM ET", venue:"Yankee Stadium, New York NY",
-    awayRec:"66-64", homeRec:"75-55",
-    wx:"⛅ New York: 82°F, 10% rain, S wind 7 mph — no significant concern.",
-    starters:"Peter Lambert (HOU) vs Max Fried (NYY)",
+    awayRec:"66-65", homeRec:"76-55",
+    wx:"⛅ New York: 81°F, 8% rain, S wind 6 mph — no concern.",
+    starters:"Hayden Wesneski (HOU) vs Gerrit Cole (NYY)",
     overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"HOU won yesterday 9-7. Pull via Odds API." },
+      lines:{ ml:"TBD", spread:"TBD", total:"O/U 8.0", movement:"NYY won yesterday 9-3. Series 2-0 NYY." },
       away:{ teamName:"Houston Astros", abbr:"HOU",
-        offStats:{ avg:".242", ops:".700", kPct:"21.8%", rPerG:"4.2", rPerG_L10:"4.4", rPerG_L5:"4.6" },
+        offStats:{ avg:".242", ops:".700", kPct:"21.8%", rPerG:"4.2", rPerG_L10:"4.4", rPerG_L5:"4.4" },
         defStats:{ era:"3.98", bullpenERA_L14:"3.98", whip:"1.22", closerNote:"Josh Hader (0.87 ERA)" },
-        starter:{ name:"Peter Lambert", hand:"RHP", rec:"8-7", era:"4.85", whip:"1.42", k9:"7.2", bb9:"3.8", era_L3:"5.20", avgIP:"5.2" },
+        starter:{ name:"Hayden Wesneski", hand:"RHP", rec:"TBD", era:"4.85", whip:"1.42",
+                  k9:"9.2", bb9:"2.8", era_L3:"4.40", avgIP:"5.2",
+                  xwOBA_vs_opp:0.495, xwOBA_pa:16 },
         injuries:[] },
       home:{ teamName:"New York Yankees", abbr:"NYY",
-        offStats:{ avg:".261", ops:".771", kPct:"22.1%", rPerG:"4.4", rPerG_L10:"4.5", rPerG_L5:"4.6" },
+        offStats:{ avg:".261", ops:".771", kPct:"22.1%", rPerG:"4.4", rPerG_L10:"4.6", rPerG_L5:"4.8" },
         defStats:{ era:"3.24", bullpenERA_L14:"2.84", whip:"1.12", closerNote:"David Bednar (1.92 ERA)" },
-        starter:{ name:"Max Fried", hand:"LHP", rec:"4-4", era:"3.80", whip:"1.22", k9:"9.2", bb9:"2.8", era_L3:"3.50", avgIP:"6.2" },
+        starter:{ name:"Gerrit Cole", hand:"RHP", rec:"TBD", era:"2.98", whip:"1.02",
+                  k9:"11.8", bb9:"2.2", era_L3:"2.60", avgIP:"6.8",
+                  xwOBA_vs_opp:0.282, xwOBA_pa:102 },
         injuries:[{status:"OUT",player:"Aaron Judge — ribs"},{status:"OUT",player:"Giancarlo Stanton — calf"}]
       }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      runline:{intro:"Lambert (hittable, .436 wOBA vs NYY) vs Fried (solid). HOU won 9-7 yesterday.",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"C+",
-         rat:"Lambert (.436 wOBA, .373 xwOBA vs NYY in 32 PA) is hittable. But HOU won 9-7 yesterday — revenge factor and momentum. Fried (TBA Savant) is solid. NYY without Judge/Stanton limits ceiling. Pull live line before committing.",
-         chips:["Lambert xwOBA: .373 vs NYY (32 PA) — hittable","NYY without Judge/Stanton","HOU won yesterday 9-7","Fried: no Savant data vs NYY"]}
-      ]},
-      total:{intro:"Lambert hittable. Fried solid. NYY depleted lineup. Moderate total.",cards:[
-        {lbl:"Game Total",pick:"Verify via Odds API",odds:"TBD",grade:"B-",
-         rat:"Lambert (.373 xwOBA) gives up NYY runs but NYY is depleted without Judge/Stanton. Fried suppresses HOU. HOU Hader closes. NYY Bednar closes. Total depends heavily on whether Lambert implodes early.",
-         chips:["Lambert xwOBA: .373 vs NYY — hittable","NYY without Judge/Stanton (depleted)","Both elite closers limit late scoring","Pull live O/U"]}
-      ]},
-      pitcher:{intro:"Lambert ER Over is the prop. Fried: skip — no Savant data vs NYY.",cards:[
-        {lbl:"Lambert — Earned Runs",pick:"Over 2.5 ER",odds:"TBD",grade:"B+",
-         rat:"Lambert career vs NYY: .436 wOBA, .373 xwOBA, 88.8 EV in 32 PA — hittable with solid sample. Season ERA 4.85, L3 ERA 5.20 — declining trend. NYY averaging 4.6 R/G L5. Over 2.5 ER in 5.2 avg IP is well-supported.",
-         chips:["Lambert xwOBA: .373 vs NYY (32 PA)","Season ERA: 4.85 · L3 ERA: 5.20 (declining)","NYY L5: 4.6 R/G","Over 2.5 requires 3+ ER"],
+      pitcher:{intro:"Cole is the top pitcher prop on today's slate.",cards:[
+        {lbl:"Cole — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"B+",
+         rat:"Cole career vs current HOU roster: .282 xwOBA, 29.4% K rate in 102 PA — largest and most reliable sample on today's slate. Blended K% 32.4%, L3 K% 35.8% — HOT trend. Projects 9.5 Ks in 6.8 avg IP. Over 5.5 is very achievable.",
+         chips:["Cole xwOBA: .282 vs HOU (102 PA) — elite sample","Blended K%: 32.4% · L3 K%: 35.8% — HOT","Proj 9.5 Ks in 6.8 avg IP","NYY won 9-3 yesterday — momentum"],
          src:"Baseball Savant 2026",
-         pitcherRecency:{seasonERA:4.85,l5ERA:5.20,l3ERA:5.20,avgIP:5.2,bb9:3.8}}
+         pitcherRecency:{seasonERA:2.98,l5ERA:2.80,l3ERA:2.60,avgIP:6.8,bb9:2.2}},
+        {lbl:"Cole — Earned Runs",pick:"Under 1.5 ER",odds:"TBD",grade:"B+",
+         rat:"Cole blended ERA 2.85 (HOT — L3 ERA 2.60). HOU averaging 4.4 R/G L5 but xwOBA vs Cole is .282 — elite suppression. Under 1.5 ER in 6.8 avg IP is well-supported.",
+         chips:["Cole blended ERA: 2.85 (HOT trend)","HOU xwOBA vs Cole: .282 (102 PA)","Under 1.5 in 6.8 avg IP","HOU without Altuve — depleted lineup"],
+         src:"Baseball Savant 2026",
+         pitcherRecency:{seasonERA:2.98,l5ERA:2.80,l3ERA:2.60,avgIP:6.8,bb9:2.2}},
+        {lbl:"Wesneski — Earned Runs",pick:"Over 2.5 ER",odds:"TBD",grade:"B-",
+         rat:"Wesneski career vs NYY: .495 xwOBA in 16 PA — hittable profile but tiny sample (below 25 PA threshold). NYY averaging 4.8 R/G L5. Grade capped at B- due to small Savant sample. Still directionally correct.",
+         chips:["Wesneski xwOBA vs NYY: .495 (16 PA) ⚑ small sample","NYY L5: 4.8 R/G (surging)","⚑ Grade capped — 16 PA below threshold","NYY won 9-3 yesterday"],
+         src:"Baseball Savant 2026"}
       ]},
-      batter:{intro:"HOU vs Lambert yesterday scored 9. NYY vs Fried moderate without Judge/Stanton.",cards:[
-        {lbl:"HOU vs Lambert — HRR",pick:"HOU top-3 Over 1.5 HRR",odds:"TBD",grade:"B",
-         rat:"Lambert xwOBA .373 vs NYY (as home pitcher) — HOU batters hit him. HOU averaging 4.6 R/G L5. HOU scored 9 yesterday. Altuve/Alvarez/Walker at top of order vs hittable arm. Confirm lineup.",
-         chips:["Lambert xwOBA: .373 vs NYY","HOU L5: 4.6 R/G · scored 9 yesterday","Altuve/Alvarez/Walker at top","⚑ Confirm HOU lineup"]}
+      batter:{intro:"NYY offense (4.8 R/G L5) vs Wesneski (.495 xwOBA, hittable).",cards:[
+        {lbl:"NYY vs Wesneski — HRR",pick:"NYY top-3 Over 1.5 HRR",odds:"TBD",grade:"B",
+         rat:"Wesneski xwOBA .495 vs NYY (16 PA — small sample) suggests hittable profile. NYY averaging 4.8 R/G L5. BB/9 2.8 — reasonable walk rate. NYY top-3 Over 1.5 HRR is the structural lean even with Wesneski's tiny sample. Confirm lineup.",
+         chips:["Wesneski xwOBA: .495 vs NYY (16 PA)","NYY L5: 4.8 R/G — surging","⚑ Confirm NYY lineup — Judge/Stanton out","Over 1.5 HRR each"]}
       ]}
     }
   },
@@ -1027,44 +638,48 @@ const games = {
   "kc-tor": {
     away:"Kansas City Royals", home:"Toronto Blue Jays",
     time:"7:07 PM ET", venue:"Rogers Centre, Toronto ON (Dome)",
-    awayRec:"71-59", homeRec:"65-66",
-    wx:"🏟 Rogers Centre dome — fully weather neutral.",
-    starters:"Randy Dobnak (KC) vs Spencer Miles (TOR)",
+    awayRec:"72-59", homeRec:"66-66",
+    wx:"🏟 Rogers Centre dome — weather neutral.",
+    starters:"Noah Cameron (KC) vs Spencer Arrighetti (TOR)",
     overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"KC won yesterday 5-3. Pull via Odds API." },
+      lines:{ ml:"TBD", spread:"TBD", total:"O/U 8.5", movement:"TOR won yesterday 3-0. Series 2-0 TOR." },
       away:{ teamName:"Kansas City Royals", abbr:"KC",
-        offStats:{ avg:".262", ops:".758", kPct:"22.1%", rPerG:"4.8", rPerG_L10:"5.1", rPerG_L5:"5.4" },
+        offStats:{ avg:".262", ops:".758", kPct:"22.1%", rPerG:"4.8", rPerG_L10:"5.0", rPerG_L5:"4.8" },
         defStats:{ era:"3.92", bullpenERA_L14:"3.78", whip:"1.24" },
-        starter:{ name:"Randy Dobnak", hand:"RHP", rec:"2-1", era:"4.20", whip:"1.32", k9:"6.8", bb9:"2.8", era_L3:"3.90", avgIP:"5.5" },
+        starter:{ name:"Noah Cameron", hand:"LHP", rec:"TBD", era:"4.60", whip:"1.38",
+                  k9:"7.4", bb9:"3.8", era_L3:"4.20", avgIP:"5.2",
+                  xwOBA_vs_opp:0.275, xwOBA_pa:22 },
         injuries:[] },
       home:{ teamName:"Toronto Blue Jays", abbr:"TOR",
-        offStats:{ avg:".244", ops:".710", kPct:"23.8%", rPerG:"4.0", rPerG_L10:"3.8", rPerG_L5:"3.6" },
+        offStats:{ avg:".244", ops:".710", kPct:"23.8%", rPerG:"4.0", rPerG_L10:"3.8", rPerG_L5:"3.8" },
         defStats:{ era:"4.56", bullpenERA_L14:"4.48", whip:"1.38" },
-        starter:{ name:"Spencer Miles", hand:"RHP", rec:"TBD", era:"TBD", whip:"TBD", k9:"TBD", bb9:"TBD", era_L3:"TBD", avgIP:"5.0" },
+        starter:{ name:"Spencer Arrighetti", hand:"RHP", rec:"TBD", era:"4.20", whip:"1.28",
+                  k9:"9.8", bb9:"4.2", era_L3:"3.60", avgIP:"5.5",
+                  xwOBA_vs_opp:0.282, xwOBA_pa:25 },
         injuries:[{status:"OUT",player:"Vladimir Guerrero Jr. — knee"}]
       }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      runline:{intro:"Dobnak (3 PA Savant — skip) vs Miles (never faced TOR). KC won yesterday 5-3.",cards:[
-        {lbl:"Run Line",pick:"Royals -1.5",odds:"TBD",grade:"B-",
-         rat:"KC is 71-59, averaging 5.4 R/G L5 — surging. Dobnak limited data. Miles has never faced current TOR roster — complete unknown. TOR without Guerrero Jr (3.6 R/G L5). KC won yesterday. Lean KC but conviction limited by unknown starters.",
-         chips:["KC: 71-59 · L5: 5.4 R/G (surging)","Miles: never faced TOR — complete unknown","TOR without Guerrero Jr · L5: 3.6 R/G","Dome: neutral"]}
+      pitcher:{intro:"Two walk-prone starters. Walk props are the primary angle.",cards:[
+        {lbl:"Arrighetti — Walks",pick:"Over 1.5 BB",odds:"TBD",grade:"B+",
+         rat:"Arrighetti season BB/9: 4.2 — elevated walk rate. Blended BB/9 4.2 (L3 slightly higher). Projects 2.6 walks in 5.5 avg IP. KC lineup draws walks — amplifies the walk environment. Over 1.5 BB is the primary prop on this game.",
+         chips:["Arrighetti BB/9: 4.2 — elevated","Proj 2.6 walks in 5.5 IP","KC lineup: patient, draws walks","Over 1.5 requires 2+ walks"],
+         pitcherRecency:{seasonERA:4.20,l5ERA:3.80,l3ERA:3.60,avgIP:5.5,bb9:4.2}},
+        {lbl:"Cameron — Walks",pick:"Over 1.5 BB",odds:"TBD",grade:"B",
+         rat:"Cameron BB/9: 3.8 — above average walk rate. Projects 2.2 walks in 5.2 IP. TOR lineup is above-average in patience. Over 1.5 BB is the lean.",
+         chips:["Cameron BB/9: 3.8 — above avg","Proj 2.2 walks in 5.2 IP","TOR lineup: moderate patience","⚑ Cameron only 22 PA Savant"],
+         pitcherRecency:{seasonERA:4.60,l5ERA:4.40,l3ERA:4.20,avgIP:5.2,bb9:3.8}},
+        {lbl:"Arrighetti — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"B",
+         rat:"Arrighetti career vs KC: .282 xwOBA, 32% K rate in 25 PA — minimal sample but elite K rate. Blended K% 28.7%, proj 5.8 Ks in 5.5 IP. KC K%: 22.1% — average. Over 5.5 is a thin edge.",
+         chips:["Arrighetti K%: 32.0% vs KC (25 PA)","xwOBA: .282 — solid","Blended K% 28.7% · proj 5.8","⚑ 25 PA — at threshold"],
+         src:"Baseball Savant 2026",
+         pitcherRecency:{seasonERA:4.20,l5ERA:3.80,l3ERA:3.60,avgIP:5.5,bb9:4.2}}
       ]},
-      total:{intro:"Both starters unknown quality. Rely on offense trends.",cards:[
-        {lbl:"Game Total",pick:"Verify via Odds API",odds:"TBD",grade:"C+",
-         rat:"Dobnak (3 PA Savant) and Miles (0 PA vs TOR) — no meaningful pitcher data. KC offense (5.4 R/G L5) vs weak TOR staff is the only lean. Pull live line before betting.",
-         chips:["Dobnak: 3 PA Savant — insufficient","Miles: never faced TOR","KC L5: 5.4 R/G (surging)","Pull live line — grade pending"]}
-      ]},
-      pitcher:{intro:"Skip both pitcher props — insufficient Savant data.",cards:[
-        {lbl:"Starter Note",pick:"Skip — insufficient data",odds:"—",grade:"C",
-         rat:"Dobnak (3 PA vs TOR) and Miles (0 PA) are both unградeable from Savant. Skip pitcher props today for this matchup.",
-         chips:["Dobnak: 3 PA — unusable","Miles: 0 PA vs TOR","Skip pitcher props","Focus on KC team offense"]}
-      ]},
-      batter:{intro:"KC offense (5.4 R/G L5) vs Miles (complete unknown) in dome.",cards:[
-        {lbl:"KC vs Miles — HRR",pick:"KC top-3 Over 1.5 HRR",odds:"TBD",grade:"B-",
-         rat:"KC averaging 5.4 R/G L5 — hottest offense in the AL. Miles has never faced this TOR roster — debut-level unknown arm creates opportunity. Dome is neutral. KC top-3 Over 1.5 HRR is a moderate lean pending Miles' actual performance.",
-         chips:["KC L5: 5.4 R/G (surging)","Miles: never faced TOR — unknown risk","Dome: neutral","⚑ Confirm KC lineup"]}
+      batter:{intro:"KC offense (4.8 R/G L5) vs Arrighetti (4.2 BB/9). HRR opportunity.",cards:[
+        {lbl:"KC vs Arrighetti — HRR",pick:"KC top-3 Over 1.5 HRR",odds:"TBD",grade:"B",
+         rat:"Arrighetti BB/9 4.2 creates baserunner traffic. KC averaging 4.8 R/G L5. Dome is neutral. KC top-3 Over 1.5 HRR is the lean — walks ahead of hits create RBI chains. Confirm lineup.",
+         chips:["Arrighetti BB/9: 4.2 — walk machine","KC L5: 4.8 R/G","Dome: neutral","⚑ Confirm KC lineup"]}
       ]}
     }
   },
@@ -1072,45 +687,44 @@ const games = {
   "mil-nym": {
     away:"Milwaukee Brewers", home:"New York Mets",
     time:"7:10 PM ET", venue:"Citi Field, New York NY",
-    awayRec:"82-49", homeRec:"TBD",
-    wx:"⛅ New York: 82°F, 10% rain, light wind — no significant concern.",
-    starters:"Dustin May (MIL) vs Robert Stock (NYM)",
+    awayRec:"83-49", homeRec:"TBD",
+    wx:"⛅ New York: 81°F, 8% rain, light wind — no concern.",
+    starters:"Jacob Misiorowski (MIL) vs Sean Manaea (NYM)",
     overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"NYM won yesterday 3-2. Pull via Odds API." },
+      lines:{ ml:"TBD", spread:"TBD", total:"O/U 8.0", movement:"MIL won yesterday 8-1. Series 1-1." },
       away:{ teamName:"Milwaukee Brewers", abbr:"MIL",
-        offStats:{ avg:".255", ops:".748", kPct:"22.4%", rPerG:"4.6", rPerG_L10:"5.8", rPerG_L5:"7.2" },
+        offStats:{ avg:".255", ops:".748", kPct:"22.4%", rPerG:"4.6", rPerG_L10:"5.6", rPerG_L5:"6.8" },
         defStats:{ era:"3.21", bullpenERA_L14:"3.18", whip:"1.15", closerNote:"Devin Williams (2.14 ERA)" },
-        starter:{ name:"Dustin May", hand:"RHP", rec:"6-8", era:"4.20", whip:"1.32", k9:"8.4", bb9:"3.0", era_L3:"3.80", avgIP:"5.8" },
+        starter:{ name:"Jacob Misiorowski", hand:"RHP", rec:"TBD", era:"4.20", whip:"1.32",
+                  k9:"10.2", bb9:"4.2", era_L3:"3.80", avgIP:"5.5",
+                  xwOBA_vs_opp:0.258, xwOBA_pa:17 },
         injuries:[] },
       home:{ teamName:"New York Mets", abbr:"NYM",
-        offStats:{ avg:".248", ops:".718", kPct:"23.2%", rPerG:"4.1", rPerG_L10:"3.8", rPerG_L5:"3.6" },
+        offStats:{ avg:".248", ops:".718", kPct:"23.2%", rPerG:"4.1", rPerG_L10:"3.8", rPerG_L5:"3.8" },
         defStats:{ era:"4.38", bullpenERA_L14:"4.42", whip:"1.31" },
-        starter:{ name:"Robert Stock", hand:"RHP", rec:"0-2", era:"5.40", whip:"1.48", k9:"7.2", bb9:"4.8", era_L3:"5.80", avgIP:"4.5" },
-        injuries:[] }
+        starter:{ name:"Sean Manaea", hand:"LHP", rec:"TBD", era:"4.10", whip:"1.28",
+                  k9:"8.6", bb9:"2.8", era_L3:"4.40", avgIP:"5.8",
+                  xwOBA_vs_opp:0.318, xwOBA_pa:61 },
+        injuries:[]
+      }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      runline:{intro:"May (B, .260 wOBA vs NYM) vs Stock (0-2, 5.40 ERA). MIL best NL record.",cards:[
-        {lbl:"Run Line",pick:"Brewers -1.5",odds:"TBD",grade:"B",
-         rat:"MIL 82-49 — best record in NL. May (.260 wOBA, .310 xwOBA, 42 PA) suppresses NYM. Stock (0-2, 5.80 L3 ERA, 4.8 BB/9) is extremely hittable. NYM lost yesterday. MIL run line is the play.",
-         chips:["MIL: 82-49 — best NL record","May xwOBA: .310 vs NYM (42 PA)","Stock ERA: 5.40 · L3: 5.80 · BB/9: 4.8","NYM L5: 3.6 R/G (suppressed)"]}
-      ]},
-      total:{intro:"May solid. Stock very hittable. MIL surging offense.",cards:[
-        {lbl:"Game Total",pick:"Over (verify line)",odds:"TBD",grade:"B+",
-         rat:"Stock (0-2, 5.80 L3 ERA, 4.8 BB/9) vs MIL (7.2 R/G L5 — hottest offense on slate). Stock's walk rate creates constant baserunner traffic for MIL. May suppresses NYM (.310 xwOBA) limiting the counter-scoring. Net: MIL scores heavily, total leans over.",
-         chips:["Stock ERA: 5.40 · BB/9: 4.8 vs MIL 7.2 R/G L5","May xwOBA: .310 — NYM side suppressed","MIL L5: 7.2 R/G — hottest on slate","Over lean — verify line"]}
-      ]},
-      pitcher:{intro:"May B grade. Stock: skip props (5.40 ERA, unpredictable).",cards:[
-        {lbl:"May — Strikeouts",pick:"Over 4.5 Ks",odds:"TBD",grade:"B",
-         rat:"May career vs NYM: .260 wOBA, .310 xwOBA, 19% K rate in 42 PA. NYM K%: 23.2% — above average. Over 4.5 in 5.8 avg IP. Moderate confidence — xwOBA .310 is solid not elite.",
-         chips:["May xwOBA: .310 vs NYM (42 PA)","K%: 19.0% — moderate","NYM K%: 23.2% — above avg","Over 4.5 in 5.8 avg IP"],
+      pitcher:{intro:"Misiorowski walk prop is the primary angle. Manaea trending cold.",cards:[
+        {lbl:"Misiorowski — Walks",pick:"Over 1.5 BB",odds:"TBD",grade:"B+",
+         rat:"Misiorowski BB/9: 4.2 — elevated walk rate. Projects 2.6 walks in 5.5 avg IP. NYM lineup draws walks at an above-average rate. Over 1.5 BB is the top prop on this game. Note: only 17 PA Savant sample — grade capped one step.",
+         chips:["Misiorowski BB/9: 4.2 — elevated","Proj 2.6 walks in 5.5 IP","NYM lineup: patient, above-avg BB%","⚑ 17 PA sample — one step capped"],
+         pitcherRecency:{seasonERA:4.20,l5ERA:4.00,l3ERA:3.80,avgIP:5.5,bb9:4.2}},
+        {lbl:"Manaea — Strikeouts",pick:"Over 4.5 Ks",odds:"TBD",grade:"B",
+         rat:"Manaea career vs MIL: .318 xwOBA, 21.3% K rate in 61 PA. Blended K% 23.1%, L3 trending slightly cold (21.6%). Over 4.5 in 5.8 avg IP — thin positive edge. MIL K%: 22.4% — average strikeout rate.",
+         chips:["Manaea K%: 21.3% vs MIL (61 PA)","Blended 23.1% · proj 5.8 Ks","L3 trending cold (21.6%)","Over 4.5 — thin edge"],
          src:"Baseball Savant 2026",
-         pitcherRecency:{seasonERA:4.20,l5ERA:3.80,l3ERA:3.80,avgIP:5.8,bb9:3.0}}
+         pitcherRecency:{seasonERA:4.10,l5ERA:4.20,l3ERA:4.40,avgIP:5.8,bb9:2.8}}
       ]},
-      batter:{intro:"MIL offense (7.2 R/G L5 — hottest on slate) vs Stock (5.40 ERA, 4.8 BB/9).",cards:[
-        {lbl:"MIL vs Stock — HRR",pick:"MIL top-3 Over 1.5 HRR",odds:"TBD",grade:"A-",
-         rat:"Stock: 0-2, 5.40 ERA, L3 ERA 5.80, 4.8 BB/9. MIL averaging 7.2 R/G L5 — hottest offense on today's slate by a significant margin. MIL is 82-49. Stock's walk rate (4.8 BB/9) creates maximum baserunner traffic. MIL top-3 hitters Over 1.5 HRR is the co-top batter prop today alongside BOS vs Gusto. Confirm lineup.",
-         chips:["Stock ERA: 5.40 · BB/9: 4.8 — walk machine","MIL L5: 7.2 R/G — hottest on slate","MIL: 82-49 — best NL record","⚑ Confirm MIL lineup"]}
+      batter:{intro:"MIL offense (6.8 R/G L5 — hottest on slate) vs Manaea (.318 xwOBA).",cards:[
+        {lbl:"MIL vs Manaea — HRR",pick:"MIL top-3 Over 1.5 HRR",odds:"TBD",grade:"B",
+         rat:"Manaea xwOBA .318 vs MIL (61 PA — solid sample). MIL averaging 6.8 R/G L5 — hottest offense on today's slate. MIL won 8-1 yesterday. Over 1.5 HRR for MIL top-3 is the lean. Capped at B without lineup position.",
+         chips:["Manaea xwOBA: .318 vs MIL (61 PA)","MIL L5: 6.8 R/G — hottest on slate","MIL won 8-1 yesterday","⚑ Confirm MIL lineup"]}
       ]}
     }
   },
@@ -1118,176 +732,94 @@ const games = {
   "lad-atl": {
     away:"Los Angeles Dodgers", home:"Atlanta Braves",
     time:"7:15 PM ET", venue:"Truist Park, Atlanta GA",
-    awayRec:"80-51", homeRec:"77-54",
-    wx:"⛅ Atlanta: 86°F, 14% rain, SE wind 6 mph — warm, minimal concern.",
-    starters:"Roki Sasaki (LAD) vs AJ Smith-Shawver (ATL)",
+    awayRec:"81-51", homeRec:"78-54",
+    wx:"⛅ Atlanta: 84°F, 14% rain, SE wind 7 mph — warm, minimal concern.",
+    starters:"Yoshinobu Yamamoto (LAD) vs Chris Sale (ATL)",
     overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"ATL won yesterday 4-3. LAD lost on Glasnow start." },
+      lines:{ ml:"TBD", spread:"TBD", total:"O/U 8.0", movement:"ATL won yesterday 6-5. Series 2-0 ATL." },
       away:{ teamName:"Los Angeles Dodgers", abbr:"LAD",
-        offStats:{ avg:".268", ops:".782", kPct:"21.4%", rPerG:"5.1", rPerG_L10:"5.4", rPerG_L5:"5.8" },
+        offStats:{ avg:".268", ops:".782", kPct:"21.4%", rPerG:"5.1", rPerG_L10:"5.4", rPerG_L5:"5.6" },
         defStats:{ era:"3.42", bullpenERA_L14:"3.28", whip:"1.18", closerNote:"Evan Phillips (1.84 ERA)" },
-        starter:{ name:"Roki Sasaki", hand:"RHP", rec:"5-5", era:"3.80", whip:"1.22", k9:"9.8", bb9:"3.2", era_L3:"3.50", avgIP:"6.0" },
+        starter:{ name:"Yoshinobu Yamamoto", hand:"RHP", rec:"TBD", era:"3.40", whip:"1.18",
+                  k9:"10.8", bb9:"3.4", era_L3:"3.00", avgIP:"6.0",
+                  xwOBA_vs_opp:0.354, xwOBA_pa:38 },
         injuries:[] },
       home:{ teamName:"Atlanta Braves", abbr:"ATL",
-        offStats:{ avg:".261", ops:".770", kPct:"21.8%", rPerG:"4.8", rPerG_L10:"4.4", rPerG_L5:"4.2" },
+        offStats:{ avg:".261", ops:".770", kPct:"21.8%", rPerG:"4.8", rPerG_L10:"4.4", rPerG_L5:"4.4" },
         defStats:{ era:"3.85", bullpenERA_L14:"3.72", whip:"1.22" },
-        starter:{ name:"AJ Smith-Shawver", hand:"RHP", rec:"0-0", era:"TBD", whip:"TBD", k9:"TBD", bb9:"TBD", era_L3:"TBD", avgIP:"5.0" },
-        injuries:[] }
+        starter:{ name:"Chris Sale", hand:"LHP", rec:"TBD", era:"3.20", whip:"1.10",
+                  k9:"11.2", bb9:"2.4", era_L3:"2.80", avgIP:"6.4",
+                  xwOBA_vs_opp:0.297, xwOBA_pa:118 },
+        injuries:[]
+      }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      runline:{intro:"Sasaki (14 PA Savant — small) vs Smith-Shawver (debut/recall — 8 PA). ATL won yesterday.",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"C+",
-         rat:"Both starters have insufficient Savant data (Sasaki 14 PA, Smith-Shawver 8 PA). ATL won yesterday 4-3. LAD offense surging (5.8 R/G L5). Rely on season ERA and team context — pull live odds before committing.",
-         chips:["Sasaki: 14 PA Savant — small sample","Smith-Shawver: 8 PA · .441 wOBA vs LAD","LAD L5: 5.8 R/G (surging)","ATL won yesterday 4-3"]}
+      pitcher:{intro:"Two elite K props — Sale (118 PA, elite sample) and Yamamoto (38 PA, solid).",cards:[
+        {lbl:"Sale — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"B+",
+         rat:"Sale career vs LAD: .297 xwOBA, 28% K rate in 118 PA — second largest sample on today's slate. Blended K% 32.7%, L3 K% 35.2% trending HOT. Projects 9.0 Ks in 6.4 avg IP. Over 5.5 is the top K prop on today's slate by sample confidence.",
+         chips:["Sale xwOBA: .297 vs LAD (118 PA — elite sample)","Blended K%: 32.7% · L3 K%: 35.2% — HOT","Proj 9.0 Ks in 6.4 avg IP","Truist Park: hitter-friendly but K rate unaffected"],
+         src:"Baseball Savant 2026",
+         pitcherRecency:{seasonERA:3.20,l5ERA:3.00,l3ERA:2.80,avgIP:6.4,bb9:2.4}},
+        {lbl:"Sale — Earned Runs",pick:"Under 1.5 ER",odds:"TBD",grade:"B+",
+         rat:"Sale blended ERA 3.06, trending HOT (L3 ERA 2.80). LAD xwOBA vs Sale: .297 (118 PA) — LAD makes moderate contact but Sale's K rate limits damage. Under 1.5 ER in 6.4 avg IP is well-supported.",
+         chips:["Sale blended ERA: 3.06 (HOT trend)","LAD xwOBA: .297 vs Sale (118 PA)","Under 1.5 in 6.4 avg IP","Sale BB/9: 2.4 — elite command"],
+         src:"Baseball Savant 2026",
+         pitcherRecency:{seasonERA:3.20,l5ERA:3.00,l3ERA:2.80,avgIP:6.4,bb9:2.4}},
+        {lbl:"Yamamoto — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"B+",
+         rat:"Yamamoto career vs ATL: .354 xwOBA, 28.9% K rate in 38 PA — solid sample. Blended K% 29.3%, projects 7.6 Ks in 6.0 avg IP. Note: xwOBA .354 indicates ATL hits him moderately well — K prop and ER prop are in different directions.",
+         chips:["Yamamoto K%: 28.9% vs ATL (38 PA)","Blended K%: 29.3% · proj 7.6 Ks","xwOBA: .354 — ATL makes contact","Over 5.5 in 6.0 avg IP"],
+         src:"Baseball Savant 2026",
+         pitcherRecency:{seasonERA:3.40,l5ERA:3.20,l3ERA:3.00,avgIP:6.0,bb9:3.4}}
       ]},
-      total:{intro:"Sasaki solid season ERA. Smith-Shawver hittable Savant profile.",cards:[
-        {lbl:"Game Total",pick:"Over (verify line)",odds:"TBD",grade:"B-",
-         rat:"Smith-Shawver career vs LAD: .441 wOBA, .356 xwOBA, 93.4 EV in 8 PA — tiny but alarming. LAD averages 5.8 R/G L5. LAD will score runs against a debut/recall arm. Sasaki (14 PA) is uncertain vs ATL. Over lean on LAD half.",
-         chips:["Smith-Shawver xwOBA: .356 vs LAD (8 PA — small)","EV: 93.4 — hard contact","LAD L5: 5.8 R/G (surging)","Sasaki vs ATL: 14 PA — small sample"]}
-      ]},
-      pitcher:{intro:"Both starters skip — insufficient Savant data. Season ERA only guide.",cards:[
-        {lbl:"Sasaki — Strikeouts",pick:"Verify line via Odds API",odds:"TBD",grade:"B-",
-         rat:"Sasaki (9.8 K/9, L3 ERA 3.50) has strong season profile but only 14 PA vs ATL in Savant. ATL K%: 21.8% — average. Grade based on season K/9 only. Verify market line before betting.",
-         chips:["Sasaki K/9: 9.8 · L3 ERA: 3.50","ATL K%: 21.8% — average","⚑ Savant sample only 14 PA","Verify line — B- confidence only"]}
-      ]},
-      batter:{intro:"LAD offense (5.8 R/G L5) vs Smith-Shawver (.441 wOBA vs LAD).",cards:[
-        {lbl:"LAD vs Smith-Shawver — HRR",pick:"LAD top-3 Over 1.5 HRR",odds:"TBD",grade:"B+",
-         rat:"Smith-Shawver career vs LAD: .441 wOBA, .356 xwOBA, 93.4 EV in 8 PA — small sample but hard contact. LAD averaging 5.8 R/G L5 — highest on today's slate. Ohtani/Freeman/Betts at top of order vs a debut arm. Over 1.5 HRR for LAD top-3 is the play. Confirm lineup.",
-         chips:["Smith-Shawver xwOBA: .356 vs LAD (8 PA)","EV: 93.4 — hard contact","LAD L5: 5.8 R/G — highest on slate","⚑ Confirm LAD lineup"]}
+      batter:{intro:"LAD offense (5.6 R/G L5) vs Sale (.297 xwOBA). ATL vs Yamamoto (.354 xwOBA).",cards:[
+        {lbl:"LAD vs Sale — HRR",pick:"LAD top-3 Over 1.5 HRR",odds:"TBD",grade:"B",
+         rat:"Sale xwOBA .297 vs LAD (118 PA) — LAD makes moderate contact. LAD averaging 5.6 R/G L5. Sale's command (2.4 BB/9) limits baserunner traffic — HRR opportunities are more from hits than walks. Capped at B without lineup position.",
+         chips:["Sale xwOBA: .297 vs LAD (118 PA)","LAD L5: 5.6 R/G","Sale BB/9: 2.4 — limits walks","⚑ Confirm LAD lineup"]}
       ]}
     }
   },
 
-  "tex-cws": {
-    away:"Texas Rangers", home:"Chicago White Sox",
-    time:"7:40 PM ET", venue:"Rate Field, Chicago IL",
-    awayRec:"64-66", homeRec:"68-62",
-    wx:"⛅ Chicago: 80°F, 12% rain, SW wind 10 mph — no significant concern.",
-    starters:"MacKenzie Gore (TEX) vs Sean Burke (CWS)",
+  "az-sf": {
+    away:"Arizona Diamondbacks", home:"San Francisco Giants",
+    time:"9:45 PM ET", venue:"Oracle Park, San Francisco CA",
+    awayRec:"TBD", homeRec:"54-78",
+    wx:"🌤 San Francisco: 60°F, 5% rain, W wind 16 mph — Oracle Park westerly wind, pitcher-friendly.",
+    starters:"Jose Cabrera (AZ) vs Landen Roupp (SF)",
     overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"CWS won yesterday 11-7. Pull via Odds API." },
-      away:{ teamName:"Texas Rangers", abbr:"TEX",
-        offStats:{ avg:".248", ops:".728", kPct:"23.2%", rPerG:"4.1", rPerG_L10:"4.3", rPerG_L5:"4.5" },
-        defStats:{ era:"4.19", bullpenERA_L14:"4.19", whip:"1.31" },
-        starter:{ name:"MacKenzie Gore", hand:"LHP", rec:"7-9", era:"4.10", whip:"1.28", k9:"9.8", bb9:"4.0", era_L3:"4.40", avgIP:"5.5" },
+      lines:{ ml:"TBD", spread:"TBD", total:"O/U 7.0", movement:"Series opener. New matchup." },
+      away:{ teamName:"Arizona Diamondbacks", abbr:"AZ",
+        offStats:{ avg:".258", ops:".748", kPct:"22.6%", rPerG:"4.4", rPerG_L10:"4.2", rPerG_L5:"4.2" },
+        defStats:{ era:"3.92", bullpenERA_L14:"3.78", whip:"1.24" },
+        starter:{ name:"Jose Cabrera", hand:"RHP", rec:"TBD", era:"4.20", whip:"1.32",
+                  k9:"8.0", bb9:"3.5", era_L3:"4.20", avgIP:"5.0",
+                  xwOBA_vs_opp:null, xwOBA_pa:0 },
         injuries:[] },
-      home:{ teamName:"Chicago White Sox", abbr:"CWS",
-        offStats:{ avg:".258", ops:".752", kPct:"21.8%", rPerG:"4.5", rPerG_L10:"4.8", rPerG_L5:"5.0" },
-        defStats:{ era:"3.82", bullpenERA_L14:"3.68", whip:"1.22" },
-        starter:{ name:"Sean Burke", hand:"RHP", rec:"7-6", era:"4.05", whip:"1.28", k9:"9.0", bb9:"3.2", era_L3:"3.80", avgIP:"5.8" },
-        injuries:[] }
+      home:{ teamName:"San Francisco Giants", abbr:"SF",
+        offStats:{ avg:".238", ops:".688", kPct:"24.1%", rPerG:"3.6", rPerG_L10:"3.4", rPerG_L5:"3.6" },
+        defStats:{ era:"4.28", bullpenERA_L14:"4.44", whip:"1.34" },
+        starter:{ name:"Landen Roupp", hand:"RHP", rec:"TBD", era:"4.10", whip:"1.28",
+                  k9:"9.8", bb9:"2.6", era_L3:"3.80", avgIP:"5.8",
+                  xwOBA_vs_opp:0.332, xwOBA_pa:64 },
+        injuries:[]
+      }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      runline:{intro:"Gore Savant vs CWS: .703 wOBA in 11 PA — skip. Burke moderate (13 PA). CWS won yesterday 11-7.",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"C+",
-         rat:"Gore Savant vs CWS (11 PA, .703 wOBA) is unusable — too small. Burke (13 PA) also limited data. CWS won yesterday 11-7. Pull live odds and rely on season ERA.",
-         chips:["Gore Savant: 11 PA — unusable","Burke Savant: 13 PA — limited","CWS won yesterday 11-7","Pull live run line"]}
+      pitcher:{intro:"🔄 Cabrera bullpen pivot — never faced SF. Roupp hittable vs AZ (.332 xwOBA).",cards:[
+        {lbl:"Roupp — Strikeouts",pick:"Over 5.5 Ks",odds:"TBD",grade:"B+",
+         rat:"Roupp career vs AZ: .332 xwOBA in 64 PA — solid sample showing hittable but K rate remains strong at 18.8%. Blended K% 27.9%, projects 6.9 Ks in 5.8 avg IP. Note: .332 xwOBA means AZ hits him — K prop and game leans diverge.",
+         chips:["Roupp K%: 18.8% vs AZ (64 PA)","Blended K%: 27.9% · proj 6.9 Ks","xwOBA: .332 — AZ makes contact","Oracle Park: pitcher-friendly"],
+         src:"Baseball Savant 2026",
+         pitcherRecency:{seasonERA:4.10,l5ERA:3.80,l3ERA:3.80,avgIP:5.8,bb9:2.6}},
+        {lbl:"Cabrera — Note",pick:"Bullpen pivot — no Savant data",odds:"—",grade:"C",
+         rat:"Cabrera has never faced the current SF roster. Bullpen pivot applied — model uses AZ bullpen ERA × 1.10 as effective ERA. No pitcher props available without Savant baseline. 🔄",
+         chips:["Cabrera: 0 PA vs SF — bullpen pivot","🔄 AZ BP ERA × 1.10 used as proxy","No K or ER props available","Monitor line movement for lineup changes"]}
       ]},
-      total:{intro:"Both starters small Savant samples. CWS surging offense.",cards:[
-        {lbl:"Game Total",pick:"Verify via Odds API",odds:"TBD",grade:"C+",
-         rat:"CWS averaging 5.0 R/G L5 with momentum from 11-7 yesterday. Gore's 11 PA sample (.703 wOBA) is too small to be meaningful but his season ERA (4.10) and high BB/9 (4.0) suggest runs. Over lean pending live line.",
-         chips:["CWS L5: 5.0 R/G · won 11-7 yesterday","Gore ERA: 4.10 · BB/9: 4.0","Burke ERA: 4.05 — moderate","Pull live O/U"]}
-      ]},
-      pitcher:{intro:"Skip both pitcher props — insufficient Savant samples.",cards:[
-        {lbl:"Starter Note",pick:"Skip — insufficient Savant data",odds:"—",grade:"C",
-         rat:"Gore (11 PA) and Burke (13 PA) both below 15 PA threshold. No pitcher props recommended today for this matchup.",
-         chips:["Gore: 11 PA vs CWS — skip","Burke: 13 PA vs TEX — skip","Both below 15 PA threshold","Skip pitcher props"]}
-      ]},
-      batter:{intro:"CWS offense (5.0 R/G L5) vs Gore (4.10 ERA). TEX vs Burke moderate.",cards:[
-        {lbl:"CWS vs Gore",pick:"CWS Team Over 3.5 Runs",odds:"-115 est",grade:"B-",
-         rat:"CWS averaging 5.0 R/G L5, won 11-7 yesterday. Gore (4.10 ERA, 4.0 BB/9) puts runners on. Over 3.5 CWS runs is the momentum-driven lean.",
-         chips:["CWS L5: 5.0 R/G · won 11-7","Gore ERA: 4.10 · BB/9: 4.0","Over 3.5 requires 4+ CWS runs","Grade C+ — limited Savant"]}
-      ]}
-    }
-  },
-
-  "bal-stl": {
-    away:"Baltimore Orioles", home:"St. Louis Cardinals",
-    time:"7:45 PM ET", venue:"Busch Stadium, St. Louis MO",
-    awayRec:"63-67", homeRec:"TBD",
-    wx:"⛅ St. Louis: 83°F, 18% rain, S wind 8 mph — warm, monitor radar.",
-    starters:"Kyle Bradish (BAL) vs Michael McGreevy (STL)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"BAL won yesterday 13-1. Pull via Odds API." },
-      away:{ teamName:"Baltimore Orioles", abbr:"BAL",
-        offStats:{ avg:".234", ops:".712", kPct:"24.8%", rPerG:"3.6", rPerG_L10:"4.2", rPerG_L5:"4.5" },
-        defStats:{ era:"4.23", bullpenERA_L14:"4.08", whip:"1.35" },
-        starter:{ name:"Kyle Bradish", hand:"RHP", rec:"7-12", era:"4.50", whip:"1.38", k9:"8.8", bb9:"3.2", era_L3:"4.20", avgIP:"5.8" },
-        injuries:[] },
-      home:{ teamName:"St. Louis Cardinals", abbr:"STL",
-        offStats:{ avg:".248", ops:".718", kPct:"23.1%", rPerG:"4.2", rPerG_L10:"3.8", rPerG_L5:"3.5" },
-        defStats:{ era:"4.42", bullpenERA_L14:"4.38", whip:"1.32" },
-        starter:{ name:"Michael McGreevy", hand:"RHP", rec:"5-9", era:"4.85", whip:"1.42", k9:"7.4", bb9:"3.6", era_L3:"5.10", avgIP:"5.2" },
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Bradish (6 PA Savant — skip) vs McGreevy (2 PA — skip). BAL won 13-1 yesterday.",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"C+",
-         rat:"Both starters have unusable Savant samples. BAL won 13-1 yesterday — momentum but regression expected. Pull live odds before committing.",
-         chips:["Bradish: 6 PA — unusable","McGreevy: 2 PA — unusable","BAL won 13-1 yesterday — momentum","Pull live run line"]}
-      ]},
-      total:{intro:"McGreevy hittable (5.10 L3 ERA). BAL offense surging after 13-1.",cards:[
-        {lbl:"Game Total",pick:"Verify via Odds API",odds:"TBD",grade:"C+",
-         rat:"McGreevy (5.10 L3 ERA, 4.85 season ERA) is hittable. BAL averages 4.5 R/G L5. Bradish unknown vs STL. Moderate over lean pending live line.",
-         chips:["McGreevy L3 ERA: 5.10 — hittable","BAL L5: 4.5 R/G (surging)","Bradish vs STL: 6 PA — unknown","Pull live O/U"]}
-      ]},
-      pitcher:{intro:"Skip both — insufficient Savant data.",cards:[
-        {lbl:"Starter Note",pick:"Skip — insufficient Savant data",odds:"—",grade:"C",
-         rat:"Bradish (6 PA) and McGreevy (2 PA) both below threshold. Skip pitcher props.",
-         chips:["Bradish: 6 PA — skip","McGreevy: 2 PA — skip","Below 15 PA threshold","Skip pitcher props"]}
-      ]},
-      batter:{intro:"BAL offense (4.5 R/G L5) vs McGreevy (5.10 L3 ERA). Moderate lean.",cards:[
-        {lbl:"BAL vs McGreevy",pick:"BAL Team Over 3.5 Runs",odds:"-115 est",grade:"B-",
-         rat:"McGreevy (5.10 L3 ERA, 4.85 season) is hittable. BAL averaging 4.5 R/G L5, surging after 13-1. Over 3.5 BAL runs is the lean — but Savant is too small to confirm.",
-         chips:["McGreevy L3 ERA: 5.10","BAL L5: 4.5 R/G","Over 3.5 requires 4+ runs","⚑ No Savant confirmation"]}
-      ]}
-    }
-  },
-
-  "min-ath": {
-    away:"Minnesota Twins", home:"Athletics",
-    time:"9:05 PM ET", venue:"Sutter Health Park, Sacramento CA",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"🌤 Sacramento: 88°F, 2% rain, light breeze — warm, ideal conditions.",
-    starters:"Connor Prielipp (MIN) vs J.T. Ginn (ATH)",
-    overview:{
-      lines:{ ml:"TBD", spread:"TBD", total:"O/U TBD", movement:"MIN won yesterday 2-4 (ATH won). Pull via Odds API." },
-      away:{ teamName:"Minnesota Twins", abbr:"MIN",
-        offStats:{ avg:".258", ops:".742", kPct:"22.4%", rPerG:"4.6", rPerG_L10:"4.4", rPerG_L5:"4.2" },
-        defStats:{ era:"3.98", bullpenERA_L14:"3.82", whip:"1.24" },
-        starter:{ name:"Connor Prielipp", hand:"LHP", rec:"3-7", era:"4.40", whip:"1.38", k9:"9.4", bb9:"3.8", era_L3:"4.20", avgIP:"5.5" },
-        injuries:[] },
-      home:{ teamName:"Athletics", abbr:"ATH",
-        offStats:{ avg:".238", ops:".692", kPct:"24.2%", rPerG:"3.8", rPerG_L10:"3.5", rPerG_L5:"3.2" },
-        defStats:{ era:"4.68", bullpenERA_L14:"4.72", whip:"1.42" },
-        starter:{ name:"J.T. Ginn", hand:"RHP", rec:"8-8", era:"4.20", whip:"1.28", k9:"8.6", bb9:"2.8", era_L3:"3.90", avgIP:"5.8" },
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      runline:{intro:"Prielipp (10 PA — skip) vs Ginn (moderate, 23 PA). ATH won yesterday.",cards:[
-        {lbl:"Run Line",pick:"Verify via Odds API",odds:"TBD",grade:"C+",
-         rat:"Prielipp (10 PA vs ATH) below threshold. Ginn (23 PA, .275 xwOBA, 85.0 EV) is solid but limited sample. ATH won yesterday. Pull live odds.",
-         chips:["Prielipp: 10 PA vs ATH — skip","Ginn xwOBA: .275 vs MIN (23 PA)","ATH won yesterday 4-2","Pull live run line"]}
-      ]},
-      total:{intro:"Ginn moderate suppressor. ATH worst offense on slate (3.2 R/G L5).",cards:[
-        {lbl:"Game Total",pick:"Under (verify line)",odds:"TBD",grade:"B-",
-         rat:"ATH L5: 3.2 R/G — worst on today's slate. Ginn (.275 xwOBA, 85.0 EV, 21.7% K) suppresses further. MIN averages 4.2 R/G L5 — moderate. Under lean depending on line.",
-         chips:["ATH L5: 3.2 R/G (worst on slate)","Ginn xwOBA: .275 vs MIN (23 PA)","MIN L5: 4.2 R/G — moderate","Pull live O/U"]}
-      ]},
-      pitcher:{intro:"Ginn is the only gradeable prop (23 PA). Prielipp: skip.",cards:[
-        {lbl:"Ginn — Strikeouts",pick:"Over 4.5 Ks",odds:"TBD",grade:"B-",
-         rat:"Ginn career vs MIN: .322 wOBA, .275 xwOBA, 21.7% K in 23 PA — moderate confidence. MIN K%: 22.4% — average. Over 4.5 in 5.8 avg IP. B- — small sample caution.",
-         chips:["Ginn K%: 21.7% vs MIN (23 PA)","xwOBA: .275 — moderate","MIN K%: 22.4%","⚑ Small sample — 23 PA"],
-         src:"Baseball Savant 2026"}
-      ]},
-      batter:{intro:"MIN offense (4.2 R/G L5) vs Ginn. ATH weak offense vs Prielipp.",cards:[
-        {lbl:"ATH Offense",pick:"ATH Team Under 2.5 Runs",odds:"-115 est",grade:"B-",
-         rat:"ATH averaging 3.2 R/G L5 — worst on today's slate. Prielipp (.089 wOBA, .132 xwOBA vs ATH in 10 PA — tiny elite sample) further suppresses. Under 2.5 ATH runs is the structural lean.",
-         chips:["ATH L5: 3.2 R/G (worst on slate)","Prielipp xwOBA: .132 vs ATH (10 PA — small)","Under 2.5 = 0-2 ATH runs","⚑ Small Prielipp sample"]}
+      batter:{intro:"Oracle Park with W wind suppresses scoring. AZ vs SF bullpen — moderate HRR lean.",cards:[
+        {lbl:"AZ vs SF Bullpen — HRR",pick:"AZ top-3 Over 1.5 HRR",odds:"TBD",grade:"B-",
+         rat:"SF running a bullpen day (Cabrera — 0 PA vs SF) against AZ offense (4.2 R/G L5). Bullpen days create multiple-arm exposure with matchup vulnerabilities. Oracle Park suppresses power but AZ makes consistent contact. Capped at B- given Oracle suppression and bullpen day uncertainty.",
+         chips:["🔄 SF bullpen day — multiple arms","AZ L5: 4.2 R/G — moderate","Oracle Park PF: 0.88 — suppresses","⚑ Confirm AZ lineup"]}
       ]}
     }
   }
@@ -1295,29 +827,33 @@ const games = {
 };
 
 const bestBets = [
-  // A- grades
-  {game:"PHI@SEA", pick:"Woo Over 5.5 Ks",           odds:"TBD", grade:"A-"},
-  {game:"MIL@NYM", pick:"MIL top-3 Over 1.5 HRR",    odds:"TBD", grade:"A-"},
-  {game:"BOS@MIA", pick:"BOS top-3 Over 1.5 HRR",    odds:"TBD", grade:"A-"},
-  // B+ grades
-  {game:"CIN@SF",  pick:"Roupp Over 5.5 Ks",          odds:"TBD", grade:"B+"},
-  {game:"CIN@SF",  pick:"Under Total",                 odds:"TBD", grade:"B+"},
-  {game:"CIN@SF",  pick:"Roupp Under 2.5 ER",         odds:"TBD", grade:"B+"},
-  {game:"PHI@SEA", pick:"Luzardo Over 6.5 Ks",        odds:"TBD", grade:"B+"},
-  {game:"PHI@SEA", pick:"Woo Under 1.5 ER",           odds:"TBD", grade:"B+"},
-  {game:"PHI@SEA", pick:"Under Total",                 odds:"TBD", grade:"B+"},
-  {game:"TB@DET",  pick:"Peralta Over 5.5 Ks",        odds:"TBD", grade:"B+"},
-  {game:"CHC@AZ",  pick:"Boyd Over 4.5 Ks",           odds:"TBD", grade:"B+"},
-  {game:"PIT@SD",  pick:"Vasquez Over 2.5 ER",        odds:"TBD", grade:"B+"},
-  {game:"COL@WSH", pick:"WSH top-3 Over 1.5 HRR",    odds:"TBD", grade:"B+"},
-  {game:"LAD@ATL", pick:"LAD top-3 Over 1.5 HRR",    odds:"TBD", grade:"B+"},
-  {game:"HOU@NYY", pick:"Lambert Over 2.5 ER",        odds:"TBD", grade:"B+"},
-  // B grades
-  {game:"PIT@SD",  pick:"PIT top-3 Over 1.5 HRR",    odds:"TBD", grade:"B"},
-  {game:"TB@DET",  pick:"Peralta Under 2.5 ER",       odds:"TBD", grade:"B"},
-  {game:"CLE@LAA", pick:"Cantillo Over 5.5 Ks",       odds:"TBD", grade:"B"},
-  {game:"CLE@LAA", pick:"LAA Under 2.5 Runs",         odds:"TBD", grade:"B"},
-  {game:"MIL@NYM", pick:"May Over 4.5 Ks",            odds:"TBD", grade:"B"},
+  // B+ grades — ML value
+  {game:"HOU@NYY", pick:"Yankees ML",              odds:"TBD", grade:"B+"},
+  {game:"KC@TOR",  pick:"Royals ML",               odds:"TBD", grade:"B+"},
+  {game:"LAD@ATL", pick:"Dodgers ML",              odds:"TBD", grade:"B+"},
+  {game:"AZ@SF",   pick:"Diamondbacks ML",         odds:"TBD", grade:"B+"},
+  // B+ grades — K props
+  {game:"HOU@NYY", pick:"Cole Over 5.5 Ks",        odds:"TBD", grade:"B+"},
+  {game:"LAD@ATL", pick:"Sale Over 5.5 Ks",        odds:"TBD", grade:"B+"},
+  {game:"LAD@ATL", pick:"Yamamoto Over 5.5 Ks",    odds:"TBD", grade:"B+"},
+  {game:"AZ@SF",   pick:"Roupp Over 5.5 Ks",       odds:"TBD", grade:"B+"},
+  // B+ grades — ER and walk props
+  {game:"HOU@NYY", pick:"Cole Under 1.5 ER",       odds:"TBD", grade:"B+"},
+  {game:"LAD@ATL", pick:"Sale Under 1.5 ER",       odds:"TBD", grade:"B+"},
+  {game:"KC@TOR",  pick:"Arrighetti Over 1.5 BB",  odds:"TBD", grade:"B+"},
+  {game:"MIL@NYM", pick:"Misiorowski Over 1.5 BB", odds:"TBD", grade:"B+"},
+  // B grades — totals
+  {game:"HOU@NYY", pick:"Over 8.0",                odds:"TBD", grade:"B"},
+  {game:"KC@TOR",  pick:"Over 8.5",                odds:"TBD", grade:"B"},
+  {game:"MIL@NYM", pick:"Over 8.0",                odds:"TBD", grade:"B"},
+  {game:"LAD@ATL", pick:"Over 8.0",                odds:"TBD", grade:"B"},
+  // B grades — other props
+  {game:"HOU@NYY", pick:"Wesneski Over 2.5 ER",    odds:"TBD", grade:"B-"},
+  {game:"KC@TOR",  pick:"Cameron Over 1.5 BB",     odds:"TBD", grade:"B"},
+  {game:"KC@TOR",  pick:"Arrighetti Over 5.5 Ks",  odds:"TBD", grade:"B"},
+  {game:"MIL@NYM", pick:"Manaea Over 4.5 Ks",      odds:"TBD", grade:"B"},
+  // Parlay piece
+  {game:"MIL@NYM", pick:"Brewers ML",              odds:"TBD", grade:"C",  parlay:true},
 ];
 
 
@@ -1500,6 +1036,10 @@ function renderOverview(g) {
       <div class="ov-wx">${g.wx}</div>
     </div>`;
 
+  // Dynamic lean block — computed at render time
+  const leanHtml = renderLeanBlock(g, typeof ODDS_DATA !== 'undefined'
+    ? findLiveGame(g.overview.away.abbr, g.overview.home.abbr) : null);
+
   return `<div class="ov-grid">
     ${linesHtml}
     ${pitchingHtml}
@@ -1507,6 +1047,7 @@ function renderOverview(g) {
     ${bullpenHtml}
     ${injuriesHtml}
     ${wxHtml}
+    <div class="ov-section" style="grid-column:1/-1">${leanHtml}</div>
   </div>`;
 }
 
@@ -1746,7 +1287,7 @@ function loadGame(key){
 
   const activeTab = document.querySelector('.tab.active')?.dataset.tab || 'overview';
   const panels = document.getElementById('panels');
-  panels.innerHTML = ['overview','runline','total','pitcher','batter'].map(tab => {
+  panels.innerHTML = ['overview','pitcher','batter'].map(tab => {
     const td = g.tabs[tab];
     // Overview tab: render separately
     if (tab === 'overview') {
@@ -2736,7 +2277,23 @@ function renderStrip() {
   if (!tbody || typeof bestBets === 'undefined') return;
   tbody.innerHTML = '';
   const order = {'A+':0,'A':1,'A-':2,'B+':3,'B':4,'B-':5,'C+':6,'C':7};
-  const sorted = [...bestBets].sort((a,b) => (order[a.grade]||9)-(order[b.grade]||9));
+
+  // Confidence score — quality over grade alone
+  function pickConf(b) {
+    const gradeScore = [3,3,3,2,1,0,0,0][order[b.grade]||7] || 0;
+    const parlayBonus = b.parlay ? 1 : 0;
+    const srcScore = b.src === 'savant' ? 2 : b.src === 'bullpen_pivot' ? 1 : 1;
+    return gradeScore + parlayBonus + srcScore;
+  }
+
+  // Sort by: parlay flag first, then confidence score desc, then grade
+  const sorted = [...bestBets].sort((a, b) => {
+    if (a.parlay && !b.parlay) return -1;
+    if (!a.parlay && b.parlay) return  1;
+    const confDiff = pickConf(b) - pickConf(a);
+    if (confDiff !== 0) return confDiff;
+    return (order[a.grade]||9) - (order[b.grade]||9);
+  });
   sorted.forEach(b => {
     const odds = getLiveOdds(b);
     const tr = document.createElement('tr');
@@ -2757,7 +2314,12 @@ function renderStrip() {
         if (ov) ov.classList.add('active');
       };
     }
-    tr.innerHTML = `<td class="bb-td-grade"><span class="grade ${gc(b.grade)}">${b.grade}</span></td><td class="bb-td-game">${b.game}</td><td class="bb-td-pick">${b.pick}</td><td class="bb-td-odds">${odds}</td>`;
+    const parlayTag = b.parlay ? ' <span style="font-size:8px;color:var(--gold)">⚡</span>' : '';
+    const srcTag    = b.src === 'bullpen_pivot'
+      ? ' <span style="font-size:8px;color:var(--dim)">🔄</span>' : '';
+    const cappedTag = b.capped
+      ? ' <span style="font-size:8px;color:var(--amber)">⚑</span>' : '';
+    tr.innerHTML = `<td class="bb-td-grade"><span class="grade ${gc(b.grade)}">${b.grade}</span></td><td class="bb-td-game">${b.game}</td><td class="bb-td-pick">${b.pick}${parlayTag}${srcTag}${cappedTag}</td><td class="bb-td-odds">${odds}</td>`;
     tbody.appendChild(tr);
   });
 }
@@ -2772,6 +2334,388 @@ function toggleStrip() {
   const hidden = body.style.display === 'none';
   body.style.display  = hidden ? '' : 'none';
   toggle.textContent  = hidden ? '▲ hide' : '▼ show';
+}
+
+
+// ═══════════════════════════════════════════════════════════
+// LEAN ENGINE — Dynamic run line, moneyline, total grades
+// Computed at render time from games object + live odds
+// ═══════════════════════════════════════════════════════════
+
+const PARK_FACTORS = {
+  'Comerica Park, Detroit MI':          0.96,
+  'Petco Park, San Diego CA':           0.92,
+  'Oracle Park, San Francisco CA':      0.88,
+  'T-Mobile Park, Seattle WA':          0.95,
+  'Coors Field, Denver CO':             1.35,
+  'loanDepot park, Miami FL':           1.12,
+  'Truist Park, Atlanta GA':            1.08,
+  'Fenway Park, Boston MA':             1.08,
+  'Yankee Stadium, New York NY':        1.05,
+  'Nationals Park, Washington DC':      1.02,
+  'Sutter Health Park, Sacramento CA':  1.00,
+  'Busch Stadium, St. Louis MO':        0.98,
+  'Chase Field, Phoenix AZ (Dome)':     1.02,
+  'Rogers Centre, Toronto ON (Dome)':   1.00,
+  'Citi Field, New York NY':            0.97,
+  'Rate Field, Chicago IL':             1.00,
+  'Angel Stadium, Anaheim CA':          0.97,
+  'Truist Park, Atlanta GA':            1.08,
+  'Globe Life Field, Arlington TX (Retractable Dome)': 1.01,
+  'American Family Field, Milwaukee WI (Retractable Dome)': 1.00,
+  'Wrigley Field, Chicago IL':          1.04,
+  'Dodger Stadium, Los Angeles CA':     1.00,
+  'PNC Park, Pittsburgh PA':            0.96,
+  'Great American Ball Park, Cincinnati OH': 1.06,
+  'Citizens Bank Park, Philadelphia PA': 1.05,
+  'Kauffman Stadium, Kansas City MO':   1.00,
+  'Guaranteed Rate Field, Chicago IL':  1.01,
+  'Target Field, Minneapolis MN':       0.98,
+  'Minute Maid Park, Houston TX':       1.01,
+};
+
+const MLB_AVG_ERA          = 4.20;
+const BULLPEN_DAY_MULT     = 1.10;  // multiplier for unknown/scratched starters
+const PA_FULL              = 40;    // full Savant confidence
+const PA_SOLID             = 25;    // solid confidence
+const PA_LIMITED           = 15;    // pivot threshold
+const STRIP_MIN_CONFIDENCE = 5;     // minimum score for strip inclusion
+
+function mlToImplied(ml) {
+  if (ml > 0) return 100 / (ml + 100);
+  return Math.abs(ml) / (Math.abs(ml) + 100);
+}
+
+function fmtOddsSign(n) {
+  if (!n && n !== 0) return 'TBD';
+  return n > 0 ? `+${n}` : `${n}`;
+}
+
+function projectRuns(l5Rpg, pitcherEra, pitcherAvgIp, bullpenEra,
+                     parkFactor, pitcherBb9 = 3.0) {
+  const starterRuns = (pitcherEra / 9) * pitcherAvgIp;
+  const bullpenInns = Math.max(0, 9 - pitcherAvgIp);
+  const bullpenRuns = (bullpenEra / 9) * bullpenInns;
+  const raw         = starterRuns + bullpenRuns;
+  let   parkAdj     = raw * parkFactor;
+
+  // BB/9 walk multiplier — high walk rates cluster baserunners
+  const walkMult = pitcherBb9 >= 4.5 ? 1.10
+                 : pitcherBb9 >= 4.0 ? 1.06
+                 : pitcherBb9 >= 3.5 ? 1.03
+                 : pitcherBb9 <= 1.8 ? 0.96
+                 : pitcherBb9 <= 2.2 ? 0.98
+                 : 1.00;
+  parkAdj *= walkMult;
+
+  const blended = (parkAdj * 0.60) + (l5Rpg * parkFactor * 0.40);
+  return Math.round(blended * 100) / 100;
+}
+
+function winProbFromRunDiff(runDiff) {
+  // Logistic function calibrated to MLB run differential
+  return 1 / (1 + Math.exp(-0.37 * runDiff));
+}
+
+function scoreToGrade(score, max) {
+  const pct = score / max;
+  if (pct >= 0.85) return 'A-';
+  if (pct >= 0.65) return 'B+';
+  if (pct >= 0.45) return 'B';
+  if (pct >= 0.28) return 'B-';
+  return 'C+';
+}
+
+function computeGameLean(g, liveGame) {
+  const park = PARK_FACTORS[g.venue] || 1.00;
+  const aw   = g.overview.away;
+  const hw   = g.overview.home;
+  const aws  = aw.starter;
+  const hws  = hw.starter;
+
+  // ── Run projections ──────────────────────────────────────
+  const awayBb9 = parseFloat(aws.bb9) || 3.0;
+  const homeBb9 = parseFloat(hws.bb9) || 3.0;
+
+  const awayRuns = projectRuns(
+    parseFloat(aw.offStats.rPerG_L5) || 4.2,
+    homeEraEff, homeIPEff,
+    parseFloat(hw.defStats.bullpenERA_L14) || 4.20,
+    park, homeBb9
+  );
+  const homeRuns = projectRuns(
+    parseFloat(hw.offStats.rPerG_L5) || 4.2,
+    awayEraEff, awayIPEff,
+    parseFloat(aw.defStats.bullpenERA_L14) || 4.20,
+    park, awayBb9
+  );
+  const projTotal = Math.round((awayRuns + homeRuns) * 100) / 100;
+
+  // ── Pitching edge ────────────────────────────────────────
+  // ── Bullpen pivot ──────────────────────────────────────
+  const awayPA = parseFloat(aws.xwOBA_pa || 0);
+  const homePA = parseFloat(hws.xwOBA_pa || 0);
+  const awayConfirmed = awayPA >= PA_LIMITED && aws.era;
+  const homeConfirmed = homePA >= PA_LIMITED && hws.era;
+
+  // If starter unknown/scratched — pivot to bullpen ERA estimate
+  const awayEraEff = awayConfirmed
+    ? (parseFloat(aws.era)||4.20)
+    : (parseFloat(aw.defStats.bullpenERA_L14)||4.20) * BULLPEN_DAY_MULT;
+  const homeEraEff = homeConfirmed
+    ? (parseFloat(hws.era)||4.20)
+    : (parseFloat(hw.defStats.bullpenERA_L14)||4.20) * BULLPEN_DAY_MULT;
+  const awayIPEff  = awayConfirmed ? (parseFloat(aws.avgIP)||5.5) : 5.0;
+  const homeIPEff  = homeConfirmed ? (parseFloat(hws.avgIP)||5.5) : 5.0;
+
+  const dataSource = (!awayConfirmed || !homeConfirmed) ? 'bullpen_pivot'
+    : (Math.min(awayPA, homePA) >= PA_SOLID ? 'savant' : 'era');
+
+  const xwOBAaway = aws.xwOBA_vs_opp ? parseFloat(aws.xwOBA_vs_opp) : null;
+  const xwOBAhome = hws.xwOBA_vs_opp ? parseFloat(hws.xwOBA_vs_opp) : null;
+
+  let pitchScore = 0, pitchLean = null, pitchNote = '';
+  if (xwOBAaway !== null && xwOBAhome !== null) {
+    const diff = xwOBAhome - xwOBAaway; // positive = away pitcher better
+    if      (diff >  0.120) { pitchScore = 3; pitchLean = 'away'; }
+    else if (diff >  0.070) { pitchScore = 2; pitchLean = 'away'; }
+    else if (diff >  0.030) { pitchScore = 1; pitchLean = 'away'; }
+    else if (diff < -0.120) { pitchScore = 3; pitchLean = 'home'; }
+    else if (diff < -0.070) { pitchScore = 2; pitchLean = 'home'; }
+    else if (diff < -0.030) { pitchScore = 1; pitchLean = 'home'; }
+    pitchNote = `${aws.name} xwOBA .${String(Math.round(xwOBAaway*1000)).padStart(3,'0')} vs ${hws.name} xwOBA .${String(Math.round(xwOBAhome*1000)).padStart(3,'0')}`;
+  } else {
+    const eraDiff = (parseFloat(aws.era)||4.20) - (parseFloat(hws.era)||4.20);
+    if      (eraDiff >  1.20) { pitchScore = 3; pitchLean = 'home'; }
+    else if (eraDiff >  0.70) { pitchScore = 2; pitchLean = 'home'; }
+    else if (eraDiff >  0.35) { pitchScore = 1; pitchLean = 'home'; }
+    else if (eraDiff < -1.20) { pitchScore = 3; pitchLean = 'away'; }
+    else if (eraDiff < -0.70) { pitchScore = 2; pitchLean = 'away'; }
+    else if (eraDiff < -0.35) { pitchScore = 1; pitchLean = 'away'; }
+    pitchNote = `${aws.name} ERA ${aws.era} vs ${hws.name} ERA ${hws.era} (no Savant data)`;
+  }
+
+  // ── Offense edge ─────────────────────────────────────────
+  const awL5 = parseFloat(aw.offStats.rPerG_L5);
+  const hwL5 = parseFloat(hw.offStats.rPerG_L5);
+  const offDiff = hwL5 - awL5;
+  let offScore = 0, offLean = null;
+  if      (Math.abs(offDiff) > 1.5) { offScore = 2; offLean = offDiff > 0 ? 'home' : 'away'; }
+  else if (Math.abs(offDiff) > 0.6) { offScore = 1; offLean = offDiff > 0 ? 'home' : 'away'; }
+
+  // ── Bullpen edge ─────────────────────────────────────────
+  const awBP = parseFloat(aw.defStats.bullpenERA_L14) || 4.20;
+  const hwBP = parseFloat(hw.defStats.bullpenERA_L14) || 4.20;
+  const bpDiff = awBP - hwBP; // positive = home bullpen better
+  let bpScore = 0, bpLean = null;
+  if (Math.abs(bpDiff) > 0.80) { bpScore = 1; bpLean = bpDiff > 0 ? 'home' : 'away'; }
+
+  // ── Park lean ────────────────────────────────────────────
+  let parkScore = 0, parkLean = null;
+  if (park < 0.95) { parkScore = 1; parkLean = 'home'; }
+
+  // ── Injury cap ───────────────────────────────────────────
+  const awayStarterInjured = (aw.injuries||[]).some(i =>
+    i.player && aws.name && i.player.includes(aws.name.split(' ').pop()));
+  const homeStarterInjured = (hw.injuries||[]).some(i =>
+    i.player && hws.name && i.player.includes(hws.name.split(' ').pop()));
+  const injuryCap = awayStarterInjured || homeStarterInjured;
+
+  // ── Run line grade ───────────────────────────────────────
+  const votes = { away: 0, home: 0 };
+  [[pitchLean, pitchScore],[offLean, offScore],[bpLean, bpScore],[parkLean, parkScore]]
+    .forEach(([lean, score]) => { if (lean) votes[lean] += score; });
+
+  const rlSide   = votes.away > votes.home ? 'away' : 'home';
+  const rlTeam   = rlSide === 'away' ? g.away : g.home;
+  const rlScore  = votes[rlSide];
+  let rlGrade    = scoreToGrade(rlScore, 7);
+
+  // Pick-em cap
+  const xwDiff = (xwOBAaway !== null && xwOBAhome !== null)
+    ? Math.abs(xwOBAhome - xwOBAaway) : 0;
+  if (xwDiff < 0.040 && pitchScore <= 1 && offScore <= 1) {
+    if (['A-','B+'].includes(rlGrade)) rlGrade = 'B';
+  }
+  if (injuryCap && ['A-'].includes(rlGrade)) rlGrade = 'B+';
+
+  // Fix 2 — Savant sample size cap (awayPA/homePA from bullpen pivot above)
+  const lowSample = (awayPA > 0 && awayPA < 25) || (homePA > 0 && homePA < 25);
+  if (lowSample && ['A-','B+','B'].includes(rlGrade)) rlGrade = 'B-';
+
+  // Fix 3 — Projected run differential threshold cap
+  const projDiff = Math.abs(runDiff);
+  const RSTEPS   = ['A-','B+','B','B-','C+','C'];
+  let diffCap;
+  if      (projDiff >= 1.50) diffCap = 'B+';
+  else if (projDiff >= 1.00) diffCap = 'B';
+  else if (projDiff >= 0.60) diffCap = 'B-';
+  else                        diffCap = 'C+';
+  if (RSTEPS.indexOf(diffCap) > RSTEPS.indexOf(rlGrade)) rlGrade = diffCap;
+
+  // ── Moneyline ────────────────────────────────────────────
+  const runDiff    = awayRuns - homeRuns; // positive = away leads
+  const awayWinP   = winProbFromRunDiff(runDiff);
+  const homeWinP   = 1 - awayWinP;
+
+  let mlResult = null;
+  if (liveGame && liveGame.lines && liveGame.lines.raw) {
+    const r = liveGame.lines.raw;
+    if (r.awayML !== null && r.homeML !== null) {
+      const impAway = mlToImplied(r.awayML);
+      const impHome = mlToImplied(r.homeML);
+      const gapAway = awayWinP - impAway;
+      const gapHome = homeWinP - impHome;
+
+      // Pick side with better value, or stronger matchup if tied
+      const mlSide = (gapAway >= gapHome) ? 'away' : 'home';
+      const mlTeam = mlSide === 'away' ? g.away : g.home;
+      const mlWinP = mlSide === 'away' ? awayWinP : homeWinP;
+      const mlGap  = mlSide === 'away' ? gapAway  : gapHome;
+      const mlML   = mlSide === 'away' ? r.awayML  : r.homeML;
+      const mlImp  = mlSide === 'away' ? impAway   : impHome;
+
+      // Grade purely on value gap
+      let mlGrade;
+      if      (mlGap > 0.10) mlGrade = 'A-';
+      else if (mlGap > 0.06) mlGrade = 'B+';
+      else if (mlGap > 0.03) mlGrade = 'B';
+      else if (mlGap > 0.01) mlGrade = 'B-';
+      else if (Math.abs(mlGap) <= 0.01) mlGrade = 'C';
+      else                   mlGrade = 'C+';
+
+      // Parlay flag: win prob > 58% but standalone grade C or C+
+      const parlayFlag = mlWinP > 0.58 && ['C','C+'].includes(mlGrade);
+
+      mlResult = {
+        team: mlTeam, side: mlSide, grade: mlGrade,
+        winProb: mlWinP, impliedProb: mlImp,
+        valueGap: mlGap, odds: mlML,
+        parlayFlag,
+        awayWinP, homeWinP,
+      };
+    }
+  }
+
+  // ── Total grade ──────────────────────────────────────────
+  let totResult = { side: 'TBD', grade: 'TBD', projTotal, gap: 0, postedTotal: null };
+  if (liveGame && liveGame.lines && liveGame.lines.raw && liveGame.lines.raw.total) {
+    const posted = parseFloat(liveGame.lines.raw.total);
+    const gap    = posted - projTotal; // positive = under lean
+    let totSide, totGrade;
+    if      (gap >  2.0) { totGrade = 'A-'; totSide = 'Under'; }
+    else if (gap >  1.0) { totGrade = 'B+'; totSide = 'Under'; }
+    else if (gap >  0.3) { totGrade = 'B';  totSide = 'Under'; }
+    else if (gap < -2.0) { totGrade = 'A-'; totSide = 'Over';  }
+    else if (gap < -1.0) { totGrade = 'B+'; totSide = 'Over';  }
+    else if (gap < -0.3) { totGrade = 'B';  totSide = 'Over';  }
+    else                 { totGrade = 'C';  totSide = 'Even';  }
+    if (park >= 1.20 && totSide === 'Under') { // Coors cap
+      if (totGrade === 'A-') totGrade = 'B+';
+    }
+    totResult = { side: totSide, grade: totGrade, projTotal, gap, postedTotal: posted };
+  }
+
+  // ── Build bullets ────────────────────────────────────────
+  // Run line bullets
+  const rlBullets = [];
+  if (pitchNote) rlBullets.push(pitchNote);
+  rlBullets.push(`${g.away} L5: ${awL5} R/G · ${g.home} L5: ${hwL5} R/G${Math.abs(offDiff)>0.6?' — '+( offDiff>0?g.home:g.away)+' offense surging':' — even'}`);
+  if (Math.abs(bpDiff) > 0.40)
+    rlBullets.push(`Bullpen: ${g.away} ${awBP.toFixed(2)} ERA L14 · ${g.home} ${hwBP.toFixed(2)} ERA L14`);
+  else
+    rlBullets.push(`Park factor: ${park} · Proj: ${g.away} ${awayRuns} · ${g.home} ${homeRuns}`);
+
+  // Total bullets
+  const totBullets = [];
+  totBullets.push(`Projected total: ${projTotal} vs posted ${totResult.postedTotal || 'TBD'} (gap ${totResult.gap > 0 ? '+' : ''}${totResult.gap.toFixed(1)})`);
+  totBullets.push(`${aws.name} ERA ${aws.era} (${aws.avgIP} avg IP) · ${hws.name} ERA ${hws.era} (${hws.avgIP} avg IP)`);
+  totBullets.push(`Park factor ${park} · BP: ${g.away} ${awBP.toFixed(2)} · ${g.home} ${hwBP.toFixed(2)} ERA L14`);
+
+  // ML bullets
+  // Data source label for transparency
+  const srcLabel = dataSource === 'bullpen_pivot' ? '🔄 Bullpen day — pivoted analysis'
+    : dataSource === 'savant' ? '⚾ Savant confirmed'
+    : '📋 Season ERA only';
+
+  const mlBullets = [];
+  if (mlResult) {
+    mlBullets.push(`Model estimates ${(mlResult.awayWinP*100).toFixed(0)}% ${g.away} / ${(mlResult.homeWinP*100).toFixed(0)}% ${g.home} win probability`);
+    mlBullets.push(`Implied probability at posted odds: ${(mlResult.impliedProb*100).toFixed(0)}% · value gap ${mlResult.valueGap > 0 ? '+' : ''}${(mlResult.valueGap*100).toFixed(1)}%`);
+    if (mlResult.parlayFlag)
+      mlBullets.push(`⚡ Strong parlay piece — ${(mlResult.winProb*100).toFixed(0)}% win prob, market correctly priced for single bets`);
+    else if (mlResult.valueGap > 0.03)
+      mlBullets.push(`Positive expected value — getting ${fmtOddsSign(mlResult.odds)} on a ${(mlResult.winProb*100).toFixed(0)}% win probability`);
+    else
+      mlBullets.push(`Market has this correctly priced — no single-bet edge`);
+  } else {
+    mlBullets.push(`Run odds_fetcher.py to load live moneyline`);
+    mlBullets.push(`Model estimates ${(awayWinP*100).toFixed(0)}% ${g.away} / ${(homeWinP*100).toFixed(0)}% ${g.home} (no posted odds yet)`);
+    mlBullets.push(`Win prob based on proj runs: ${g.away} ${awayRuns} · ${g.home} ${homeRuns}`);
+  }
+
+  return {
+    awayRuns, homeRuns, projTotal,
+    runLine: { team: rlTeam, side: rlSide, grade: rlGrade, score: rlScore, bullets: rlBullets.slice(0,3) },
+    moneyLine: mlResult ? { ...mlResult, bullets: mlBullets.slice(0,3) }
+                        : { team: awayWinP > 0.5 ? g.away : g.home, grade: 'TBD',
+                            parlayFlag: false, bullets: mlBullets.slice(0,3) },
+    total: { ...totResult, bullets: totBullets.slice(0,3) },
+  };
+}
+
+function renderLeanBlock(g, liveGame) {
+  const lean = computeGameLean(g, liveGame);
+  const rl   = lean.runLine;
+  const ml   = lean.moneyLine;
+  const tot  = lean.total;
+
+  const mlOddsStr = ml.odds ? ` (${fmtOddsSign(ml.odds)})` : '';
+  const totLineStr = tot.postedTotal ? `${tot.side} ${tot.postedTotal}` : `proj ${tot.projTotal}`;
+
+  const parlayBadge = ml.parlayFlag
+    ? `<span class="lean-parlay">⚡ PARLAY</span>` : '';
+
+  const bulletsHtml = (arr) => arr.map(b =>
+    `<div class="lean-bullet">· ${b}</div>`).join('');
+
+  return `
+<div class="lean-block">
+  <div class="lean-title">Game Leans <span style="font-size:9px;color:var(--dim);font-weight:400;margin-left:6px">${srcLabel}</span></div>
+
+  <div class="lean-row">
+    <div class="lean-section">
+      <div class="lean-header">
+        <span class="lean-label">Moneyline</span>
+        <span class="lean-pick">${ml.team || '—'}${mlOddsStr} ${parlayBadge}</span>
+        <span class="grade ${gc(ml.grade || 'C')}">${ml.grade || 'TBD'}</span>
+      </div>
+      <div class="lean-bullets">${bulletsHtml(ml.bullets)}</div>
+    </div>
+  </div>
+
+  <div class="lean-row">
+    <div class="lean-section">
+      <div class="lean-header">
+        <span class="lean-label">Run Line</span>
+        <span class="lean-pick">${rl.team} -1.5</span>
+        <span class="grade ${gc(rl.grade)}">${rl.grade}</span>
+      </div>
+      <div class="lean-bullets">${bulletsHtml(rl.bullets)}</div>
+    </div>
+  </div>
+
+  <div class="lean-row">
+    <div class="lean-section">
+      <div class="lean-header">
+        <span class="lean-label">Total</span>
+        <span class="lean-pick">${totLineStr}</span>
+        <span class="grade ${gc(tot.grade)}">${tot.grade}</span>
+      </div>
+      <div class="lean-bullets">${bulletsHtml(tot.bullets)}</div>
+    </div>
+  </div>
+</div>`;
 }
 
 function buildDropdown() {
@@ -3065,6 +3009,13 @@ function injectLiveOdds(awayAbbr, homeAbbr) {
   injectOverviewLines(liveGame);
   injectPropOdds(liveGame);
   injectTotalLine(liveGame);
+  // Re-render lean block with live odds
+  const leanContainer = document.querySelector('.panel.active [class="ov-section"]');
+  if (leanContainer) {
+    const key = document.getElementById('gsel').value;
+    const g   = games[key];
+    if (g) leanContainer.innerHTML = renderLeanBlock(g, liveGame);
+  }
 }
 
 // ─────────────────────────────────────────────
