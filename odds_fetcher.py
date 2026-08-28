@@ -22,7 +22,7 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 # Parse --outdir before anything else — sets the working directory
 _parser = argparse.ArgumentParser(add_help=False)
@@ -133,11 +133,19 @@ def parse_odds(data):
     if not data:
         return {}
 
-    today_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    ET_OFFSET = timezone(timedelta(hours=-4))
+    today_et  = datetime.now(ET_OFFSET).strftime("%Y-%m-%d")
     games = {}
 
+    def is_today_et(ts):
+        try:
+            dt = datetime.fromisoformat(ts.replace("Z","+00:00")).astimezone(ET_OFFSET)
+            return dt.strftime("%Y-%m-%d") == today_et
+        except:
+            return False
+
     for event in data:
-        if not event.get("commence_time","").startswith(today_utc):
+        if not is_today_et(event.get("commence_time","")):
             continue
 
         game_id = event["id"]
@@ -145,18 +153,15 @@ def parse_odds(data):
         away    = event["away_team"]
 
         # Parse ET time
-        from datetime import datetime as dt
         try:
-            utc = dt.fromisoformat(event["commence_time"].replace("Z","+00:00"))
-            import time as t_mod
-            offset = -4  # ET (adjust for DST automatically in prod)
-            local  = utc.replace(tzinfo=None)
-            # Simple ET conversion
-            et_hr  = (utc.hour - 4) % 24
-            ampm   = "AM" if et_hr < 12 else "PM"
-            hr12   = et_hr if et_hr <= 12 else et_hr - 12
-            hr12   = 12 if hr12 == 0 else hr12
-            time_str = f"{hr12}:{utc.minute:02d} {ampm} ET"
+            dt_et    = datetime.fromisoformat(
+                event["commence_time"].replace("Z","+00:00")
+            ).astimezone(ET_OFFSET)
+            hr24     = dt_et.hour
+            ampm     = "AM" if hr24 < 12 else "PM"
+            hr12     = hr24 if hr24 <= 12 else hr24 - 12
+            hr12     = 12 if hr12 == 0 else hr12
+            time_str = f"{hr12}:{dt_et.minute:02d} {ampm} ET"
         except:
             time_str = "TBD"
 

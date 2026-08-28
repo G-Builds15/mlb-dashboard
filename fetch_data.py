@@ -24,6 +24,13 @@ import sys
 import time
 from datetime import datetime, timedelta, timezone
 
+# All date comparisons use Eastern Time (ET = UTC-4 during MLB season)
+# Avoids midnight UTC boundary cutting off late-night games
+ET_OFFSET = timezone(timedelta(hours=-4))
+
+def et_today():
+    return datetime.now(ET_OFFSET).strftime("%Y-%m-%d")
+
 def curl(url, label=""):
     """Run a curl request and return parsed JSON, or None on failure."""
     r = subprocess.run(
@@ -72,7 +79,7 @@ def fetch_starters(outdir, date_str):
 
     save(data, outdir, "starters_raw.json")
 
-def fetch_odds(outdir, api_key, today_utc):
+def fetch_odds(outdir, api_key, today_et):
     print(f"\n[2] Game odds — The Odds API")
     url  = (f"https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/"
             f"?apiKey={api_key}&regions=us&markets=h2h,spreads,totals"
@@ -83,14 +90,22 @@ def fetch_odds(outdir, api_key, today_utc):
         save([], outdir, "odds_raw.json")
         return
 
-    today_games = [g for g in data
-                   if g.get("commence_time","").startswith(today_utc)]
+    # Convert each game's UTC commence time to ET before comparing
+    def is_today_et(commence_utc):
+        try:
+            dt_utc = datetime.fromisoformat(commence_utc.replace("Z","+00:00"))
+            dt_et  = dt_utc.astimezone(ET_OFFSET)
+            return dt_et.strftime("%Y-%m-%d") == today_et
+        except:
+            return False
+
+    today_games = [g for g in data if is_today_et(g.get("commence_time",""))]
     print(f"  {len(today_games)}/{len(data)} games are today")
     for g in today_games:
         print(f"    {g['away_team']} @ {g['home_team']} — {g['commence_time'][:16]}")
     save(data, outdir, "odds_raw.json")
 
-def fetch_props(outdir, api_key, today_utc):
+def fetch_props(outdir, api_key, today_et):
     print(f"\n[3] Pitcher props — The Odds API")
     url    = (f"https://api.the-odds-api.com/v4/sports/baseball_mlb/events"
               f"?apiKey={api_key}&dateFormat=iso")
@@ -99,8 +114,13 @@ def fetch_props(outdir, api_key, today_utc):
         save({}, outdir, "props_raw.json")
         return
 
-    today_e  = [e for e in events
-                if e.get("commence_time","").startswith(today_utc)]
+    def _is_today(ts):
+        try:
+            dt = datetime.fromisoformat(ts.replace("Z","+00:00")).astimezone(ET_OFFSET)
+            return dt.strftime("%Y-%m-%d") == today_et
+        except:
+            return False
+    today_e = [e for e in events if _is_today(e.get("commence_time",""))]
     markets  = ("pitcher_strikeouts,pitcher_earned_runs,pitcher_walks,"
                 "pitcher_outs,pitcher_hits_allowed")
     all_props = {}
@@ -284,17 +304,17 @@ def main():
     print(f"Files will be written to: {outdir}")
 
     api_key   = os.environ.get("ODDS_API_KEY","")
-    today_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    date_str  = datetime.now().strftime("%Y-%m-%d")
-    season    = datetime.now().year
+    today_et  = et_today()
+    date_str  = today_et
+    season    = datetime.now(ET_OFFSET).year
 
     print(f"\n{'='*55}")
     print(f"MLB Data Fetcher — {date_str}")
     print(f"{'='*55}")
 
     fetch_starters(outdir, date_str)
-    fetch_odds(outdir, api_key, today_utc)
-    fetch_props(outdir, api_key, today_utc)
+    fetch_odds(outdir, api_key, today_et)
+    fetch_props(outdir, api_key, today_et)
     fetch_pitcher_stats(outdir, season)
     fetch_team_stats(outdir, season)
 
@@ -312,4 +332,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-  
