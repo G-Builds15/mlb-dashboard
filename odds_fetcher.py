@@ -23,7 +23,7 @@ import os
 import sys
 from datetime import datetime, timezone
 
-OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.environ.get("GITHUB_WORKSPACE") or os.path.dirname(os.path.abspath(__file__))
 
 # ─────────────────────────────────────────────────────────
 # HELPERS

@@ -29,7 +29,7 @@ from datetime import datetime
 # CONFIG
 # ─────────────────────────────────────────────────────────
 
-OUTPUT_DIR      = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR      = os.environ.get("GITHUB_WORKSPACE") or os.path.dirname(os.path.abspath(__file__))
 GAMES_DATA_FILE = os.path.join(OUTPUT_DIR, "games_data.js")
 SLATE_FILE      = os.path.join(OUTPUT_DIR, "slate_data.js")
 

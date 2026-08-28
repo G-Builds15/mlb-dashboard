@@ -21,7 +21,7 @@ import re
 import subprocess
 import sys
 
-OUTPUT_DIR    = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR    = os.environ.get("GITHUB_WORKSPACE") or os.path.dirname(os.path.abspath(__file__))
 SLATE_FILE    = os.path.join(OUTPUT_DIR, "slate_data.js")
 DASHBOARD     = os.path.join(OUTPUT_DIR, "mlb_dashboard.html")
 
