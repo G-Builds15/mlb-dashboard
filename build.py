@@ -16,33 +16,26 @@ Writes: mlb_dashboard.html
 Run:    python3 build.py
 """
 
+import argparse
 import os
 import re
 import subprocess
 import sys
 
-OUTPUT_DIR    = os.environ.get("GITHUB_WORKSPACE") or os.path.dirname(os.path.abspath(__file__))
-SLATE_FILE    = os.path.join(OUTPUT_DIR, "slate_data.js")
-DASHBOARD     = os.path.join(OUTPUT_DIR, "mlb_dashboard.html")
+_parser = argparse.ArgumentParser(add_help=False)
+_parser.add_argument("--outdir", default=None)
+_args, _ = _parser.parse_known_args()
+OUTPUT_DIR = (_args.outdir or
+              os.environ.get("GITHUB_WORKSPACE") or
+              os.path.dirname(os.path.abspath(__file__)))
+SLATE_FILE = os.path.join(OUTPUT_DIR, "slate_data.js")
+DASHBOARD  = os.path.join(OUTPUT_DIR, "mlb_dashboard.html")
 
 SLATE_MARKER  = "// SLATE DATA — update daily"
 ENGINE_MARKER = "// DASHBOARD ENGINE"
 
 
 def main():
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--outdir", default=None)
-    args, _ = parser.parse_known_args()
-
-    global OUTPUT_DIR, SLATE_FILE, DASHBOARD
-    if args.outdir:
-        OUTPUT_DIR = args.outdir
-    elif os.environ.get("GITHUB_WORKSPACE"):
-        OUTPUT_DIR = os.environ["GITHUB_WORKSPACE"]
-    SLATE_FILE = os.path.join(OUTPUT_DIR, "slate_data.js")
-    DASHBOARD  = os.path.join(OUTPUT_DIR, "mlb_dashboard.html")
-
     print("=" * 55)
     print("MLB Dashboard Builder")
     print(f"  Output dir: {OUTPUT_DIR}")

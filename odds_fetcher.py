@@ -18,12 +18,19 @@ No API calls made here. All network calls happen in update_odds.yml.
 Run: python3 odds_fetcher.py
 """
 
+import argparse
 import json
 import os
 import sys
 from datetime import datetime, timezone
 
-OUTPUT_DIR = os.environ.get("GITHUB_WORKSPACE") or os.path.dirname(os.path.abspath(__file__))
+# Parse --outdir before anything else — sets the working directory
+_parser = argparse.ArgumentParser(add_help=False)
+_parser.add_argument("--outdir", default=None)
+_args, _ = _parser.parse_known_args()
+OUTPUT_DIR = (_args.outdir or
+              os.environ.get("GITHUB_WORKSPACE") or
+              os.path.dirname(os.path.abspath(__file__)))
 
 # ─────────────────────────────────────────────────────────
 # HELPERS
@@ -378,17 +385,6 @@ def write_games_data(games):
 # ─────────────────────────────────────────────────────────
 
 def main():
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--outdir", default=None)
-    args, _ = parser.parse_known_args()
-
-    global OUTPUT_DIR
-    if args.outdir:
-        OUTPUT_DIR = args.outdir
-    elif os.environ.get("GITHUB_WORKSPACE"):
-        OUTPUT_DIR = os.environ["GITHUB_WORKSPACE"]
-
     print("=" * 55)
     print("MLB Odds Fetcher — File Assembler")
     print(f"  Output dir: {OUTPUT_DIR}")
