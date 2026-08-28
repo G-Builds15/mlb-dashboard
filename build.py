@@ -30,8 +30,22 @@ ENGINE_MARKER = "// DASHBOARD ENGINE"
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--outdir", default=None)
+    args, _ = parser.parse_known_args()
+
+    global OUTPUT_DIR, SLATE_FILE, DASHBOARD
+    if args.outdir:
+        OUTPUT_DIR = args.outdir
+    elif os.environ.get("GITHUB_WORKSPACE"):
+        OUTPUT_DIR = os.environ["GITHUB_WORKSPACE"]
+    SLATE_FILE = os.path.join(OUTPUT_DIR, "slate_data.js")
+    DASHBOARD  = os.path.join(OUTPUT_DIR, "mlb_dashboard.html")
+
     print("=" * 55)
     print("MLB Dashboard Builder")
+    print(f"  Output dir: {OUTPUT_DIR}")
     print("=" * 55)
 
     # Validate inputs exist

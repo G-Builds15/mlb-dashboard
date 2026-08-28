@@ -887,8 +887,22 @@ const bestBets = [
 # ─────────────────────────────────────────────────────────
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--outdir", default=None)
+    args, _ = parser.parse_known_args()
+
+    global OUTPUT_DIR, GAMES_DATA_FILE, SLATE_FILE
+    if args.outdir:
+        OUTPUT_DIR = args.outdir
+    elif os.environ.get("GITHUB_WORKSPACE"):
+        OUTPUT_DIR = os.environ["GITHUB_WORKSPACE"]
+    GAMES_DATA_FILE = os.path.join(OUTPUT_DIR, "games_data.js")
+    SLATE_FILE      = os.path.join(OUTPUT_DIR, "slate_data.js")
+
     print("=" * 55)
     print("MLB Slate Builder")
+    print(f"  Output dir: {OUTPUT_DIR}")
     print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 55)
 

@@ -378,8 +378,20 @@ def write_games_data(games):
 # ─────────────────────────────────────────────────────────
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--outdir", default=None)
+    args, _ = parser.parse_known_args()
+
+    global OUTPUT_DIR
+    if args.outdir:
+        OUTPUT_DIR = args.outdir
+    elif os.environ.get("GITHUB_WORKSPACE"):
+        OUTPUT_DIR = os.environ["GITHUB_WORKSPACE"]
+
     print("=" * 55)
     print("MLB Odds Fetcher — File Assembler")
+    print(f"  Output dir: {OUTPUT_DIR}")
     print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 55)
 
