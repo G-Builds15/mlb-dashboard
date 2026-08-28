@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-08-28T22:16:51.668485+00:00",
+  "fetched_at": "2026-08-28T22:31:05.766821+00:00",
   "date": "2026-08-28",
   "games": [
     {
@@ -227,18 +227,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Washington Nationals +124 / Miami Marlins -134",
-        "spread": "Washington Nationals +1.5 (-142)",
-        "total": "O/U 8.5 (Over -104 / Under -118)",
+        "spread": "Washington Nationals +1.5 (-140)",
+        "total": "O/U 8.5 (Over -106 / Under -114)",
         "raw": {
           "homeML": 124,
           "awayML": -134,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -142,
+          "homeSpreadOdds": -140,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 118,
+          "awaySpreadOdds": 116,
           "total": 8.5,
-          "overOdds": -104,
-          "underOdds": -118
+          "overOdds": -106,
+          "underOdds": -114
         }
       },
       "props": {
@@ -252,10 +252,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": -113,
-            "under": -113,
-            "overStr": "-113",
-            "underStr": "-113"
+            "over": -111,
+            "under": -115,
+            "overStr": "-111",
+            "underStr": "-115"
           }
         },
         "Jackson Kent": {
@@ -776,7 +776,7 @@ const ODDS_DATA = {
       "lines": {
         "ml": "Atlanta Braves -220 / Colorado Rockies +200",
         "spread": "Atlanta Braves -1.5 (-106)",
-        "total": "O/U 9.0 (Over -110 / Under -110)",
+        "total": "O/U 9.0 (Over -106 / Under -114)",
         "raw": {
           "homeML": -220,
           "awayML": 200,
@@ -785,8 +785,8 @@ const ODDS_DATA = {
           "awaySpread": 1.5,
           "awaySpreadOdds": -113,
           "total": 9.0,
-          "overOdds": -110,
-          "underOdds": -110
+          "overOdds": -106,
+          "underOdds": -114
         }
       },
       "props": {
@@ -800,9 +800,9 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 2.5,
-            "over": -188,
+            "over": -192,
             "under": 146,
-            "overStr": "-188",
+            "overStr": "-192",
             "underStr": "+146"
           }
         },
@@ -913,7 +913,7 @@ const ODDS_DATA = {
       "lines": {
         "ml": "New York Yankees -148 / Boston Red Sox +138",
         "spread": "New York Yankees -1.5 (+140)",
-        "total": "O/U 7.0 (Over -114 / Under -106)",
+        "total": "O/U 7.5 (Over +106 / Under -130)",
         "raw": {
           "homeML": -148,
           "awayML": 138,
@@ -921,9 +921,9 @@ const ODDS_DATA = {
           "homeSpreadOdds": 140,
           "awaySpread": 1.5,
           "awaySpreadOdds": -170,
-          "total": 7.0,
-          "overOdds": -114,
-          "underOdds": -106
+          "total": 7.5,
+          "overOdds": 106,
+          "underOdds": -130
         }
       },
       "props": {
@@ -1049,18 +1049,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Toronto Blue Jays -140 / Seattle Mariners +130",
-        "spread": "Toronto Blue Jays -1.5 (+152)",
-        "total": "O/U 7.0 (Over -104 / Under -118)",
+        "spread": "Toronto Blue Jays -1.5 (+146)",
+        "total": "O/U 6.5 (Over -128 / Under +104)",
         "raw": {
           "homeML": -140,
           "awayML": 130,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 152,
+          "homeSpreadOdds": 146,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -184,
-          "total": 7.0,
-          "overOdds": -104,
-          "underOdds": -118
+          "awaySpreadOdds": -176,
+          "total": 6.5,
+          "overOdds": -128,
+          "underOdds": 104
         }
       },
       "props": {
@@ -1074,10 +1074,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 7.5,
-            "over": -125,
-            "under": -102,
-            "overStr": "-125",
-            "underStr": "-102"
+            "over": -122,
+            "under": -104,
+            "overStr": "-122",
+            "underStr": "-104"
           }
         },
         "Emerson Hancock": {
