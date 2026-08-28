@@ -1,9 +1,9 @@
-name: Update MLB Odds + Starters
+name: Update MLB Dashboard
 
 on:
   schedule:
-    - cron: '0 14 * * *'    # 10:00 AM ET daily (14:00 UTC)
-    - cron: '0 21 * * *'    # 5:00 PM ET daily (21:00 UTC)
+    - cron: '0 14 * * *'   # 10:00 AM ET
+    - cron: '0 21 * * *'   # 5:00 PM ET
   workflow_dispatch:
 
 permissions:
@@ -27,16 +27,26 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run odds fetcher
+      - name: Step 1 — Fetch all data
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: python3 odds_fetcher.py
+        run: python3 fetch_data.py --outdir $GITHUB_WORKSPACE
 
-      - name: Commit updated odds file
+      - name: Step 2 — Assemble games_data.js
+        run: python3 odds_fetcher.py --outdir $GITHUB_WORKSPACE
+
+      - name: Step 3 — Grade props and leans
+        run: python3 slate_builder.py --outdir $GITHUB_WORKSPACE
+
+      - name: Step 4 — Build dashboard
+        run: python3 build.py --outdir $GITHUB_WORKSPACE
+
+      - name: Commit and push
         run: |
           git config user.email "mlb-bot@dashboard"
-          git config user.name "MLB Odds Bot"
-          git add games_data.js
-          git diff --staged --quiet || git commit -m "Update odds + starters $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git config user.name "MLB Dashboard Bot"
+          git add games_data.js slate_data.js mlb_dashboard.html
+          git diff --staged --quiet || \
+            git commit -m "Auto-update $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
           
