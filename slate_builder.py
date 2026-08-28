@@ -735,6 +735,27 @@ def build_game_object(game):
     sp_str = game.get("lines",{}).get("spread","TBD")
     tt_str = game.get("lines",{}).get("total","TBD")
 
+    # Pull real team stats
+    ats = game.get("team_stats",{}).get("away",{})
+    hts = game.get("team_stats",{}).get("home",{})
+
+    def off_stats(ts):
+        return {
+            "avg":      ts.get("avg","TBD"),
+            "ops":      ts.get("ops","TBD"),
+            "kPct":     str(ts.get("kPct","TBD")),
+            "rPerG":    str(ts.get("rPerG","TBD")),
+            "rPerG_L10":str(ts.get("rPerG_L10") or ts.get("rPerG","TBD")),
+            "rPerG_L5": str(ts.get("rPerG_L5")  or ts.get("rPerG","TBD")),
+        }
+
+    def def_stats(ts, pitcher_stats):
+        return {
+            "era":            str(pitcher_stats.get("era","TBD")),
+            "bullpenERA_L14": str(ts.get("bullpenERA_L14","TBD")),
+            "whip":           str(pitcher_stats.get("whip","TBD")),
+        }
+
     key = f"{away_abbr.lower()}-{home_abbr.lower()}"
     return key, f'''  "{key}": {{
     away:"{away}", home:"{home}",
@@ -745,13 +766,13 @@ def build_game_object(game):
     overview:{{
       lines:{{ ml:"{ml_str}", spread:"{sp_str}", total:"{tt_str}", movement:"" }},
       away:{{ teamName:"{away}", abbr:"{away_abbr}",
-        offStats:{{ avg:"TBD", ops:"TBD", kPct:"TBD", rPerG:"TBD", rPerG_L10:"TBD", rPerG_L5:"TBD" }},
-        defStats:{{ era:"TBD", bullpenERA_L14:"TBD", whip:"TBD" }},
+        offStats:{json.dumps(off_stats(ats))},
+        defStats:{json.dumps(def_stats(ats, aws))},
         starter:{json.dumps(starter_obj(away_p, aws))},
         injuries:[] }},
       home:{{ teamName:"{home}", abbr:"{home_abbr}",
-        offStats:{{ avg:"TBD", ops:"TBD", kPct:"TBD", rPerG:"TBD", rPerG_L10:"TBD", rPerG_L5:"TBD" }},
-        defStats:{{ era:"TBD", bullpenERA_L14:"TBD", whip:"TBD" }},
+        offStats:{json.dumps(off_stats(hts))},
+        defStats:{json.dumps(def_stats(hts, hws))},
         starter:{json.dumps(starter_obj(home_p, hws))},
         injuries:[] }}
     }},
@@ -847,7 +868,7 @@ def write_slate(game_objects, pitcher_cards_by_game, best_bets):
     # Inject pitcher prop cards into game objects
     for key, cards in pitcher_cards_by_game.items():
         for i, go in enumerate(game_objects):
-            if f'"{key}"' in go[:30]:
+            if f'"{key}"' in go[:60]:
                 if cards:
                     cards_js = json.dumps(cards, ensure_ascii=False)
                     game_objects[i] = go.replace(
