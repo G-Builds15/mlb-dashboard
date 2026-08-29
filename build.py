@@ -70,22 +70,22 @@ def main():
             print("ERROR: Cannot locate dashboard engine in mlb_dashboard.html")
             sys.exit(1)
 
-    if slate_start < 0 or slate_start >= engine_start:
-        # Slate marker missing or misplaced — insert before engine
-        print(f"  Slate marker missing — inserting slate before engine")
-        # Find the opening <script> tag before the engine
+    if slate_start >= 0 and slate_start < engine_start:
+        # Clean splice — both markers present
+        new_html = html[:slate_start] + slate + "\n\n" + html[engine_start:]
+    else:
+        # Slate marker missing — find <script> tag and insert before engine
+        print("  Slate marker missing — locating script block")
         script_before = html.rfind("<script>", 0, engine_start)
         if script_before < 0:
-            print("ERROR: Cannot locate <script> block to insert slate")
+            print("ERROR: Cannot locate <script> block")
             sys.exit(1)
         insert_at = script_before + len("<script>") + 1
         new_html = (html[:insert_at] +
-                    "\n" + SLATE_MARKER + "\n" +
-                    slate + "\n\n" + ENGINE_MARKER + "\n" +
+                    "\n" + slate +
+                    "\n\n" + ENGINE_MARKER + "\n" +
                     html[engine_start:])
-    else:
-        # Both markers found — clean splice
-        new_html = html[:slate_start] + slate + "\n\n" + html[engine_start:]
+        print("  Slate injected before engine")
 
     # JavaScript syntax check
     scripts = [(len(m.group(1)), m.group(1))
