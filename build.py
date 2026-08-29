@@ -53,26 +53,39 @@ def main():
     with open(DASHBOARD) as f:
         html = f.read()
 
-    # Locate slate and engine sections
+    # Locate markers — both must exist for clean splice
     slate_start  = html.find(SLATE_MARKER)
     engine_start = html.find(ENGINE_MARKER)
 
-    if slate_start < 0:
-        print(f"ERROR: Slate marker not found in mlb_dashboard.html")
-        print(f"  Expected: '{SLATE_MARKER}'")
-        sys.exit(1)
-
     if engine_start < 0:
-        print(f"ERROR: Engine marker not found in mlb_dashboard.html")
-        print(f"  Expected: '{ENGINE_MARKER}'")
-        sys.exit(1)
+        # ENGINE marker missing — try to find it from known function name
+        engine_start = html.find("function computeGameLean")
+        if engine_start < 0:
+            engine_start = html.find("function renderOverview")
+        if engine_start >= 0:
+            # Walk back to start of line
+            engine_start = html.rfind("\n", 0, engine_start) + 1
+            print(f"  Engine marker missing — located engine at position {engine_start}")
+        else:
+            print("ERROR: Cannot locate dashboard engine in mlb_dashboard.html")
+            sys.exit(1)
 
-    if engine_start <= slate_start:
-        print("ERROR: Engine marker appears before slate marker — file corrupt")
-        sys.exit(1)
-
-    # Splice: pre-slate + new slate + engine-onwards
-    new_html = html[:slate_start] + slate + "\n\n" + html[engine_start:]
+    if slate_start < 0 or slate_start >= engine_start:
+        # Slate marker missing or misplaced — insert before engine
+        print(f"  Slate marker missing — inserting slate before engine")
+        # Find the opening <script> tag before the engine
+        script_before = html.rfind("<script>", 0, engine_start)
+        if script_before < 0:
+            print("ERROR: Cannot locate <script> block to insert slate")
+            sys.exit(1)
+        insert_at = script_before + len("<script>") + 1
+        new_html = (html[:insert_at] +
+                    "\n" + SLATE_MARKER + "\n" +
+                    slate + "\n\n" + ENGINE_MARKER + "\n" +
+                    html[engine_start:])
+    else:
+        # Both markers found — clean splice
+        new_html = html[:slate_start] + slate + "\n\n" + html[engine_start:]
 
     # JavaScript syntax check
     scripts = [(len(m.group(1)), m.group(1))
