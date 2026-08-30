@@ -6,205 +6,23 @@
 
 const games = {
 
-  "mar-nat": {
-    away:"Miami Marlins", home:"Washington Nationals",
-    time:"12:16 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Janson Junk (?HP) vs Andrew Alvarez (?HP)",
-    overview:{
-      lines:{ ml:"Washington Nationals -108 / Miami Marlins +100", spread:"Washington Nationals +1.5 (-192)", total:"O/U 9.0 (Over -118 / Under -104)", movement:"" },
-      away:{ teamName:"Miami Marlins", abbr:"MAR",
-        offStats:{"avg": ".248", "ops": ".724", "kPct": "21.8", "rPerG": "4.32", "rPerG_L10": "4.32", "rPerG_L5": "3.57"},
-        defStats:{"era": "4.21", "bullpenERA_L14": "3.63", "whip": "1.3"},
-        starter:{"name": "Janson Junk", "hand": "?HP", "era": "4.21", "whip": "1.3", "k9": "6.22", "bb9": "2.38", "era_L3": "2.16", "avgIP": "5.2"},
-        injuries:[] },
-      home:{ teamName:"Washington Nationals", abbr:"NAT",
-        offStats:{"avg": ".248", "ops": ".755", "kPct": "21.5", "rPerG": "5.2", "rPerG_L10": "5.2", "rPerG_L5": "5.0"},
-        defStats:{"era": "3.72", "bullpenERA_L14": "4.02", "whip": "1.35"},
-        starter:{"name": "Andrew Alvarez", "hand": "?HP", "era": "3.72", "whip": "1.35", "k9": "8.5", "bb9": "4.04", "era_L3": "3.52", "avgIP": "7.0"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "roc-bra": {
-    away:"Colorado Rockies", home:"Atlanta Braves",
-    time:"1:36 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Mason Adams (?HP) vs Tyler Mahle (?HP)",
-    overview:{
-      lines:{ ml:"Atlanta Braves -225 / Colorado Rockies +205", spread:"Atlanta Braves -1.5 (-115)", total:"O/U 8.5 (Over -105 / Under -115)", movement:"" },
-      away:{ teamName:"Colorado Rockies", abbr:"ROC",
-        offStats:{"avg": ".253", "ops": ".739", "kPct": "22.7", "rPerG": "4.72", "rPerG_L10": "4.72", "rPerG_L5": "3.75"},
-        defStats:{"era": "2.25", "bullpenERA_L14": "6.08", "whip": "1.5"},
-        starter:{"name": "Mason Adams", "hand": "?HP", "era": "2.25", "whip": "1.5", "k9": "11.25", "bb9": "6.75", "era_L3": "2.25", "avgIP": "4.0"},
-        injuries:[] },
-      home:{ teamName:"Atlanta Braves", abbr:"BRA",
-        offStats:{"avg": ".248", "ops": ".724", "kPct": "21.6", "rPerG": "4.65", "rPerG_L10": "4.65", "rPerG_L5": "3.43"},
-        defStats:{"era": "4.41", "bullpenERA_L14": "2.81", "whip": "1.32"},
-        starter:{"name": "Tyler Mahle", "hand": "?HP", "era": "4.41", "whip": "1.32", "k9": "8.52", "bb9": "3.19", "era_L3": "2.04", "avgIP": "5.4"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "sox-yan": {
-    away:"Boston Red Sox", home:"New York Yankees",
-    time:"1:36 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Ranger Suarez (?HP) vs Will Warren (?HP)",
-    overview:{
-      lines:{ ml:"New York Yankees +110 / Boston Red Sox -118", spread:"New York Yankees +1.5 (-162)", total:"O/U 8.0 (Over -105 / Under -115)", movement:"" },
-      away:{ teamName:"Boston Red Sox", abbr:"SOX",
-        offStats:{"avg": ".249", "ops": ".727", "kPct": "21.3", "rPerG": "4.47", "rPerG_L10": "4.47", "rPerG_L5": "3.38"},
-        defStats:{"era": "3.35", "bullpenERA_L14": "3.41", "whip": "1.2"},
-        starter:{"name": "Ranger Suarez", "hand": "?HP", "era": "3.35", "whip": "1.2", "k9": "8.9", "bb9": "2.81", "era_L3": "3.52", "avgIP": "5.1"},
-        injuries:[] },
-      home:{ teamName:"New York Yankees", abbr:"YAN",
-        offStats:{"avg": ".230", "ops": ".714", "kPct": "24.8", "rPerG": "4.46", "rPerG_L10": "4.46", "rPerG_L5": "4.75"},
-        defStats:{"era": "4.39", "bullpenERA_L14": "2.75", "whip": "1.42"},
-        starter:{"name": "Will Warren", "hand": "?HP", "era": "4.39", "whip": "1.42", "k9": "8.93", "bb9": "3.19", "era_L3": "6.23", "avgIP": "5.1"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "mar-jay": {
-    away:"Seattle Mariners", home:"Toronto Blue Jays",
-    time:"1:38 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Logan Gilbert (?HP) vs Max Scherzer (?HP)",
-    overview:{
-      lines:{ ml:"Toronto Blue Jays +122 / Seattle Mariners -132", spread:"Toronto Blue Jays +1.5 (-140)", total:"O/U 8.0 (Over -110 / Under -110)", movement:"" },
-      away:{ teamName:"Seattle Mariners", abbr:"MAR",
-        offStats:{"avg": ".228", "ops": ".682", "kPct": "23.2", "rPerG": "3.9", "rPerG_L10": "3.9", "rPerG_L5": "3.43"},
-        defStats:{"era": "3.36", "bullpenERA_L14": "6.94", "whip": "1.02"},
-        starter:{"name": "Logan Gilbert", "hand": "?HP", "era": "3.36", "whip": "1.02", "k9": "9.39", "bb9": "2.26", "era_L3": "2.81", "avgIP": "6.0"},
-        injuries:[] },
-      home:{ teamName:"Toronto Blue Jays", abbr:"JAY",
-        offStats:{"avg": ".246", "ops": ".688", "kPct": "19.3", "rPerG": "3.95", "rPerG_L10": "3.95", "rPerG_L5": "3.86"},
-        defStats:{"era": "7.02", "bullpenERA_L14": "4.08", "whip": "1.54"},
-        starter:{"name": "Max Scherzer", "hand": "?HP", "era": "7.02", "whip": "1.54", "k9": "6.48", "bb9": "4.5", "era_L3": "6.43", "avgIP": "4.2"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "roy-gua": {
-    away:"Kansas City Royals", home:"Cleveland Guardians",
-    time:"1:41 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Seth Lugo (?HP) vs Parker Messick (?HP)",
-    overview:{
-      lines:{ ml:"Cleveland Guardians -178 / Kansas City Royals +164", spread:"Cleveland Guardians -1.5 (+122)", total:"O/U 7.5 (Over -110 / Under -110)", movement:"" },
-      away:{ teamName:"Kansas City Royals", abbr:"ROY",
-        offStats:{"avg": ".248", "ops": ".718", "kPct": "20.9", "rPerG": "4.3", "rPerG_L10": "4.3", "rPerG_L5": "6.14"},
-        defStats:{"era": "4.61", "bullpenERA_L14": "2.87", "whip": "1.38"},
-        starter:{"name": "Seth Lugo", "hand": "?HP", "era": "4.61", "whip": "1.38", "k9": "6.94", "bb9": "2.81", "era_L3": "6.32", "avgIP": "5.6"},
-        injuries:[] },
-      home:{ teamName:"Cleveland Guardians", abbr:"GUA",
-        offStats:{"avg": ".236", "ops": ".683", "kPct": "21.5", "rPerG": "4.01", "rPerG_L10": "4.01", "rPerG_L5": "4.29"},
-        defStats:{"era": "2.5", "bullpenERA_L14": "2.89", "whip": "1.01"},
-        starter:{"name": "Parker Messick", "hand": "?HP", "era": "2.5", "whip": "1.01", "k9": "9.06", "bb9": "2.38", "era_L3": "1.96", "avgIP": "6.0"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "dod-tig": {
-    away:"Los Angeles Dodgers", home:"Detroit Tigers",
-    time:"1:41 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Tyler Glasnow (?HP) vs Framber Valdez (?HP)",
-    overview:{
-      lines:{ ml:"Detroit Tigers +140 / Los Angeles Dodgers -150", spread:"Detroit Tigers +1.5 (-138)", total:"O/U 7.5 (Over -104 / Under -118)", movement:"" },
-      away:{ teamName:"Los Angeles Dodgers", abbr:"DOD",
-        offStats:{"avg": ".257", "ops": ".757", "kPct": "20.5", "rPerG": "4.88", "rPerG_L10": "4.88", "rPerG_L5": "2.71"},
-        defStats:{"era": "3.02", "bullpenERA_L14": "3.2", "whip": "0.87"},
-        starter:{"name": "Tyler Glasnow", "hand": "?HP", "era": "3.02", "whip": "0.87", "k9": "11.28", "bb9": "2.62", "era_L3": "5.4", "avgIP": "5.5"},
-        injuries:[] },
-      home:{ teamName:"Detroit Tigers", abbr:"TIG",
-        offStats:{"avg": ".239", "ops": ".716", "kPct": "22.6", "rPerG": "4.41", "rPerG_L10": "4.41", "rPerG_L5": "2.29"},
-        defStats:{"era": "4.35", "bullpenERA_L14": "4.17", "whip": "1.41"},
-        starter:{"name": "Framber Valdez", "hand": "?HP", "era": "4.35", "whip": "1.41", "k9": "6.91", "bb9": "3.48", "era_L3": "5.71", "avgIP": "5.5"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
   "pad-ray": {
     away:"San Diego Padres", home:"Tampa Bay Rays",
-    time:"1:41 PM ET", venue:"TBD",
+    time:"1:40 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
     starters:"Robbie Ray (?HP) vs Drew Rasmussen (?HP)",
     overview:{
-      lines:{ ml:"Tampa Bay Rays -164 / San Diego Padres +150", spread:"Tampa Bay Rays -1.5 (+130)", total:"O/U 7.0 (Over -115 / Under -105)", movement:"" },
+      lines:{ ml:"Tampa Bay Rays +135 / San Diego Padres -150", spread:"Tampa Bay Rays N/A", total:"O/U 8.5 (Over -118 / Under -112)", movement:"" },
       away:{ teamName:"San Diego Padres", abbr:"PAD",
-        offStats:{"avg": ".237", "ops": ".702", "kPct": "21.7", "rPerG": "4.26", "rPerG_L10": "4.26", "rPerG_L5": "4.29"},
-        defStats:{"era": "3.21", "bullpenERA_L14": "2.19", "whip": "1.31"},
-        starter:{"name": "Robbie Ray", "hand": "?HP", "era": "3.21", "whip": "1.31", "k9": "7.68", "bb9": "4.41", "era_L3": "2.93", "avgIP": "5.7"},
+        offStats:{"avg": ".236", "ops": ".699", "kPct": "21.7", "rPerG": "4.26", "rPerG_L10": "4.26", "rPerG_L5": "4.25"},
+        defStats:{"era": "3.14", "bullpenERA_L14": "2.3", "whip": "1.3"},
+        starter:{"name": "Robbie Ray", "hand": "?HP", "era": "3.14", "whip": "1.3", "k9": "7.61", "bb9": "4.41", "era_L3": "2.53", "avgIP": "5.7"},
         injuries:[] },
       home:{ teamName:"Tampa Bay Rays", abbr:"RAY",
-        offStats:{"avg": ".261", "ops": ".733", "kPct": "18.5", "rPerG": "4.53", "rPerG_L10": "4.53", "rPerG_L5": "4.14"},
-        defStats:{"era": "2.95", "bullpenERA_L14": "4.54", "whip": "0.93"},
-        starter:{"name": "Drew Rasmussen", "hand": "?HP", "era": "2.95", "whip": "0.93", "k9": "9.17", "bb9": "1.6", "era_L3": "4.5", "avgIP": "5.6"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "sox-twi": {
-    away:"Chicago White Sox", home:"Minnesota Twins",
-    time:"2:11 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Jordan Hicks (?HP) vs Zebby Matthews (?HP)",
-    overview:{
-      lines:{ ml:"Minnesota Twins -118 / Chicago White Sox +110", spread:"Minnesota Twins -1.5 (+168)", total:"O/U 8.5 (Over -114 / Under -106)", movement:"" },
-      away:{ teamName:"Chicago White Sox", abbr:"SOX",
-        offStats:{"avg": ".238", "ops": ".730", "kPct": "23.9", "rPerG": "4.82", "rPerG_L10": "4.82", "rPerG_L5": "5.71"},
-        defStats:{"era": "3.83", "bullpenERA_L14": "4.55", "whip": "1.53"},
-        starter:{"name": "Jordan Hicks", "hand": "?HP", "era": "3.83", "whip": "1.53", "k9": "11.03", "bb9": "5.63", "era_L3": "5.14", "avgIP": "40.0"},
-        injuries:[] },
-      home:{ teamName:"Minnesota Twins", abbr:"TWI",
-        offStats:{"avg": ".246", "ops": ".723", "kPct": "21.1", "rPerG": "4.57", "rPerG_L10": "4.57", "rPerG_L5": "3.86"},
-        defStats:{"era": "4.86", "bullpenERA_L14": "4.98", "whip": "1.31"},
-        starter:{"name": "Zebby Matthews", "hand": "?HP", "era": "4.86", "whip": "1.31", "k9": "7.64", "bb9": "2.78", "era_L3": "3.06", "avgIP": "5.7"},
+        offStats:{"avg": ".260", "ops": ".733", "kPct": "18.6", "rPerG": "4.53", "rPerG_L10": "4.53", "rPerG_L5": "4.25"},
+        defStats:{"era": "2.95", "bullpenERA_L14": "4.29", "whip": "0.93"},
+        starter:{"name": "Drew Rasmussen", "hand": "?HP", "era": "2.95", "whip": "0.93", "k9": "9.16", "bb9": "1.66", "era_L3": "4.09", "avgIP": "5.6"},
         injuries:[] }
     },
     tabs:{
@@ -216,21 +34,21 @@ const games = {
 
   "ran-bre": {
     away:"Texas Rangers", home:"Milwaukee Brewers",
-    time:"2:11 PM ET", venue:"TBD",
+    time:"2:12 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
     starters:"Kumar Rocker (?HP) vs Dustin May (?HP)",
     overview:{
-      lines:{ ml:"Milwaukee Brewers -158 / Texas Rangers +146", spread:"Milwaukee Brewers -1.5 (+128)", total:"O/U 8.5 (Over -110 / Under -110)", movement:"" },
+      lines:{ ml:"Milwaukee Brewers +2200 / Texas Rangers -3000", spread:"Milwaukee Brewers +4.5 (+124)", total:"O/U 11.5 (Over +116 / Under -154)", movement:"" },
       away:{ teamName:"Texas Rangers", abbr:"RAN",
-        offStats:{"avg": ".241", "ops": ".711", "kPct": "22.8", "rPerG": "4.02", "rPerG_L10": "4.02", "rPerG_L5": "4.43"},
-        defStats:{"era": "4.41", "bullpenERA_L14": "4.24", "whip": "1.4"},
-        starter:{"name": "Kumar Rocker", "hand": "?HP", "era": "4.41", "whip": "1.4", "k9": "8.31", "bb9": "3.62", "era_L3": "6.27", "avgIP": "5.5"},
+        offStats:{"avg": ".242", "ops": ".714", "kPct": "22.8", "rPerG": "4.04", "rPerG_L10": "4.04", "rPerG_L5": "4.75"},
+        defStats:{"era": "4.44", "bullpenERA_L14": "4.16", "whip": "1.43"},
+        starter:{"name": "Kumar Rocker", "hand": "?HP", "era": "4.44", "whip": "1.43", "k9": "8.61", "bb9": "3.82", "era_L3": "6.23", "avgIP": "5.4"},
         injuries:[] },
       home:{ teamName:"Milwaukee Brewers", abbr:"BRE",
-        offStats:{"avg": ".256", "ops": ".736", "kPct": "21.4", "rPerG": "4.99", "rPerG_L10": "4.99", "rPerG_L5": "5.0"},
-        defStats:{"era": "4.56", "bullpenERA_L14": "2.24", "whip": "1.29"},
-        starter:{"name": "Dustin May", "hand": "?HP", "era": "4.56", "whip": "1.29", "k9": "8.54", "bb9": "3.04", "era_L3": "7.71", "avgIP": "5.0"},
+        offStats:{"avg": ".255", "ops": ".735", "kPct": "21.5", "rPerG": "4.97", "rPerG_L10": "4.97", "rPerG_L5": "4.62"},
+        defStats:{"era": "4.69", "bullpenERA_L14": "2.5", "whip": "1.32"},
+        starter:{"name": "Dustin May", "hand": "?HP", "era": "4.69", "whip": "1.32", "k9": "8.53", "bb9": "3.15", "era_L3": "7.9", "avgIP": "4.9"},
         injuries:[] }
     },
     tabs:{
@@ -247,16 +65,42 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Braxton Ashcraft (?HP) vs Matthew Liberatore (?HP)",
     overview:{
-      lines:{ ml:"St. Louis Cardinals +106 / Pittsburgh Pirates -114", spread:"St. Louis Cardinals +1.5 (-170)", total:"O/U 7.5 (Over -124 / Under +102)", movement:"" },
+      lines:{ ml:"St. Louis Cardinals +500 / Pittsburgh Pirates -650", spread:"St. Louis Cardinals +1.5 (-1800)", total:"O/U 9.5 (Over +230 / Under -330)", movement:"" },
       away:{ teamName:"Pittsburgh Pirates", abbr:"PIR",
-        offStats:{"avg": ".252", "ops": ".732", "kPct": "24.5", "rPerG": "4.85", "rPerG_L10": "4.85", "rPerG_L5": "2.0"},
-        defStats:{"era": "3.59", "bullpenERA_L14": "2.93", "whip": "1.07"},
-        starter:{"name": "Braxton Ashcraft", "hand": "?HP", "era": "3.59", "whip": "1.07", "k9": "9.33", "bb9": "1.97", "era_L3": "1.17", "avgIP": "6.0"},
+        offStats:{"avg": ".252", "ops": ".733", "kPct": "24.6", "rPerG": "4.85", "rPerG_L10": "4.85", "rPerG_L5": "2.38"},
+        defStats:{"era": "3.59", "bullpenERA_L14": "3.03", "whip": "1.08"},
+        starter:{"name": "Braxton Ashcraft", "hand": "?HP", "era": "3.59", "whip": "1.08", "k9": "9.21", "bb9": "1.96", "era_L3": "1.61", "avgIP": "5.9"},
         injuries:[] },
       home:{ teamName:"St. Louis Cardinals", abbr:"CAR",
-        offStats:{"avg": ".240", "ops": ".696", "kPct": "20.7", "rPerG": "4.42", "rPerG_L10": "4.42", "rPerG_L5": "4.0"},
-        defStats:{"era": "5.44", "bullpenERA_L14": "5.89", "whip": "1.47"},
-        starter:{"name": "Matthew Liberatore", "hand": "?HP", "era": "5.44", "whip": "1.47", "k9": "9.21", "bb9": "3.14", "era_L3": "7.63", "avgIP": "5.0"},
+        offStats:{"avg": ".241", "ops": ".696", "kPct": "20.7", "rPerG": "4.42", "rPerG_L10": "4.42", "rPerG_L5": "4.0"},
+        defStats:{"era": "5.41", "bullpenERA_L14": "5.77", "whip": "1.46"},
+        starter:{"name": "Matthew Liberatore", "hand": "?HP", "era": "5.41", "whip": "1.46", "k9": "9.42", "bb9": "3.14", "era_L3": "6.86", "avgIP": "5.0"},
+        injuries:[] }
+    },
+    tabs:{
+      overview:{intro:"",cards:[]},
+      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
+      batter:{intro:"HRR props — lineup position pending",cards:[]}
+    }
+  },
+
+  "dod-tig": {
+    away:"Los Angeles Dodgers", home:"Detroit Tigers",
+    time:"2:37 PM ET", venue:"TBD",
+    awayRec:"TBD", homeRec:"TBD",
+    wx:"⛅ Weather TBD",
+    starters:"Tyler Glasnow (?HP) vs Framber Valdez (?HP)",
+    overview:{
+      lines:{ ml:"Detroit Tigers N/A / Los Angeles Dodgers N/A", spread:"Detroit Tigers +4.5 (+194)", total:"O/U 7.5 (Over -152 / Under +114)", movement:"" },
+      away:{ teamName:"Los Angeles Dodgers", abbr:"DOD",
+        offStats:{"avg": ".258", "ops": ".757", "kPct": "20.5", "rPerG": "4.89", "rPerG_L10": "4.89", "rPerG_L5": "3.12"},
+        defStats:{"era": "2.79", "bullpenERA_L14": "3.07", "whip": "0.81"},
+        starter:{"name": "Tyler Glasnow", "hand": "?HP", "era": "2.79", "whip": "0.81", "k9": "10.8", "bb9": "2.44", "era_L3": "3.0", "avgIP": "5.7"},
+        injuries:[] },
+      home:{ teamName:"Detroit Tigers", abbr:"TIG",
+        offStats:{"avg": ".238", "ops": ".713", "kPct": "22.6", "rPerG": "4.38", "rPerG_L10": "4.38", "rPerG_L5": "2.12"},
+        defStats:{"era": "4.36", "bullpenERA_L14": "4.35", "whip": "1.4"},
+        starter:{"name": "Framber Valdez", "hand": "?HP", "era": "4.36", "whip": "1.4", "k9": "6.93", "bb9": "3.4", "era_L3": "5.4", "avgIP": "5.6"},
         injuries:[] }
     },
     tabs:{
@@ -273,16 +117,16 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Ethan Pecko (?HP) vs Zac Thornton (?HP)",
     overview:{
-      lines:{ ml:"New York Mets -120 / Houston Astros +110", spread:"New York Mets -1.5 (+158)", total:"O/U 9.0 (Over -106 / Under -114)", movement:"" },
+      lines:{ ml:"New York Mets +195 / Houston Astros -220", spread:"New York Mets +1.5 (-172)", total:"O/U 10.5 (Over +102 / Under -136)", movement:"" },
       away:{ teamName:"Houston Astros", abbr:"AST",
-        offStats:{"avg": ".241", "ops": ".725", "kPct": "21.6", "rPerG": "4.54", "rPerG_L10": "4.54", "rPerG_L5": "4.43"},
-        defStats:{"era": "7.88", "bullpenERA_L14": "5.09", "whip": "1.88"},
-        starter:{"name": "Ethan Pecko", "hand": "?HP", "era": "7.88", "whip": "1.88", "k9": "5.63", "bb9": "7.88", "era_L3": "7.88", "avgIP": "4.0"},
+        offStats:{"avg": ".241", "ops": ".726", "kPct": "21.7", "rPerG": "4.54", "rPerG_L10": "4.54", "rPerG_L5": "4.38"},
+        defStats:{"era": "6.23", "bullpenERA_L14": "5.01", "whip": "1.54"},
+        starter:{"name": "Ethan Pecko", "hand": "?HP", "era": "6.23", "whip": "1.54", "k9": "6.23", "bb9": "6.23", "era_L3": "6.23", "avgIP": "4.3"},
         injuries:[] },
       home:{ teamName:"New York Mets", abbr:"MET",
-        offStats:{"avg": ".236", "ops": ".694", "kPct": "22.7", "rPerG": "4.11", "rPerG_L10": "4.11", "rPerG_L5": "3.43"},
-        defStats:{"era": "2.88", "bullpenERA_L14": "3.83", "whip": "1.15"},
-        starter:{"name": "Zac Thornton", "hand": "?HP", "era": "2.88", "whip": "1.15", "k9": "6.39", "bb9": "2.24", "era_L3": "3.71", "avgIP": "5.6"},
+        offStats:{"avg": ".236", "ops": ".695", "kPct": "22.7", "rPerG": "4.1", "rPerG_L10": "4.1", "rPerG_L5": "3.38"},
+        defStats:{"era": "2.93", "bullpenERA_L14": "3.95", "whip": "1.16"},
+        starter:{"name": "Zac Thornton", "hand": "?HP", "era": "2.93", "whip": "1.16", "k9": "6.6", "bb9": "2.05", "era_L3": "3.68", "avgIP": "5.6"},
         injuries:[] }
     },
     tabs:{
@@ -299,16 +143,16 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Chris Bassitt (?HP) vs Jeffrey Springs (?HP)",
     overview:{
-      lines:{ ml:"Athletics +130 / Baltimore Orioles -140", spread:"Athletics +1.5 (-126)", total:"O/U 10.0 (Over -118 / Under -104)", movement:"" },
+      lines:{ ml:"Athletics -500 / Baltimore Orioles +410", spread:"Athletics -3.5 (+112)", total:"O/U 12.5 (Over +102 / Under -136)", movement:"" },
       away:{ teamName:"Baltimore Orioles", abbr:"ORI",
-        offStats:{"avg": ".236", "ops": ".715", "kPct": "24.4", "rPerG": "4.54", "rPerG_L10": "4.54", "rPerG_L5": "5.57"},
-        defStats:{"era": "4.74", "bullpenERA_L14": "3.77", "whip": "1.55"},
-        starter:{"name": "Chris Bassitt", "hand": "?HP", "era": "4.74", "whip": "1.55", "k9": "6.2", "bb9": "3.16", "era_L3": "3.06", "avgIP": "5.7"},
+        offStats:{"avg": ".236", "ops": ".715", "kPct": "24.4", "rPerG": "4.52", "rPerG_L10": "4.52", "rPerG_L5": "5.0"},
+        defStats:{"era": "4.93", "bullpenERA_L14": "4.05", "whip": "1.6"},
+        starter:{"name": "Chris Bassitt", "hand": "?HP", "era": "4.93", "whip": "1.6", "k9": "6.34", "bb9": "3.29", "era_L3": "4.79", "avgIP": "5.4"},
         injuries:[] },
       home:{ teamName:"Athletics", abbr:"ATH",
-        offStats:{"avg": ".246", "ops": ".720", "kPct": "22.5", "rPerG": "4.35", "rPerG_L10": "4.35", "rPerG_L5": "4.86"},
-        defStats:{"era": "6.08", "bullpenERA_L14": "4.75", "whip": "1.5"},
-        starter:{"name": "Jeffrey Springs", "hand": "?HP", "era": "6.08", "whip": "1.5", "k9": "7.0", "bb9": "3.73", "era_L3": "5.23", "avgIP": "4.9"},
+        offStats:{"avg": ".246", "ops": ".722", "kPct": "22.5", "rPerG": "4.35", "rPerG_L10": "4.35", "rPerG_L5": "4.88"},
+        defStats:{"era": "6.01", "bullpenERA_L14": "4.71", "whip": "1.47"},
+        starter:{"name": "Jeffrey Springs", "hand": "?HP", "era": "6.01", "whip": "1.47", "k9": "7.12", "bb9": "3.63", "era_L3": "4.73", "avgIP": "4.8"},
         injuries:[] }
     },
     tabs:{
@@ -320,21 +164,21 @@ const games = {
 
   "phi-ang": {
     away:"Philadelphia Phillies", home:"Los Angeles Angels",
-    time:"4:07 PM ET", venue:"TBD",
+    time:"4:08 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
     starters:"Zack Wheeler (?HP) vs Yusei Kikuchi (?HP)",
     overview:{
-      lines:{ ml:"Los Angeles Angels +162 / Philadelphia Phillies -174", spread:"Los Angeles Angels +1.5 (-114)", total:"O/U 7.5 (Over -113 / Under -106)", movement:"" },
+      lines:{ ml:"Los Angeles Angels +107 / Philadelphia Phillies -123", spread:"Los Angeles Angels +1.5 (-203)", total:"O/U 6.5 (Over -134 / Under +103)", movement:"" },
       away:{ teamName:"Philadelphia Phillies", abbr:"PHI",
-        offStats:{"avg": ".243", "ops": ".714", "kPct": "22.2", "rPerG": "4.54", "rPerG_L10": "4.54", "rPerG_L5": "5.14"},
-        defStats:{"era": "3.4", "bullpenERA_L14": "3.25", "whip": "1.09"},
-        starter:{"name": "Zack Wheeler", "hand": "?HP", "era": "3.4", "whip": "1.09", "k9": "10.71", "bb9": "2.75", "era_L3": "9.0", "avgIP": "5.6"},
+        offStats:{"avg": ".242", "ops": ".714", "kPct": "22.2", "rPerG": "4.51", "rPerG_L10": "4.51", "rPerG_L5": "4.62"},
+        defStats:{"era": "3.39", "bullpenERA_L14": "3.24", "whip": "1.09"},
+        starter:{"name": "Zack Wheeler", "hand": "?HP", "era": "3.39", "whip": "1.09", "k9": "10.6", "bb9": "2.76", "era_L3": "7.94", "avgIP": "5.5"},
         injuries:[] },
       home:{ teamName:"Los Angeles Angels", abbr:"ANG",
-        offStats:{"avg": ".234", "ops": ".681", "kPct": "25.1", "rPerG": "4.07", "rPerG_L10": "4.07", "rPerG_L5": "3.14"},
-        defStats:{"era": "6.25", "bullpenERA_L14": "2.82", "whip": "1.58"},
-        starter:{"name": "Yusei Kikuchi", "hand": "?HP", "era": "6.25", "whip": "1.58", "k9": "9.25", "bb9": "3.75", "era_L3": "9.0", "avgIP": "4.5"},
+        offStats:{"avg": ".234", "ops": ".681", "kPct": "25.1", "rPerG": "4.04", "rPerG_L10": "4.04", "rPerG_L5": "2.88"},
+        defStats:{"era": "6.0", "bullpenERA_L14": "2.8", "whip": "1.54"},
+        starter:{"name": "Yusei Kikuchi", "hand": "?HP", "era": "6.0", "whip": "1.54", "k9": "9.46", "bb9": "3.69", "era_L3": "6.48", "avgIP": "4.3"},
         injuries:[] }
     },
     tabs:{
@@ -351,7 +195,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Chase Burns (?HP) vs Shota Imanaga (?HP)",
     overview:{
-      lines:{ ml:"Chicago Cubs -146 / Cincinnati Reds +136", spread:"Chicago Cubs -1.5 (+138)", total:"O/U 9.0 (Over -122 / Under +100)", movement:"" },
+      lines:{ ml:"Chicago Cubs -150 / Cincinnati Reds +140", spread:"Chicago Cubs -1.5 (+128)", total:"O/U 9.0 (Over -118 / Under -104)", movement:"" },
       away:{ teamName:"Cincinnati Reds", abbr:"RED",
         offStats:{"avg": ".228", "ops": ".701", "kPct": "25.3", "rPerG": "4.14", "rPerG_L10": "4.14", "rPerG_L5": "5.71"},
         defStats:{"era": "2.77", "bullpenERA_L14": "6.2", "whip": "1.15"},
@@ -373,21 +217,17 @@ const games = {
 };
 
 const bestBets = [
-  {game:"SOX@TWI", pick:"Over 8.5", odds:"-114", grade:"A-", src:"era"},
-  {game:"MAR@JAY", pick:"Over 8.0", odds:"-110", grade:"B+", src:"era"},
-  {game:"DOD@TIG", pick:"Under 7.5", odds:"-118", grade:"B+", src:"era"},
-  {game:"AST@MET", pick:"Mets -1.5", odds:"-120", grade:"B+", src:"era"},
-  {game:"PHI@ANG", pick:"Phillies -1.5", odds:"-174", grade:"B+", src:"era"},
-  {game:"RED@CUB", pick:"Over 9.0", odds:"-122", grade:"B+", src:"era"},
-  {game:"MAR@NAT", pick:"Under 9.0", odds:"-104", grade:"B", src:"era"},
-  {game:"ROC@BRA", pick:"Under 8.5", odds:"-115", grade:"B", src:"era"},
-  {game:"SOX@YAN", pick:"Under 8.0", odds:"-115", grade:"B", src:"era"},
-  {game:"ROY@GUA", pick:"Over 7.5", odds:"-110", grade:"B", src:"era"},
-  {game:"DOD@TIG", pick:"Over 6.5 Ks", odds:"+106", grade:"B", src:"MLB Stats API"},
-  {game:"SOX@TWI", pick:"Twins -1.5", odds:"-118", grade:"B", src:"era"},
-  {game:"ORI@ATH", pick:"Orioles -1.5", odds:"-140", grade:"B", src:"era"},
-  {game:"PHI@ANG", pick:"Over 7.5", odds:"-113", grade:"B", src:"era"},
-  {game:"RED@CUB", pick:"Cubs -1.5", odds:"-146", grade:"B", src:"era"},
-  {game:"DOD@TIG", pick:"Dodgers ML", odds:"-150", grade:"C", parlay:true, src:"era"},
-  {game:"ORI@ATH", pick:"Orioles ML", odds:"-140", grade:"C", parlay:true, src:"era"}
+  {game:"RAN@BRE", pick:"Under 11.5", odds:"-154", grade:"A-", src:"era"},
+  {game:"ORI@ATH", pick:"Under 12.5", odds:"-136", grade:"A-", src:"era"},
+  {game:"PAD@RAY", pick:"Under 8.5", odds:"-112", grade:"B+", src:"era"},
+  {game:"PIR@CAR", pick:"Under 9.5", odds:"-330", grade:"B+", src:"era"},
+  {game:"DOD@TIG", pick:"Under 7.5", odds:"+114", grade:"B+", src:"era"},
+  {game:"AST@MET", pick:"Under 10.5", odds:"-136", grade:"B+", src:"era"},
+  {game:"PHI@ANG", pick:"Over 6.5", odds:"-134", grade:"B+", src:"era"},
+  {game:"RED@CUB", pick:"Over 9.0", odds:"-118", grade:"B+", src:"era"},
+  {game:"DOD@TIG", pick:"Dodgers -1.5", odds:"TBD", grade:"B", src:"era"},
+  {game:"AST@MET", pick:"Mets -1.5", odds:"+195", grade:"B", src:"era"},
+  {game:"PHI@ANG", pick:"Phillies -1.5", odds:"-123", grade:"B", src:"era"},
+  {game:"RED@CUB", pick:"Cubs -1.5", odds:"-150", grade:"B", src:"era"},
+  {game:"PHI@ANG", pick:"Phillies ML", odds:"-123", grade:"C", parlay:true, src:"era"}
 ];
