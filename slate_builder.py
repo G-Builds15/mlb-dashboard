@@ -22,6 +22,7 @@ import json
 import math
 import os
 import re
+import unicodedata
 import sys
 from datetime import datetime
 
@@ -133,7 +134,7 @@ def era_to_grade(blended_era):
     if blended_era <= 3.30: return "B+"
     if blended_era <= 3.90: return "B"
     if blended_era <= 4.50: return "B-"
-    return "C+"
+    return "C+"  # grade but strip filter excludes from best bets
 
 def bb9_modifier(avg_ip, bb9):
     if bb9 <= 3.0: return avg_ip, None
@@ -321,22 +322,18 @@ def grade_pitcher_props(game, pitcher_side, park):
     opp_name = game.get("home" if opp_side=="home" else "away","")
 
     # Find this pitcher's props
-    # Match pitcher to props by last name, then first+last initial fallback
-    last = name.split()[-1].lower()
+    # Normalize unicode for matching (Vásquez → vasquez)
+    def _norm(s):
+        return unicodedata.normalize("NFD", s).encode("ascii","ignore").decode().lower()
+
+    last         = _norm(name.split()[-1])
     first_initial = name.split()[0][0].lower() if name.split() else ""
+
     player_key = next(
-        (k for k in props if last in k.lower()),
+        (k for k in props if last in _norm(k)),
         None,
     )
-    # If no match, try first initial + last name
-    if not player_key:
-        player_key = next(
-            (k for k in props
-             if last in k.lower() and first_initial in k.lower()),
-            None,
-        )
     if not player_key and props:
-        # Log available keys to help debug mismatches
         print(f"  ⚠ No prop key found for {name} (last={last}) "
               f"in: {list(props.keys())[:4]}")
 
@@ -377,7 +374,7 @@ def grade_pitcher_props(game, pitcher_side, park):
     er_line_val  = er_data.get("point") if er_data else 2.5
     er_under_str = er_data.get("underStr","TBD") if er_data else "TBD"
 
-    if er_grade not in ("C+","C"):
+    if er_grade not in ("C+","C","B-","C+",None):
         er_line  = er_line_val
         er_under = er_under_str
         if er_line is not None:
