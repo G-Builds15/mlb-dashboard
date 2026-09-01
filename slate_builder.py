@@ -356,15 +356,16 @@ def grade_pitcher_props(game, pitcher_side, park):
                     "pick":  f"Over {k_line} Ks",
                     "odds":  k_data.get("overStr","TBD"),
                     "grade": k_grade,
+                    "rat":   f"Blended K% {kblend:.1f}% — projects {kproj} Ks vs {k_line} line",
                     "chips": [
                         f"Blended K%: {kblend:.1f}% · proj {kproj} Ks vs {k_line} line",
-                        f"ERA {era} · BB/9 {bb9} · avgIP {avg_ip} · trend {ktrend}",
-                        f"L5 ERA: {l5_era} · L3 ERA: {l3_era}",
+                        f"ERA {era:.2f} · BB/9 {bb9:.2f} · avgIP {avg_ip:.1f} · trend {ktrend}",
+                        f"L5 ERA: {l5_era:.2f} · L3 ERA: {l3_era:.2f}",
                     ],
                     "src": "MLB Stats API",
                     "pitcherRecency": {
-                        "seasonERA": era, "l5ERA": l5_era, "l3ERA": l3_era,
-                        "avgIP": avg_ip, "bb9": bb9,
+                        "seasonERA": float(era), "l5ERA": float(l5_era), "l3ERA": float(l3_era),
+                        "avgIP": float(avg_ip), "bb9": float(bb9),
                     },
                 })
 
@@ -385,6 +386,7 @@ def grade_pitcher_props(game, pitcher_side, park):
                 "pick":  f"Under {er_line} ER",
                 "odds":  er_under,
                 "grade": er_grade,
+                    "rat":   f"Blended ERA {blended_era:.2f} — season {era:.2f} · L5 {l5_era:.2f} · L3 {l3_era:.2f}",
                 "chips": [
                     f"Blended ERA: {blended_era} · {adj_ip} avg IP",
                     f"Season {era} · L5 {l5_era} · L3 {l3_era}",
@@ -434,15 +436,16 @@ def grade_pitcher_props(game, pitcher_side, park):
                     "pick":  f"{'Over' if dirn=='over' else 'Under'} {bb_line} BB",
                     "odds":  bb_odds,
                     "grade": wg,
+                    "rat":   f"BB/9 {bb9:.2f} — projects {wproj} walks vs {bb_line} line",
                     "chips": [
                         f"BB/9: {bb9:.1f} · adj {wadj:.1f} · proj {wproj} walks vs {bb_line} line",
                         wnote or f"L3 BB/9: {l3_bb9:.1f}",
-                        f"Blended ERA {blended_era} · {pitcher_gs} GS · {pitcher_ip} IP",
+                        f"Blended ERA {blended_era:.2f} · {pitcher_gs} GS · {pitcher_ip} IP",
                     ],
                     "src": "MLB Stats API",
                     "pitcherRecency": {
-                        "seasonERA": era, "l5ERA": l5_era, "l3ERA": l3_era,
-                        "avgIP": avg_ip, "bb9": bb9,
+                        "seasonERA": float(era), "l5ERA": float(l5_era), "l3ERA": float(l3_era),
+                        "avgIP": float(avg_ip), "bb9": float(bb9),
                     },
                 })
     elif not walk_sample_ok and (bb9 >= 3.5 or bb9 <= 2.5):
