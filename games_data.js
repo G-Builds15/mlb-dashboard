@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-01T15:03:45.644368+00:00",
+  "fetched_at": "2026-09-01T15:10:24.356340+00:00",
   "date": "2026-09-01",
   "games": [
     {
@@ -245,10 +245,10 @@ const ODDS_DATA = {
         "Gavin Williams": {
           "pitcher_outs": {
             "point": 17.5,
-            "over": -138,
-            "under": 104,
-            "overStr": "-138",
-            "underStr": "+104"
+            "over": -125,
+            "under": -106,
+            "overStr": "-125",
+            "underStr": "-106"
           },
           "pitcher_strikeouts": {
             "point": 6.5,
@@ -853,13 +853,13 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Chicago Cubs -126 / Milwaukee Brewers +108",
-        "spread": "Chicago Cubs -1.5 (+158)",
+        "spread": "Chicago Cubs -1.5 (+155)",
         "total": "O/U 10.0 (Over -105 / Under -115)",
         "raw": {
           "homeML": -126,
           "awayML": 108,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 158,
+          "homeSpreadOdds": 155,
           "awaySpread": 1.5,
           "awaySpreadOdds": -192,
           "total": 10.0,
@@ -1247,16 +1247,16 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Texas Rangers -210 / Athletics +176",
-        "spread": "Texas Rangers -1.5 (+108)",
+        "ml": "Texas Rangers -220 / Athletics +184",
+        "spread": "Texas Rangers -1.5 (+104)",
         "total": "O/U 7.5 (Over -110 / Under -110)",
         "raw": {
-          "homeML": -210,
-          "awayML": 176,
+          "homeML": -220,
+          "awayML": 184,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 108,
+          "homeSpreadOdds": 104,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -130,
+          "awaySpreadOdds": -125,
           "total": 7.5,
           "overOdds": -110,
           "underOdds": -110
@@ -1499,15 +1499,15 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Colorado Rockies +124 / Baltimore Orioles -146",
-        "spread": "Colorado Rockies +1.5 (-118)",
+        "spread": "Colorado Rockies +1.5 (-115)",
         "total": "O/U 11.0 (Over -115 / Under -105)",
         "raw": {
           "homeML": 124,
           "awayML": -146,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -118,
+          "homeSpreadOdds": -115,
           "awaySpread": -1.5,
-          "awaySpreadOdds": -102,
+          "awaySpreadOdds": -104,
           "total": 11.0,
           "overOdds": -115,
           "underOdds": -105
@@ -1661,10 +1661,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 6.5,
-            "over": -102,
-            "under": -125,
-            "overStr": "-102",
-            "underStr": "-125"
+            "over": -104,
+            "under": -122,
+            "overStr": "-104",
+            "underStr": "-122"
           }
         },
         "Grayson Rodriguez": {
@@ -1772,16 +1772,16 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Arizona Diamondbacks +116 / Philadelphia Phillies -136",
-        "spread": "Arizona Diamondbacks +1.5 (-144)",
+        "ml": "Arizona Diamondbacks +114 / Philadelphia Phillies -134",
+        "spread": "Arizona Diamondbacks +1.5 (-152)",
         "total": "O/U 7.5 (Over -115 / Under -105)",
         "raw": {
-          "homeML": 116,
-          "awayML": -136,
+          "homeML": 114,
+          "awayML": -134,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -144,
+          "homeSpreadOdds": -152,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 120,
+          "awaySpreadOdds": 126,
           "total": 7.5,
           "overOdds": -115,
           "underOdds": -105
@@ -1909,16 +1909,16 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Los Angeles Dodgers -174 / St. Louis Cardinals +146",
-        "spread": "Los Angeles Dodgers -1.5 (+116)",
+        "ml": "Los Angeles Dodgers -188 / St. Louis Cardinals +158",
+        "spread": "Los Angeles Dodgers -1.5 (+112)",
         "total": "O/U 8.5 (Over -122 / Under +100)",
         "raw": {
-          "homeML": -174,
-          "awayML": 146,
+          "homeML": -188,
+          "awayML": 158,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 116,
+          "homeSpreadOdds": 112,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -140,
+          "awaySpreadOdds": -134,
           "total": 8.5,
           "overOdds": -122,
           "underOdds": 100
@@ -1951,10 +1951,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -142,
-            "under": 112,
-            "overStr": "-142",
-            "underStr": "+112"
+            "over": -140,
+            "under": 110,
+            "overStr": "-140",
+            "underStr": "+110"
           }
         }
       }

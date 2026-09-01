@@ -169,7 +169,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Robert Gasser (?HP) vs Matthew Boyd (?HP)",
     overview:{
-      lines:{ ml:"Chicago Cubs -126 / Milwaukee Brewers +108", spread:"Chicago Cubs -1.5 (+158)", total:"O/U 10.0 (Over -105 / Under -115)", movement:"" },
+      lines:{ ml:"Chicago Cubs -126 / Milwaukee Brewers +108", spread:"Chicago Cubs -1.5 (+155)", total:"O/U 10.0 (Over -105 / Under -115)", movement:"" },
       away:{ teamName:"Milwaukee Brewers", abbr:"BRE",
         offStats:{"avg": ".255", "ops": ".736", "kPct": "21.5", "rPerG": "4.97", "rPerG_L10": "4.97", "rPerG_L5": "5.14"},
         defStats:{"era": "4.59", "bullpenERA_L14": "3.64", "whip": "1.3"},
@@ -247,7 +247,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Brady Basso (?HP) vs MacKenzie Gore (?HP)",
     overview:{
-      lines:{ ml:"Texas Rangers -210 / Athletics +176", spread:"Texas Rangers -1.5 (+108)", total:"O/U 7.5 (Over -110 / Under -110)", movement:"" },
+      lines:{ ml:"Texas Rangers -220 / Athletics +184", spread:"Texas Rangers -1.5 (+104)", total:"O/U 7.5 (Over -110 / Under -110)", movement:"" },
       away:{ teamName:"Athletics", abbr:"ATH",
         offStats:{"avg": ".245", "ops": ".717", "kPct": "22.5", "rPerG": "4.33", "rPerG_L10": "4.33", "rPerG_L5": "4.14"},
         defStats:{"era": "4.5", "bullpenERA_L14": "5.15", "whip": "1.39"},
@@ -299,7 +299,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Kyle Bradish (?HP) vs Gabriel Hughes (?HP)",
     overview:{
-      lines:{ ml:"Colorado Rockies +124 / Baltimore Orioles -146", spread:"Colorado Rockies +1.5 (-118)", total:"O/U 11.0 (Over -115 / Under -105)", movement:"" },
+      lines:{ ml:"Colorado Rockies +124 / Baltimore Orioles -146", spread:"Colorado Rockies +1.5 (-115)", total:"O/U 11.0 (Over -115 / Under -105)", movement:"" },
       away:{ teamName:"Baltimore Orioles", abbr:"ORI",
         offStats:{"avg": ".235", "ops": ".715", "kPct": "24.4", "rPerG": "4.55", "rPerG_L10": "4.55", "rPerG_L5": "6.43"},
         defStats:{"era": "4.03", "bullpenERA_L14": "3.51", "whip": "1.41"},
@@ -351,7 +351,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Jesús Luzardo (?HP) vs Eduardo Rodriguez (?HP)",
     overview:{
-      lines:{ ml:"Arizona Diamondbacks +116 / Philadelphia Phillies -136", spread:"Arizona Diamondbacks +1.5 (-144)", total:"O/U 7.5 (Over -115 / Under -105)", movement:"" },
+      lines:{ ml:"Arizona Diamondbacks +114 / Philadelphia Phillies -134", spread:"Arizona Diamondbacks +1.5 (-152)", total:"O/U 7.5 (Over -115 / Under -105)", movement:"" },
       away:{ teamName:"Philadelphia Phillies", abbr:"PHI",
         offStats:{"avg": ".243", "ops": ".715", "kPct": "22.1", "rPerG": "4.52", "rPerG_L10": "4.52", "rPerG_L5": "3.57"},
         defStats:{"era": "3.09", "bullpenERA_L14": "2.67", "whip": "1.12"},
@@ -377,7 +377,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Michael McGreevy (?HP) vs Eric Lauer (?HP)",
     overview:{
-      lines:{ ml:"Los Angeles Dodgers -174 / St. Louis Cardinals +146", spread:"Los Angeles Dodgers -1.5 (+116)", total:"O/U 8.5 (Over -122 / Under +100)", movement:"" },
+      lines:{ ml:"Los Angeles Dodgers -188 / St. Louis Cardinals +158", spread:"Los Angeles Dodgers -1.5 (+112)", total:"O/U 8.5 (Over -122 / Under +100)", movement:"" },
       away:{ teamName:"St. Louis Cardinals", abbr:"CAR",
         offStats:{"avg": ".240", "ops": ".696", "kPct": "20.7", "rPerG": "4.42", "rPerG_L10": "4.42", "rPerG_L5": "4.17"},
         defStats:{"era": "3.86", "bullpenERA_L14": "6.39", "whip": "1.25"},
