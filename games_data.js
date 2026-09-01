@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-01T14:54:38.435921+00:00",
+  "fetched_at": "2026-09-01T15:03:45.644368+00:00",
   "date": "2026-09-01",
   "games": [
     {
@@ -347,19 +347,19 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Tampa Bay Rays -124 / New York Mets +106",
-        "spread": "Tampa Bay Rays +1.5 (-205)",
-        "total": "O/U 7.5 (Over -122 / Under +100)",
+        "ml": "Tampa Bay Rays -126 / New York Mets +108",
+        "spread": "Tampa Bay Rays +1.5 (-200)",
+        "total": "O/U 7.5 (Over -114 / Under -106)",
         "raw": {
-          "homeML": -124,
-          "awayML": 106,
+          "homeML": -126,
+          "awayML": 108,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -205,
+          "homeSpreadOdds": -200,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 168,
+          "awaySpreadOdds": 164,
           "total": 7.5,
-          "overOdds": -122,
-          "underOdds": 100
+          "overOdds": -114,
+          "underOdds": -106
         }
       },
       "props": {
@@ -373,10 +373,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -128,
-            "under": 100,
-            "overStr": "-128",
-            "underStr": "+100"
+            "over": -130,
+            "under": 102,
+            "overStr": "-130",
+            "underStr": "+102"
           }
         },
         "Sean Manaea": {
