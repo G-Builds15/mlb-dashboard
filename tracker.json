@@ -1,0 +1,1460 @@
+{
+  "2026-08-31": {
+    "generated_at": "2026-08-31T00:00:00Z",
+    "game_count": 12,
+    "picks": [
+      {
+        "game": "BAL@COL",
+        "pick": "Over 10.0",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "3 total",
+        "hit": false
+      },
+      {
+        "game": "TEX@ATH",
+        "pick": "deGrom Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "0 ER 7 IP",
+        "hit": true
+      },
+      {
+        "game": "SEA@BOS",
+        "pick": "Over 8.0",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "17 total",
+        "hit": true
+      },
+      {
+        "game": "MIA@WSH",
+        "pick": "Dion Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 BB 3 IP",
+        "hit": false
+      },
+      {
+        "game": "NYM@TB",
+        "pick": "Stock Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "0 BB 5.1 IP",
+        "hit": false
+      },
+      {
+        "game": "CWS@HOU",
+        "pick": "Over 7.5",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "9 total",
+        "hit": true
+      },
+      {
+        "game": "NYY@LAA",
+        "pick": "Rodr\u00edguez Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "3 BB 3.2 IP",
+        "hit": true
+      },
+      {
+        "game": "NYY@LAA",
+        "pick": "Ure\u00f1a Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "0 BB 7 IP",
+        "hit": false
+      },
+      {
+        "game": "ATH@TEX",
+        "pick": "Jump Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "3 BB 4.1 IP",
+        "hit": true
+      },
+      {
+        "game": "SD@CIN",
+        "pick": "King Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "0 ER 6 IP",
+        "hit": true
+      },
+      {
+        "game": "NYM@TB",
+        "pick": "Under 7.5",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "5 total",
+        "hit": true
+      },
+      {
+        "game": "CHC@MIL",
+        "pick": "Over 8.0",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "20 total",
+        "hit": true
+      },
+      {
+        "game": "CHC@MIL",
+        "pick": "Holmes Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "0 ER 6 IP",
+        "hit": true
+      },
+      {
+        "game": "CWS@HOU",
+        "pick": "Lambert Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "2 ER 4.2 IP",
+        "hit": true
+      },
+      {
+        "game": "PHI@ARI",
+        "pick": "Nola Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 5 IP",
+        "hit": true
+      },
+      {
+        "game": "PHI@ARI",
+        "pick": "Pfaadt Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "2 ER 6 IP",
+        "hit": true
+      },
+      {
+        "game": "MIA@WSH",
+        "pick": "Over 8.5",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "9 total",
+        "hit": true
+      },
+      {
+        "game": "MIA@WSH",
+        "pick": "Gusto Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 4.1 IP",
+        "hit": true
+      },
+      {
+        "game": "DET@MIN",
+        "pick": "Bradley Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 7 IP",
+        "hit": true
+      },
+      {
+        "game": "SD@CIN",
+        "pick": "Singer Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "4 ER 4.1 IP",
+        "hit": false
+      },
+      {
+        "game": "DET@MIN",
+        "pick": "Jobe Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "4 ER 5 IP",
+        "hit": false
+      },
+      {
+        "game": "CHC@MIL",
+        "pick": "Harrison Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "9 ER 3.2 IP",
+        "hit": false
+      },
+      {
+        "game": "SFG@ATL",
+        "pick": "Elder Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "5 ER 5.1 IP",
+        "hit": false
+      },
+      {
+        "game": "TEX",
+        "pick": "TEX ML",
+        "odds": "-280",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "TEX won 8-1",
+        "hit": true
+      },
+      {
+        "game": "BAL",
+        "pick": "BAL ML",
+        "odds": "-148",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "BAL won 2-1",
+        "hit": true
+      },
+      {
+        "game": "PHI",
+        "pick": "PHI ML",
+        "odds": "-175",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "PHI won 2-1",
+        "hit": true
+      },
+      {
+        "game": "MIN",
+        "pick": "MIN ML",
+        "odds": "-172",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "MIN won 5-1",
+        "hit": true
+      },
+      {
+        "game": "HOU",
+        "pick": "HOU ML",
+        "odds": "-335",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "HOU won 6-3",
+        "hit": true
+      },
+      {
+        "game": "ATL",
+        "pick": "ATL ML",
+        "odds": "-200",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "SF won 7-3",
+        "hit": false
+      },
+      {
+        "game": "NYY",
+        "pick": "NYY ML",
+        "odds": "-215",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "LAA won 10-1",
+        "hit": false
+      },
+      {
+        "game": "MIL",
+        "pick": "MIL ML",
+        "odds": "-158",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "CHC won 17-3",
+        "hit": false
+      },
+      {
+        "game": "SD",
+        "pick": "SD ML",
+        "odds": "-138",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "SD won 5-0",
+        "hit": true
+      },
+      {
+        "game": "TOR",
+        "pick": "TOR ML",
+        "odds": "-192",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "TOR won 7-0",
+        "hit": true
+      },
+      {
+        "game": "NYM",
+        "pick": "NYM ML",
+        "odds": "+125",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "NYM won 3-2",
+        "hit": true
+      },
+      {
+        "game": "TB",
+        "pick": "TB ML",
+        "odds": "-148",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "NYM won 3-2",
+        "hit": false
+      }
+    ],
+    "summary": {
+      "total": 35,
+      "by_grade": {
+        "A-": 2,
+        "B+": 7,
+        "B": 14,
+        "C": 12
+      },
+      "parlay_count": 12
+    },
+    "results": {
+      "total": 35,
+      "hits": 18,
+      "hit_rate": 0.51,
+      "by_grade": {
+        "A-": {
+          "hits": 1,
+          "total": 2
+        },
+        "B+": {
+          "hits": 5,
+          "total": 7
+        },
+        "B": {
+          "hits": 10,
+          "total": 14
+        },
+        "C_parlay": {
+          "hits": 8,
+          "total": 12
+        }
+      }
+    }
+  },
+  "2026-08-30": {
+    "generated_at": "2026-08-30T00:00:00Z",
+    "game_count": 14,
+    "picks": [
+      {
+        "game": "COL@ATL",
+        "pick": "Adams Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "2 BB 5 IP",
+        "hit": true
+      },
+      {
+        "game": "LAD@DET",
+        "pick": "Glasnow Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 7 IP",
+        "hit": true
+      },
+      {
+        "game": "LAD@DET",
+        "pick": "Valdez Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "3 ER 6 IP",
+        "hit": false
+      },
+      {
+        "game": "LAD@DET",
+        "pick": "Under 7.5",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "7 total",
+        "hit": true
+      },
+      {
+        "game": "SD@TB",
+        "pick": "Rasmussen Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "2 ER 6 IP",
+        "hit": true
+      },
+      {
+        "game": "CWS@MIN",
+        "pick": "Matthews Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 8.1 IP",
+        "hit": true
+      },
+      {
+        "game": "HOU@NYM",
+        "pick": "Pecko Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "2 BB 5 IP",
+        "hit": true
+      },
+      {
+        "game": "PHI@LAA",
+        "pick": "Wheeler Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 6 IP",
+        "hit": true
+      },
+      {
+        "game": "CIN@CHC",
+        "pick": "Burns Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "2 ER 5.2 IP",
+        "hit": true
+      },
+      {
+        "game": "CIN@CHC",
+        "pick": "Imanaga Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "6 ER 5 IP",
+        "hit": false
+      },
+      {
+        "game": "HOU@NYM",
+        "pick": "Thornton Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "2 ER 5 IP",
+        "hit": true
+      },
+      {
+        "game": "COL@ATL",
+        "pick": "Over 8.5",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "5 total",
+        "hit": false
+      },
+      {
+        "game": "BOS@NYY",
+        "pick": "Over 8.0",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "17 total",
+        "hit": true
+      },
+      {
+        "game": "BOS@NYY",
+        "pick": "Su\u00e1rez Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "6 ER 5.1 IP",
+        "hit": false
+      },
+      {
+        "game": "SEA@TOR",
+        "pick": "Gilbert Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "3 ER 5 IP",
+        "hit": false
+      },
+      {
+        "game": "SEA@TOR",
+        "pick": "Scherzer Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "0 ER 7 IP",
+        "hit": true
+      },
+      {
+        "game": "KC@CLE",
+        "pick": "Over 8.0",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "12 total",
+        "hit": true
+      },
+      {
+        "game": "KC@CLE",
+        "pick": "Lugo Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "9 ER 3.2 IP",
+        "hit": false
+      },
+      {
+        "game": "KC@CLE",
+        "pick": "Messick Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 6 IP",
+        "hit": true
+      },
+      {
+        "game": "TEX@MIL",
+        "pick": "Over 7.5",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "11 total",
+        "hit": true
+      },
+      {
+        "game": "TEX@MIL",
+        "pick": "May Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "4 ER 4.1 IP",
+        "hit": false
+      },
+      {
+        "game": "HOU@NYM",
+        "pick": "Over 8.5",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "9 total",
+        "hit": true
+      },
+      {
+        "game": "BAL@ATH",
+        "pick": "Over 8.0",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "13 total",
+        "hit": true
+      },
+      {
+        "game": "BAL@ATH",
+        "pick": "Bassitt Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "5 ER 5.2 IP",
+        "hit": false
+      },
+      {
+        "game": "PHI@LAA",
+        "pick": "Kikuchi Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "2 ER 7 IP",
+        "hit": true
+      },
+      {
+        "game": "CIN@CHC",
+        "pick": "Over 9.0",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "12 total",
+        "hit": true
+      },
+      {
+        "game": "SD@TB",
+        "pick": "Ray Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 6 IP",
+        "hit": true
+      },
+      {
+        "game": "MIA",
+        "pick": "MIA ML",
+        "odds": "-128",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "WSH won in 10",
+        "hit": false
+      },
+      {
+        "game": "ATL",
+        "pick": "ATL ML",
+        "odds": "-265",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "ATL won in 10",
+        "hit": true
+      },
+      {
+        "game": "MIN",
+        "pick": "MIN ML",
+        "odds": "-295",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "MIN won 5-1",
+        "hit": true
+      },
+      {
+        "game": "CHC",
+        "pick": "CHC ML",
+        "odds": "-178",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "CIN won 7-5",
+        "hit": false
+      },
+      {
+        "game": "NYY",
+        "pick": "NYY ML",
+        "odds": "-175",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "NYY won 9-2",
+        "hit": true
+      },
+      {
+        "game": "MIL",
+        "pick": "MIL ML",
+        "odds": "-210",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "TEX won 7-4",
+        "hit": false
+      },
+      {
+        "game": "BAL",
+        "pick": "BAL ML",
+        "odds": "-148",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "BAL won",
+        "hit": true
+      },
+      {
+        "game": "PHI",
+        "pick": "PHI ML",
+        "odds": "-225",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "PHI won",
+        "hit": true
+      },
+      {
+        "game": "SD",
+        "pick": "SD ML",
+        "odds": "-132",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "TB won in 11",
+        "hit": false
+      },
+      {
+        "game": "LAD",
+        "pick": "LAD ML",
+        "odds": "-185",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "LAD won",
+        "hit": true
+      }
+    ],
+    "summary": {
+      "total": 40,
+      "by_grade": {
+        "A-": 1,
+        "B+": 10,
+        "B": 16,
+        "C": 13
+      },
+      "parlay_count": 13
+    },
+    "results": {
+      "total": 40,
+      "hits": 24,
+      "hit_rate": 0.6,
+      "by_grade": {
+        "A-": {
+          "hits": 1,
+          "total": 1
+        },
+        "B+": {
+          "hits": 8,
+          "total": 10
+        },
+        "B": {
+          "hits": 11,
+          "total": 16
+        },
+        "C_parlay": {
+          "hits": 7,
+          "total": 13
+        }
+      }
+    }
+  },
+  "2026-08-29": {
+    "generated_at": "2026-08-29T00:00:00Z",
+    "game_count": 16,
+    "picks": [
+      {
+        "game": "BOS@NYY",
+        "pick": "Bennett Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "0 BB 6 IP",
+        "hit": false
+      },
+      {
+        "game": "PHI@LAA",
+        "pick": "Johnson Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "5 BB 5 IP",
+        "hit": true
+      },
+      {
+        "game": "BOS@NYY",
+        "pick": "NYY Over 8.0",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "6 total",
+        "hit": false
+      },
+      {
+        "game": "LAD@DET",
+        "pick": "Snell Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 5 IP",
+        "hit": true
+      },
+      {
+        "game": "LAD@DET",
+        "pick": "Snell Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "3 BB 5 IP",
+        "hit": true
+      },
+      {
+        "game": "CWS@MIN",
+        "pick": "Ober Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 5 IP",
+        "hit": true
+      },
+      {
+        "game": "CIN@CHC",
+        "pick": "Over 9.0",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "22 total",
+        "hit": true
+      },
+      {
+        "game": "CIN@CHC",
+        "pick": "Gausman Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "5 ER 5 IP",
+        "hit": false
+      },
+      {
+        "game": "SEA@TOR",
+        "pick": "Over 7.5",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "7 total",
+        "hit": false
+      },
+      {
+        "game": "MIA@WSH",
+        "pick": "Cavalli Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "3 BB 4 IP",
+        "hit": true
+      },
+      {
+        "game": "KC@CLE",
+        "pick": "Over 7.5",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "11 total",
+        "hit": true
+      },
+      {
+        "game": "BOS@NYY",
+        "pick": "Fried Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 3.2 IP",
+        "hit": true
+      },
+      {
+        "game": "PHI@LAA",
+        "pick": "Over 7.5",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "6 total",
+        "hit": false
+      },
+      {
+        "game": "LAD@DET",
+        "pick": "Under 7.5",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "3 total",
+        "hit": true
+      },
+      {
+        "game": "LAD@DET",
+        "pick": "Montero Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 5.1 IP",
+        "hit": true
+      },
+      {
+        "game": "MIA@WSH",
+        "pick": "Under 8.5",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "9 total",
+        "hit": false
+      },
+      {
+        "game": "MIA@WSH",
+        "pick": "Alcantara Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "4 ER 6 IP",
+        "hit": false
+      },
+      {
+        "game": "SEA@TOR",
+        "pick": "Soriano Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "3 ER 7 IP",
+        "hit": false
+      },
+      {
+        "game": "BOS@NYY",
+        "pick": "Bello Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "4 ER 4.1 IP",
+        "hit": false
+      },
+      {
+        "game": "BAL@ATH",
+        "pick": "Baz Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 7 IP",
+        "hit": true
+      },
+      {
+        "game": "PHI@LAA",
+        "pick": "S\u00e1nchez Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "0 ER 7 IP",
+        "hit": true
+      },
+      {
+        "game": "NYY G1",
+        "pick": "NYY ML",
+        "odds": "-185",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "BOS won 6-0",
+        "hit": false
+      },
+      {
+        "game": "MIN",
+        "pick": "MIN ML",
+        "odds": "-265",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "CWS won 3-2",
+        "hit": false
+      },
+      {
+        "game": "CHC",
+        "pick": "CHC ML",
+        "odds": "-160",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "CHC won 17-5",
+        "hit": true
+      },
+      {
+        "game": "MIA",
+        "pick": "MIA ML",
+        "odds": "-128",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "WSH won in 10",
+        "hit": false
+      },
+      {
+        "game": "SD",
+        "pick": "SD ML",
+        "odds": "-118",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "TB won in 11",
+        "hit": false
+      },
+      {
+        "game": "ATL",
+        "pick": "ATL ML",
+        "odds": "-265",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "ATL won",
+        "hit": true
+      },
+      {
+        "game": "NYY G2",
+        "pick": "NYY ML",
+        "odds": "-165",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "NYY won 9-2",
+        "hit": true
+      },
+      {
+        "game": "BAL",
+        "pick": "BAL ML",
+        "odds": "-138",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "BAL won in 10",
+        "hit": true
+      },
+      {
+        "game": "PHI",
+        "pick": "PHI ML",
+        "odds": "-165",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "PHI won in 10",
+        "hit": true
+      }
+    ],
+    "summary": {
+      "total": 31,
+      "by_grade": {
+        "A-": 2,
+        "B+": 13,
+        "B": 9,
+        "C": 9
+      },
+      "parlay_count": 9
+    },
+    "results": {
+      "total": 31,
+      "hits": 18,
+      "hit_rate": 0.58,
+      "by_grade": {
+        "A-": {
+          "hits": 1,
+          "total": 2
+        },
+        "B+": {
+          "hits": 8,
+          "total": 13
+        },
+        "B": {
+          "hits": 4,
+          "total": 9
+        },
+        "C_parlay": {
+          "hits": 5,
+          "total": 9
+        }
+      }
+    }
+  },
+  "2026-08-28": {
+    "generated_at": "2026-08-28T00:00:00Z",
+    "game_count": 9,
+    "picks": [
+      {
+        "game": "DOD@TIG",
+        "pick": "Skubal Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 6 IP",
+        "hit": true
+      },
+      {
+        "game": "DOD@TIG",
+        "pick": "Skubal Under 1.5 BB",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "0 BB 6 IP",
+        "hit": true
+      },
+      {
+        "game": "MAR@NAT",
+        "pick": "P\u00e9rez Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "5 ER 3 IP",
+        "hit": false
+      },
+      {
+        "game": "ROY@GUA",
+        "pick": "Wacha Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "0 ER 8 IP",
+        "hit": true
+      },
+      {
+        "game": "AST@MET",
+        "pick": "Brown Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 BB 6.2 IP",
+        "hit": false
+      },
+      {
+        "game": "AST@MET",
+        "pick": "Scott Over 2.5 ER",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "3 ER 5.1 IP",
+        "hit": true
+      },
+      {
+        "game": "AST@MET",
+        "pick": "Scott Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "5 BB 5.1 IP",
+        "hit": true
+      },
+      {
+        "game": "PAD@RAY",
+        "pick": "Mize Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "2 ER 5 IP",
+        "hit": true
+      },
+      {
+        "game": "PAD@RAY",
+        "pick": "McClanahan Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "3 ER 5.2 IP",
+        "hit": false
+      },
+      {
+        "game": "ROC@BRA",
+        "pick": "Sugano Under 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 BB 4 IP",
+        "hit": true
+      },
+      {
+        "game": "ROC@BRA",
+        "pick": "Holmes Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "3 ER 5 IP",
+        "hit": false
+      },
+      {
+        "game": "ROC@BRA",
+        "pick": "Holmes Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "1 BB 5 IP",
+        "hit": false
+      },
+      {
+        "game": "SOX@YAN",
+        "pick": "Schlittler Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "0 ER 5.2 IP",
+        "hit": true
+      },
+      {
+        "game": "SOX@YAN",
+        "pick": "Sandoval Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "4 BB 5.1 IP",
+        "hit": true
+      },
+      {
+        "game": "SEA@TOR",
+        "pick": "Hancock Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "5 ER 5 IP",
+        "hit": false
+      },
+      {
+        "game": "SEA@TOR",
+        "pick": "Cease Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 6 IP",
+        "hit": true
+      },
+      {
+        "game": "SEA@TOR",
+        "pick": "Cease Over 1.5 BB",
+        "odds": "TBD",
+        "grade": "B",
+        "parlay": false,
+        "src": "era",
+        "result": "1 BB 6 IP",
+        "hit": false
+      },
+      {
+        "game": "RAN@BRE",
+        "pick": "Henderson Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "1 ER 7 IP",
+        "hit": true
+      },
+      {
+        "game": "RAN@BRE",
+        "pick": "Henderson Under 1.5 BB",
+        "odds": "TBD",
+        "grade": "A-",
+        "parlay": false,
+        "src": "era",
+        "result": "0 BB 7 IP",
+        "hit": true
+      },
+      {
+        "game": "RAN@BRE",
+        "pick": "Bradford Under 2.5 ER",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "3 ER 5.2 IP",
+        "hit": false
+      },
+      {
+        "game": "RAN@BRE",
+        "pick": "Bradford Under 1.5 BB",
+        "odds": "TBD",
+        "grade": "B+",
+        "parlay": false,
+        "src": "era",
+        "result": "2 BB 5.2 IP",
+        "hit": false
+      },
+      {
+        "game": "DOD@TIG",
+        "pick": "LAD ML",
+        "odds": "-178",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "LAD won",
+        "hit": true
+      },
+      {
+        "game": "MAR@NAT",
+        "pick": "MIA ML",
+        "odds": "-134",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "WSH won",
+        "hit": false
+      },
+      {
+        "game": "SOX@YAN",
+        "pick": "NYY ML",
+        "odds": "-148",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "NYY won",
+        "hit": true
+      },
+      {
+        "game": "RAN@BRE",
+        "pick": "MIL ML",
+        "odds": "-205",
+        "grade": "C",
+        "parlay": true,
+        "src": "era",
+        "result": "MIL won",
+        "hit": true
+      }
+    ],
+    "summary": {
+      "total": 27,
+      "by_grade": {
+        "A-": 6,
+        "B+": 11,
+        "B": 4,
+        "C": 4
+      },
+      "parlay_count": 4
+    },
+    "results": {
+      "total": 27,
+      "hits": 17,
+      "hit_rate": 0.63,
+      "by_grade": {
+        "A-": {
+          "hits": 5,
+          "total": 6
+        },
+        "B+": {
+          "hits": 7,
+          "total": 11
+        },
+        "B": {
+          "hits": 2,
+          "total": 4
+        },
+        "C_parlay": {
+          "hits": 3,
+          "total": 4
+        }
+      }
+    }
+  },
+  "2026-08-27": {
+    "generated_at": "2026-08-27T00:00:00Z",
+    "game_count": 15,
+    "note": "Pre-dashboard \u2014 manual slate",
+    "picks": [],
+    "summary": {
+      "total": 22,
+      "by_grade": {},
+      "parlay_count": 0
+    },
+    "results": {
+      "total": 22,
+      "hits": 12,
+      "hit_rate": 0.55
+    }
+  },
+  "2026-08-26": {
+    "generated_at": "2026-08-26T00:00:00Z",
+    "game_count": 15,
+    "note": "Pre-dashboard \u2014 manual slate",
+    "picks": [],
+    "summary": {
+      "total": 23,
+      "by_grade": {},
+      "parlay_count": 0
+    },
+    "results": {
+      "total": 23,
+      "hits": 8,
+      "hit_rate": 0.35
+    }
+  }
+}
