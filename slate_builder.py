@@ -883,6 +883,17 @@ def write_slate(game_objects, pitcher_cards_by_game, best_bets):
     today = datetime.now().strftime("%b %d, %Y")
 
     # Inject pitcher prop cards into game objects
+    obj_keys = []
+    for go in game_objects:
+        import re as _re2
+        m = _re2.match(r'\s*"([^"]+)":\s*\{', go)
+        if m: obj_keys.append(m.group(1))
+    card_keys = list(pitcher_cards_by_game.keys())
+    print(f"  game_object keys: {obj_keys[:5]}")
+    print(f"  pitcher_card keys: {card_keys[:5]}")
+    key_match = set(obj_keys) & set(card_keys)
+    print(f"  matching keys: {len(key_match)}/{len(card_keys)}")
+
     for key, cards in pitcher_cards_by_game.items():
         for i, go in enumerate(game_objects):
             if f'"{{key}}"' in go[:60]:
