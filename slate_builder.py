@@ -896,7 +896,7 @@ def write_slate(game_objects, pitcher_cards_by_game, best_bets):
 
     for key, cards in pitcher_cards_by_game.items():
         for i, go in enumerate(game_objects):
-            if f'"{{key}}"' in go[:60]:
+            if ('"' + key + '"') in go[:60]:
                 if cards:
                     cards_js = json.dumps(cards, ensure_ascii=False)
                     # Use regex to handle any whitespace variation in the target
