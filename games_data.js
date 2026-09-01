@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-01T19:40:59.675073+00:00",
+  "fetched_at": "2026-09-01T19:49:53.597827+00:00",
   "date": "2026-09-01",
   "games": [
     {
@@ -90,15 +90,15 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Cincinnati Reds +116 / San Diego Padres -136",
-        "spread": "Cincinnati Reds +1.5 (-140)",
+        "spread": "Cincinnati Reds +1.5 (-142)",
         "total": "O/U 9.0 (Over -120 / Under -102)",
         "raw": {
           "homeML": 116,
           "awayML": -136,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -140,
+          "homeSpreadOdds": -142,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 116,
+          "awaySpreadOdds": 118,
           "total": 9.0,
           "overOdds": -120,
           "underOdds": -102
@@ -131,10 +131,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": 100,
-            "under": -128,
-            "overStr": "+100",
-            "underStr": "-128"
+            "over": -106,
+            "under": -120,
+            "overStr": "-106",
+            "underStr": "-120"
           }
         }
       }
@@ -356,7 +356,7 @@ const ODDS_DATA = {
           "homeSpread": -1.5,
           "homeSpreadOdds": 150,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -184,
+          "awaySpreadOdds": -182,
           "total": 7.5,
           "overOdds": -122,
           "underOdds": 100
@@ -373,10 +373,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -138,
-            "under": 108,
-            "overStr": "-138",
-            "underStr": "+108"
+            "over": -148,
+            "under": 116,
+            "overStr": "-148",
+            "underStr": "+116"
           }
         },
         "Sean Manaea": {
@@ -519,10 +519,10 @@ const ODDS_DATA = {
         "Paul Skenes": {
           "pitcher_outs": {
             "point": 16.5,
-            "over": -114,
-            "under": -120,
-            "overStr": "-114",
-            "underStr": "-120"
+            "over": -102,
+            "under": -136,
+            "overStr": "-102",
+            "underStr": "-136"
           },
           "pitcher_strikeouts": {
             "point": 6.5,
@@ -892,10 +892,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": 122,
-            "under": -156,
-            "overStr": "+122",
-            "underStr": "-156"
+            "over": 120,
+            "under": -154,
+            "overStr": "+120",
+            "underStr": "-154"
           }
         },
         "Robert Gasser": {
@@ -908,9 +908,9 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -160,
+            "over": -158,
             "under": 124,
-            "overStr": "-160",
+            "overStr": "-158",
             "underStr": "+124"
           }
         }
