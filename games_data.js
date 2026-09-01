@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-01T14:45:24.107414+00:00",
+  "fetched_at": "2026-09-01T14:54:38.435921+00:00",
   "date": "2026-09-01",
   "games": [
     {
@@ -227,15 +227,15 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Cleveland Guardians -184 / Toronto Blue Jays +154",
-        "spread": "Cleveland Guardians -1.5 (+125)",
+        "spread": "Cleveland Guardians -1.5 (+126)",
         "total": "O/U 7.5 (Over -122 / Under +100)",
         "raw": {
           "homeML": -184,
           "awayML": 154,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 125,
+          "homeSpreadOdds": 126,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -150,
+          "awaySpreadOdds": -152,
           "total": 7.5,
           "overOdds": -122,
           "underOdds": 100
@@ -623,7 +623,7 @@ const ODDS_DATA = {
       "lines": {
         "ml": "Washington Nationals +152 / Atlanta Braves -180",
         "spread": "Washington Nationals +1.5 (-108)",
-        "total": "O/U 9.5 (Over -120 / Under -102)",
+        "total": "O/U 9.5 (Over -122 / Under +100)",
         "raw": {
           "homeML": 152,
           "awayML": -180,
@@ -632,8 +632,8 @@ const ODDS_DATA = {
           "awaySpread": -1.5,
           "awaySpreadOdds": -111,
           "total": 9.5,
-          "overOdds": -120,
-          "underOdds": -102
+          "overOdds": -122,
+          "underOdds": 100
         }
       },
       "props": {
@@ -1248,18 +1248,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Texas Rangers -210 / Athletics +176",
-        "spread": "Texas Rangers -1.5 (+106)",
-        "total": "O/U 7.5 (Over +100 / Under -122)",
+        "spread": "Texas Rangers -1.5 (+108)",
+        "total": "O/U 7.5 (Over -110 / Under -110)",
         "raw": {
           "homeML": -210,
           "awayML": 176,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 106,
+          "homeSpreadOdds": 108,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -128,
+          "awaySpreadOdds": -130,
           "total": 7.5,
-          "overOdds": 100,
-          "underOdds": -122
+          "overOdds": -110,
+          "underOdds": -110
         }
       },
       "props": {
@@ -1499,15 +1499,15 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Colorado Rockies +124 / Baltimore Orioles -146",
-        "spread": "Colorado Rockies +1.5 (-120)",
+        "spread": "Colorado Rockies +1.5 (-118)",
         "total": "O/U 11.0 (Over -115 / Under -105)",
         "raw": {
           "homeML": 124,
           "awayML": -146,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -120,
+          "homeSpreadOdds": -118,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 100,
+          "awaySpreadOdds": -102,
           "total": 11.0,
           "overOdds": -115,
           "underOdds": -105
@@ -1636,18 +1636,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Los Angeles Angels +160 / New York Yankees -190",
-        "spread": "Los Angeles Angels +1.5 (-118)",
-        "total": "O/U 7.5 (Over -112 / Under -108)",
+        "spread": "Los Angeles Angels +1.5 (-115)",
+        "total": "O/U 7.5 (Over -108 / Under -112)",
         "raw": {
           "homeML": 160,
           "awayML": -190,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -118,
+          "homeSpreadOdds": -115,
           "awaySpread": -1.5,
-          "awaySpreadOdds": -102,
+          "awaySpreadOdds": -104,
           "total": 7.5,
-          "overOdds": -112,
-          "underOdds": -108
+          "overOdds": -108,
+          "underOdds": -112
         }
       },
       "props": {
@@ -1773,18 +1773,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Arizona Diamondbacks +116 / Philadelphia Phillies -136",
-        "spread": "Arizona Diamondbacks +1.5 (-152)",
-        "total": "O/U 7.5 (Over -122 / Under +100)",
+        "spread": "Arizona Diamondbacks +1.5 (-144)",
+        "total": "O/U 7.5 (Over -115 / Under -105)",
         "raw": {
           "homeML": 116,
           "awayML": -136,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -152,
+          "homeSpreadOdds": -144,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 126,
+          "awaySpreadOdds": 120,
           "total": 7.5,
-          "overOdds": -122,
-          "underOdds": 100
+          "overOdds": -115,
+          "underOdds": -105
         }
       },
       "props": {
@@ -1798,10 +1798,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": 116,
-            "under": -148,
-            "overStr": "+116",
-            "underStr": "-148"
+            "over": 114,
+            "under": -146,
+            "overStr": "+114",
+            "underStr": "-146"
           }
         },
         "Jesus Luzardo": {
@@ -1910,15 +1910,15 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Los Angeles Dodgers -174 / St. Louis Cardinals +146",
-        "spread": "Los Angeles Dodgers -1.5 (+118)",
+        "spread": "Los Angeles Dodgers -1.5 (+116)",
         "total": "O/U 8.5 (Over -122 / Under +100)",
         "raw": {
           "homeML": -174,
           "awayML": 146,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 118,
+          "homeSpreadOdds": 116,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -142,
+          "awaySpreadOdds": -140,
           "total": 8.5,
           "overOdds": -122,
           "underOdds": 100
