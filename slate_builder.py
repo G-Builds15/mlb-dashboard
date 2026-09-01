@@ -321,11 +321,24 @@ def grade_pitcher_props(game, pitcher_side, park):
     opp_name = game.get("home" if opp_side=="home" else "away","")
 
     # Find this pitcher's props
+    # Match pitcher to props by last name, then first+last initial fallback
+    last = name.split()[-1].lower()
+    first_initial = name.split()[0][0].lower() if name.split() else ""
     player_key = next(
-        (k for k in props
-         if name.split()[-1].lower() in k.lower()),
+        (k for k in props if last in k.lower()),
         None,
     )
+    # If no match, try first initial + last name
+    if not player_key:
+        player_key = next(
+            (k for k in props
+             if last in k.lower() and first_initial in k.lower()),
+            None,
+        )
+    if not player_key and props:
+        # Log available keys to help debug mismatches
+        print(f"  ⚠ No prop key found for {name} (last={last}) "
+              f"in: {list(props.keys())[:4]}")
 
     # ── K prop ──────────────────────────────────────────
     k_data = props.get(player_key,{}).get("pitcher_strikeouts") if player_key else None
@@ -356,12 +369,16 @@ def grade_pitcher_props(game, pitcher_side, park):
                 })
 
     # ── ER prop ─────────────────────────────────────────
-    er_data = props.get(player_key,{}).get("pitcher_earned_runs") if player_key else None
+    er_data  = props.get(player_key,{}).get("pitcher_earned_runs") if player_key else None
     er_grade = era_to_grade(blended_era)
 
-    if er_data and er_grade not in ("C+","C"):
-        er_line  = er_data.get("point")
-        er_under = er_data.get("underStr","TBD")
+    # Grade ER prop even without live odds line — use standard 2.5 line
+    er_line_val  = er_data.get("point") if er_data else 2.5
+    er_under_str = er_data.get("underStr","TBD") if er_data else "TBD"
+
+    if er_grade not in ("C+","C"):
+        er_line  = er_line_val
+        er_under = er_under_str
         if er_line is not None:
             cards.append({
                 "lbl":   f"{name.split()[-1]} — Earned Runs",
