@@ -174,7 +174,8 @@ def fetch_pitcher_stats(outdir, season):
                   f"?stats=season&group=pitching&season={season}")
         d = curl(url_s)
         if d:
-            splits = d.get("stats",[{}])[0].get("splits",[])
+            stats_list = d.get("stats",[])
+            splits = stats_list[0].get("splits",[]) if stats_list else []
             if splits:
                 s  = splits[0]["stat"]
                 ip = float(s.get("inningsPitched",0) or 0)
@@ -203,7 +204,8 @@ def fetch_pitcher_stats(outdir, season):
                      f"&startDate={start}&endDate={end}&season={season}")
             d2 = curl(url_r)
             if d2:
-                sp = d2.get("stats",[{}])[0].get("splits",[])
+                sl2 = d2.get("stats",[])
+                sp = sl2[0].get("splits",[]) if sl2 else []
                 if sp:
                     st = sp[0]["stat"]
                     k2 = int(st.get("strikeOuts",0) or 0)
