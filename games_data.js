@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-03T13:21:29.046425+00:00",
+  "fetched_at": "2026-09-03T13:32:13.726592+00:00",
   "date": "2026-09-03",
   "games": [
     {
@@ -37,9 +37,11 @@ const ODDS_DATA = {
           "l5ERA": 5.26,
           "l5KPct": 19.6,
           "l5BB9": 3.51,
+          "l5AvgIP": 5.0,
           "l3ERA": 7.2,
           "l3KPct": 19.0,
           "l3BB9": 4.8,
+          "l3AvgIP": 5.0,
           "name": "Blade Tidwell",
           "pid": 694918
         },
@@ -57,9 +59,11 @@ const ODDS_DATA = {
           "l5ERA": null,
           "l5KPct": 15.4,
           "l5BB9": null,
+          "l5AvgIP": 4.0,
           "l3ERA": 1.86,
           "l3KPct": 23.7,
           "l3BB9": 6.52,
+          "l3AvgIP": 3.1,
           "name": "Lake Bachar",
           "pid": 669199
         }
@@ -158,9 +162,11 @@ const ODDS_DATA = {
           "l5ERA": 4.13,
           "l5KPct": 18.5,
           "l5BB9": 3.18,
+          "l5AvgIP": 5.6,
           "l3ERA": 5.6,
           "l3KPct": 19.5,
           "l3BB9": 2.55,
+          "l3AvgIP": 5.7,
           "name": "Jos\u00e9 Soriano",
           "pid": 667755
         },
@@ -178,9 +184,11 @@ const ODDS_DATA = {
           "l5ERA": 3.86,
           "l5KPct": 20.1,
           "l5BB9": 2.17,
+          "l5AvgIP": 6.2,
           "l3ERA": 3.0,
           "l3KPct": 17.9,
           "l3BB9": 3.0,
+          "l3AvgIP": 6.0,
           "name": "Tanner Bibee",
           "pid": 676440
         }
@@ -337,9 +345,11 @@ const ODDS_DATA = {
           "l5ERA": 6.45,
           "l5KPct": 19.4,
           "l5BB9": 2.42,
+          "l5AvgIP": 4.4,
           "l3ERA": 8.74,
           "l3KPct": 8.1,
           "l3BB9": 2.38,
+          "l3AvgIP": 3.7,
           "name": "Luis Castillo",
           "pid": 622491
         },
@@ -357,9 +367,11 @@ const ODDS_DATA = {
           "l5ERA": 3.18,
           "l5KPct": 25.7,
           "l5BB9": 4.24,
+          "l5AvgIP": 5.7,
           "l3ERA": 2.08,
           "l3KPct": 26.8,
           "l3BB9": 4.67,
+          "l3AvgIP": 5.7,
           "name": "Hunter Brown",
           "pid": 686613
         }
@@ -516,9 +528,11 @@ const ODDS_DATA = {
           "l5ERA": 4.5,
           "l5KPct": 23.9,
           "l5BB9": 2.25,
+          "l5AvgIP": 5.6,
           "l3ERA": 3.71,
           "l3KPct": 27.9,
           "l3BB9": 1.06,
+          "l3AvgIP": 5.7,
           "name": "Jake Bennett",
           "pid": 687562
         },
@@ -536,9 +550,11 @@ const ODDS_DATA = {
           "l5ERA": 4.13,
           "l5KPct": 16.3,
           "l5BB9": 3.31,
+          "l5AvgIP": 5.4,
           "l3ERA": 3.78,
           "l3KPct": 14.5,
           "l3BB9": 2.7,
+          "l3AvgIP": 5.4,
           "name": "Brandon Young",
           "pid": 687064
         }
@@ -569,18 +585,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Baltimore Orioles +108 / Boston Red Sox -126",
-        "spread": "Baltimore Orioles +1.5 (-162)",
-        "total": "O/U 8.5 (Over -102 / Under -120)",
+        "spread": "Baltimore Orioles +1.5 (-160)",
+        "total": "O/U 8.5 (Over -105 / Under -115)",
         "raw": {
           "homeML": 108,
           "awayML": -126,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -162,
+          "homeSpreadOdds": -160,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 134,
+          "awaySpreadOdds": 132,
           "total": 8.5,
-          "overOdds": -102,
-          "underOdds": -120
+          "overOdds": -105,
+          "underOdds": -115
         }
       },
       "props": {
@@ -610,10 +626,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": 128,
-            "under": -164,
-            "overStr": "+128",
-            "underStr": "-164"
+            "over": 130,
+            "under": -166,
+            "overStr": "+130",
+            "underStr": "-166"
           }
         }
       }
@@ -653,9 +669,11 @@ const ODDS_DATA = {
           "l5ERA": 2.23,
           "l5KPct": 27.4,
           "l5BB9": 1.39,
+          "l5AvgIP": 6.4,
           "l3ERA": 1.35,
           "l3KPct": 24.3,
           "l3BB9": 1.35,
+          "l3AvgIP": 6.7,
           "name": "Logan Henderson",
           "pid": 701656
         },
@@ -673,9 +691,11 @@ const ODDS_DATA = {
           "l5ERA": 5.14,
           "l5KPct": 25.0,
           "l5BB9": 2.25,
+          "l5AvgIP": 5.6,
           "l3ERA": 6.0,
           "l3KPct": 27.8,
           "l3BB9": 2.57,
+          "l3AvgIP": 5.2,
           "name": "Kevin Gausman",
           "pid": 592332
         }
@@ -731,10 +751,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": -124,
-            "under": -103,
-            "overStr": "-124",
-            "underStr": "-103"
+            "over": -118,
+            "under": -108,
+            "overStr": "-118",
+            "underStr": "-108"
           }
         },
         "Kevin Gausman": {
@@ -747,10 +767,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": -111,
-            "under": -115,
-            "overStr": "-111",
-            "underStr": "-115"
+            "over": -114,
+            "under": -111,
+            "overStr": "-114",
+            "underStr": "-111"
           }
         }
       }
@@ -790,9 +810,11 @@ const ODDS_DATA = {
           "l5ERA": 2.08,
           "l5KPct": 15.7,
           "l5BB9": 2.54,
+          "l5AvgIP": 6.5,
           "l3ERA": 3.12,
           "l3KPct": 10.9,
           "l3BB9": 2.77,
+          "l3AvgIP": 6.5,
           "name": "Sandy Alcantara",
           "pid": 645261
         },
@@ -810,9 +832,11 @@ const ODDS_DATA = {
           "l5ERA": 2.35,
           "l5KPct": 21.6,
           "l5BB9": 0.94,
+          "l5AvgIP": 6.4,
           "l3ERA": 2.25,
           "l3KPct": 25.7,
           "l3BB9": 0.45,
+          "l3AvgIP": 6.7,
           "name": "Michael Wacha",
           "pid": 608379
         }
@@ -842,66 +866,29 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Kansas City Royals -107 / Miami Marlins -112",
-        "spread": "Kansas City Royals +1.5 (-167)",
+        "ml": "Kansas City Royals -118 / Miami Marlins -102",
+        "spread": "Kansas City Royals +1.5 (-180)",
         "total": "O/U 9.0 (Over -112 / Under -108)",
         "raw": {
-          "homeML": -107,
-          "awayML": -112,
+          "homeML": -118,
+          "awayML": -102,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -167,
+          "homeSpreadOdds": -180,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 138,
+          "awaySpreadOdds": 148,
           "total": 9.0,
           "overOdds": -112,
           "underOdds": -108
         }
       },
       "props": {
-        "Sandy Alcantara": {
-          "pitcher_earned_runs": {
-            "point": 2.5,
-            "over": -148,
-            "under": 111,
-            "overStr": "-148",
-            "underStr": "+111"
-          },
-          "pitcher_hits_allowed": {
-            "point": 6.5,
-            "over": 106,
-            "under": -141,
-            "overStr": "+106",
-            "underStr": "-141"
-          },
-          "pitcher_outs": {
-            "point": 18.5,
-            "over": -107,
-            "under": -124,
-            "overStr": "-107",
-            "underStr": "-124"
-          },
-          "pitcher_strikeouts": {
-            "point": 3.5,
-            "over": -145,
-            "under": 113,
-            "overStr": "-145",
-            "underStr": "+113"
-          },
-          "pitcher_walks": {
-            "point": 1.5,
-            "over": -116,
-            "under": -115,
-            "overStr": "-116",
-            "underStr": "-115"
-          }
-        },
         "Michael Wacha": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": -153,
-            "under": 115,
-            "overStr": "-153",
-            "underStr": "+115"
+            "over": -147,
+            "under": 110,
+            "overStr": "-147",
+            "underStr": "+110"
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
@@ -919,17 +906,54 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": 106,
-            "under": -135,
-            "overStr": "+106",
-            "underStr": "-135"
+            "over": 111,
+            "under": -142,
+            "overStr": "+111",
+            "underStr": "-142"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -112,
-            "under": -119,
-            "overStr": "-112",
-            "underStr": "-119"
+            "over": -106,
+            "under": -125,
+            "overStr": "-106",
+            "underStr": "-125"
+          }
+        },
+        "Sandy Alcantara": {
+          "pitcher_earned_runs": {
+            "point": 2.5,
+            "over": -153,
+            "under": 115,
+            "overStr": "-153",
+            "underStr": "+115"
+          },
+          "pitcher_hits_allowed": {
+            "point": 6.5,
+            "over": 102,
+            "under": -135,
+            "overStr": "+102",
+            "underStr": "-135"
+          },
+          "pitcher_outs": {
+            "point": 18.5,
+            "over": -107,
+            "under": -124,
+            "overStr": "-107",
+            "underStr": "-124"
+          },
+          "pitcher_strikeouts": {
+            "point": 3.5,
+            "over": -138,
+            "under": 108,
+            "overStr": "-138",
+            "underStr": "+108"
+          },
+          "pitcher_walks": {
+            "point": 1.5,
+            "over": -116,
+            "under": -115,
+            "overStr": "-116",
+            "underStr": "-115"
           }
         }
       }
@@ -969,9 +993,11 @@ const ODDS_DATA = {
           "l5ERA": 3.71,
           "l5KPct": 21.7,
           "l5BB9": 2.65,
+          "l5AvgIP": 4.2,
           "l3ERA": 3.86,
           "l3KPct": 21.1,
           "l3BB9": 1.93,
+          "l3AvgIP": 4.7,
           "name": "Shane McClanahan",
           "pid": 663556
         },
@@ -989,9 +1015,11 @@ const ODDS_DATA = {
           "l5ERA": 1.45,
           "l5KPct": 24.4,
           "l5BB9": 1.16,
+          "l5AvgIP": 6.2,
           "l3ERA": 1.42,
           "l3KPct": 27.1,
           "l3BB9": null,
+          "l3AvgIP": 6.3,
           "name": "Cal Quantrill",
           "pid": 615698
         }
@@ -1022,15 +1050,15 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Texas Rangers +108 / Tampa Bay Rays -126",
-        "spread": "Texas Rangers +1.5 (-170)",
+        "spread": "Texas Rangers +1.5 (-164)",
         "total": "O/U 7.5 (Over -120 / Under -102)",
         "raw": {
           "homeML": 108,
           "awayML": -126,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -170,
+          "homeSpreadOdds": -164,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 140,
+          "awaySpreadOdds": 136,
           "total": 7.5,
           "overOdds": -120,
           "underOdds": -102
@@ -1047,10 +1075,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -142,
-            "under": 112,
-            "overStr": "-142",
-            "underStr": "+112"
+            "over": -140,
+            "under": 110,
+            "overStr": "-140",
+            "underStr": "+110"
           }
         },
         "Cal Quantrill": {
@@ -1063,10 +1091,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -104,
-            "under": -122,
-            "overStr": "-104",
-            "underStr": "-122"
+            "over": -102,
+            "under": -125,
+            "overStr": "-102",
+            "underStr": "-125"
           }
         }
       }
@@ -1106,9 +1134,11 @@ const ODDS_DATA = {
           "l5ERA": 6.33,
           "l5KPct": 22.8,
           "l5BB9": 5.0,
+          "l5AvgIP": 6.8,
           "l3ERA": 1.32,
           "l3KPct": 26.3,
           "l3BB9": 6.59,
+          "l3AvgIP": 13.2,
           "name": "Jack Perkins",
           "pid": 678022
         },
@@ -1126,9 +1156,11 @@ const ODDS_DATA = {
           "l5ERA": 4.5,
           "l5KPct": 19.5,
           "l5BB9": 4.5,
+          "l5AvgIP": 5.0,
           "l3ERA": 4.5,
           "l3KPct": 19.5,
           "l3BB9": 4.5,
+          "l3AvgIP": 5.0,
           "name": "Kade Anderson",
           "pid": 807739
         }
@@ -1159,37 +1191,37 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Seattle Mariners -205 / Athletics +172",
-        "spread": "Seattle Mariners -1.5 (+110)",
-        "total": "O/U 7.0 (Over -115 / Under -105)",
+        "spread": "Seattle Mariners -1.5 (+106)",
+        "total": "O/U 7.0 (Over -112 / Under -108)",
         "raw": {
           "homeML": -205,
           "awayML": 172,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 110,
+          "homeSpreadOdds": 106,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -132,
+          "awaySpreadOdds": -128,
           "total": 7.0,
-          "overOdds": -115,
-          "underOdds": -105
+          "overOdds": -112,
+          "underOdds": -108
         }
       },
       "props": {
         "Jack Perkins": {
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": 104,
-            "under": -132,
-            "overStr": "+104",
-            "underStr": "-132"
+            "over": 106,
+            "under": -136,
+            "overStr": "+106",
+            "underStr": "-136"
           }
         },
         "Kade Anderson": {
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": -118,
-            "under": -108,
-            "overStr": "-118",
-            "underStr": "-108"
+            "over": -115,
+            "under": -111,
+            "overStr": "-115",
+            "underStr": "-111"
           }
         }
       }
@@ -1229,9 +1261,11 @@ const ODDS_DATA = {
           "l5ERA": 5.03,
           "l5KPct": 22.5,
           "l5BB9": 3.66,
+          "l5AvgIP": 4.8,
           "l3ERA": 5.52,
           "l3KPct": 26.2,
           "l3BB9": 3.07,
+          "l3AvgIP": 4.7,
           "name": "Quinn Mathews",
           "pid": 687273
         },
@@ -1249,9 +1283,11 @@ const ODDS_DATA = {
           "l5ERA": 3.0,
           "l5KPct": 30.6,
           "l5BB9": 2.1,
+          "l5AvgIP": 6.0,
           "l3ERA": 2.37,
           "l3KPct": 32.9,
           "l3BB9": 1.42,
+          "l3AvgIP": 6.3,
           "name": "Tarik Skubal",
           "pid": 669373
         }

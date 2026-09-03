@@ -1,8 +1,18 @@
 {
   "2026-09-03": {
-    "generated_at": "2026-09-03T13:21:29Z",
+    "generated_at": "2026-09-03T13:32:16Z",
     "game_count": 9,
     "picks": [
+      {
+        "game": "SOX@AST",
+        "pick": "Under 15.5 outs",
+        "odds": "-128",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
       {
         "game": "BRE@CUB",
         "pick": "Under 2.5 ER",
@@ -26,7 +36,7 @@
       {
         "game": "ATH@MAR",
         "pick": "Over 7.0",
-        "odds": "-115",
+        "odds": "-112",
         "grade": "A-",
         "src": "era",
         "parlay": false,
@@ -76,16 +86,6 @@
       {
         "game": "MAR@ROY",
         "pick": "Under 2.5 ER",
-        "odds": "+111",
-        "grade": "B+",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "MAR@ROY",
-        "pick": "Under 2.5 ER",
         "odds": "+115",
         "grade": "B+",
         "src": "MLB Stats API",
@@ -95,8 +95,18 @@
       },
       {
         "game": "MAR@ROY",
+        "pick": "Under 2.5 ER",
+        "odds": "+110",
+        "grade": "B+",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "MAR@ROY",
         "pick": "Under 1.5 BB",
-        "odds": "-119",
+        "odds": "-125",
         "grade": "B+",
         "src": "MLB Stats API",
         "parlay": false,
@@ -136,7 +146,7 @@
       {
         "game": "SOX@ORI",
         "pick": "Under 8.5",
-        "odds": "-120",
+        "odds": "-115",
         "grade": "B",
         "src": "era",
         "parlay": false,
@@ -165,6 +175,16 @@
       },
       {
         "game": "SOX@ORI",
+        "pick": "Over 16.5 outs",
+        "odds": "-112",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@ORI",
         "pick": "Under 2.5 ER",
         "odds": "TBD",
         "grade": "B",
@@ -176,7 +196,7 @@
       {
         "game": "BRE@CUB",
         "pick": "Over 5.5 Ks",
-        "odds": "-124",
+        "odds": "-118",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -186,7 +206,7 @@
       {
         "game": "BRE@CUB",
         "pick": "Over 5.5 Ks",
-        "odds": "-111",
+        "odds": "-114",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -205,8 +225,28 @@
       },
       {
         "game": "MAR@ROY",
+        "pick": "Over 18.5 outs",
+        "odds": "-107",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "MAR@ROY",
         "pick": "Over 5.5 Ks",
-        "odds": "+106",
+        "odds": "+111",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "MAR@ROY",
+        "pick": "Over 18.5 outs",
+        "odds": "+122",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -216,7 +256,7 @@
       {
         "game": "RAY@RAN",
         "pick": "Over 4.5 Ks",
-        "odds": "-142",
+        "odds": "-140",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -236,7 +276,7 @@
       {
         "game": "RAY@RAN",
         "pick": "Over 3.5 Ks",
-        "odds": "-104",
+        "odds": "-102",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -246,7 +286,7 @@
       {
         "game": "ATH@MAR",
         "pick": "Over 5.5 Ks",
-        "odds": "+104",
+        "odds": "+106",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -255,11 +295,11 @@
       }
     ],
     "summary": {
-      "total": 25,
+      "total": 29,
       "by_grade": {
-        "A-": 4,
+        "A-": 5,
         "B+": 7,
-        "B": 14
+        "B": 17
       },
       "parlay_count": 0
     }
