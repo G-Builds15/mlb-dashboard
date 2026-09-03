@@ -336,6 +336,9 @@ def grade_pitcher_props(game, pitcher_side, park):
     if not player_key and props:
         print(f"  ⚠ No prop key found for {name} (last={last}) "
               f"in: {list(props.keys())[:4]}")
+    if player_key and props.get(player_key):
+        markets = list(props[player_key].keys())
+        print(f"  props [{pitcher_side}] {name}: markets={markets}")
 
     # ── K prop ──────────────────────────────────────────
     k_data = props.get(player_key,{}).get("pitcher_strikeouts") if player_key else None
