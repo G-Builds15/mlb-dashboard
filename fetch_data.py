@@ -208,11 +208,14 @@ def fetch_pitcher_stats(outdir, season):
                 sp = sl2[0].get("splits",[]) if sl2 else []
                 if sp:
                     st = sp[0]["stat"]
-                    k2 = int(st.get("strikeOuts",0) or 0)
-                    bf2= int(st.get("battersFaced",0) or 0)
-                    splits_out[f"{label}ERA"]  = float(st.get("era",0) or 0) or None
-                    splits_out[f"{label}KPct"] = round(k2/max(bf2,1)*100,1) if bf2>10 else None
-                    splits_out[f"{label}BB9"]  = float(st.get("walksPer9Inn",0) or 0) or None
+                    k2  = int(st.get("strikeOuts",0) or 0)
+                    bf2 = int(st.get("battersFaced",0) or 0)
+                    ip2 = float(st.get("inningsPitched",0) or 0)
+                    gs2 = int(st.get("gamesStarted",1) or 1)
+                    splits_out[f"{label}ERA"]   = float(st.get("era",0) or 0) or None
+                    splits_out[f"{label}KPct"]  = round(k2/max(bf2,1)*100,1) if bf2>10 else None
+                    splits_out[f"{label}BB9"]   = float(st.get("walksPer9Inn",0) or 0) or None
+                    splits_out[f"{label}AvgIP"] = round(ip2/max(gs2,1),1) if gs2>0 else None
 
         stats_out[pid] = {"name":name,"season":s_data,"splits":splits_out}
         ok = "✓" if s_data else "✗"

@@ -272,6 +272,63 @@ def walk_prop_grade(bb9, avg_ip, l3_bb9=None,
 
     return grade, proj, adj_bb9, note
 
+
+# ─────────────────────────────────────────────────────────
+# GRADE OUTS RECORDED PROPS
+# ─────────────────────────────────────────────────────────
+
+def grade_outs_prop(stats, prop_line):
+    """
+    Model: project outs as avgIP × 3.
+    Use L3 avgIP trend as key modifier — short recent outings signal under.
+    L5/L3 avgIP blended: season 50% / L5 30% / L3 20%.
+    Over: pitcher consistently goes deep, line set conservatively.
+    Under: pitcher trending shorter (high ERA, early hooks).
+    """
+    avg_ip   = stats.get("avgIP", 5.5)
+    l5_avgip = stats.get("l5AvgIP") or avg_ip
+    l3_avgip = stats.get("l3AvgIP") or avg_ip
+    gs       = stats.get("gs", 0) or 0
+    ip_total = stats.get("ip", 0) or 0
+
+    # Minimum sample gate — IP is too noisy below 5 GS
+    if gs < 5 or ip_total < 20:
+        return None, None, None, "insufficient sample"
+
+    # Blended avgIP
+    blended_ip = round(avg_ip*0.50 + l5_avgip*0.30 + l3_avgip*0.20, 2)
+    proj_outs  = round(blended_ip * 3, 1)
+    gap        = proj_outs - prop_line
+
+    # Trend: positive = going deeper recently, negative = getting pulled early
+    trend_gap  = l3_avgip - avg_ip
+
+    # Over grading
+    if gap > 3.0 and trend_gap >= -0.3:    over_g = "A-"
+    elif gap > 1.5 and trend_gap >= -0.5:  over_g = "B+"
+    elif gap > 0.5 and trend_gap >= -0.8:  over_g = "B"
+    else:                                   over_g = None
+
+    # Under grading — L3 avgIP vs line's implied IP
+    # Line implies a certain IP threshold (prop_line / 3)
+    # If L3 avgIP is meaningfully below that threshold, pitcher at risk of early hook
+    line_ip   = prop_line / 3
+    l3_gap    = line_ip - l3_avgip  # positive = L3 is below line's implied IP
+    if   l3_gap > 1.0 and trend_gap <= -0.5: under_g = "A-"
+    elif l3_gap > 0.7 and trend_gap <= -0.3: under_g = "B+"
+    elif l3_gap > 0.5 and trend_gap <= -0.2: under_g = "B"
+    else:                                      under_g = None
+
+    # Trend note
+    if trend_gap <= -0.5:
+        trend_note = f"⚠ Trending shorter (L3 avg {l3_avgip:.1f} IP vs season {avg_ip:.1f} IP)"
+    elif trend_gap >= 0.5:
+        trend_note = f"↗ Going deeper (L3 avg {l3_avgip:.1f} IP vs season {avg_ip:.1f} IP)"
+    else:
+        trend_note = f"Stable depth ({avg_ip:.1f} avgIP · L3 {l3_avgip:.1f} IP)"
+
+    return over_g, under_g, proj_outs, trend_note
+
 # ─────────────────────────────────────────────────────────
 # GRADE PITCHER PROPS
 # ─────────────────────────────────────────────────────────
@@ -455,6 +512,60 @@ def grade_pitcher_props(game, pitcher_side, park):
     elif not walk_sample_ok and (bb9 >= 3.5 or bb9 <= 2.5):
         print(f"  ~ Walk prop skipped: {name} — insufficient sample "
               f"({pitcher_gs} GS, {pitcher_ip:.0f} IP — need 5 GS / 20 IP)")
+
+    # ── Outs recorded prop ──────────────────────────────
+    outs_data = props.get(player_key,{}).get("pitcher_outs") if player_key else None
+
+    if outs_data:
+        outs_line = outs_data.get("point")
+        if outs_line is not None:
+            # Attach L5/L3 avgIP from splits into stats for grading
+            stats_with_avgip = dict(stats)
+            stats_with_avgip["l5AvgIP"] = stats.get("l5AvgIP") or stats.get("avgIP")
+            stats_with_avgip["l3AvgIP"] = stats.get("l3AvgIP") or stats.get("avgIP")
+
+            over_g, under_g, proj_outs, trend_note = grade_outs_prop(
+                stats_with_avgip, outs_line)
+
+            # Grade Over outs
+            if over_g and over_g not in ("C+","C","B-"):
+                cards.append({
+                    "lbl":   f"{name.split()[-1]} — Outs Recorded",
+                    "pick":  f"Over {outs_line} outs",
+                    "odds":  outs_data.get("overStr","TBD"),
+                    "grade": over_g,
+                    "rat":   f"Projects {proj_outs} outs ({proj_outs/3:.1f} IP) vs {outs_line} line",
+                    "chips": [
+                        f"Proj {proj_outs} outs · blended {proj_outs/3:.1f} avgIP vs {outs_line/3:.1f} IP line",
+                        trend_note,
+                        f"Season avgIP {avg_ip:.1f} · {pitcher_gs} GS · {pitcher_ip:.0f} IP",
+                    ],
+                    "src": "MLB Stats API",
+                    "pitcherRecency": {
+                        "seasonERA": float(era), "l5ERA": float(l5_era), "l3ERA": float(l3_era),
+                        "avgIP": float(avg_ip), "bb9": float(bb9),
+                    },
+                })
+
+            # Grade Under outs — only when trending shorter
+            if under_g and under_g not in ("C+","C","B-"):
+                cards.append({
+                    "lbl":   f"{name.split()[-1]} — Outs Recorded",
+                    "pick":  f"Under {outs_line} outs",
+                    "odds":  outs_data.get("underStr","TBD"),
+                    "grade": under_g,
+                    "rat":   f"Projects {proj_outs} outs ({proj_outs/3:.1f} IP) vs {outs_line} line",
+                    "chips": [
+                        f"Proj {proj_outs} outs · blended {proj_outs/3:.1f} avgIP vs {outs_line/3:.1f} IP line",
+                        trend_note,
+                        f"Season avgIP {avg_ip:.1f} · {pitcher_gs} GS · {pitcher_ip:.0f} IP",
+                    ],
+                    "src": "MLB Stats API",
+                    "pitcherRecency": {
+                        "seasonERA": float(era), "l5ERA": float(l5_era), "l3ERA": float(l3_era),
+                        "avgIP": float(avg_ip), "bb9": float(bb9),
+                    },
+                })
 
     return cards
 
