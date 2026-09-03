@@ -342,13 +342,17 @@ def grade_pitcher_props(game, pitcher_side, park):
 
     # ── K prop ──────────────────────────────────────────
     k_data = props.get(player_key,{}).get("pitcher_strikeouts") if player_key else None
-    pa     = starter.get("xwOBA_pa",0) or 0
+    # PA vs opponent used for xwOBA confidence — not applicable to K% rate stat
+    # Use pitcher's GS count as proxy: 10+ GS = solid sample for K grading
+    pitcher_gs = stats.get("gs", 0) or 0
+    pitcher_ip = stats.get("ip", 0) or 0
+    k_pa = 99 if (pitcher_gs >= 10 and pitcher_ip >= 50) else 20 if pitcher_gs >= 5 else 0
 
     if k_data:
         k_line = k_data.get("point")
         if k_line is not None:
             k_grade, kblend, kproj, ktrend = grade_k_prop(
-                stats, k_line, pa, opp_name)
+                stats, k_line, k_pa, opp_name)
 
             if k_grade not in ("C+","C","B-"):
                 cards.append({
