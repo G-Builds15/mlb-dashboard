@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-03T13:32:13.726592+00:00",
+  "fetched_at": "2026-09-03T14:10:29.232309+00:00",
   "date": "2026-09-03",
   "games": [
     {
@@ -93,16 +93,16 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Pittsburgh Pirates -162 / San Francisco Giants +136",
-        "spread": "Pittsburgh Pirates -1.5 (+130)",
+        "ml": "Pittsburgh Pirates -166 / San Francisco Giants +140",
+        "spread": "Pittsburgh Pirates -1.5 (+132)",
         "total": "O/U 8.5 (Over -124 / Under +102)",
         "raw": {
-          "homeML": -162,
-          "awayML": 136,
+          "homeML": -166,
+          "awayML": 140,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 130,
+          "homeSpreadOdds": 132,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -156,
+          "awaySpreadOdds": -160,
           "total": 8.5,
           "overOdds": -124,
           "underOdds": 102
@@ -218,12 +218,12 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Cleveland Guardians -110 / Toronto Blue Jays -109",
+        "ml": "Cleveland Guardians -114 / Toronto Blue Jays -106",
         "spread": "Cleveland Guardians +1.5 (-186)",
         "total": "O/U 8.0 (Over -103 / Under -117)",
         "raw": {
-          "homeML": -110,
-          "awayML": -109,
+          "homeML": -114,
+          "awayML": -106,
           "homeSpread": 1.5,
           "homeSpreadOdds": -186,
           "awaySpread": -1.5,
@@ -250,25 +250,25 @@ const ODDS_DATA = {
             "underStr": "-142"
           },
           "pitcher_outs": {
-            "point": 16.5,
-            "over": -135,
-            "under": 102,
-            "overStr": "-135",
-            "underStr": "+102"
+            "point": 17.5,
+            "over": 106,
+            "under": -141,
+            "overStr": "+106",
+            "underStr": "-141"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": 126,
+            "over": 127,
             "under": -162,
-            "overStr": "+126",
+            "overStr": "+127",
             "underStr": "-162"
           },
           "pitcher_walks": {
             "point": 2.5,
-            "over": 134,
-            "under": -178,
-            "overStr": "+134",
-            "underStr": "-178"
+            "over": 132,
+            "under": -177,
+            "overStr": "+132",
+            "underStr": "-177"
           }
         },
         "Tanner Bibee": {
@@ -295,10 +295,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -152,
-            "under": 119,
-            "overStr": "-152",
-            "underStr": "+119"
+            "over": -157,
+            "under": 123,
+            "overStr": "-157",
+            "underStr": "+123"
           },
           "pitcher_walks": {
             "point": 1.5,
@@ -464,24 +464,24 @@ const ODDS_DATA = {
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
-            "over": 110,
-            "under": -146,
-            "overStr": "+110",
-            "underStr": "-146"
+            "over": 103,
+            "under": -136,
+            "overStr": "+103",
+            "underStr": "-136"
           },
           "pitcher_outs": {
             "point": 15.5,
-            "over": -104,
-            "under": -128,
-            "overStr": "-104",
-            "underStr": "-128"
+            "over": -118,
+            "under": -112,
+            "overStr": "-118",
+            "underStr": "-112"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": 101,
-            "under": -129,
-            "overStr": "+101",
-            "underStr": "-129"
+            "over": 105,
+            "under": -134,
+            "overStr": "+105",
+            "underStr": "-134"
           },
           "pitcher_walks": {
             "point": 1.5,
@@ -726,18 +726,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Chicago Cubs -102 / Milwaukee Brewers -118",
-        "spread": "Chicago Cubs +1.5 (-179)",
-        "total": "O/U 8.5 (Over -103 / Under -117)",
+        "spread": "Chicago Cubs +1.5 (-175)",
+        "total": "O/U 8.0 (Over -119 / Under -102)",
         "raw": {
           "homeML": -102,
           "awayML": -118,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -179,
+          "homeSpreadOdds": -175,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 148,
-          "total": 8.5,
-          "overOdds": -103,
-          "underOdds": -117
+          "awaySpreadOdds": 144,
+          "total": 8.0,
+          "overOdds": -119,
+          "underOdds": -102
         }
       },
       "props": {
@@ -751,10 +751,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": -118,
-            "under": -108,
-            "overStr": "-118",
-            "underStr": "-108"
+            "over": -122,
+            "under": -104,
+            "overStr": "-122",
+            "underStr": "-104"
           }
         },
         "Kevin Gausman": {
@@ -866,16 +866,16 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Kansas City Royals -118 / Miami Marlins -102",
-        "spread": "Kansas City Royals +1.5 (-180)",
+        "ml": "Kansas City Royals -120 / Miami Marlins -101",
+        "spread": "Kansas City Royals +1.5 (-184)",
         "total": "O/U 9.0 (Over -112 / Under -108)",
         "raw": {
-          "homeML": -118,
-          "awayML": -102,
+          "homeML": -120,
+          "awayML": -101,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -180,
+          "homeSpreadOdds": -184,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 148,
+          "awaySpreadOdds": 152,
           "total": 9.0,
           "overOdds": -112,
           "underOdds": -108
@@ -885,10 +885,10 @@ const ODDS_DATA = {
         "Michael Wacha": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": -147,
-            "under": 110,
-            "overStr": "-147",
-            "underStr": "+110"
+            "over": -149,
+            "under": 112,
+            "overStr": "-149",
+            "underStr": "+112"
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
@@ -906,10 +906,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": 111,
-            "under": -142,
-            "overStr": "+111",
-            "underStr": "-142"
+            "over": 119,
+            "under": -152,
+            "overStr": "+119",
+            "underStr": "-152"
           },
           "pitcher_walks": {
             "point": 1.5,
@@ -1075,10 +1075,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -140,
-            "under": 110,
-            "overStr": "-140",
-            "underStr": "+110"
+            "over": -122,
+            "under": -104,
+            "overStr": "-122",
+            "underStr": "-104"
           }
         },
         "Cal Quantrill": {
@@ -1191,37 +1191,37 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Seattle Mariners -205 / Athletics +172",
-        "spread": "Seattle Mariners -1.5 (+106)",
-        "total": "O/U 7.0 (Over -112 / Under -108)",
+        "spread": "Seattle Mariners -1.5 (+110)",
+        "total": "O/U 7.0 (Over -118 / Under -104)",
         "raw": {
           "homeML": -205,
           "awayML": 172,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 106,
+          "homeSpreadOdds": 110,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -128,
+          "awaySpreadOdds": -132,
           "total": 7.0,
-          "overOdds": -112,
-          "underOdds": -108
+          "overOdds": -118,
+          "underOdds": -104
         }
       },
       "props": {
         "Jack Perkins": {
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": 106,
-            "under": -136,
-            "overStr": "+106",
-            "underStr": "-136"
+            "over": 104,
+            "under": -132,
+            "overStr": "+104",
+            "underStr": "-132"
           }
         },
         "Kade Anderson": {
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": -115,
-            "under": -111,
-            "overStr": "-115",
-            "underStr": "-111"
+            "over": -120,
+            "under": -106,
+            "overStr": "-120",
+            "underStr": "-106"
           }
         }
       }
@@ -1336,17 +1336,17 @@ const ODDS_DATA = {
         "Tarik Skubal": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -110,
-            "under": -120,
-            "overStr": "-110",
-            "underStr": "-120"
+            "over": -107,
+            "under": -124,
+            "overStr": "-107",
+            "underStr": "-124"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": 101,
-            "under": -134,
-            "overStr": "+101",
-            "underStr": "-134"
+            "over": 105,
+            "under": -139,
+            "overStr": "+105",
+            "underStr": "-139"
           },
           "pitcher_outs": {
             "point": 18.5,
@@ -1380,17 +1380,17 @@ const ODDS_DATA = {
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
-            "over": 110,
-            "under": -146,
-            "overStr": "+110",
-            "underStr": "-146"
+            "over": 119,
+            "under": -158,
+            "overStr": "+119",
+            "underStr": "-158"
           },
           "pitcher_outs": {
             "point": 15.5,
-            "over": 102,
-            "under": -136,
-            "overStr": "+102",
-            "underStr": "-136"
+            "over": 139,
+            "under": -186,
+            "overStr": "+139",
+            "underStr": "-186"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
