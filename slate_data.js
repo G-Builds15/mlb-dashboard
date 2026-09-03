@@ -39,7 +39,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"José Soriano (?HP) vs Tanner Bibee (?HP)",
     overview:{
-      lines:{ ml:"Cleveland Guardians -107 / Toronto Blue Jays -112", spread:"Cleveland Guardians +1.5 (-186)", total:"O/U 8.0 (Over -103 / Under -117)", movement:"" },
+      lines:{ ml:"Cleveland Guardians -110 / Toronto Blue Jays -109", spread:"Cleveland Guardians +1.5 (-186)", total:"O/U 8.0 (Over -103 / Under -117)", movement:"" },
       away:{ teamName:"Toronto Blue Jays", abbr:"JAY",
         offStats:{"avg": ".246", "ops": ".688", "kPct": "19.4", "rPerG": "4.0", "rPerG_L10": "4.0", "rPerG_L5": "5.14"},
         defStats:{"era": "3.45", "bullpenERA_L14": "3.34", "whip": "1.28"},
@@ -117,7 +117,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Logan Henderson (?HP) vs Kevin Gausman (?HP)",
     overview:{
-      lines:{ ml:"Chicago Cubs -105 / Milwaukee Brewers -114", spread:"Chicago Cubs +1.5 (-181)", total:"O/U 8.5 (Over -102 / Under -118)", movement:"" },
+      lines:{ ml:"Chicago Cubs -102 / Milwaukee Brewers -118", spread:"Chicago Cubs +1.5 (-179)", total:"O/U 8.5 (Over -103 / Under -117)", movement:"" },
       away:{ teamName:"Milwaukee Brewers", abbr:"BRE",
         offStats:{"avg": ".257", "ops": ".740", "kPct": "21.4", "rPerG": "5.03", "rPerG_L10": "5.03", "rPerG_L5": "6.5"},
         defStats:{"era": "2.48", "bullpenERA_L14": "3.71", "whip": "0.83"},
@@ -157,7 +157,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Alcantara — Earned Runs", "pick": "Under 2.5 ER", "odds": "+111", "grade": "B+", "rat": "Blended ERA 2.98 — season 3.46 · L5 2.08 · L3 3.12", "chips": ["Blended ERA: 2.98 · 6.5 avg IP", "Season 3.46 · L5 2.08 · L3 3.12", "BB/9 2.37 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.46, "l5ERA": 2.08, "l3ERA": 3.12, "avgIP": 6.5, "bb9": 2.37}}, {"lbl": "Wacha — Earned Runs", "pick": "Under 2.5 ER", "odds": "+119", "grade": "B+", "rat": "Blended ERA 2.81 — season 3.32 · L5 2.35 · L3 2.25", "chips": ["Blended ERA: 2.81 · 6.3 avg IP", "Season 3.32 · L5 2.35 · L3 2.25", "BB/9 2.21 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.32, "l5ERA": 2.35, "l3ERA": 2.25, "avgIP": 6.3, "bb9": 2.21}}]},
+      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Alcantara — Earned Runs", "pick": "Under 2.5 ER", "odds": "+111", "grade": "B+", "rat": "Blended ERA 2.98 — season 3.46 · L5 2.08 · L3 3.12", "chips": ["Blended ERA: 2.98 · 6.5 avg IP", "Season 3.46 · L5 2.08 · L3 3.12", "BB/9 2.37 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.46, "l5ERA": 2.08, "l3ERA": 3.12, "avgIP": 6.5, "bb9": 2.37}}, {"lbl": "Wacha — Earned Runs", "pick": "Under 2.5 ER", "odds": "+115", "grade": "B+", "rat": "Blended ERA 2.81 — season 3.32 · L5 2.35 · L3 2.25", "chips": ["Blended ERA: 2.81 · 6.3 avg IP", "Season 3.32 · L5 2.35 · L3 2.25", "BB/9 2.21 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.32, "l5ERA": 2.35, "l3ERA": 2.25, "avgIP": 6.3, "bb9": 2.21}}, {"lbl": "Wacha — Walks", "pick": "Under 1.5 BB", "odds": "-119", "grade": "B+", "rat": "BB/9 2.21 — projects 1.1 walks vs 1.5 line", "chips": ["BB/9: 2.2 · adj 1.5 · proj 1.1 walks vs 1.5 line", "↗ Improving command", "Blended ERA 2.81 · 27 GS · 170.2 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.32, "l5ERA": 2.35, "l3ERA": 2.25, "avgIP": 6.3, "bb9": 2.21}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -169,7 +169,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Shane McClanahan (?HP) vs Cal Quantrill (?HP)",
     overview:{
-      lines:{ ml:"Texas Rangers +108 / Tampa Bay Rays -126", spread:"Texas Rangers +1.5 (-164)", total:"O/U 7.5 (Over -120 / Under -102)", movement:"" },
+      lines:{ ml:"Texas Rangers +108 / Tampa Bay Rays -126", spread:"Texas Rangers +1.5 (-170)", total:"O/U 7.5 (Over -120 / Under -102)", movement:"" },
       away:{ teamName:"Tampa Bay Rays", abbr:"RAY",
         offStats:{"avg": ".261", "ops": ".733", "kPct": "18.5", "rPerG": "4.52", "rPerG_L10": "4.52", "rPerG_L5": "5.14"},
         defStats:{"era": "3.19", "bullpenERA_L14": "3.08", "whip": "1.11"},
@@ -195,7 +195,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Jack Perkins (?HP) vs Kade Anderson (?HP)",
     overview:{
-      lines:{ ml:"Seattle Mariners -210 / Athletics +176", spread:"Seattle Mariners -1.5 (+105)", total:"O/U 7.5 (Over -105 / Under -115)", movement:"" },
+      lines:{ ml:"Seattle Mariners -210 / Athletics +176", spread:"Seattle Mariners -1.5 (+108)", total:"O/U 7.0 (Over -112 / Under -108)", movement:"" },
       away:{ teamName:"Athletics", abbr:"ATH",
         offStats:{"avg": ".246", "ops": ".722", "kPct": "22.5", "rPerG": "4.36", "rPerG_L10": "4.36", "rPerG_L5": "4.71"},
         defStats:{"era": "6.42", "bullpenERA_L14": "4.97", "whip": "1.49"},
@@ -235,7 +235,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Skubal — Earned Runs", "pick": "Under 1.5 ER", "odds": "-129", "grade": "A-", "rat": "Blended ERA 2.79 — season 2.84 · L5 3.00 · L3 2.37", "chips": ["Blended ERA: 2.79 · 6.0 avg IP", "Season 2.84 · L5 3.0 · L3 2.37", "BB/9 1.49 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.84, "l5ERA": 3.0, "l3ERA": 2.37, "avgIP": 6.0, "bb9": 1.49}}]},
+      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Skubal — Earned Runs", "pick": "Under 1.5 ER", "odds": "-120", "grade": "A-", "rat": "Blended ERA 2.79 — season 2.84 · L5 3.00 · L3 2.37", "chips": ["Blended ERA: 2.79 · 6.0 avg IP", "Season 2.84 · L5 3.0 · L3 2.37", "BB/9 1.49 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.84, "l5ERA": 3.0, "l3ERA": 2.37, "avgIP": 6.0, "bb9": 1.49}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -245,13 +245,14 @@ const games = {
 const bestBets = [
   {game:"BRE@CUB", pick:"Under 2.5 ER", odds:"TBD", grade:"A-", src:"MLB Stats API"},
   {game:"RAY@RAN", pick:"Under 2.5 ER", odds:"TBD", grade:"A-", src:"MLB Stats API"},
-  {game:"ATH@MAR", pick:"Over 7.5", odds:"-105", grade:"A-", src:"era"},
-  {game:"CAR@DOD", pick:"Under 1.5 ER", odds:"-129", grade:"A-", src:"MLB Stats API"},
+  {game:"ATH@MAR", pick:"Over 7.0", odds:"-112", grade:"A-", src:"era"},
+  {game:"CAR@DOD", pick:"Under 1.5 ER", odds:"-120", grade:"A-", src:"MLB Stats API"},
   {game:"GIA@PIR", pick:"Over 8.5", odds:"-124", grade:"B+", src:"era"},
   {game:"SOX@AST", pick:"Under 1.5 ER", odds:"+121", grade:"B+", src:"MLB Stats API"},
-  {game:"BRE@CUB", pick:"Over 8.5", odds:"-102", grade:"B+", src:"era"},
+  {game:"BRE@CUB", pick:"Over 8.5", odds:"-103", grade:"B+", src:"era"},
   {game:"MAR@ROY", pick:"Under 2.5 ER", odds:"+111", grade:"B+", src:"MLB Stats API"},
-  {game:"MAR@ROY", pick:"Under 2.5 ER", odds:"+119", grade:"B+", src:"MLB Stats API"},
+  {game:"MAR@ROY", pick:"Under 2.5 ER", odds:"+115", grade:"B+", src:"MLB Stats API"},
+  {game:"MAR@ROY", pick:"Under 1.5 BB", odds:"-119", grade:"B+", src:"MLB Stats API"},
   {game:"CAR@DOD", pick:"Over 8.0", odds:"-102", grade:"B+", src:"era"},
   {game:"GIA@PIR", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"},
   {game:"JAY@GUA", pick:"Under 2.5 ER", odds:"-126", grade:"B", src:"MLB Stats API"},
