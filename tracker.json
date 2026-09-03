@@ -1,6 +1,6 @@
 {
   "2026-09-03": {
-    "generated_at": "2026-09-03T13:17:26Z",
+    "generated_at": "2026-09-03T13:21:29Z",
     "game_count": 9,
     "picks": [
       {
@@ -26,7 +26,7 @@
       {
         "game": "ATH@MAR",
         "pick": "Over 7.0",
-        "odds": "-112",
+        "odds": "-115",
         "grade": "A-",
         "src": "era",
         "parlay": false,
@@ -145,6 +145,16 @@
       },
       {
         "game": "SOX@ORI",
+        "pick": "Over 4.5 Ks",
+        "odds": "-136",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@ORI",
         "pick": "Under 2.5 ER",
         "odds": "TBD",
         "grade": "B",
@@ -164,11 +174,51 @@
         "hit": null
       },
       {
+        "game": "BRE@CUB",
+        "pick": "Over 5.5 Ks",
+        "odds": "-124",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "BRE@CUB",
+        "pick": "Over 5.5 Ks",
+        "odds": "-111",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
         "game": "MAR@ROY",
         "pick": "Under 9.0",
         "odds": "-108",
         "grade": "B",
         "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "MAR@ROY",
+        "pick": "Over 5.5 Ks",
+        "odds": "+106",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "RAY@RAN",
+        "pick": "Over 4.5 Ks",
+        "odds": "-142",
+        "grade": "B",
+        "src": "MLB Stats API",
         "parlay": false,
         "result": null,
         "hit": null
@@ -182,14 +232,34 @@
         "parlay": false,
         "result": null,
         "hit": null
+      },
+      {
+        "game": "RAY@RAN",
+        "pick": "Over 3.5 Ks",
+        "odds": "-104",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "ATH@MAR",
+        "pick": "Over 5.5 Ks",
+        "odds": "+104",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
       }
     ],
     "summary": {
-      "total": 18,
+      "total": 25,
       "by_grade": {
         "A-": 4,
         "B+": 7,
-        "B": 7
+        "B": 14
       },
       "parlay_count": 0
     }

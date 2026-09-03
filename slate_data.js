@@ -105,7 +105,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Bennett — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.73 — season 3.27 · L5 4.50 · L3 3.71", "chips": ["Blended ERA: 3.73 · 5.8 avg IP", "Season 3.27 · L5 4.5 · L3 3.71", "BB/9 1.73 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.27, "l5ERA": 4.5, "l3ERA": 3.71, "avgIP": 5.8, "bb9": 1.73}}, {"lbl": "Young — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.68 — season 3.38 · L5 4.13 · L3 3.78", "chips": ["Blended ERA: 3.68 · 5.6 avg IP", "Season 3.38 · L5 4.13 · L3 3.78", "BB/9 3.2 — IP adj 5.7→5.6"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.38, "l5ERA": 4.13, "l3ERA": 3.78, "avgIP": 5.7, "bb9": 3.18}}]},
+      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Bennett — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-136", "grade": "B", "rat": "Blended K% 22.0% — projects 5.5 Ks vs 4.5 line", "chips": ["Blended K%: 22.0% · proj 5.5 Ks vs 4.5 line", "ERA 3.27 · BB/9 1.73 · avgIP 5.8 · trend HOT", "L5 ERA: 4.50 · L3 ERA: 3.71"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.27, "l5ERA": 4.5, "l3ERA": 3.71, "avgIP": 5.8, "bb9": 1.73}}, {"lbl": "Bennett — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.73 — season 3.27 · L5 4.50 · L3 3.71", "chips": ["Blended ERA: 3.73 · 5.8 avg IP", "Season 3.27 · L5 4.5 · L3 3.71", "BB/9 1.73 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.27, "l5ERA": 4.5, "l3ERA": 3.71, "avgIP": 5.8, "bb9": 1.73}}, {"lbl": "Young — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.68 — season 3.38 · L5 4.13 · L3 3.78", "chips": ["Blended ERA: 3.68 · 5.6 avg IP", "Season 3.38 · L5 4.13 · L3 3.78", "BB/9 3.2 — IP adj 5.7→5.6"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.38, "l5ERA": 4.13, "l3ERA": 3.78, "avgIP": 5.7, "bb9": 3.18}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -131,7 +131,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Henderson — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "A-", "rat": "Blended ERA 2.18 — season 2.48 · L5 2.23 · L3 1.35", "chips": ["Blended ERA: 2.18 · 5.4 avg IP", "Season 2.48 · L5 2.23 · L3 1.35", "BB/9 1.65 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.48, "l5ERA": 2.23, "l3ERA": 1.35, "avgIP": 5.4, "bb9": 1.65}}]},
+      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Henderson — Strikeouts", "pick": "Over 5.5 Ks", "odds": "-124", "grade": "B", "rat": "Blended K% 28.6% — projects 6.6 Ks vs 5.5 line", "chips": ["Blended K%: 28.6% · proj 6.6 Ks vs 5.5 line", "ERA 2.48 · BB/9 1.65 · avgIP 5.4 · trend COLD", "L5 ERA: 2.23 · L3 ERA: 1.35"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.48, "l5ERA": 2.23, "l3ERA": 1.35, "avgIP": 5.4, "bb9": 1.65}}, {"lbl": "Henderson — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "A-", "rat": "Blended ERA 2.18 — season 2.48 · L5 2.23 · L3 1.35", "chips": ["Blended ERA: 2.18 · 5.4 avg IP", "Season 2.48 · L5 2.23 · L3 1.35", "BB/9 1.65 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.48, "l5ERA": 2.23, "l3ERA": 1.35, "avgIP": 5.4, "bb9": 1.65}}, {"lbl": "Gausman — Strikeouts", "pick": "Over 5.5 Ks", "odds": "-111", "grade": "B", "rat": "Blended K% 24.7% — projects 5.8 Ks vs 5.5 line", "chips": ["Blended K%: 24.7% · proj 5.8 Ks vs 5.5 line", "ERA 4.52 · BB/9 2.49 · avgIP 5.5 · trend NEUTRAL", "L5 ERA: 5.14 · L3 ERA: 6.00"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.52, "l5ERA": 5.14, "l3ERA": 6.0, "avgIP": 5.5, "bb9": 2.49}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -157,7 +157,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Alcantara — Earned Runs", "pick": "Under 2.5 ER", "odds": "+111", "grade": "B+", "rat": "Blended ERA 2.98 — season 3.46 · L5 2.08 · L3 3.12", "chips": ["Blended ERA: 2.98 · 6.5 avg IP", "Season 3.46 · L5 2.08 · L3 3.12", "BB/9 2.37 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.46, "l5ERA": 2.08, "l3ERA": 3.12, "avgIP": 6.5, "bb9": 2.37}}, {"lbl": "Wacha — Earned Runs", "pick": "Under 2.5 ER", "odds": "+115", "grade": "B+", "rat": "Blended ERA 2.81 — season 3.32 · L5 2.35 · L3 2.25", "chips": ["Blended ERA: 2.81 · 6.3 avg IP", "Season 3.32 · L5 2.35 · L3 2.25", "BB/9 2.21 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.32, "l5ERA": 2.35, "l3ERA": 2.25, "avgIP": 6.3, "bb9": 2.21}}, {"lbl": "Wacha — Walks", "pick": "Under 1.5 BB", "odds": "-119", "grade": "B+", "rat": "BB/9 2.21 — projects 1.1 walks vs 1.5 line", "chips": ["BB/9: 2.2 · adj 1.5 · proj 1.1 walks vs 1.5 line", "↗ Improving command", "Blended ERA 2.81 · 27 GS · 170.2 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.32, "l5ERA": 2.35, "l3ERA": 2.25, "avgIP": 6.3, "bb9": 2.21}}]},
+      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Alcantara — Earned Runs", "pick": "Under 2.5 ER", "odds": "+111", "grade": "B+", "rat": "Blended ERA 2.98 — season 3.46 · L5 2.08 · L3 3.12", "chips": ["Blended ERA: 2.98 · 6.5 avg IP", "Season 3.46 · L5 2.08 · L3 3.12", "BB/9 2.37 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.46, "l5ERA": 2.08, "l3ERA": 3.12, "avgIP": 6.5, "bb9": 2.37}}, {"lbl": "Wacha — Strikeouts", "pick": "Over 5.5 Ks", "odds": "+106", "grade": "B", "rat": "Blended K% 21.1% — projects 5.7 Ks vs 5.5 line", "chips": ["Blended K%: 21.1% · proj 5.7 Ks vs 5.5 line", "ERA 3.32 · BB/9 2.21 · avgIP 6.3 · trend HOT", "L5 ERA: 2.35 · L3 ERA: 2.25"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.32, "l5ERA": 2.35, "l3ERA": 2.25, "avgIP": 6.3, "bb9": 2.21}}, {"lbl": "Wacha — Earned Runs", "pick": "Under 2.5 ER", "odds": "+115", "grade": "B+", "rat": "Blended ERA 2.81 — season 3.32 · L5 2.35 · L3 2.25", "chips": ["Blended ERA: 2.81 · 6.3 avg IP", "Season 3.32 · L5 2.35 · L3 2.25", "BB/9 2.21 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.32, "l5ERA": 2.35, "l3ERA": 2.25, "avgIP": 6.3, "bb9": 2.21}}, {"lbl": "Wacha — Walks", "pick": "Under 1.5 BB", "odds": "-119", "grade": "B+", "rat": "BB/9 2.21 — projects 1.1 walks vs 1.5 line", "chips": ["BB/9: 2.2 · adj 1.5 · proj 1.1 walks vs 1.5 line", "↗ Improving command", "Blended ERA 2.81 · 27 GS · 170.2 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.32, "l5ERA": 2.35, "l3ERA": 2.25, "avgIP": 6.3, "bb9": 2.21}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -183,7 +183,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "McClanahan — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.48 — season 3.19 · L5 3.71 · L3 3.86", "chips": ["Blended ERA: 3.48 · 4.9 avg IP", "Season 3.19 · L5 3.71 · L3 3.86", "BB/9 3.03 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.19, "l5ERA": 3.71, "l3ERA": 3.86, "avgIP": 4.9, "bb9": 3.03}}, {"lbl": "Quantrill — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "A-", "rat": "Blended ERA 2.22 — season 3.01 · L5 1.45 · L3 1.42", "chips": ["Blended ERA: 2.22 · 8.1 avg IP", "Season 3.01 · L5 1.45 · L3 1.42", "BB/9 2.21 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.01, "l5ERA": 1.45, "l3ERA": 1.42, "avgIP": 8.1, "bb9": 2.21}}]},
+      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "McClanahan — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-142", "grade": "B", "rat": "Blended K% 21.8% — projects 4.6 Ks vs 4.5 line", "chips": ["Blended K%: 21.8% · proj 4.6 Ks vs 4.5 line", "ERA 3.19 · BB/9 3.03 · avgIP 4.9 · trend NEUTRAL", "L5 ERA: 3.71 · L3 ERA: 3.86"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.19, "l5ERA": 3.71, "l3ERA": 3.86, "avgIP": 4.9, "bb9": 3.03}}, {"lbl": "McClanahan — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.48 — season 3.19 · L5 3.71 · L3 3.86", "chips": ["Blended ERA: 3.48 · 4.9 avg IP", "Season 3.19 · L5 3.71 · L3 3.86", "BB/9 3.03 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.19, "l5ERA": 3.71, "l3ERA": 3.86, "avgIP": 4.9, "bb9": 3.03}}, {"lbl": "Quantrill — Strikeouts", "pick": "Over 3.5 Ks", "odds": "-104", "grade": "B", "rat": "Blended K% 21.3% — projects 7.4 Ks vs 3.5 line", "chips": ["Blended K%: 21.3% · proj 7.4 Ks vs 3.5 line", "ERA 3.01 · BB/9 2.21 · avgIP 8.1 · trend HOT", "L5 ERA: 1.45 · L3 ERA: 1.42"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.01, "l5ERA": 1.45, "l3ERA": 1.42, "avgIP": 8.1, "bb9": 2.21}}, {"lbl": "Quantrill — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "A-", "rat": "Blended ERA 2.22 — season 3.01 · L5 1.45 · L3 1.42", "chips": ["Blended ERA: 2.22 · 8.1 avg IP", "Season 3.01 · L5 1.45 · L3 1.42", "BB/9 2.21 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.01, "l5ERA": 1.45, "l3ERA": 1.42, "avgIP": 8.1, "bb9": 2.21}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -195,7 +195,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Jack Perkins (?HP) vs Kade Anderson (?HP)",
     overview:{
-      lines:{ ml:"Seattle Mariners -210 / Athletics +176", spread:"Seattle Mariners -1.5 (+108)", total:"O/U 7.0 (Over -112 / Under -108)", movement:"" },
+      lines:{ ml:"Seattle Mariners -205 / Athletics +172", spread:"Seattle Mariners -1.5 (+110)", total:"O/U 7.0 (Over -115 / Under -105)", movement:"" },
       away:{ teamName:"Athletics", abbr:"ATH",
         offStats:{"avg": ".246", "ops": ".722", "kPct": "22.5", "rPerG": "4.36", "rPerG_L10": "4.36", "rPerG_L5": "4.71"},
         defStats:{"era": "6.42", "bullpenERA_L14": "4.97", "whip": "1.49"},
@@ -209,7 +209,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
+      pitcher:{intro:"Props graded Sep 03, 2026",cards:[{"lbl": "Perkins — Strikeouts", "pick": "Over 5.5 Ks", "odds": "+104", "grade": "B", "rat": "Blended K% 21.9% — projects 7.0 Ks vs 5.5 line", "chips": ["Blended K%: 21.9% · proj 7.0 Ks vs 5.5 line", "ERA 6.42 · BB/9 3.97 · avgIP 7.9 · trend NEUTRAL", "L5 ERA: 6.33 · L3 ERA: 1.32"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 6.42, "l5ERA": 6.33, "l3ERA": 1.32, "avgIP": 7.9, "bb9": 3.97}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -245,7 +245,7 @@ const games = {
 const bestBets = [
   {game:"BRE@CUB", pick:"Under 2.5 ER", odds:"TBD", grade:"A-", src:"MLB Stats API"},
   {game:"RAY@RAN", pick:"Under 2.5 ER", odds:"TBD", grade:"A-", src:"MLB Stats API"},
-  {game:"ATH@MAR", pick:"Over 7.0", odds:"-112", grade:"A-", src:"era"},
+  {game:"ATH@MAR", pick:"Over 7.0", odds:"-115", grade:"A-", src:"era"},
   {game:"CAR@DOD", pick:"Under 1.5 ER", odds:"-120", grade:"A-", src:"MLB Stats API"},
   {game:"GIA@PIR", pick:"Over 8.5", odds:"-124", grade:"B+", src:"era"},
   {game:"SOX@AST", pick:"Under 1.5 ER", odds:"+121", grade:"B+", src:"MLB Stats API"},
@@ -257,8 +257,15 @@ const bestBets = [
   {game:"GIA@PIR", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"},
   {game:"JAY@GUA", pick:"Under 2.5 ER", odds:"-126", grade:"B", src:"MLB Stats API"},
   {game:"SOX@ORI", pick:"Under 8.5", odds:"-120", grade:"B", src:"era"},
+  {game:"SOX@ORI", pick:"Over 4.5 Ks", odds:"-136", grade:"B", src:"MLB Stats API"},
   {game:"SOX@ORI", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"},
   {game:"SOX@ORI", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"},
+  {game:"BRE@CUB", pick:"Over 5.5 Ks", odds:"-124", grade:"B", src:"MLB Stats API"},
+  {game:"BRE@CUB", pick:"Over 5.5 Ks", odds:"-111", grade:"B", src:"MLB Stats API"},
   {game:"MAR@ROY", pick:"Under 9.0", odds:"-108", grade:"B", src:"era"},
-  {game:"RAY@RAN", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"}
+  {game:"MAR@ROY", pick:"Over 5.5 Ks", odds:"+106", grade:"B", src:"MLB Stats API"},
+  {game:"RAY@RAN", pick:"Over 4.5 Ks", odds:"-142", grade:"B", src:"MLB Stats API"},
+  {game:"RAY@RAN", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"},
+  {game:"RAY@RAN", pick:"Over 3.5 Ks", odds:"-104", grade:"B", src:"MLB Stats API"},
+  {game:"ATH@MAR", pick:"Over 5.5 Ks", odds:"+104", grade:"B", src:"MLB Stats API"}
 ];

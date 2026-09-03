@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-03T13:17:26.544120+00:00",
+  "fetched_at": "2026-09-03T13:21:29.046425+00:00",
   "date": "2026-09-03",
   "games": [
     {
@@ -1158,19 +1158,19 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Seattle Mariners -210 / Athletics +176",
-        "spread": "Seattle Mariners -1.5 (+108)",
-        "total": "O/U 7.0 (Over -112 / Under -108)",
+        "ml": "Seattle Mariners -205 / Athletics +172",
+        "spread": "Seattle Mariners -1.5 (+110)",
+        "total": "O/U 7.0 (Over -115 / Under -105)",
         "raw": {
-          "homeML": -210,
-          "awayML": 176,
+          "homeML": -205,
+          "awayML": 172,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 108,
+          "homeSpreadOdds": 110,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -130,
+          "awaySpreadOdds": -132,
           "total": 7.0,
-          "overOdds": -112,
-          "underOdds": -108
+          "overOdds": -115,
+          "underOdds": -105
         }
       },
       "props": {
