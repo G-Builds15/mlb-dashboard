@@ -1,6 +1,6 @@
 {
   "2026-09-04": {
-    "generated_at": "2026-09-04T12:40:10Z",
+    "generated_at": "2026-09-04T14:09:28Z",
     "game_count": 16,
     "picks": [
       {
@@ -46,7 +46,7 @@
       {
         "game": "TWI@SOX",
         "pick": "Over 14.5 outs",
-        "odds": "-198",
+        "odds": "-152",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -56,7 +56,7 @@
       {
         "game": "RAY@RAN",
         "pick": "Over 8.0",
-        "odds": "-115",
+        "odds": "-120",
         "grade": "A-",
         "src": "era",
         "parlay": false,
@@ -106,7 +106,7 @@
       {
         "game": "ATH@MAR",
         "pick": "Under 18.5 outs",
-        "odds": "-171",
+        "odds": "-164",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -116,7 +116,7 @@
       {
         "game": "NAT@DOD",
         "pick": "Under 1.5 ER",
-        "odds": "-142",
+        "odds": "-149",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -136,7 +136,7 @@
       {
         "game": "BRA@PHI",
         "pick": "Over 6.5 Ks",
-        "odds": "-156",
+        "odds": "-136",
         "grade": "B+",
         "src": "MLB Stats API",
         "parlay": false,
@@ -156,7 +156,7 @@
       {
         "game": "BRA@PHI",
         "pick": "Over 6.5 Ks",
-        "odds": "-118",
+        "odds": "-120",
         "grade": "B+",
         "src": "MLB Stats API",
         "parlay": false,
@@ -166,7 +166,7 @@
       {
         "game": "CUB@MAR",
         "pick": "Under 15.5 outs",
-        "odds": "-107",
+        "odds": "+100",
         "grade": "B+",
         "src": "MLB Stats API",
         "parlay": false,
@@ -176,7 +176,7 @@
       {
         "game": "CUB@MAR",
         "pick": "Under 1.5 ER",
-        "odds": "+118",
+        "odds": "+119",
         "grade": "B+",
         "src": "MLB Stats API",
         "parlay": false,
@@ -196,7 +196,7 @@
       {
         "game": "JAY@ROY",
         "pick": "Over 11.5 outs",
-        "odds": "-194",
+        "odds": "-187",
         "grade": "B+",
         "src": "MLB Stats API",
         "parlay": false,
@@ -216,7 +216,7 @@
       {
         "game": "CAR@ROC",
         "pick": "Cardinals -1.5",
-        "odds": "-132",
+        "odds": "-130",
         "grade": "B+",
         "src": "era",
         "parlay": false,
@@ -238,6 +238,16 @@
         "pick": "Mariners -1.5",
         "odds": "-226",
         "grade": "B+",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "TIG@GUA",
+        "pick": "Over 8.0",
+        "odds": "-115",
+        "grade": "B",
         "src": "era",
         "parlay": false,
         "result": null,
@@ -266,7 +276,7 @@
       {
         "game": "BRE@RED",
         "pick": "Over 5.5 Ks",
-        "odds": "+108",
+        "odds": "+102",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -296,7 +306,7 @@
       {
         "game": "BRA@PHI",
         "pick": "Under 6.5",
-        "odds": "+102",
+        "odds": "+100",
         "grade": "B",
         "src": "era",
         "parlay": false,
@@ -325,6 +335,16 @@
       },
       {
         "game": "SOX@ORI",
+        "pick": "Over 8.0",
+        "odds": "-115",
+        "grade": "B",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@ORI",
         "pick": "Over 4.5 Ks",
         "odds": "-158",
         "grade": "B",
@@ -346,7 +366,7 @@
       {
         "game": "CUB@MAR",
         "pick": "Over 5.5 Ks",
-        "odds": "+120",
+        "odds": "+106",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -356,7 +376,7 @@
       {
         "game": "CUB@MAR",
         "pick": "Over 14.5 outs",
-        "odds": "-109",
+        "odds": "-102",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -366,7 +386,7 @@
       {
         "game": "GIA@MET",
         "pick": "Over 8.0",
-        "odds": "-115",
+        "odds": "-112",
         "grade": "B",
         "src": "era",
         "parlay": false,
@@ -376,7 +396,7 @@
       {
         "game": "TWI@SOX",
         "pick": "Over 9.0",
-        "odds": "-120",
+        "odds": "-105",
         "grade": "B",
         "src": "era",
         "parlay": false,
@@ -396,7 +416,7 @@
       {
         "game": "TWI@SOX",
         "pick": "Over 17.5 outs",
-        "odds": "+102",
+        "odds": "-108",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -416,7 +436,7 @@
       {
         "game": "RAY@RAN",
         "pick": "Rays -1.5",
-        "odds": "-116",
+        "odds": "-104",
         "grade": "B",
         "src": "era",
         "parlay": false,
@@ -486,7 +506,7 @@
       {
         "game": "YAN@PAD",
         "pick": "Over 14.5 outs",
-        "odds": "-158",
+        "odds": "-152",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -496,7 +516,7 @@
       {
         "game": "ATH@MAR",
         "pick": "Under 1.5 ER",
-        "odds": "-106",
+        "odds": "-110",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -505,8 +525,8 @@
       },
       {
         "game": "NAT@DOD",
-        "pick": "Over 8.0",
-        "odds": "-117",
+        "pick": "Over 8.5",
+        "odds": "-102",
         "grade": "B",
         "src": "era",
         "parlay": false,
@@ -526,7 +546,7 @@
       {
         "game": "CUB@MAR",
         "pick": "Cubs ML",
-        "odds": "-142",
+        "odds": "-156",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -546,7 +566,7 @@
       {
         "game": "CAR@ROC",
         "pick": "Cardinals ML",
-        "odds": "-132",
+        "odds": "-130",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -555,11 +575,11 @@
       }
     ],
     "summary": {
-      "total": 55,
+      "total": 57,
       "by_grade": {
         "A-": 12,
         "B+": 12,
-        "B": 27,
+        "B": 29,
         "C": 4
       },
       "parlay_count": 4
