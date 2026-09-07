@@ -6,110 +6,6 @@
 
 const games = {
 
-  "bra-phi": {
-    away:"Atlanta Braves", home:"Philadelphia Phillies",
-    time:"1:06 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Grant Holmes (?HP) vs Jesús Luzardo (?HP)",
-    overview:{
-      lines:{ ml:"Philadelphia Phillies -174 / Atlanta Braves +146", spread:"Philadelphia Phillies -1.5 (+126)", total:"O/U 8.0 (Over -110 / Under -110)", movement:"" },
-      away:{ teamName:"Atlanta Braves", abbr:"BRA",
-        offStats:{"avg": ".248", "ops": ".725", "kPct": "21.8", "rPerG": "4.65", "rPerG_L10": "4.65", "rPerG_L5": "4.57"},
-        defStats:{"era": "3.62", "bullpenERA_L14": "3.2", "whip": "1.31"},
-        starter:{"name": "Grant Holmes", "hand": "?HP", "era": "3.62", "whip": "1.31", "k9": "7.11", "bb9": "3.76", "era_L3": "1.93", "avgIP": "5.0"},
-        injuries:[] },
-      home:{ teamName:"Philadelphia Phillies", abbr:"PHI",
-        offStats:{"avg": ".242", "ops": ".712", "kPct": "22.0", "rPerG": "4.48", "rPerG_L10": "4.48", "rPerG_L5": "3.43"},
-        defStats:{"era": "3.02", "bullpenERA_L14": "2.89", "whip": "1.12"},
-        starter:{"name": "Jes\u00fas Luzardo", "hand": "?HP", "era": "3.02", "whip": "1.12", "k9": "11.09", "bb9": "2.71", "era_L3": "1.4", "avgIP": "6.0"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Holmes — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B+", "rat": "Blended ERA 3.02 — season 3.62 · L5 2.73 · L3 1.93", "chips": ["Blended ERA: 3.02 · 4.7 avg IP", "Season 3.62 · L5 2.73 · L3 1.93", "BB/9 3.8 — IP adj 5.0→4.7"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.62, "l5ERA": 2.73, "l3ERA": 1.93, "avgIP": 5.0, "bb9": 3.76}}, {"lbl": "Luzardo — Strikeouts", "pick": "Over 7.5 Ks", "odds": "+112", "grade": "B+", "rat": "Blended K% 30.9% — projects 8.0 Ks vs 7.5 line", "chips": ["Blended K%: 30.9% · proj 8.0 Ks vs 7.5 line", "ERA 3.02 · BB/9 2.71 · avgIP 6.0 · trend NEUTRAL", "L5 ERA: 1.32 · L3 ERA: 1.40"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.02, "l5ERA": 1.32, "l3ERA": 1.4, "avgIP": 6.0, "bb9": 2.71}}, {"lbl": "Luzardo — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "A-", "rat": "Blended ERA 2.19 — season 3.02 · L5 1.32 · L3 1.40", "chips": ["Blended ERA: 2.19 · 6.0 avg IP", "Season 3.02 · L5 1.32 · L3 1.4", "BB/9 2.71 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.02, "l5ERA": 1.32, "l3ERA": 1.4, "avgIP": 6.0, "bb9": 2.71}}]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "met-mar": {
-    away:"New York Mets", home:"Miami Marlins",
-    time:"1:11 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Jonah Tong (?HP) vs Eury Pérez (?HP)",
-    overview:{
-      lines:{ ml:"Miami Marlins -126 / New York Mets +108", spread:"Miami Marlins -1.5 (+162)", total:"O/U 8.0 (Over -110 / Under -110)", movement:"" },
-      away:{ teamName:"New York Mets", abbr:"MET",
-        offStats:{"avg": ".236", "ops": ".697", "kPct": "22.6", "rPerG": "4.17", "rPerG_L10": "4.17", "rPerG_L5": "5.29"},
-        defStats:{"era": "3.6", "bullpenERA_L14": "4.67", "whip": "1.5"},
-        starter:{"name": "Jonah Tong", "hand": "?HP", "era": "3.6", "whip": "1.5", "k9": "6.3", "bb9": "6.3", "era_L3": "3.6", "avgIP": "10.0"},
-        injuries:[] },
-      home:{ teamName:"Miami Marlins", abbr:"MAR",
-        offStats:{"avg": ".247", "ops": ".725", "kPct": "21.7", "rPerG": "4.38", "rPerG_L10": "4.38", "rPerG_L5": "5.38"},
-        defStats:{"era": "3.72", "bullpenERA_L14": "4.71", "whip": "1.18"},
-        starter:{"name": "Eury P\u00e9rez", "hand": "?HP", "era": "3.72", "whip": "1.18", "k9": "9.64", "bb9": "3.92", "era_L3": "8.53", "avgIP": "5.4"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Tong — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.60 — season 3.60 · L5 3.60 · L3 3.60", "chips": ["Blended ERA: 3.6 · 8.7 avg IP", "Season 3.6 · L5 3.6 · L3 3.6", "BB/9 6.3 — IP adj 10.0→8.7"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.6, "l5ERA": 3.6, "l3ERA": 3.6, "avgIP": 10.0, "bb9": 6.3}}, {"lbl": "Pérez — Outs Recorded", "pick": "Under 16.5 outs", "odds": "-106", "grade": "A-", "rat": "Projects 15.1 outs (5.0 IP) vs 16.5 line", "chips": ["Proj 15.1 outs · blended 5.0 avgIP vs 5.5 IP line", "⚠ Trending shorter (L3 avg 4.1 IP vs season 5.4 IP)", "Season avgIP 5.4 · 25 GS · 135 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.72, "l5ERA": 4.7, "l3ERA": 8.53, "avgIP": 5.4, "bb9": 3.92}}]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "gua-ori": {
-    away:"Cleveland Guardians", home:"Baltimore Orioles",
-    time:"1:36 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Joey Cantillo (?HP) vs Trevor Rogers (?HP)",
-    overview:{
-      lines:{ ml:"Baltimore Orioles -132 / Cleveland Guardians +112", spread:"Baltimore Orioles -1.5 (+158)", total:"O/U 7.5 (Over -102 / Under -120)", movement:"" },
-      away:{ teamName:"Cleveland Guardians", abbr:"GUA",
-        offStats:{"avg": ".236", "ops": ".684", "kPct": "21.3", "rPerG": "4.03", "rPerG_L10": "4.03", "rPerG_L5": "4.25"},
-        defStats:{"era": "3.81", "bullpenERA_L14": "3.75", "whip": "1.48"},
-        starter:{"name": "Joey Cantillo", "hand": "?HP", "era": "3.81", "whip": "1.48", "k9": "9.59", "bb9": "4.57", "era_L3": "3.94", "avgIP": "4.9"},
-        injuries:[] },
-      home:{ teamName:"Baltimore Orioles", abbr:"ORI",
-        offStats:{"avg": ".234", "ops": ".708", "kPct": "24.5", "rPerG": "4.45", "rPerG_L10": "4.45", "rPerG_L5": "2.88"},
-        defStats:{"era": "4.3", "bullpenERA_L14": "3.52", "whip": "1.23"},
-        starter:{"name": "Trevor Rogers", "hand": "?HP", "era": "4.3", "whip": "1.23", "k9": "8.23", "bb9": "2.31", "era_L3": "5.3", "avgIP": "5.5"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Cantillo — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.75 — season 3.81 · L5 3.54 · L3 3.94", "chips": ["Blended ERA: 3.75 · 4.3 avg IP", "Season 3.81 · L5 3.54 · L3 3.94", "BB/9 4.6 — IP adj 4.9→4.3"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.81, "l5ERA": 3.54, "l3ERA": 3.94, "avgIP": 4.9, "bb9": 4.57}}, {"lbl": "Rogers — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-156", "grade": "B", "rat": "Blended K% 25.7% — projects 6.1 Ks vs 4.5 line", "chips": ["Blended K%: 25.7% · proj 6.1 Ks vs 4.5 line", "ERA 4.30 · BB/9 2.31 · avgIP 5.5 · trend HOT", "L5 ERA: 4.41 · L3 ERA: 5.30"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.3, "l5ERA": 4.41, "l3ERA": 5.3, "avgIP": 5.5, "bb9": 2.31}}]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "ang-sox": {
-    away:"Los Angeles Angels", home:"Boston Red Sox",
-    time:"1:36 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Grayson Rodriguez (?HP) vs TBD (?HP)",
-    overview:{
-      lines:{ ml:"Boston Red Sox -180 / Los Angeles Angels +152", spread:"Boston Red Sox -1.5 (+116)", total:"O/U 8.5 (Over +100 / Under -122)", movement:"" },
-      away:{ teamName:"Los Angeles Angels", abbr:"ANG",
-        offStats:{"avg": ".233", "ops": ".677", "kPct": "25.2", "rPerG": "4.03", "rPerG_L10": "4.03", "rPerG_L5": "3.43"},
-        defStats:{"era": "6.03", "bullpenERA_L14": "3.55", "whip": "1.52"},
-        starter:{"name": "Grayson Rodriguez", "hand": "?HP", "era": "6.03", "whip": "1.52", "k9": "8.34", "bb9": "3.82", "era_L3": "2.41", "avgIP": "4.8"},
-        injuries:[] },
-      home:{ teamName:"Boston Red Sox", abbr:"SOX",
-        offStats:{"avg": ".248", "ops": ".727", "kPct": "21.4", "rPerG": "4.46", "rPerG_L10": "4.46", "rPerG_L5": "4.25"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "4.46", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
   "dia-roy": {
     away:"Arizona Diamondbacks", home:"Kansas City Royals",
     time:"2:11 PM ET", venue:"TBD",
@@ -117,47 +13,21 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Derek Law (?HP) vs Noah Cameron (?HP)",
     overview:{
-      lines:{ ml:"Kansas City Royals -116 / Arizona Diamondbacks -102", spread:"Kansas City Royals +1.5 (-188)", total:"O/U 9.0 (Over -122 / Under +100)", movement:"" },
+      lines:{ ml:"Kansas City Royals +420 / Arizona Diamondbacks -650", spread:"Kansas City Royals +2.5 (-144)", total:"O/U 7.5 (Over -174 / Under +130)", movement:"" },
       away:{ teamName:"Arizona Diamondbacks", abbr:"DIA",
-        offStats:{"avg": ".242", "ops": ".708", "kPct": "19.4", "rPerG": "4.42", "rPerG_L10": "4.42", "rPerG_L5": "1.83"},
-        defStats:{"era": "1.93", "bullpenERA_L14": "3.52", "whip": "1.07"},
-        starter:{"name": "Derek Law", "hand": "?HP", "era": "1.93", "whip": "1.07", "k9": "5.79", "bb9": "1.93", "era_L3": "1.93", "avgIP": "4.2"},
+        offStats:{"avg": ".242", "ops": ".707", "kPct": "19.5", "rPerG": "4.42", "rPerG_L10": "4.42", "rPerG_L5": "2.29"},
+        defStats:{"era": "1.35", "bullpenERA_L14": "3.47", "whip": "0.9"},
+        starter:{"name": "Derek Law", "hand": "?HP", "era": "1.35", "whip": "0.9", "k9": "4.05", "bb9": "1.35", "era_L3": "1.35", "avgIP": "6.2"},
         injuries:[] },
       home:{ teamName:"Kansas City Royals", abbr:"ROY",
-        offStats:{"avg": ".247", "ops": ".719", "kPct": "20.7", "rPerG": "4.28", "rPerG_L10": "4.28", "rPerG_L5": "4.0"},
-        defStats:{"era": "4.08", "bullpenERA_L14": "4.42", "whip": "1.22"},
-        starter:{"name": "Noah Cameron", "hand": "?HP", "era": "4.08", "whip": "1.22", "k9": "8.05", "bb9": "2.86", "era_L3": "3.38", "avgIP": "5.9"},
+        offStats:{"avg": ".247", "ops": ".718", "kPct": "20.7", "rPerG": "4.26", "rPerG_L10": "4.26", "rPerG_L5": "4.0"},
+        defStats:{"era": "3.93", "bullpenERA_L14": "4.34", "whip": "1.2"},
+        starter:{"name": "Noah Cameron", "hand": "?HP", "era": "3.93", "whip": "1.2", "k9": "8.14", "bb9": "2.86", "era_L3": "2.45", "avgIP": "5.9"},
         injuries:[] }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Law — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "A-", "rat": "Blended ERA 1.93 — season 1.93 · L5 1.93 · L3 1.93", "chips": ["Blended ERA: 1.93 · 4.2 avg IP", "Season 1.93 · L5 1.93 · L3 1.93", "BB/9 1.93 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.93, "l5ERA": 1.93, "l3ERA": 1.93, "avgIP": 4.2, "bb9": 1.93}}, {"lbl": "Cameron — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.48 — season 4.08 · L5 2.56 · L3 3.38", "chips": ["Blended ERA: 3.48 · 5.9 avg IP", "Season 4.08 · L5 2.56 · L3 3.38", "BB/9 2.86 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.08, "l5ERA": 2.56, "l3ERA": 3.38, "avgIP": 5.9, "bb9": 2.86}}]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "cub-bre": {
-    away:"Chicago Cubs", home:"Milwaukee Brewers",
-    time:"2:11 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Matthew Boyd (?HP) vs Robert Gasser (?HP)",
-    overview:{
-      lines:{ ml:"Milwaukee Brewers -124 / Chicago Cubs +106", spread:"Milwaukee Brewers +1.5 (-192)", total:"O/U 8.5 (Over +100 / Under -122)", movement:"" },
-      away:{ teamName:"Chicago Cubs", abbr:"CUB",
-        offStats:{"avg": ".252", "ops": ".771", "kPct": "21.4", "rPerG": "5.33", "rPerG_L10": "5.33", "rPerG_L5": "6.0"},
-        defStats:{"era": "4.05", "bullpenERA_L14": "5.1", "whip": "1.23"},
-        starter:{"name": "Matthew Boyd", "hand": "?HP", "era": "4.05", "whip": "1.23", "k9": "6.95", "bb9": "2.73", "era_L3": "4.15", "avgIP": "5.7"},
-        injuries:[] },
-      home:{ teamName:"Milwaukee Brewers", abbr:"BRE",
-        offStats:{"avg": ".256", "ops": ".739", "kPct": "21.5", "rPerG": "5.04", "rPerG_L10": "5.04", "rPerG_L5": "5.88"},
-        defStats:{"era": "4.57", "bullpenERA_L14": "4.84", "whip": "1.29"},
-        starter:{"name": "Robert Gasser", "hand": "?HP", "era": "4.57", "whip": "1.29", "k9": "8.52", "bb9": "2.8", "era_L3": "4.73", "avgIP": "5.4"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Gasser — Strikeouts", "pick": "Over 4.5 Ks", "odds": "+102", "grade": "B", "rat": "Blended K% 21.7% — projects 5.0 Ks vs 4.5 line", "chips": ["Blended K%: 21.7% · proj 5.0 Ks vs 4.5 line", "ERA 4.57 · BB/9 2.80 · avgIP 5.4 · trend NEUTRAL", "L5 ERA: 4.81 · L3 ERA: 4.73"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.57, "l5ERA": 4.81, "l3ERA": 4.73, "avgIP": 5.4, "bb9": 2.8}}, {"lbl": "Gasser — Outs Recorded", "pick": "Over 15.5 outs", "odds": "+152", "grade": "B+", "rat": "Projects 17.4 outs (5.8 IP) vs 15.5 line", "chips": ["Proj 17.4 outs · blended 5.8 avgIP vs 5.2 IP line", "↗ Going deeper (L3 avg 6.5 IP vs season 5.4 IP)", "Season avgIP 5.4 · 16 GS · 86 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.57, "l5ERA": 4.81, "l3ERA": 4.73, "avgIP": 5.4, "bb9": 2.8}}]},
+      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Law — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "A-", "rat": "Blended ERA 1.35 — season 1.35 · L5 1.35 · L3 1.35", "chips": ["Blended ERA: 1.35 · 6.2 avg IP", "Season 1.35 · L5 1.35 · L3 1.35", "BB/9 1.35 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.35, "l5ERA": 1.35, "l3ERA": 1.35, "avgIP": 6.2, "bb9": 1.35}}, {"lbl": "Cameron — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B+", "rat": "Blended ERA 3.12 — season 3.93 · L5 2.22 · L3 2.45", "chips": ["Blended ERA: 3.12 · 5.9 avg IP", "Season 3.93 · L5 2.22 · L3 2.45", "BB/9 2.86 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.93, "l5ERA": 2.22, "l3ERA": 2.45, "avgIP": 5.9, "bb9": 2.86}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -167,23 +37,23 @@ const games = {
     time:"3:11 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs Troy Melton (?HP)",
+    starters:"Joe Ryan (?HP) vs Troy Melton (?HP)",
     overview:{
-      lines:{ ml:"Detroit Tigers -120 / Minnesota Twins +102", spread:"Detroit Tigers -1.5 (+172)", total:"O/U 8.0 (Over -105 / Under -115)", movement:"" },
+      lines:{ ml:"Detroit Tigers -350 / Minnesota Twins +255", spread:"Detroit Tigers -1.5 (+162)", total:"O/U 11.5 (Over +104 / Under -138)", movement:"" },
       away:{ teamName:"Minnesota Twins", abbr:"TWI",
-        offStats:{"avg": ".246", "ops": ".726", "kPct": "21.0", "rPerG": "4.66", "rPerG_L10": "4.66", "rPerG_L5": "6.43"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "4.71", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+        offStats:{"avg": ".246", "ops": ".726", "kPct": "21.0", "rPerG": "4.65", "rPerG_L10": "4.65", "rPerG_L5": "6.12"},
+        defStats:{"era": "3.68", "bullpenERA_L14": "4.78", "whip": "1.13"},
+        starter:{"name": "Joe Ryan", "hand": "?HP", "era": "3.68", "whip": "1.13", "k9": "10.06", "bb9": "1.94", "era_L3": "4.5", "avgIP": "5.4"},
         injuries:[] },
       home:{ teamName:"Detroit Tigers", abbr:"TIG",
-        offStats:{"avg": ".238", "ops": ".709", "kPct": "22.9", "rPerG": "4.38", "rPerG_L10": "4.38", "rPerG_L5": "4.0"},
-        defStats:{"era": "2.2", "bullpenERA_L14": "4.21", "whip": "1.03"},
-        starter:{"name": "Troy Melton", "hand": "?HP", "era": "2.2", "whip": "1.03", "k9": "7.39", "bb9": "2.55", "era_L3": "5.5", "avgIP": "6.0"},
+        offStats:{"avg": ".238", "ops": ".710", "kPct": "23.0", "rPerG": "4.39", "rPerG_L10": "4.39", "rPerG_L5": "4.11"},
+        defStats:{"era": "2.42", "bullpenERA_L14": "4.29", "whip": "1.05"},
+        starter:{"name": "Troy Melton", "hand": "?HP", "era": "2.42", "whip": "1.05", "k9": "7.25", "bb9": "2.5", "era_L3": "5.7", "avgIP": "6.0"},
         injuries:[] }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Melton — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B+", "rat": "Blended ERA 3.12 — season 2.20 · L5 3.06 · L3 5.50", "chips": ["Blended ERA: 3.12 · 6.0 avg IP", "Season 2.2 · L5 3.06 · L3 5.5", "BB/9 2.55 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.2, "l5ERA": 3.06, "l3ERA": 5.5, "avgIP": 6.0, "bb9": 2.55}}]},
+      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Melton — Earned Runs", "pick": "Under 2.5 ER", "odds": "TBD", "grade": "B", "rat": "Blended ERA 3.40 — season 2.42 · L5 3.51 · L3 5.70", "chips": ["Blended ERA: 3.4 · 6.0 avg IP", "Season 2.42 · L5 3.51 · L3 5.7", "BB/9 2.5 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.42, "l5ERA": 3.51, "l3ERA": 5.7, "avgIP": 6.0, "bb9": 2.5}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -195,7 +65,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Jake Irvin (?HP) vs Nick Pivetta (?HP)",
     overview:{
-      lines:{ ml:"San Diego Padres -205 / Washington Nationals +172", spread:"San Diego Padres -1.5 (+104)", total:"O/U 8.0 (Over -110 / Under -110)", movement:"" },
+      lines:{ ml:"San Diego Padres -198 / Washington Nationals +166", spread:"San Diego Padres -1.5 (+106)", total:"O/U 8.0 (Over -110 / Under -110)", movement:"" },
       away:{ teamName:"Washington Nationals", abbr:"NAT",
         offStats:{"avg": ".249", "ops": ".754", "kPct": "21.8", "rPerG": "5.16", "rPerG_L10": "5.16", "rPerG_L5": "4.29"},
         defStats:{"era": "5.57", "bullpenERA_L14": "5.17", "whip": "1.4"},
@@ -209,7 +79,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Pivetta — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-108", "grade": "B", "rat": "Blended K% 35.3% — projects 5.8 Ks vs 4.5 line", "chips": ["Blended K%: 35.3% · proj 5.8 Ks vs 4.5 line", "ERA 4.50 · BB/9 3.38 · avgIP 4.0 · trend NEUTRAL", "L5 ERA: 4.50 · L3 ERA: 4.50"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.5, "l5ERA": 4.5, "l3ERA": 4.5, "avgIP": 4.0, "bb9": 3.38}}]},
+      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Pivetta — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-122", "grade": "B", "rat": "Blended K% 35.3% — projects 5.8 Ks vs 4.5 line", "chips": ["Blended K%: 35.3% · proj 5.8 Ks vs 4.5 line", "ERA 4.50 · BB/9 3.38 · avgIP 4.0 · trend NEUTRAL", "L5 ERA: 4.50 · L3 ERA: 4.50"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.5, "l5ERA": 4.5, "l3ERA": 4.5, "avgIP": 4.0, "bb9": 3.38}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -221,7 +91,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Michael McGreevy (?HP) vs Logan Webb (?HP)",
     overview:{
-      lines:{ ml:"San Francisco Giants -134 / St. Louis Cardinals +114", spread:"San Francisco Giants -1.5 (+162)", total:"O/U 7.5 (Over -114 / Under -106)", movement:"" },
+      lines:{ ml:"San Francisco Giants -134 / St. Louis Cardinals +114", spread:"San Francisco Giants -1.5 (+168)", total:"O/U 7.5 (Over -122 / Under +100)", movement:"" },
       away:{ teamName:"St. Louis Cardinals", abbr:"CAR",
         offStats:{"avg": ".244", "ops": ".704", "kPct": "20.8", "rPerG": "4.56", "rPerG_L10": "4.56", "rPerG_L5": "7.29"},
         defStats:{"era": "3.97", "bullpenERA_L14": "6.29", "whip": "1.26"},
@@ -247,7 +117,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Chase Burns (?HP) vs TBD (?HP)",
     overview:{
-      lines:{ ml:"Los Angeles Dodgers -158 / Cincinnati Reds +134", spread:"Los Angeles Dodgers -1.5 (+132)", total:"O/U 8.5 (Over +100 / Under -122)", movement:"" },
+      lines:{ ml:"Los Angeles Dodgers -172 / Cincinnati Reds +144", spread:"Los Angeles Dodgers -1.5 (+118)", total:"O/U 8.5 (Over -105 / Under -115)", movement:"" },
       away:{ teamName:"Cincinnati Reds", abbr:"RED",
         offStats:{"avg": ".231", "ops": ".709", "kPct": "25.3", "rPerG": "4.23", "rPerG_L10": "4.23", "rPerG_L5": "6.0"},
         defStats:{"era": "2.79", "bullpenERA_L14": "6.51", "whip": "1.16"},
@@ -261,7 +131,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Burns — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-118", "grade": "B+", "rat": "Blended K% 29.0% — projects 7.0 Ks vs 4.5 line", "chips": ["Blended K%: 29.0% · proj 7.0 Ks vs 4.5 line", "ERA 2.79 · BB/9 3.10 · avgIP 5.6 · trend NEUTRAL", "L5 ERA: 4.73 · L3 ERA: 5.65"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.79, "l5ERA": 4.73, "l3ERA": 5.65, "avgIP": 5.6, "bb9": 3.1}}]},
+      pitcher:{intro:"Props graded Sep 07, 2026",cards:[{"lbl": "Burns — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-120", "grade": "B+", "rat": "Blended K% 29.0% — projects 7.0 Ks vs 4.5 line", "chips": ["Blended K%: 29.0% · proj 7.0 Ks vs 4.5 line", "ERA 2.79 · BB/9 3.10 · avgIP 5.6 · trend NEUTRAL", "L5 ERA: 4.73 · L3 ERA: 5.65"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.79, "l5ERA": 4.73, "l3ERA": 5.65, "avgIP": 5.6, "bb9": 3.1}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -273,7 +143,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Dylan Cease (?HP) vs Jacob Lopez (?HP)",
     overview:{
-      lines:{ ml:"Athletics +168 / Toronto Blue Jays -200", spread:"Athletics +1.5 (-102)", total:"O/U 8.5 (Over -102 / Under -120)", movement:"" },
+      lines:{ ml:"Athletics +168 / Toronto Blue Jays -200", spread:"Athletics +1.5 (+104)", total:"O/U 8.5 (Over -102 / Under -120)", movement:"" },
       away:{ teamName:"Toronto Blue Jays", abbr:"JAY",
         offStats:{"avg": ".248", "ops": ".691", "kPct": "19.2", "rPerG": "4.03", "rPerG_L10": "4.03", "rPerG_L5": "5.57"},
         defStats:{"era": "2.25", "bullpenERA_L14": "3.31", "whip": "1.04"},
@@ -295,30 +165,19 @@ const games = {
 };
 
 const bestBets = [
-  {game:"BRA@PHI", pick:"Under 2.5 ER", odds:"TBD", grade:"A-", src:"MLB Stats API"},
-  {game:"MET@MAR", pick:"Under 16.5 outs", odds:"-106", grade:"A-", src:"MLB Stats API"},
-  {game:"DIA@ROY", pick:"Under 9.0", odds:"+100", grade:"A-", src:"era"},
   {game:"DIA@ROY", pick:"Under 2.5 ER", odds:"TBD", grade:"A-", src:"MLB Stats API"},
-  {game:"CAR@GIA", pick:"Over 7.5", odds:"-114", grade:"A-", src:"era"},
+  {game:"TWI@TIG", pick:"Under 11.5", odds:"-138", grade:"A-", src:"era"},
+  {game:"CAR@GIA", pick:"Over 7.5", odds:"-122", grade:"A-", src:"era"},
   {game:"CAR@GIA", pick:"Under 17.5 outs", odds:"+134", grade:"A-", src:"MLB Stats API"},
   {game:"JAY@ATH", pick:"Under 2.5 ER", odds:"TBD", grade:"A-", src:"MLB Stats API"},
-  {game:"BRA@PHI", pick:"Under 2.5 ER", odds:"TBD", grade:"B+", src:"MLB Stats API"},
-  {game:"BRA@PHI", pick:"Over 7.5 Ks", odds:"+112", grade:"B+", src:"MLB Stats API"},
-  {game:"MET@MAR", pick:"Over 8.0", odds:"-110", grade:"B+", src:"era"},
-  {game:"CUB@BRE", pick:"Over 8.5", odds:"+100", grade:"B+", src:"era"},
-  {game:"CUB@BRE", pick:"Over 15.5 outs", odds:"+152", grade:"B+", src:"MLB Stats API"},
-  {game:"TWI@TIG", pick:"Under 2.5 ER", odds:"TBD", grade:"B+", src:"MLB Stats API"},
-  {game:"RED@DOD", pick:"Over 8.5", odds:"+100", grade:"B+", src:"bullpen_pivot"},
-  {game:"RED@DOD", pick:"Over 4.5 Ks", odds:"-118", grade:"B+", src:"MLB Stats API"},
+  {game:"DIA@ROY", pick:"Under 7.5", odds:"+130", grade:"B+", src:"era"},
+  {game:"DIA@ROY", pick:"Under 2.5 ER", odds:"TBD", grade:"B+", src:"MLB Stats API"},
+  {game:"RED@DOD", pick:"Over 8.5", odds:"-105", grade:"B+", src:"bullpen_pivot"},
+  {game:"RED@DOD", pick:"Over 4.5 Ks", odds:"-120", grade:"B+", src:"MLB Stats API"},
   {game:"JAY@ATH", pick:"Jays -1.5", odds:"-200", grade:"B+", src:"era"},
-  {game:"BRA@PHI", pick:"Under 8.0", odds:"-110", grade:"B", src:"era"},
-  {game:"MET@MAR", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"},
-  {game:"GUA@ORI", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"},
-  {game:"GUA@ORI", pick:"Over 4.5 Ks", odds:"-156", grade:"B", src:"MLB Stats API"},
-  {game:"DIA@ROY", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"},
-  {game:"CUB@BRE", pick:"Over 4.5 Ks", odds:"+102", grade:"B", src:"MLB Stats API"},
+  {game:"TWI@TIG", pick:"Under 2.5 ER", odds:"TBD", grade:"B", src:"MLB Stats API"},
   {game:"NAT@PAD", pick:"Over 8.0", odds:"-110", grade:"B", src:"era"},
-  {game:"NAT@PAD", pick:"Over 4.5 Ks", odds:"-108", grade:"B", src:"MLB Stats API"},
+  {game:"NAT@PAD", pick:"Over 4.5 Ks", odds:"-122", grade:"B", src:"MLB Stats API"},
   {game:"JAY@ATH", pick:"Over 8.5", odds:"-102", grade:"B", src:"era"},
   {game:"JAY@ATH", pick:"Over 7.5 Ks", odds:"+102", grade:"B", src:"MLB Stats API"},
   {game:"JAY@ATH", pick:"Over 17.5 outs", odds:"-205", grade:"B", src:"MLB Stats API"},
