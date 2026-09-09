@@ -1,13 +1,13 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-09T14:09:56.533465+00:00",
+  "fetched_at": "2026-09-09T21:04:27.160962+00:00",
   "date": "2026-09-09",
   "games": [
     {
       "id": "3fdcf1fc18b369e071964b94abe0e5fe",
       "home": "Detroit Tigers",
       "away": "Minnesota Twins",
-      "time": "1:11 PM ET",
-      "commence": "2026-09-09T17:11:00Z",
+      "time": "2:51 PM ET",
+      "commence": "2026-09-09T18:51:00Z",
       "starters": {
         "away": {
           "name": "Zebby Matthews",
@@ -24,46 +24,46 @@ const ODDS_DATA = {
       },
       "pitcher_stats": {
         "away": {
-          "era": 4.69,
-          "whip": 1.25,
-          "k9": 7.46,
-          "bb9": 2.54,
-          "h9": 8.69,
-          "ip": 117.0,
-          "avgIP": 5.8,
-          "gs": 20,
-          "kPct": 19.9,
+          "era": 4.98,
+          "whip": 1.27,
+          "k9": 7.47,
+          "bb9": 2.79,
+          "h9": 8.67,
+          "ip": 119.1,
+          "avgIP": 5.7,
+          "gs": 21,
+          "kPct": 19.8,
           "_source": "mlb_stats_api",
-          "l5ERA": 3.5,
-          "l5KPct": 19.2,
-          "l5BB9": 1.75,
-          "l5AvgIP": 6.0,
-          "l3ERA": 2.66,
-          "l3KPct": 20.8,
-          "l3BB9": 0.89,
-          "l3AvgIP": 6.7,
+          "l5ERA": 4.46,
+          "l5KPct": 18.9,
+          "l5BB9": 2.58,
+          "l5AvgIP": 5.4,
+          "l3ERA": 4.37,
+          "l3KPct": 20.0,
+          "l3BB9": 2.38,
+          "l3AvgIP": 5.5,
           "name": "Zebby Matthews",
           "pid": 805673
         },
         "home": {
-          "era": 3.52,
+          "era": 3.55,
           "whip": 1.03,
-          "k9": 6.04,
-          "bb9": 2.01,
-          "h9": 7.24,
-          "ip": 143.0,
-          "avgIP": 6.2,
-          "gs": 23,
-          "kPct": 16.6,
+          "k9": 6.0,
+          "bb9": 2.08,
+          "h9": 7.16,
+          "ip": 147.0,
+          "avgIP": 6.1,
+          "gs": 24,
+          "kPct": 16.5,
           "_source": "mlb_stats_api",
-          "l5ERA": 5.06,
-          "l5KPct": 13.4,
-          "l5BB9": 2.36,
-          "l5AvgIP": 5.2,
-          "l3ERA": 6.75,
-          "l3KPct": 16.7,
-          "l3BB9": 1.93,
-          "l3AvgIP": 4.5,
+          "l5ERA": 4.99,
+          "l5KPct": 13.3,
+          "l5BB9": 2.64,
+          "l5AvgIP": 5.0,
+          "l3ERA": 6.08,
+          "l3KPct": 15.5,
+          "l3BB9": 2.7,
+          "l3AvgIP": 4.4,
           "name": "Keider Montero",
           "pid": 672456
         }
@@ -72,76 +72,43 @@ const ODDS_DATA = {
         "away": {
           "name": "Minnesota Twins",
           "_source": "mlb_stats_api",
-          "rPerG": 4.64,
+          "rPerG": 4.62,
           "avg": ".245",
           "ops": ".726",
           "kPct": 20.9,
           "bbPct": 8.5,
-          "rPerG_L5": 5.14,
-          "bullpenERA_L14": 4.37
+          "rPerG_L5": 4.75,
+          "bullpenERA_L14": 4.53
         },
         "home": {
           "name": "Detroit Tigers",
           "_source": "mlb_stats_api",
-          "rPerG": 4.37,
+          "rPerG": 4.38,
           "avg": ".238",
-          "ops": ".708",
+          "ops": ".709",
           "kPct": 23.0,
           "bbPct": 9.1,
-          "rPerG_L5": 4.62,
-          "bullpenERA_L14": 4.44
+          "rPerG_L5": 4.67,
+          "bullpenERA_L14": 4.33
         }
       },
       "lines": {
-        "ml": "Detroit Tigers -122 / Minnesota Twins +104",
-        "spread": "Detroit Tigers -1.5 (+164)",
-        "total": "O/U 8.5 (Over -112 / Under -108)",
+        "ml": "Detroit Tigers -4000 / Minnesota Twins +1100",
+        "spread": "Detroit Tigers -2.5 (-275)",
+        "total": "O/U 8.5 (Over +114 / Under -152)",
         "raw": {
-          "homeML": -122,
-          "awayML": 104,
-          "homeSpread": -1.5,
-          "homeSpreadOdds": 164,
-          "awaySpread": 1.5,
-          "awaySpreadOdds": -200,
+          "homeML": -4000,
+          "awayML": 1100,
+          "homeSpread": -2.5,
+          "homeSpreadOdds": -275,
+          "awaySpread": 2.5,
+          "awaySpreadOdds": 198,
           "total": 8.5,
-          "overOdds": -112,
-          "underOdds": -108
+          "overOdds": 114,
+          "underOdds": -152
         }
       },
-      "props": {
-        "Keider Montero": {
-          "pitcher_outs": {
-            "point": 16.5,
-            "over": -112,
-            "under": -118,
-            "overStr": "-112",
-            "underStr": "-118"
-          },
-          "pitcher_strikeouts": {
-            "point": 3.5,
-            "over": 126,
-            "under": -162,
-            "overStr": "+126",
-            "underStr": "-162"
-          }
-        },
-        "Zebby Matthews": {
-          "pitcher_outs": {
-            "point": 15.5,
-            "over": -132,
-            "under": 100,
-            "overStr": "-132",
-            "underStr": "+100"
-          },
-          "pitcher_strikeouts": {
-            "point": 4.5,
-            "over": 108,
-            "under": -138,
-            "overStr": "+108",
-            "underStr": "-138"
-          }
-        }
-      }
+      "props": {}
     },
     {
       "id": "2aa327e9de6b277bd5a019e26bf45f04",
@@ -165,46 +132,46 @@ const ODDS_DATA = {
       },
       "pitcher_stats": {
         "away": {
-          "era": 3.2,
-          "whip": 1.24,
-          "k9": 8.7,
-          "bb9": 4.86,
-          "h9": 6.27,
-          "ip": 70.1,
-          "avgIP": 8.8,
-          "gs": 8,
-          "kPct": 23.8,
+          "era": 3.15,
+          "whip": 1.22,
+          "k9": 8.71,
+          "bb9": 4.79,
+          "h9": 6.18,
+          "ip": 71.1,
+          "avgIP": 7.9,
+          "gs": 9,
+          "kPct": 23.9,
           "_source": "mlb_stats_api",
-          "l5ERA": 0.59,
-          "l5KPct": 23.3,
-          "l5BB9": 5.87,
-          "l5AvgIP": 15.1,
+          "l5ERA": 0.55,
+          "l5KPct": 23.8,
+          "l5BB9": 5.51,
+          "l5AvgIP": 8.1,
           "l3ERA": null,
-          "l3KPct": 36.7,
-          "l3BB9": 4.91,
-          "l3AvgIP": 7.1,
+          "l3KPct": 36.4,
+          "l3BB9": 4.32,
+          "l3AvgIP": 8.1,
           "name": "Braydon Fisher",
           "pid": 680755
         },
         "home": {
-          "era": 4.32,
-          "whip": 1.41,
-          "k9": 6.48,
-          "bb9": 1.35,
-          "h9": 11.34,
-          "ip": 33.1,
-          "avgIP": 8.3,
-          "gs": 4,
-          "kPct": 16.6,
+          "era": 3.86,
+          "whip": 1.39,
+          "k9": 6.75,
+          "bb9": 1.69,
+          "h9": 10.85,
+          "ip": 37.1,
+          "avgIP": 7.4,
+          "gs": 5,
+          "kPct": 17.3,
           "_source": "mlb_stats_api",
-          "l5ERA": 3.44,
-          "l5KPct": 13.3,
-          "l5BB9": 0.98,
-          "l5AvgIP": 6.0,
-          "l3ERA": 5.23,
-          "l3KPct": 11.1,
-          "l3BB9": 1.74,
-          "l3AvgIP": 5.0,
+          "l5ERA": 2.82,
+          "l5KPct": 15.2,
+          "l5BB9": 1.61,
+          "l5AvgIP": 5.5,
+          "l3ERA": 3.77,
+          "l3KPct": 14.5,
+          "l3BB9": 2.51,
+          "l3AvgIP": 4.7,
           "name": "Brady Basso",
           "pid": 669620
         }
@@ -213,53 +180,43 @@ const ODDS_DATA = {
         "away": {
           "name": "Toronto Blue Jays",
           "_source": "mlb_stats_api",
-          "rPerG": 4.03,
+          "rPerG": 4.01,
           "avg": ".248",
-          "ops": ".693",
-          "kPct": 19.1,
+          "ops": ".692",
+          "kPct": 19.2,
           "bbPct": 7.4,
-          "rPerG_L5": 5.12,
-          "bullpenERA_L14": 3.38
+          "rPerG_L5": 4.56,
+          "bullpenERA_L14": 3.33
         },
         "home": {
           "name": "Athletics",
           "_source": "mlb_stats_api",
-          "rPerG": 4.38,
-          "avg": ".246",
-          "ops": ".722",
-          "kPct": 22.6,
+          "rPerG": 4.36,
+          "avg": ".245",
+          "ops": ".721",
+          "kPct": 22.5,
           "bbPct": 8.6,
-          "rPerG_L5": 5.25,
-          "bullpenERA_L14": 4.54
+          "rPerG_L5": 4.89,
+          "bullpenERA_L14": 4.24
         }
       },
       "lines": {
-        "ml": "Athletics +150 / Toronto Blue Jays -178",
-        "spread": "Athletics +1.5 (-104)",
-        "total": "O/U 9.5 (Over -105 / Under -115)",
+        "ml": "Athletics -1800 / Toronto Blue Jays +800",
+        "spread": "Athletics -1.5 (-330)",
+        "total": "O/U 2.5 (Over -110 / Under -122)",
         "raw": {
-          "homeML": 150,
-          "awayML": -178,
-          "homeSpread": 1.5,
-          "homeSpreadOdds": -104,
-          "awaySpread": -1.5,
-          "awaySpreadOdds": -115,
-          "total": 9.5,
-          "overOdds": -105,
-          "underOdds": -115
+          "homeML": -1800,
+          "awayML": 800,
+          "homeSpread": -1.5,
+          "homeSpreadOdds": -330,
+          "awaySpread": 1.5,
+          "awaySpreadOdds": 230,
+          "total": 2.5,
+          "overOdds": -110,
+          "underOdds": -122
         }
       },
-      "props": {
-        "Brady Basso": {
-          "pitcher_earned_runs": {
-            "point": 0.5,
-            "over": -180,
-            "under": 140,
-            "overStr": "-180",
-            "underStr": "+140"
-          }
-        }
-      }
+      "props": {}
     },
     {
       "id": "4a391464b8e1ffee0ee5e205298840de",
@@ -283,46 +240,46 @@ const ODDS_DATA = {
       },
       "pitcher_stats": {
         "away": {
-          "era": 3.51,
+          "era": 3.5,
           "whip": 1.24,
-          "k9": 6.26,
-          "bb9": 2.87,
-          "h9": 8.3,
-          "ip": 141.0,
-          "avgIP": 5.6,
-          "gs": 25,
-          "kPct": 16.8,
+          "k9": 6.31,
+          "bb9": 2.81,
+          "h9": 8.38,
+          "ip": 144.0,
+          "avgIP": 5.5,
+          "gs": 26,
+          "kPct": 17.0,
           "_source": "mlb_stats_api",
-          "l5ERA": 2.42,
-          "l5KPct": 13.6,
-          "l5BB9": 4.43,
-          "l5AvgIP": 5.5,
-          "l3ERA": 1.8,
-          "l3KPct": 5.0,
-          "l3BB9": 7.2,
-          "l3AvgIP": 5.0,
+          "l5ERA": 2.49,
+          "l5KPct": 15.2,
+          "l5BB9": 3.91,
+          "l5AvgIP": 5.0,
+          "l3ERA": 2.25,
+          "l3KPct": 12.9,
+          "l3BB9": 4.5,
+          "l3AvgIP": 4.0,
           "name": "Andre Pallante",
           "pid": 669467
         },
         "home": {
-          "era": 4.43,
+          "era": 4.63,
           "whip": 1.24,
-          "k9": 7.59,
-          "bb9": 3.8,
-          "h9": 7.38,
-          "ip": 42.2,
-          "avgIP": 7.0,
-          "gs": 6,
-          "kPct": 20.5,
+          "k9": 7.33,
+          "bb9": 3.66,
+          "h9": 7.52,
+          "ip": 46.2,
+          "avgIP": 6.6,
+          "gs": 7,
+          "kPct": 19.6,
           "_source": "mlb_stats_api",
-          "l5ERA": 5.26,
-          "l5KPct": 21.5,
-          "l5BB9": 4.91,
-          "l5AvgIP": 5.0,
-          "l3ERA": 4.6,
-          "l3KPct": 24.2,
-          "l3BB9": 4.6,
-          "l3AvgIP": 5.1,
+          "l5ERA": 5.46,
+          "l5KPct": 20.0,
+          "l5BB9": 4.55,
+          "l5AvgIP": 4.9,
+          "l3ERA": 5.03,
+          "l3KPct": 21.4,
+          "l3BB9": 4.12,
+          "l3AvgIP": 4.8,
           "name": "Blade Tidwell",
           "pid": 694918
         }
@@ -333,64 +290,76 @@ const ODDS_DATA = {
           "_source": "mlb_stats_api",
           "rPerG": 4.53,
           "avg": ".243",
-          "ops": ".702",
+          "ops": ".703",
           "kPct": 20.7,
           "bbPct": 8.4,
-          "rPerG_L5": 6.5,
-          "bullpenERA_L14": 5.09
+          "rPerG_L5": 6.22,
+          "bullpenERA_L14": 5.04
         },
         "home": {
           "name": "San Francisco Giants",
           "_source": "mlb_stats_api",
-          "rPerG": 4.18,
-          "avg": ".247",
+          "rPerG": 4.16,
+          "avg": ".248",
           "ops": ".716",
           "kPct": 21.3,
           "bbPct": 7.4,
-          "rPerG_L5": 5.38,
-          "bullpenERA_L14": 4.8
+          "rPerG_L5": 4.89,
+          "bullpenERA_L14": 4.86
         }
       },
       "lines": {
-        "ml": "San Francisco Giants +100 / St. Louis Cardinals -118",
-        "spread": "San Francisco Giants +1.5 (-176)",
-        "total": "O/U 8.5 (Over -105 / Under -115)",
+        "ml": "San Francisco Giants +900 / St. Louis Cardinals -2500",
+        "spread": "San Francisco Giants +4.5 (-122)",
+        "total": "O/U 10.5 (Over +110 / Under -146)",
         "raw": {
-          "homeML": 100,
-          "awayML": -118,
-          "homeSpread": 1.5,
-          "homeSpreadOdds": -176,
-          "awaySpread": -1.5,
-          "awaySpreadOdds": 146,
-          "total": 8.5,
-          "overOdds": -105,
-          "underOdds": -115
+          "homeML": 900,
+          "awayML": -2500,
+          "homeSpread": 4.5,
+          "homeSpreadOdds": -122,
+          "awaySpread": -4.5,
+          "awaySpreadOdds": -108,
+          "total": 10.5,
+          "overOdds": 110,
+          "underOdds": -146
         }
       },
       "props": {
-        "Blade Tidwell": {
+        "Andre Pallante": {
+          "pitcher_earned_runs": {
+            "point": 1.5,
+            "over": 130,
+            "under": -180,
+            "overStr": "+130",
+            "underStr": "-180"
+          },
+          "pitcher_hits_allowed": {
+            "point": 5.5,
+            "over": -145,
+            "under": 105,
+            "overStr": "-145",
+            "underStr": "+105"
+          },
           "pitcher_outs": {
-            "point": 15.5,
-            "over": 102,
-            "under": -138,
-            "overStr": "+102",
-            "underStr": "-138"
+            "point": 14.5,
+            "over": -180,
+            "under": 130,
+            "overStr": "-180",
+            "underStr": "+130"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -104,
-            "under": -122,
-            "overStr": "-104",
-            "underStr": "-122"
-          }
-        },
-        "Andre Pallante": {
-          "pitcher_strikeouts": {
-            "point": 3.5,
-            "over": 100,
-            "under": -128,
-            "overStr": "+100",
-            "underStr": "-128"
+            "over": 130,
+            "under": -180,
+            "overStr": "+130",
+            "underStr": "-180"
+          },
+          "pitcher_walks": {
+            "point": 0.5,
+            "over": -105,
+            "under": -130,
+            "overStr": "-105",
+            "underStr": "-130"
           }
         }
       }
@@ -417,46 +386,46 @@ const ODDS_DATA = {
       },
       "pitcher_stats": {
         "away": {
-          "era": 5.55,
-          "whip": 1.68,
-          "k9": 7.77,
-          "bb9": 7.03,
-          "h9": 8.14,
-          "ip": 24.1,
-          "avgIP": 4.8,
-          "gs": 5,
-          "kPct": 18.8,
+          "era": 5.13,
+          "whip": 1.67,
+          "k9": 7.52,
+          "bb9": 6.49,
+          "h9": 8.54,
+          "ip": 26.1,
+          "avgIP": 4.4,
+          "gs": 6,
+          "kPct": 18.3,
           "_source": "mlb_stats_api",
-          "l5ERA": 5.55,
-          "l5KPct": 18.8,
-          "l5BB9": 7.03,
-          "l5AvgIP": 4.8,
-          "l3ERA": 3.78,
-          "l3KPct": 16.9,
-          "l3BB9": 5.94,
-          "l3AvgIP": 5.4,
+          "l5ERA": 5.13,
+          "l5KPct": 18.3,
+          "l5BB9": 6.49,
+          "l5AvgIP": 4.4,
+          "l3ERA": 3.38,
+          "l3KPct": 16.5,
+          "l3BB9": 5.3,
+          "l3AvgIP": 4.5,
           "name": "Jackson Kent",
           "pid": 800600
         },
         "home": {
-          "era": 4.56,
-          "whip": 1.34,
-          "k9": 7.72,
-          "bb9": 3.37,
-          "h9": 8.71,
-          "ip": 136.1,
-          "avgIP": 4.9,
-          "gs": 28,
-          "kPct": 20.3,
+          "era": 4.61,
+          "whip": 1.36,
+          "k9": 7.85,
+          "bb9": 3.44,
+          "h9": 8.76,
+          "ip": 138.2,
+          "avgIP": 4.8,
+          "gs": 29,
+          "kPct": 20.6,
           "_source": "mlb_stats_api",
-          "l5ERA": 2.53,
-          "l5KPct": 20.7,
-          "l5BB9": 1.97,
-          "l5AvgIP": 5.3,
-          "l3ERA": 2.81,
-          "l3KPct": 22.4,
-          "l3BB9": 1.13,
-          "l3AvgIP": 5.3,
+          "l5ERA": 2.88,
+          "l5KPct": 21.8,
+          "l5BB9": 2.36,
+          "l5AvgIP": 4.9,
+          "l3ERA": 3.44,
+          "l3KPct": 24.3,
+          "l3BB9": 1.96,
+          "l3AvgIP": 4.5,
           "name": "Walker Buehler",
           "pid": 621111
         }
@@ -465,73 +434,64 @@ const ODDS_DATA = {
         "away": {
           "name": "Washington Nationals",
           "_source": "mlb_stats_api",
-          "rPerG": 5.13,
+          "rPerG": 5.11,
           "avg": ".248",
-          "ops": ".752",
-          "kPct": 21.8,
-          "bbPct": 9.0,
-          "rPerG_L5": 4.0,
-          "bullpenERA_L14": 5.42
+          "ops": ".753",
+          "kPct": 21.9,
+          "bbPct": 9.1,
+          "rPerG_L5": 3.75,
+          "bullpenERA_L14": 5.32
         },
         "home": {
           "name": "San Diego Padres",
           "_source": "mlb_stats_api",
-          "rPerG": 4.21,
+          "rPerG": 4.18,
           "avg": ".236",
           "ops": ".699",
           "kPct": 21.7,
           "bbPct": 9.3,
-          "rPerG_L5": 3.14,
-          "bullpenERA_L14": 3.13
+          "rPerG_L5": 2.75,
+          "bullpenERA_L14": 3.23
         }
       },
       "lines": {
-        "ml": "San Diego Padres -190 / Washington Nationals +160",
-        "spread": "San Diego Padres -1.5 (+122)",
-        "total": "O/U 8.5 (Over -102 / Under -120)",
+        "ml": "San Diego Padres +200 / Washington Nationals -265",
+        "spread": "San Diego Padres +2.5 (-132)",
+        "total": "O/U 9.5 (Over -112 / Under -118)",
         "raw": {
-          "homeML": -190,
-          "awayML": 160,
-          "homeSpread": -1.5,
-          "homeSpreadOdds": 122,
-          "awaySpread": 1.5,
-          "awaySpreadOdds": -146,
-          "total": 8.5,
-          "overOdds": -102,
-          "underOdds": -120
+          "homeML": 200,
+          "awayML": -265,
+          "homeSpread": 2.5,
+          "homeSpreadOdds": -132,
+          "awaySpread": -2.5,
+          "awaySpreadOdds": 100,
+          "total": 9.5,
+          "overOdds": -112,
+          "underOdds": -118
         }
       },
       "props": {
         "Jackson Kent": {
+          "pitcher_hits_allowed": {
+            "point": 5.5,
+            "over": -145,
+            "under": -105,
+            "overStr": "-145",
+            "underStr": "-105"
+          },
           "pitcher_outs": {
             "point": 14.5,
-            "over": -128,
-            "under": -108,
-            "overStr": "-128",
-            "underStr": "-108"
+            "over": -135,
+            "under": -115,
+            "overStr": "-135",
+            "underStr": "-115"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -128,
-            "under": 100,
-            "overStr": "-128",
-            "underStr": "+100"
-          }
-        },
-        "Walker Buehler": {
-          "pitcher_outs": {
-            "point": 14.5,
-            "over": -174,
-            "under": 128,
-            "overStr": "-174",
-            "underStr": "+128"
-          },
-          "pitcher_strikeouts": {
-            "point": 3.5,
-            "over": -174,
-            "under": 136,
-            "overStr": "-174",
-            "underStr": "+136"
+            "over": 125,
+            "under": -165,
+            "overStr": "+125",
+            "underStr": "-165"
           }
         }
       }
@@ -558,46 +518,46 @@ const ODDS_DATA = {
       },
       "pitcher_stats": {
         "away": {
-          "era": 4.45,
-          "whip": 1.58,
-          "k9": 4.75,
-          "bb9": 2.08,
-          "h9": 12.16,
-          "ip": 30.1,
-          "avgIP": 5.0,
-          "gs": 6,
-          "kPct": 11.9,
+          "era": 4.32,
+          "whip": 1.53,
+          "k9": 4.59,
+          "bb9": 2.16,
+          "h9": 11.61,
+          "ip": 33.1,
+          "avgIP": 4.7,
+          "gs": 7,
+          "kPct": 11.6,
           "_source": "mlb_stats_api",
-          "l5ERA": 4.45,
-          "l5KPct": 11.9,
-          "l5BB9": 2.08,
-          "l5AvgIP": 5.0,
-          "l3ERA": 6.0,
-          "l3KPct": 8.7,
-          "l3BB9": 1.8,
-          "l3AvgIP": 5.0,
+          "l5ERA": 4.32,
+          "l5KPct": 11.6,
+          "l5BB9": 2.16,
+          "l5AvgIP": 4.7,
+          "l3ERA": 5.5,
+          "l3KPct": 8.6,
+          "l3BB9": 2.0,
+          "l3AvgIP": 4.5,
           "name": "Cody Bradford",
           "pid": 674003
         },
         "home": {
-          "era": 5.4,
-          "whip": 1.47,
-          "k9": 6.6,
-          "bb9": 4.2,
+          "era": 4.74,
+          "whip": 1.42,
+          "k9": 6.63,
+          "bb9": 3.79,
           "h9": 9.0,
-          "ip": 15.0,
-          "avgIP": 5.0,
-          "gs": 3,
+          "ip": 19.0,
+          "avgIP": 4.8,
+          "gs": 4,
           "kPct": 17.5,
           "_source": "mlb_stats_api",
-          "l5ERA": 5.4,
+          "l5ERA": 4.74,
           "l5KPct": 17.5,
-          "l5BB9": 4.2,
-          "l5AvgIP": 5.0,
-          "l3ERA": 5.4,
+          "l5BB9": 3.79,
+          "l5AvgIP": 4.8,
+          "l3ERA": 4.74,
           "l3KPct": 17.5,
-          "l3BB9": 4.2,
-          "l3AvgIP": 5.0,
+          "l3BB9": 3.79,
+          "l3AvgIP": 4.8,
           "name": "Kade Anderson",
           "pid": 807739
         }
@@ -606,73 +566,66 @@ const ODDS_DATA = {
         "away": {
           "name": "Texas Rangers",
           "_source": "mlb_stats_api",
-          "rPerG": 4.17,
+          "rPerG": 4.15,
           "avg": ".243",
           "ops": ".719",
           "kPct": 22.7,
-          "bbPct": 8.8,
-          "rPerG_L5": 6.14,
-          "bullpenERA_L14": 5.09
+          "bbPct": 8.7,
+          "rPerG_L5": 5.5,
+          "bullpenERA_L14": 5.04
         },
         "home": {
           "name": "Seattle Mariners",
           "_source": "mlb_stats_api",
-          "rPerG": 3.96,
+          "rPerG": 3.94,
           "avg": ".229",
           "ops": ".684",
-          "kPct": 23.4,
+          "kPct": 23.3,
           "bbPct": 9.0,
-          "rPerG_L5": 5.14,
-          "bullpenERA_L14": 5.98
+          "rPerG_L5": 4.62,
+          "bullpenERA_L14": 5.84
         }
       },
       "lines": {
-        "ml": "Seattle Mariners -156 / Texas Rangers +132",
-        "spread": "Seattle Mariners -1.5 (+146)",
-        "total": "O/U 7.5 (Over -122 / Under +100)",
+        "ml": "Seattle Mariners -180 / Texas Rangers +140",
+        "spread": "Seattle Mariners -1.5 (+154)",
+        "total": "O/U 6.5 (Over -132 / Under +100)",
         "raw": {
-          "homeML": -156,
-          "awayML": 132,
+          "homeML": -180,
+          "awayML": 140,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 146,
+          "homeSpreadOdds": 154,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -178,
-          "total": 7.5,
-          "overOdds": -122,
+          "awaySpreadOdds": -210,
+          "total": 6.5,
+          "overOdds": -132,
           "underOdds": 100
         }
       },
       "props": {
-        "Kade Anderson": {
-          "pitcher_outs": {
-            "point": 15.5,
-            "over": 118,
-            "under": -158,
-            "overStr": "+118",
-            "underStr": "-158"
-          },
-          "pitcher_strikeouts": {
-            "point": 5.5,
-            "over": 128,
-            "under": -164,
-            "overStr": "+128",
-            "underStr": "-164"
+        "Cody Bradford": {
+          "pitcher_hits_allowed": {
+            "point": 4.5,
+            "over": -120,
+            "under": -130,
+            "overStr": "-120",
+            "underStr": "-130"
           }
         },
-        "Cody Bradford": {
+        "Kade Anderson": {
           "pitcher_outs": {
-            "point": 15.5,
+            "point": 16.5,
             "over": -125,
-            "under": -108,
+            "under": -125,
             "overStr": "-125",
-            "underStr": "-108"
+            "underStr": "-125"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": 124,
-            "under": -158,
-            "overStr": "+124",
-            "underStr": "-158"
+            "over": 110,
+            "under": -145,
+            "overStr": "+110",
+            "underStr": "-145"
           }
         }
       }
@@ -768,19 +721,19 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Baltimore Orioles -104 / Cleveland Guardians -112",
-        "spread": "Baltimore Orioles +1.5 (-176)",
-        "total": "O/U 8.5 (Over -122 / Under +100)",
+        "ml": "Baltimore Orioles -102 / Cleveland Guardians -116",
+        "spread": "Baltimore Orioles +1.5 (-178)",
+        "total": "O/U 8.5 (Over -114 / Under -106)",
         "raw": {
-          "homeML": -104,
-          "awayML": -112,
+          "homeML": -102,
+          "awayML": -116,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -176,
+          "homeSpreadOdds": -178,
           "awaySpread": -1.5,
           "awaySpreadOdds": 146,
           "total": 8.5,
-          "overOdds": -122,
-          "underOdds": 100
+          "overOdds": -114,
+          "underOdds": -106
         }
       },
       "props": {
@@ -794,10 +747,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": 100,
-            "under": -128,
-            "overStr": "+100",
-            "underStr": "-128"
+            "over": 114,
+            "under": -146,
+            "overStr": "+114",
+            "underStr": "-146"
           }
         },
         "Foster Griffin": {
@@ -910,15 +863,15 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Philadelphia Phillies -154 / Houston Astros +130",
-        "spread": "Philadelphia Phillies -1.5 (+130)",
+        "spread": "Philadelphia Phillies -1.5 (+146)",
         "total": "O/U 8.5 (Over +108 / Under -132)",
         "raw": {
           "homeML": -154,
           "awayML": 130,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 130,
+          "homeSpreadOdds": 146,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -156,
+          "awaySpreadOdds": -176,
           "total": 8.5,
           "overOdds": 108,
           "underOdds": -132
@@ -935,26 +888,26 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -146,
-            "under": 114,
-            "overStr": "-146",
-            "underStr": "+114"
+            "over": -130,
+            "under": 102,
+            "overStr": "-130",
+            "underStr": "+102"
           }
         },
         "Cristopher Sanchez": {
           "pitcher_outs": {
             "point": 18.5,
-            "over": -102,
-            "under": -130,
-            "overStr": "-102",
-            "underStr": "-130"
+            "over": 108,
+            "under": -144,
+            "overStr": "+108",
+            "underStr": "-144"
           },
           "pitcher_strikeouts": {
             "point": 6.5,
-            "over": -108,
-            "under": -118,
-            "overStr": "-108",
-            "underStr": "-118"
+            "over": 118,
+            "under": -150,
+            "overStr": "+118",
+            "underStr": "-150"
           }
         }
       }
@@ -1051,21 +1004,37 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Miami Marlins -124 / New York Mets +106",
-        "spread": "Miami Marlins +1.5 (-192)",
-        "total": "O/U 8.5 (Over -120 / Under -102)",
+        "spread": "Miami Marlins +1.5 (-188)",
+        "total": "O/U 8.5 (Over -122 / Under +100)",
         "raw": {
           "homeML": -124,
           "awayML": 106,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -192,
+          "homeSpreadOdds": -188,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 158,
+          "awaySpreadOdds": 155,
           "total": 8.5,
-          "overOdds": -120,
-          "underOdds": -102
+          "overOdds": -122,
+          "underOdds": 100
         }
       },
       "props": {
+        "Janson Junk": {
+          "pitcher_outs": {
+            "point": 14.5,
+            "over": 108,
+            "under": -152,
+            "overStr": "+108",
+            "underStr": "-152"
+          },
+          "pitcher_strikeouts": {
+            "point": 3.5,
+            "over": 106,
+            "under": -136,
+            "overStr": "+106",
+            "underStr": "-136"
+          }
+        },
         "Robert Stock": {
           "pitcher_outs": {
             "point": 14.5,
@@ -1077,25 +1046,9 @@ const ODDS_DATA = {
           "pitcher_strikeouts": {
             "point": 4.5,
             "over": 114,
-            "under": -148,
+            "under": -146,
             "overStr": "+114",
-            "underStr": "-148"
-          }
-        },
-        "Janson Junk": {
-          "pitcher_outs": {
-            "point": 14.5,
-            "over": -108,
-            "under": -128,
-            "overStr": "-108",
-            "underStr": "-128"
-          },
-          "pitcher_strikeouts": {
-            "point": 3.5,
-            "over": 104,
-            "under": -132,
-            "overStr": "+104",
-            "underStr": "-132"
+            "underStr": "-146"
           }
         }
       }
@@ -1192,15 +1145,15 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Boston Red Sox -215 / Los Angeles Angels +180",
-        "spread": "Boston Red Sox -1.5 (+100)",
+        "spread": "Boston Red Sox -1.5 (-106)",
         "total": "O/U 9.5 (Over +104 / Under -128)",
         "raw": {
           "homeML": -215,
           "awayML": 180,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 100,
+          "homeSpreadOdds": -106,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -120,
+          "awaySpreadOdds": -113,
           "total": 9.5,
           "overOdds": 104,
           "underOdds": -128
@@ -1233,10 +1186,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -172,
-            "under": 134,
-            "overStr": "-172",
-            "underStr": "+134"
+            "over": -184,
+            "under": 142,
+            "overStr": "-184",
+            "underStr": "+142"
           }
         }
       }
@@ -1333,18 +1286,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "New York Yankees -245 / Colorado Rockies +200",
-        "spread": "New York Yankees -1.5 (-113)",
-        "total": "O/U 9.5 (Over +110 / Under -134)",
+        "spread": "New York Yankees -1.5 (-118)",
+        "total": "O/U 9.5 (Over +104 / Under -128)",
         "raw": {
           "homeML": -245,
           "awayML": 200,
           "homeSpread": -1.5,
-          "homeSpreadOdds": -113,
+          "homeSpreadOdds": -118,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -106,
+          "awaySpreadOdds": -102,
           "total": 9.5,
-          "overOdds": 110,
-          "underOdds": -134
+          "overOdds": 104,
+          "underOdds": -128
         }
       },
       "props": {
@@ -1367,10 +1320,10 @@ const ODDS_DATA = {
         "Will Warren": {
           "pitcher_outs": {
             "point": 16.5,
-            "over": -138,
-            "under": 104,
-            "overStr": "-138",
-            "underStr": "+104"
+            "over": -118,
+            "under": -114,
+            "overStr": "-118",
+            "underStr": "-114"
           },
           "pitcher_strikeouts": {
             "point": 5.5,
@@ -1396,10 +1349,10 @@ const ODDS_DATA = {
           "confirmed": true
         },
         "home": {
-          "name": "TBD",
-          "id": null,
+          "name": "Reynaldo L\u00f3pez",
+          "id": 625643,
           "hand": "?",
-          "confirmed": false
+          "confirmed": true
         }
       },
       "pitcher_stats": {
@@ -1424,6 +1377,20 @@ const ODDS_DATA = {
           "l3AvgIP": 2.2,
           "name": "Griffin Jax",
           "pid": 643377
+        },
+        "home": {
+          "era": 3.64,
+          "whip": 1.34,
+          "k9": 8.29,
+          "bb9": 3.64,
+          "h9": 8.41,
+          "ip": 71.2,
+          "avgIP": 6.5,
+          "gs": 11,
+          "kPct": 21.6,
+          "_source": "mlb_stats_api",
+          "name": "Reynaldo L\u00f3pez",
+          "pid": 625643
         }
       },
       "team_stats": {
@@ -1453,7 +1420,7 @@ const ODDS_DATA = {
       "lines": {
         "ml": "Atlanta Braves -124 / Tampa Bay Rays +106",
         "spread": "Atlanta Braves -1.5 (+162)",
-        "total": "O/U 8.5 (Over -102 / Under -120)",
+        "total": "O/U 8.5 (Over +102 / Under -124)",
         "raw": {
           "homeML": -124,
           "awayML": 106,
@@ -1462,34 +1429,34 @@ const ODDS_DATA = {
           "awaySpread": 1.5,
           "awaySpreadOdds": -196,
           "total": 8.5,
-          "overOdds": -102,
-          "underOdds": -120
+          "overOdds": 102,
+          "underOdds": -124
         }
       },
       "props": {
         "Griffin Jax": {
           "pitcher_outs": {
             "point": 14.5,
-            "over": -114,
-            "under": -120,
-            "overStr": "-114",
-            "underStr": "-120"
+            "over": 102,
+            "under": -144,
+            "overStr": "+102",
+            "underStr": "-144"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -113,
-            "under": -113,
-            "overStr": "-113",
-            "underStr": "-113"
+            "over": -111,
+            "under": -115,
+            "overStr": "-111",
+            "underStr": "-115"
           }
         },
         "Reynaldo Lopez": {
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -132,
-            "under": 104,
-            "overStr": "-132",
-            "underStr": "+104"
+            "over": -136,
+            "under": 106,
+            "overStr": "-136",
+            "underStr": "+106"
           }
         }
       }
@@ -1577,12 +1544,12 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Kansas City Royals +104 / Arizona Diamondbacks -122",
+        "ml": "Kansas City Royals +102 / Arizona Diamondbacks -120",
         "spread": "Kansas City Royals +1.5 (-164)",
         "total": "O/U 8.5 (Over -122 / Under +100)",
         "raw": {
-          "homeML": 104,
-          "awayML": -122,
+          "homeML": 102,
+          "awayML": -120,
           "homeSpread": 1.5,
           "homeSpreadOdds": -164,
           "awaySpread": -1.5,
@@ -1603,10 +1570,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 2.5,
-            "over": -120,
-            "under": -106,
-            "overStr": "-120",
-            "underStr": "-106"
+            "over": -113,
+            "under": -113,
+            "overStr": "-113",
+            "underStr": "-113"
           }
         }
       }
@@ -1702,22 +1669,38 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Milwaukee Brewers -134 / Chicago Cubs +116",
-        "spread": "Milwaukee Brewers -1.5 (+158)",
+        "ml": "Milwaukee Brewers -130 / Chicago Cubs +110",
+        "spread": "Milwaukee Brewers -1.5 (+172)",
         "total": "O/U 7.5 (Over -110 / Under -110)",
         "raw": {
-          "homeML": -134,
-          "awayML": 116,
+          "homeML": -130,
+          "awayML": 110,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 158,
+          "homeSpreadOdds": 172,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -192,
+          "awaySpreadOdds": -205,
           "total": 7.5,
           "overOdds": -110,
           "underOdds": -110
         }
       },
       "props": {
+        "Kevin Gausman": {
+          "pitcher_outs": {
+            "point": 17.5,
+            "over": -108,
+            "under": -125,
+            "overStr": "-108",
+            "underStr": "-125"
+          },
+          "pitcher_strikeouts": {
+            "point": 5.5,
+            "over": 114,
+            "under": -146,
+            "overStr": "+114",
+            "underStr": "-146"
+          }
+        },
         "Logan Henderson": {
           "pitcher_outs": {
             "point": 17.5,
@@ -1728,26 +1711,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 6.5,
-            "over": 126,
-            "under": -162,
-            "overStr": "+126",
-            "underStr": "-162"
-          }
-        },
-        "Kevin Gausman": {
-          "pitcher_outs": {
-            "point": 17.5,
-            "over": -102,
-            "under": -132,
-            "overStr": "-102",
-            "underStr": "-132"
-          },
-          "pitcher_strikeouts": {
-            "point": 5.5,
-            "over": -115,
-            "under": -111,
-            "overStr": "-115",
-            "underStr": "-111"
+            "over": 132,
+            "under": -170,
+            "overStr": "+132",
+            "underStr": "-170"
           }
         }
       }
@@ -1843,16 +1810,16 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Chicago White Sox -148 / Pittsburgh Pirates +126",
-        "spread": "Chicago White Sox -1.5 (+130)",
+        "ml": "Chicago White Sox -136 / Pittsburgh Pirates +116",
+        "spread": "Chicago White Sox -1.5 (+142)",
         "total": "O/U 8.5 (Over -122 / Under +100)",
         "raw": {
-          "homeML": -148,
-          "awayML": 126,
+          "homeML": -136,
+          "awayML": 116,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 130,
+          "homeSpreadOdds": 142,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -156,
+          "awaySpreadOdds": -172,
           "total": 8.5,
           "overOdds": -122,
           "underOdds": 100
@@ -1869,10 +1836,10 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -122,
-            "under": -104,
-            "overStr": "-122",
-            "underStr": "-104"
+            "over": -106,
+            "under": -120,
+            "overStr": "-106",
+            "underStr": "-120"
           }
         }
       }
@@ -1969,15 +1936,15 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Los Angeles Dodgers -295 / Cincinnati Reds +240",
-        "spread": "Los Angeles Dodgers -1.5 (-134)",
+        "spread": "Los Angeles Dodgers -1.5 (-126)",
         "total": "O/U 8.5 (Over -114 / Under -106)",
         "raw": {
           "homeML": -295,
           "awayML": 240,
           "homeSpread": -1.5,
-          "homeSpreadOdds": -134,
+          "homeSpreadOdds": -126,
           "awaySpread": 1.5,
-          "awaySpreadOdds": 112,
+          "awaySpreadOdds": 105,
           "total": 8.5,
           "overOdds": -114,
           "underOdds": -106
@@ -1987,10 +1954,10 @@ const ODDS_DATA = {
         "Rhett Lowder": {
           "pitcher_outs": {
             "point": 15.5,
-            "over": 112,
-            "under": -148,
-            "overStr": "+112",
-            "underStr": "-148"
+            "over": 122,
+            "under": -166,
+            "overStr": "+122",
+            "underStr": "-166"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
