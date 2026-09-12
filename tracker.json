@@ -1,29 +1,9 @@
 {
   "2026-09-12": {
-    "generated_at": "2026-09-12T14:08:56Z",
-    "game_count": 15,
+    "generated_at": "2026-09-12T21:04:07Z",
+    "game_count": 12,
     "picks": [
       {
-        "game": "ROC@TIG",
-        "pick": "Over 8.5",
-        "odds": "-105",
-        "grade": "A-",
-        "src": "era",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "ORI@JAY",
-        "pick": "Under 16.5 outs",
-        "odds": "-104",
-        "grade": "A-",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
         "game": "ORI@JAY",
         "pick": "Under 2.5 ER",
         "odds": "TBD",
@@ -34,9 +14,9 @@
         "hit": null
       },
       {
-        "game": "PAD@GIA",
-        "pick": "Under 8.5",
-        "odds": "-134",
+        "game": "ANG@NAT",
+        "pick": "Under 9.5",
+        "odds": "-128",
         "grade": "A-",
         "src": "era",
         "parlay": false,
@@ -45,10 +25,10 @@
       },
       {
         "game": "PAD@GIA",
-        "pick": "Under 2.5 ER",
-        "odds": "TBD",
+        "pick": "Under 11.5",
+        "odds": "-110",
         "grade": "A-",
-        "src": "MLB Stats API",
+        "src": "era",
         "parlay": false,
         "result": null,
         "hit": null
@@ -67,16 +47,6 @@
         "game": "GUA@TWI",
         "pick": "Under 2.5 ER",
         "odds": "TBD",
-        "grade": "A-",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "GUA@TWI",
-        "pick": "Over 14.5 outs",
-        "odds": "-138",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -85,8 +55,8 @@
       },
       {
         "game": "DOD@MAR",
-        "pick": "Over 7.5",
-        "odds": "-124",
+        "pick": "Under 11.5",
+        "odds": "-118",
         "grade": "A-",
         "src": "era",
         "parlay": false,
@@ -96,9 +66,9 @@
       {
         "game": "RED@BRE",
         "pick": "Over 8.5",
-        "odds": "-106",
+        "odds": "-115",
         "grade": "A-",
-        "src": "bullpen_pivot",
+        "src": "era",
         "parlay": false,
         "result": null,
         "hit": null
@@ -114,31 +84,11 @@
         "hit": null
       },
       {
-        "game": "MET@YAN",
-        "pick": "Over 8.5",
-        "odds": "+104",
-        "grade": "B+",
-        "src": "era",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "PIR@CUB",
+        "game": "PHI@BRA",
         "pick": "Under 2.5 ER",
         "odds": "TBD",
-        "grade": "B+",
+        "grade": "A-",
         "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "ANG@NAT",
-        "pick": "Under 8.5",
-        "odds": "-128",
-        "grade": "B+",
-        "src": "era",
         "parlay": false,
         "result": null,
         "hit": null
@@ -155,28 +105,18 @@
       },
       {
         "game": "PAD@GIA",
-        "pick": "Giants -1.5",
-        "odds": "+148",
+        "pick": "Under 2.5 ER",
+        "odds": "TBD",
         "grade": "B+",
-        "src": "era",
+        "src": "MLB Stats API",
         "parlay": false,
         "result": null,
         "hit": null
       },
       {
         "game": "ROY@SOX",
-        "pick": "Under 8.5",
-        "odds": "-112",
-        "grade": "B+",
-        "src": "era",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "ROY@SOX",
-        "pick": "Over 15.5 outs",
-        "odds": "+112",
+        "pick": "Under 2.5 ER",
+        "odds": "TBD",
         "grade": "B+",
         "src": "MLB Stats API",
         "parlay": false,
@@ -186,7 +126,17 @@
       {
         "game": "GUA@TWI",
         "pick": "Guardians -1.5",
-        "odds": "-108",
+        "odds": "+200",
+        "grade": "B+",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "GUA@TWI",
+        "pick": "Under 8.5",
+        "odds": "+106",
         "grade": "B+",
         "src": "era",
         "parlay": false,
@@ -196,19 +146,9 @@
       {
         "game": "AST@RAY",
         "pick": "Over 5.5 Ks",
-        "odds": "-115",
+        "odds": "+100",
         "grade": "B+",
         "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "PHI@BRA",
-        "pick": "Under 8.5",
-        "odds": "-114",
-        "grade": "B+",
-        "src": "bullpen_pivot",
         "parlay": false,
         "result": null,
         "hit": null
@@ -244,59 +184,9 @@
         "hit": null
       },
       {
-        "game": "MET@YAN",
-        "pick": "Over 15.5 outs",
-        "odds": "+136",
-        "grade": "B",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "MET@YAN",
-        "pick": "Under 2.5 ER",
-        "odds": "TBD",
-        "grade": "B",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "PIR@CUB",
-        "pick": "Cubs -1.5",
-        "odds": "-122",
-        "grade": "B",
-        "src": "era",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "PIR@CUB",
-        "pick": "Under 8.5",
-        "odds": "+110",
-        "grade": "B",
-        "src": "era",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "PIR@CUB",
-        "pick": "Under 2.5 ER",
-        "odds": "TBD",
-        "grade": "B",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
         "game": "ORI@JAY",
         "pick": "Under 8.5",
-        "odds": "-115",
+        "odds": "-158",
         "grade": "B",
         "src": "era",
         "parlay": false,
@@ -314,26 +204,6 @@
         "hit": null
       },
       {
-        "game": "PAD@GIA",
-        "pick": "Over 17.5 outs",
-        "odds": "-138",
-        "grade": "B",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "ROY@SOX",
-        "pick": "Under 2.5 ER",
-        "odds": "TBD",
-        "grade": "B",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
         "game": "ROY@SOX",
         "pick": "Under 2.5 ER",
         "odds": "TBD",
@@ -345,29 +215,19 @@
       },
       {
         "game": "GUA@TWI",
-        "pick": "Under 8.5",
+        "pick": "Over 2.5 Ks",
+        "odds": "-130",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "DOD@MAR",
+        "pick": "Over 4.5 Ks",
         "odds": "-120",
         "grade": "B",
-        "src": "era",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "GUA@TWI",
-        "pick": "Over 4.5 Ks",
-        "odds": "+114",
-        "grade": "B",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "DOD@MAR",
-        "pick": "Over 7.5 Ks",
-        "odds": "+112",
-        "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
         "result": null,
@@ -376,17 +236,7 @@
       {
         "game": "DOD@MAR",
         "pick": "Under 2.5 ER",
-        "odds": "TBD",
-        "grade": "B",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "DOD@MAR",
-        "pick": "Under 2.5 ER",
-        "odds": "TBD",
+        "odds": "-105",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -396,7 +246,7 @@
       {
         "game": "AST@RAY",
         "pick": "Over 7.5",
-        "odds": "-118",
+        "odds": "-114",
         "grade": "B",
         "src": "era",
         "parlay": false,
@@ -404,9 +254,29 @@
         "hit": null
       },
       {
+        "game": "RED@BRE",
+        "pick": "Brewers -1.5",
+        "odds": "-198",
+        "grade": "B",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "RED@BRE",
+        "pick": "Over 5.5 Ks",
+        "odds": "-128",
+        "grade": "B",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
         "game": "PHI@BRA",
         "pick": "Over 4.5 Ks",
-        "odds": "-113",
+        "odds": "-111",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -426,7 +296,7 @@
       {
         "game": "SOX@CAR",
         "pick": "Over 3.5 Ks",
-        "odds": "+128",
+        "odds": "+138",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -456,7 +326,7 @@
       {
         "game": "MAR@ATH",
         "pick": "Under 9.5",
-        "odds": "-110",
+        "odds": "-115",
         "grade": "B",
         "src": "era",
         "parlay": false,
@@ -466,7 +336,7 @@
       {
         "game": "MAR@ATH",
         "pick": "Over 5.5 Ks",
-        "odds": "-104",
+        "odds": "+102",
         "grade": "B",
         "src": "MLB Stats API",
         "parlay": false,
@@ -484,49 +354,9 @@
         "hit": null
       },
       {
-        "game": "PIR@CUB",
-        "pick": "Cubs ML",
-        "odds": "-122",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "PAD@GIA",
-        "pick": "Giants ML",
-        "odds": "+148",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "ROY@SOX",
-        "pick": "Royals ML",
-        "odds": "+180",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
         "game": "GUA@TWI",
         "pick": "Guardians ML",
-        "odds": "-108",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "DOD@MAR",
-        "pick": "Dodgers ML",
-        "odds": "-196",
+        "odds": "+200",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -536,19 +366,9 @@
       {
         "game": "RED@BRE",
         "pick": "Brewers ML",
-        "odds": "-196",
+        "odds": "-198",
         "grade": "C",
-        "src": "bullpen_pivot",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "PHI@BRA",
-        "pick": "Phillies ML",
-        "odds": "+108",
-        "grade": "C",
-        "src": "bullpen_pivot",
+        "src": "era",
         "parlay": true,
         "result": null,
         "hit": null
@@ -556,7 +376,7 @@
       {
         "game": "SOX@CAR",
         "pick": "Cardinals ML",
-        "odds": "-112",
+        "odds": "-108",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -565,14 +385,14 @@
       }
     ],
     "summary": {
-      "total": 56,
+      "total": 38,
       "by_grade": {
-        "A-": 11,
-        "B+": 13,
-        "B": 24,
-        "C": 8
+        "A-": 9,
+        "B+": 9,
+        "B": 17,
+        "C": 3
       },
-      "parlay_count": 8
+      "parlay_count": 3
     }
   },
   "2026-09-11": {
