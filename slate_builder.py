@@ -46,7 +46,7 @@ PA_SOLID     = 25     # solid confidence
 PA_LIMITED   = 15     # bullpen pivot below this
 COLD_FLOOR   = 30.0   # K% floor — no cold cap above this
 BULLPEN_MULT = 1.10   # bullpen day ERA multiplier
-STRIP_MIN_CONFIDENCE = 5  # minimum confidence score for strip inclusion
+STRIP_MIN_CONFIDENCE = 5  # A- only in best bets  # minimum confidence score for strip inclusion
 HRR_MAX_GRADE_WITHOUT_LINEUP = "B"
 
 GRADE_ORDER = {"A+":0,"A":1,"A-":2,"B+":3,"B":4,"B-":5,"C+":6,"C":7,"C-":8}
@@ -434,11 +434,11 @@ def grade_pitcher_props(game, pitcher_side, park):
     er_data  = props.get(player_key,{}).get("pitcher_earned_runs") if player_key else None
     er_grade = era_to_grade(blended_era)
 
-    # Grade ER prop even without live odds line — use standard 2.5 line
-    er_line_val  = er_data.get("point") if er_data else 2.5
+    # Only grade ER prop when live odds line exists — default 2.5 is unreliable
+    er_line_val  = er_data.get("point") if er_data else None
     er_under_str = er_data.get("underStr","TBD") if er_data else "TBD"
 
-    if er_grade not in ("C+","C","B-","C+",None):
+    if er_data and er_line_val is not None and er_grade not in ("C+","C","B-","C+",None):
         er_line  = er_line_val
         er_under = er_under_str
         if er_line is not None:
@@ -941,7 +941,7 @@ def build_best_bets(all_leans, pitcher_cards):
         if ml:
             conf = confidence_score(ml["grade"], away_pa, home_pa,
                                     away_cf, home_cf, src)
-            if ml.get("parlay") or (GRADE_ORDER.get(ml["grade"],9) <= GRADE_ORDER["B-"]
+            if ml.get("parlay") or (GRADE_ORDER.get(ml["grade"],9) <= GRADE_ORDER["A-"]
                                     and conf >= STRIP_MIN_CONFIDENCE):
                 picks.append({
                     "game":   tag,
@@ -953,7 +953,7 @@ def build_best_bets(all_leans, pitcher_cards):
                 })
 
         # RL
-        if rl and GRADE_ORDER.get(rl["grade"],9) <= GRADE_ORDER["B-"]:
+        if rl and GRADE_ORDER.get(rl["grade"],9) <= GRADE_ORDER["A-"]:
             conf = confidence_score(rl["grade"], away_pa, home_pa,
                                     away_cf, home_cf, src)
             if conf >= STRIP_MIN_CONFIDENCE:
@@ -967,7 +967,7 @@ def build_best_bets(all_leans, pitcher_cards):
 
         # Total
         if (tot and tot.get("side") not in ("TBD","Even")
-                and GRADE_ORDER.get(tot.get("grade","C"),9) <= GRADE_ORDER["B-"]):
+                and GRADE_ORDER.get(tot.get("grade","C"),9) <= GRADE_ORDER["A-"]):
             conf = confidence_score(tot["grade"], away_pa, home_pa,
                                     away_cf, home_cf, src)
             if conf >= STRIP_MIN_CONFIDENCE:
@@ -981,7 +981,9 @@ def build_best_bets(all_leans, pitcher_cards):
 
         # Pitcher props
         for card in pitcher_cards.get(game_key,[]):
-            if GRADE_ORDER.get(card["grade"],9) <= GRADE_ORDER["B-"]:
+            if GRADE_ORDER.get(card["grade"],9) <= GRADE_ORDER["A-"]:
+                if card.get("odds","TBD") == "TBD":
+                    continue  # no live line — skip from best bets
                 picks.append({
                     "game":  tag,
                     "pick":  card["pick"],
