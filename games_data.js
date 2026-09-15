@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-15T14:10:22.524680+00:00",
+  "fetched_at": "2026-09-15T21:04:35.249815+00:00",
   "date": "2026-09-15",
   "games": [
     {
@@ -93,94 +93,94 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Tampa Bay Rays -238 / Athletics +193",
-        "spread": "Tampa Bay Rays -1.5 (-106)",
-        "total": "O/U 8.0 (Over -108 / Under -111)",
+        "ml": "Tampa Bay Rays -227 / Athletics +184",
+        "spread": "Tampa Bay Rays -1.5 (-105)",
+        "total": "O/U 8.0 (Over -112 / Under -107)",
         "raw": {
-          "homeML": -238,
-          "awayML": 193,
+          "homeML": -227,
+          "awayML": 184,
           "homeSpread": -1.5,
-          "homeSpreadOdds": -106,
+          "homeSpreadOdds": -105,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -114,
+          "awaySpreadOdds": -115,
           "total": 8.0,
-          "overOdds": -108,
-          "underOdds": -111
+          "overOdds": -112,
+          "underOdds": -107
         }
       },
       "props": {
         "Griffin Jax": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": 102,
-            "under": -136,
-            "overStr": "+102",
-            "underStr": "-136"
+            "over": 108,
+            "under": -144,
+            "overStr": "+108",
+            "underStr": "-144"
           },
           "pitcher_hits_allowed": {
             "point": 3.5,
-            "over": -152,
-            "under": 115,
-            "overStr": "-152",
-            "underStr": "+115"
+            "over": -151,
+            "under": 113,
+            "overStr": "-151",
+            "underStr": "+113"
           },
           "pitcher_outs": {
             "point": 14.5,
-            "over": -190,
-            "under": 142,
-            "overStr": "-190",
-            "underStr": "+142"
+            "over": -170,
+            "under": 128,
+            "overStr": "-170",
+            "underStr": "+128"
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": 117,
-            "under": -149,
-            "overStr": "+117",
-            "underStr": "-149"
+            "over": 121,
+            "under": -155,
+            "overStr": "+121",
+            "underStr": "-155"
           },
           "pitcher_walks": {
             "point": 0.5,
-            "over": -236,
-            "under": 174,
-            "overStr": "-236",
-            "underStr": "+174"
+            "over": -227,
+            "under": 169,
+            "overStr": "-227",
+            "underStr": "+169"
           }
         },
         "Jack Perkins": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": -102,
-            "under": -130,
-            "overStr": "-102",
-            "underStr": "-130"
+            "over": 103,
+            "under": -137,
+            "overStr": "+103",
+            "underStr": "-137"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
+            "over": -132,
+            "under": 100,
+            "overStr": "-132",
+            "underStr": "+100"
+          },
+          "pitcher_outs": {
+            "point": 14.5,
             "over": -141,
             "under": 106,
             "overStr": "-141",
             "underStr": "+106"
           },
-          "pitcher_outs": {
-            "point": 14.5,
-            "over": -189,
-            "under": 141,
-            "overStr": "-189",
-            "underStr": "+141"
-          },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -168,
-            "under": 131,
-            "overStr": "-168",
-            "underStr": "+131"
+            "over": -159,
+            "under": 125,
+            "overStr": "-159",
+            "underStr": "+125"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -171,
-            "under": 128,
-            "overStr": "-171",
-            "underStr": "+128"
+            "over": -177,
+            "under": 133,
+            "overStr": "-177",
+            "underStr": "+133"
           }
         }
       }
@@ -193,8 +193,8 @@ const ODDS_DATA = {
       "commence": "2026-09-15T22:40:00Z",
       "starters": {
         "away": {
-          "name": "Davis Martin",
-          "id": 663436,
+          "name": "Chris Murphy",
+          "id": 669684,
           "hand": "?",
           "confirmed": true
         },
@@ -207,26 +207,26 @@ const ODDS_DATA = {
       },
       "pitcher_stats": {
         "away": {
-          "era": 4.05,
-          "whip": 1.31,
-          "k9": 7.63,
-          "bb9": 2.79,
-          "h9": 9.02,
-          "ip": 135.2,
-          "avgIP": 5.2,
-          "gs": 26,
-          "kPct": 20.1,
+          "era": 3.94,
+          "whip": 1.34,
+          "k9": 9.56,
+          "bb9": 4.22,
+          "h9": 7.88,
+          "ip": 32.0,
+          "avgIP": 16.0,
+          "gs": 2,
+          "kPct": 24.3,
           "_source": "mlb_stats_api",
-          "l5ERA": 2.84,
-          "l5KPct": 13.2,
-          "l5BB9": 2.84,
-          "l5AvgIP": 4.1,
-          "l3ERA": 0.84,
-          "l3KPct": 9.5,
-          "l3BB9": 2.53,
-          "l3AvgIP": 5.1,
-          "name": "Davis Martin",
-          "pid": 663436
+          "l5ERA": null,
+          "l5KPct": null,
+          "l5BB9": null,
+          "l5AvgIP": 2.0,
+          "l3ERA": null,
+          "l3KPct": null,
+          "l3BB9": null,
+          "l3AvgIP": 2.0,
+          "name": "Chris Murphy",
+          "pid": 669684
         },
         "home": {
           "era": 3.65,
@@ -276,94 +276,57 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Cleveland Guardians -155 / Chicago White Sox +128",
-        "spread": "Cleveland Guardians -1.5 (+144)",
-        "total": "O/U 8.5 (Over -111 / Under -108)",
+        "ml": "Cleveland Guardians -156 / Chicago White Sox +129",
+        "spread": "Cleveland Guardians -1.5 (+139)",
+        "total": "O/U 9.0 (Over -101 / Under -119)",
         "raw": {
-          "homeML": -155,
-          "awayML": 128,
+          "homeML": -156,
+          "awayML": 129,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 144,
+          "homeSpreadOdds": 139,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -175,
-          "total": 8.5,
-          "overOdds": -111,
-          "underOdds": -108
+          "awaySpreadOdds": -168,
+          "total": 9.0,
+          "overOdds": -101,
+          "underOdds": -119
         }
       },
       "props": {
         "Foster Griffin": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": 126,
-            "under": -168,
-            "overStr": "+126",
-            "underStr": "-168"
+            "over": 131,
+            "under": -174,
+            "overStr": "+131",
+            "underStr": "-174"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": -148,
-            "under": 111,
-            "overStr": "-148",
-            "underStr": "+111"
+            "over": -138,
+            "under": 104,
+            "overStr": "-138",
+            "underStr": "+104"
           },
           "pitcher_outs": {
             "point": 15.5,
-            "over": 115,
-            "under": -152,
-            "overStr": "+115",
-            "underStr": "-152"
+            "over": 129,
+            "under": -173,
+            "overStr": "+129",
+            "underStr": "-173"
           },
           "pitcher_strikeouts": {
-            "point": 4.5,
-            "over": -159,
-            "under": 125,
-            "overStr": "-159",
-            "underStr": "+125"
+            "point": 5.5,
+            "over": 124,
+            "under": -158,
+            "overStr": "+124",
+            "underStr": "-158"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": 120,
-            "under": -159,
-            "overStr": "+120",
-            "underStr": "-159"
-          }
-        },
-        "Davis Martin": {
-          "pitcher_earned_runs": {
-            "point": 2.5,
-            "over": 102,
-            "under": -136,
-            "overStr": "+102",
-            "underStr": "-136"
-          },
-          "pitcher_hits_allowed": {
-            "point": 4.5,
-            "over": -154,
-            "under": 116,
-            "overStr": "-154",
-            "underStr": "+116"
-          },
-          "pitcher_outs": {
-            "point": 14.5,
-            "over": -126,
-            "under": -105,
-            "overStr": "-126",
-            "underStr": "-105"
-          },
-          "pitcher_strikeouts": {
-            "point": 2.5,
-            "over": -133,
-            "under": 104,
-            "overStr": "-133",
-            "underStr": "+104"
-          },
-          "pitcher_walks": {
-            "point": 1.5,
-            "over": 102,
-            "under": -135,
-            "overStr": "+102",
-            "underStr": "-135"
+            "over": -108,
+            "under": -122,
+            "overStr": "-108",
+            "underStr": "-122"
           }
         }
       }
@@ -459,94 +422,94 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Cincinnati Reds +198 / Los Angeles Dodgers -244",
-        "spread": "Cincinnati Reds +1.5 (+114)",
-        "total": "O/U 8.5 (Over -117 / Under -103)",
+        "ml": "Cincinnati Reds +198 / Los Angeles Dodgers -245",
+        "spread": "Cincinnati Reds +1.5 (+118)",
+        "total": "O/U 8.5 (Over -115 / Under -105)",
         "raw": {
           "homeML": 198,
-          "awayML": -244,
+          "awayML": -245,
           "homeSpread": 1.5,
-          "homeSpreadOdds": 114,
+          "homeSpreadOdds": 118,
           "awaySpread": -1.5,
-          "awaySpreadOdds": -137,
+          "awaySpreadOdds": -143,
           "total": 8.5,
-          "overOdds": -117,
-          "underOdds": -103
+          "overOdds": -115,
+          "underOdds": -105
         }
       },
       "props": {
         "Yoshinobu Yamamoto": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -169,
-            "under": 126,
-            "overStr": "-169",
-            "underStr": "+126"
+            "over": -161,
+            "under": 121,
+            "overStr": "-161",
+            "underStr": "+121"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": -144,
-            "under": 108,
-            "overStr": "-144",
-            "underStr": "+108"
+            "over": -140,
+            "under": 106,
+            "overStr": "-140",
+            "underStr": "+106"
           },
           "pitcher_outs": {
             "point": 18.5,
-            "over": 125,
-            "under": -167,
-            "overStr": "+125",
-            "underStr": "-167"
+            "over": 112,
+            "under": -149,
+            "overStr": "+112",
+            "underStr": "-149"
           },
           "pitcher_strikeouts": {
             "point": 7.5,
-            "over": -101,
-            "under": -126,
-            "overStr": "-101",
-            "underStr": "-126"
+            "over": -119,
+            "under": -107,
+            "overStr": "-119",
+            "underStr": "-107"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": 113,
-            "under": -150,
-            "overStr": "+113",
-            "underStr": "-150"
+            "over": 107,
+            "under": -142,
+            "overStr": "+107",
+            "underStr": "-142"
           }
         },
         "Rhett Lowder": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": -152,
-            "under": 115,
-            "overStr": "-152",
-            "underStr": "+115"
+            "over": -134,
+            "under": 101,
+            "overStr": "-134",
+            "underStr": "+101"
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
-            "over": -111,
-            "under": -119,
-            "overStr": "-111",
-            "underStr": "-119"
+            "over": -101,
+            "under": -131,
+            "overStr": "-101",
+            "underStr": "-131"
           },
           "pitcher_outs": {
             "point": 14.5,
-            "over": -143,
-            "under": 108,
-            "overStr": "-143",
-            "underStr": "+108"
+            "over": -157,
+            "under": 118,
+            "overStr": "-157",
+            "underStr": "+118"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -125,
-            "under": -102,
-            "overStr": "-125",
-            "underStr": "-102"
+            "over": -121,
+            "under": -105,
+            "overStr": "-121",
+            "underStr": "-105"
           },
           "pitcher_walks": {
-            "point": 1.5,
-            "over": -173,
-            "under": 130,
-            "overStr": "-173",
-            "underStr": "+130"
+            "point": 2.5,
+            "over": 139,
+            "under": -186,
+            "overStr": "+139",
+            "underStr": "-186"
           }
         }
       }
@@ -642,16 +605,16 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Pittsburgh Pirates +190 / Milwaukee Brewers -230",
-        "spread": "Pittsburgh Pirates +1.5 (+106)",
+        "ml": "Pittsburgh Pirates +180 / Milwaukee Brewers -215",
+        "spread": "Pittsburgh Pirates +1.5 (+102)",
         "total": "O/U 7.5 (Over -110 / Under -110)",
         "raw": {
-          "homeML": 190,
-          "awayML": -230,
+          "homeML": 180,
+          "awayML": -215,
           "homeSpread": 1.5,
-          "homeSpreadOdds": 106,
+          "homeSpreadOdds": 102,
           "awaySpread": -1.5,
-          "awaySpreadOdds": -128,
+          "awaySpreadOdds": -122,
           "total": 7.5,
           "overOdds": -110,
           "underOdds": -110
@@ -661,17 +624,17 @@ const ODDS_DATA = {
         "Jacob Misiorowski": {
           "pitcher_outs": {
             "point": 17.5,
-            "over": -114,
-            "under": -118,
-            "overStr": "-114",
-            "underStr": "-118"
+            "over": -152,
+            "under": 114,
+            "overStr": "-152",
+            "underStr": "+114"
           },
           "pitcher_strikeouts": {
             "point": 8.5,
-            "over": 124,
-            "under": -158,
-            "overStr": "+124",
-            "underStr": "-158"
+            "over": 112,
+            "under": -142,
+            "overStr": "+112",
+            "underStr": "-142"
           }
         }
       }
@@ -767,66 +730,66 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Washington Nationals +177 / Philadelphia Phillies -217",
-        "spread": "Washington Nationals +1.5 (+104)",
-        "total": "O/U 8.0 (Over -115 / Under -105)",
+        "ml": "Washington Nationals +188 / Philadelphia Phillies -231",
+        "spread": "Washington Nationals +1.5 (+109)",
+        "total": "O/U 8.0 (Over -110 / Under -110)",
         "raw": {
-          "homeML": 177,
-          "awayML": -217,
+          "homeML": 188,
+          "awayML": -231,
           "homeSpread": 1.5,
-          "homeSpreadOdds": 104,
+          "homeSpreadOdds": 109,
           "awaySpread": -1.5,
-          "awaySpreadOdds": -125,
+          "awaySpreadOdds": -132,
           "total": 8.0,
-          "overOdds": -115,
-          "underOdds": -105
+          "overOdds": -110,
+          "underOdds": -110
         }
       },
       "props": {
         "Cristopher Sanchez": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -137,
-            "under": 103,
-            "overStr": "-137",
-            "underStr": "+103"
+            "over": -129,
+            "under": -103,
+            "overStr": "-129",
+            "underStr": "-103"
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
-            "over": 112,
-            "under": -148,
-            "overStr": "+112",
-            "underStr": "-148"
+            "over": 105,
+            "under": -139,
+            "overStr": "+105",
+            "underStr": "-139"
           },
           "pitcher_outs": {
             "point": 18.5,
-            "over": 134,
-            "under": -179,
-            "overStr": "+134",
-            "underStr": "-179"
+            "over": 126,
+            "under": -168,
+            "overStr": "+126",
+            "underStr": "-168"
           },
           "pitcher_strikeouts": {
             "point": 6.5,
-            "over": -118,
-            "under": -108,
-            "overStr": "-118",
-            "underStr": "-108"
+            "over": -128,
+            "under": 101,
+            "overStr": "-128",
+            "underStr": "+101"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -106,
-            "under": -125,
-            "overStr": "-106",
-            "underStr": "-125"
+            "over": -102,
+            "under": -130,
+            "overStr": "-102",
+            "underStr": "-130"
           }
         },
         "Jackson Kent": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": 103,
-            "under": -137,
-            "overStr": "+103",
-            "underStr": "-137"
+            "over": -101,
+            "under": -132,
+            "overStr": "-101",
+            "underStr": "-132"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
@@ -837,24 +800,24 @@ const ODDS_DATA = {
           },
           "pitcher_outs": {
             "point": 14.5,
-            "over": -162,
-            "under": 122,
-            "overStr": "-162",
-            "underStr": "+122"
+            "over": -145,
+            "under": 109,
+            "overStr": "-145",
+            "underStr": "+109"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -131,
-            "under": 102,
-            "overStr": "-131",
-            "underStr": "+102"
+            "over": -123,
+            "under": -103,
+            "overStr": "-123",
+            "underStr": "-103"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -164,
-            "under": 123,
-            "overStr": "-164",
-            "underStr": "+123"
+            "over": -180,
+            "under": 135,
+            "overStr": "-180",
+            "underStr": "+135"
           }
         }
       }
@@ -950,35 +913,35 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Toronto Blue Jays -134 / Detroit Tigers +116",
-        "spread": "Toronto Blue Jays -1.5 (+150)",
-        "total": "O/U 8.5 (Over +100 / Under -122)",
+        "ml": "Toronto Blue Jays -146 / Detroit Tigers +124",
+        "spread": "Toronto Blue Jays -1.5 (+138)",
+        "total": "O/U 8.5 (Over +104 / Under -128)",
         "raw": {
-          "homeML": -134,
-          "awayML": 116,
+          "homeML": -146,
+          "awayML": 124,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 150,
+          "homeSpreadOdds": 138,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -182,
+          "awaySpreadOdds": -170,
           "total": 8.5,
-          "overOdds": 100,
-          "underOdds": -122
+          "overOdds": 104,
+          "underOdds": -128
         }
       },
       "props": {
         "Drew Anderson": {
           "pitcher_outs": {
             "point": 15.5,
-            "over": 132,
-            "under": -178,
-            "overStr": "+132",
-            "underStr": "-178"
+            "over": 118,
+            "under": -158,
+            "overStr": "+118",
+            "underStr": "-158"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -160,
+            "over": -158,
             "under": 124,
-            "overStr": "-160",
+            "overStr": "-158",
             "underStr": "+124"
           }
         }
@@ -1076,93 +1039,93 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "New York Mets -136 / Baltimore Orioles +113",
-        "spread": "New York Mets -1.5 (+154)",
-        "total": "O/U 8.0 (Over -110 / Under -110)",
+        "spread": "New York Mets -1.5 (+158)",
+        "total": "O/U 8.0 (Over -115 / Under -105)",
         "raw": {
           "homeML": -136,
           "awayML": 113,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 154,
+          "homeSpreadOdds": 158,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -188,
+          "awaySpreadOdds": -192,
           "total": 8.0,
-          "overOdds": -110,
-          "underOdds": -110
+          "overOdds": -115,
+          "underOdds": -105
         }
       },
       "props": {
         "Sean Manaea": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -147,
-            "under": 110,
-            "overStr": "-147",
-            "underStr": "+110"
+            "over": -170,
+            "under": 128,
+            "overStr": "-170",
+            "underStr": "+128"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": -126,
-            "under": -105,
-            "overStr": "-126",
-            "underStr": "-105"
+            "over": -117,
+            "under": -114,
+            "overStr": "-117",
+            "underStr": "-114"
           },
           "pitcher_outs": {
             "point": 16.5,
-            "over": -125,
-            "under": -106,
-            "overStr": "-125",
-            "underStr": "-106"
+            "over": -128,
+            "under": -104,
+            "overStr": "-128",
+            "underStr": "-104"
           },
           "pitcher_strikeouts": {
             "point": 6.5,
-            "over": 120,
-            "under": -154,
-            "overStr": "+120",
-            "underStr": "-154"
+            "over": 116,
+            "under": -148,
+            "overStr": "+116",
+            "underStr": "-148"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": 147,
-            "under": -196,
-            "overStr": "+147",
-            "underStr": "-196"
+            "over": 150,
+            "under": -201,
+            "overStr": "+150",
+            "underStr": "-201"
           }
         },
         "Shane Baz": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": 109,
-            "under": -145,
-            "overStr": "+109",
-            "underStr": "-145"
+            "over": 113,
+            "under": -150,
+            "overStr": "+113",
+            "underStr": "-150"
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
-            "over": 118,
-            "under": -156,
-            "overStr": "+118",
-            "underStr": "-156"
+            "over": 123,
+            "under": -164,
+            "overStr": "+123",
+            "underStr": "-164"
           },
           "pitcher_outs": {
             "point": 16.5,
-            "over": -123,
-            "under": -108,
-            "overStr": "-123",
-            "underStr": "-108"
+            "over": -118,
+            "under": -113,
+            "overStr": "-118",
+            "underStr": "-113"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -145,
-            "under": 113,
-            "overStr": "-145",
-            "underStr": "+113"
+            "over": -139,
+            "under": 109,
+            "overStr": "-139",
+            "underStr": "+109"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -190,
-            "under": 142,
-            "overStr": "-190",
-            "underStr": "+142"
+            "over": -208,
+            "under": 155,
+            "overStr": "-208",
+            "underStr": "+155"
           }
         }
       }
@@ -1259,18 +1222,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Chicago Cubs -143 / Atlanta Braves +119",
-        "spread": "Chicago Cubs -1.5 (+148)",
-        "total": "O/U 8.5 (Over -112 / Under -108)",
+        "spread": "Chicago Cubs -1.5 (+145)",
+        "total": "O/U 8.5 (Over -110 / Under -110)",
         "raw": {
           "homeML": -143,
           "awayML": 119,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 148,
+          "homeSpreadOdds": 145,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -180,
+          "awaySpreadOdds": -176,
           "total": 8.5,
-          "overOdds": -112,
-          "underOdds": -108
+          "overOdds": -110,
+          "underOdds": -110
         }
       },
       "props": {
@@ -1291,17 +1254,17 @@ const ODDS_DATA = {
           },
           "pitcher_outs": {
             "point": 17.5,
-            "over": -120,
-            "under": -111,
-            "overStr": "-120",
-            "underStr": "-111"
+            "over": -115,
+            "under": -115,
+            "overStr": "-115",
+            "underStr": "-115"
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": -112,
-            "under": -114,
-            "overStr": "-112",
-            "underStr": "-114"
+            "over": -117,
+            "under": -109,
+            "overStr": "-117",
+            "underStr": "-109"
           },
           "pitcher_walks": {
             "point": 1.5,
@@ -1321,31 +1284,31 @@ const ODDS_DATA = {
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
-            "over": 106,
-            "under": -141,
-            "overStr": "+106",
-            "underStr": "-141"
+            "over": 112,
+            "under": -148,
+            "overStr": "+112",
+            "underStr": "-148"
           },
           "pitcher_outs": {
-            "point": 15.5,
-            "over": 123,
-            "under": -164,
-            "overStr": "+123",
-            "underStr": "-164"
+            "point": 14.5,
+            "over": -155,
+            "under": 117,
+            "overStr": "-155",
+            "underStr": "+117"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
             "over": 112,
-            "under": -143,
+            "under": -142,
             "overStr": "+112",
-            "underStr": "-143"
+            "underStr": "-142"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -136,
-            "under": 102,
-            "overStr": "-136",
-            "underStr": "+102"
+            "over": -166,
+            "under": 124,
+            "overStr": "-166",
+            "underStr": "+124"
           }
         }
       }
@@ -1441,94 +1404,94 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Minnesota Twins +148 / New York Yankees -180",
-        "spread": "Minnesota Twins +1.5 (-115)",
-        "total": "O/U 8.0 (Over -105 / Under -114)",
+        "ml": "Minnesota Twins +144 / New York Yankees -175",
+        "spread": "Minnesota Twins +1.5 (-118)",
+        "total": "O/U 7.5 (Over -112 / Under -107)",
         "raw": {
-          "homeML": 148,
-          "awayML": -180,
+          "homeML": 144,
+          "awayML": -175,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -115,
+          "homeSpreadOdds": -118,
           "awaySpread": -1.5,
-          "awaySpreadOdds": -104,
-          "total": 8.0,
-          "overOdds": -105,
-          "underOdds": -114
+          "awaySpreadOdds": -102,
+          "total": 7.5,
+          "overOdds": -112,
+          "underOdds": -107
         }
       },
       "props": {
         "Max Fried": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -122,
-            "under": -108,
-            "overStr": "-122",
-            "underStr": "-108"
+            "over": -116,
+            "under": -114,
+            "overStr": "-116",
+            "underStr": "-114"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": 116,
-            "under": -155,
-            "overStr": "+116",
-            "underStr": "-155"
+            "over": 107,
+            "under": -143,
+            "overStr": "+107",
+            "underStr": "-143"
           },
           "pitcher_outs": {
             "point": 16.5,
-            "over": -118,
-            "under": -113,
-            "overStr": "-118",
-            "underStr": "-113"
+            "over": -119,
+            "under": -111,
+            "overStr": "-119",
+            "underStr": "-111"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -154,
-            "under": 120,
-            "overStr": "-154",
-            "underStr": "+120"
+            "over": -147,
+            "under": 115,
+            "overStr": "-147",
+            "underStr": "+115"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -161,
-            "under": 121,
-            "overStr": "-161",
-            "underStr": "+121"
+            "over": -140,
+            "under": 105,
+            "overStr": "-140",
+            "underStr": "+105"
           }
         },
         "Bailey Ober": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": -117,
-            "under": -113,
-            "overStr": "-117",
-            "underStr": "-113"
+            "over": -106,
+            "under": -125,
+            "overStr": "-106",
+            "underStr": "-125"
           },
           "pitcher_hits_allowed": {
-            "point": 4.5,
-            "over": -130,
-            "under": -102,
-            "overStr": "-130",
-            "underStr": "-102"
+            "point": 5.5,
+            "over": 123,
+            "under": -164,
+            "overStr": "+123",
+            "underStr": "-164"
           },
           "pitcher_outs": {
-            "point": 14.5,
-            "over": -190,
-            "under": 142,
-            "overStr": "-190",
-            "underStr": "+142"
+            "point": 15.5,
+            "over": 106,
+            "under": -140,
+            "overStr": "+106",
+            "underStr": "-140"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": 121,
-            "under": -155,
-            "overStr": "+121",
-            "underStr": "-155"
+            "over": 134,
+            "under": -172,
+            "overStr": "+134",
+            "underStr": "-172"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -114,
-            "under": -117,
-            "overStr": "-114",
-            "underStr": "-117"
+            "over": -102,
+            "under": -130,
+            "overStr": "-102",
+            "underStr": "-130"
           }
         }
       }
@@ -1624,52 +1587,94 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "St. Louis Cardinals -168 / San Francisco Giants +138",
-        "spread": "St. Louis Cardinals -1.5 (+128)",
-        "total": "O/U 8.0 (Over -118 / Under -102)",
+        "ml": "St. Louis Cardinals -175 / San Francisco Giants +144",
+        "spread": "St. Louis Cardinals -1.5 (+123)",
+        "total": "O/U 8.0 (Over -112 / Under -107)",
         "raw": {
-          "homeML": -168,
-          "awayML": 138,
+          "homeML": -175,
+          "awayML": 144,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 128,
+          "homeSpreadOdds": 123,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -155,
+          "awaySpreadOdds": -149,
           "total": 8.0,
-          "overOdds": -118,
-          "underOdds": -102
+          "overOdds": -112,
+          "underOdds": -107
         }
       },
       "props": {
         "Andre Pallante": {
+          "pitcher_earned_runs": {
+            "point": 1.5,
+            "over": -146,
+            "under": 110,
+            "overStr": "-146",
+            "underStr": "+110"
+          },
+          "pitcher_hits_allowed": {
+            "point": 4.5,
+            "over": -152,
+            "under": 114,
+            "overStr": "-152",
+            "underStr": "+114"
+          },
           "pitcher_outs": {
             "point": 16.5,
-            "over": -107,
-            "under": -124,
-            "overStr": "-107",
-            "underStr": "-124"
+            "over": -124,
+            "under": -107,
+            "overStr": "-124",
+            "underStr": "-107"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -118,
-            "under": -108,
-            "overStr": "-118",
-            "underStr": "-108"
+            "over": -134,
+            "under": 105,
+            "overStr": "-134",
+            "underStr": "+105"
+          },
+          "pitcher_walks": {
+            "point": 1.5,
+            "over": -122,
+            "under": -109,
+            "overStr": "-122",
+            "underStr": "-109"
           }
         },
         "Blade Tidwell": {
+          "pitcher_earned_runs": {
+            "point": 2.5,
+            "over": 105,
+            "under": -140,
+            "overStr": "+105",
+            "underStr": "-140"
+          },
+          "pitcher_hits_allowed": {
+            "point": 5.5,
+            "over": 120,
+            "under": -160,
+            "overStr": "+120",
+            "underStr": "-160"
+          },
           "pitcher_outs": {
             "point": 14.5,
-            "over": -129,
-            "under": -103,
-            "overStr": "-129",
-            "underStr": "-103"
+            "over": -156,
+            "under": 117,
+            "overStr": "-156",
+            "underStr": "+117"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -130,
-            "under": 102,
-            "overStr": "-130",
-            "underStr": "+102"
+            "over": -108,
+            "under": -118,
+            "overStr": "-108",
+            "underStr": "-118"
+          },
+          "pitcher_walks": {
+            "point": 1.5,
+            "over": -151,
+            "under": 114,
+            "overStr": "-151",
+            "underStr": "+114"
           }
         }
       }
@@ -1688,10 +1693,10 @@ const ODDS_DATA = {
           "confirmed": true
         },
         "home": {
-          "name": "TBD",
-          "id": null,
+          "name": "Jacob deGrom",
+          "id": 594798,
           "hand": "?",
-          "confirmed": false
+          "confirmed": true
         }
       },
       "pitcher_stats": {
@@ -1716,6 +1721,28 @@ const ODDS_DATA = {
           "l3AvgIP": 5.0,
           "name": "Patrick Sandoval",
           "pid": 663776
+        },
+        "home": {
+          "era": 3.8,
+          "whip": 1.08,
+          "k9": 11.21,
+          "bb9": 2.29,
+          "h9": 7.41,
+          "ip": 149.1,
+          "avgIP": 5.3,
+          "gs": 28,
+          "kPct": 30.9,
+          "_source": "mlb_stats_api",
+          "l5ERA": 3.52,
+          "l5KPct": 36.5,
+          "l5BB9": 2.35,
+          "l5AvgIP": 5.0,
+          "l3ERA": 3.97,
+          "l3KPct": 34.9,
+          "l3BB9": 2.38,
+          "l3AvgIP": 5.5,
+          "name": "Jacob deGrom",
+          "pid": 594798
         }
       },
       "team_stats": {
@@ -1743,29 +1770,38 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Texas Rangers -104 / Boston Red Sox -112",
-        "spread": "Texas Rangers +1.5 (-184)",
-        "total": "O/U 8.5 (Over +102 / Under -124)",
+        "ml": "Texas Rangers -136 / Boston Red Sox +116",
+        "spread": "Texas Rangers -1.5 (+158)",
+        "total": "O/U 7.5 (Over -112 / Under -108)",
         "raw": {
-          "homeML": -104,
-          "awayML": -112,
-          "homeSpread": 1.5,
-          "homeSpreadOdds": -184,
-          "awaySpread": -1.5,
-          "awaySpreadOdds": 152,
-          "total": 8.5,
-          "overOdds": 102,
-          "underOdds": -124
+          "homeML": -136,
+          "awayML": 116,
+          "homeSpread": -1.5,
+          "homeSpreadOdds": 158,
+          "awaySpread": 1.5,
+          "awaySpreadOdds": -192,
+          "total": 7.5,
+          "overOdds": -112,
+          "underOdds": -108
         }
       },
       "props": {
+        "Jacob deGrom": {
+          "pitcher_strikeouts": {
+            "point": 6.5,
+            "over": -111,
+            "under": -115,
+            "overStr": "-111",
+            "underStr": "-115"
+          }
+        },
         "Patrick Sandoval": {
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": 106,
-            "under": -136,
-            "overStr": "+106",
-            "underStr": "-136"
+            "over": 130,
+            "under": -166,
+            "overStr": "+130",
+            "underStr": "-166"
           }
         }
       }
@@ -1880,31 +1916,31 @@ const ODDS_DATA = {
         "Hunter Brown": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -153,
-            "under": 115,
-            "overStr": "-153",
-            "underStr": "+115"
+            "over": -160,
+            "under": 121,
+            "overStr": "-160",
+            "underStr": "+121"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": -118,
-            "under": -112,
-            "overStr": "-118",
-            "underStr": "-112"
+            "over": -120,
+            "under": -111,
+            "overStr": "-120",
+            "underStr": "-111"
           },
           "pitcher_outs": {
             "point": 17.5,
-            "over": -111,
-            "under": -119,
-            "overStr": "-111",
-            "underStr": "-119"
+            "over": 100,
+            "under": -132,
+            "overStr": "+100",
+            "underStr": "-132"
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": -133,
-            "under": 104,
-            "overStr": "-133",
-            "underStr": "+104"
+            "over": -130,
+            "under": 102,
+            "overStr": "-130",
+            "underStr": "+102"
           },
           "pitcher_walks": {
             "point": 1.5,
@@ -1917,38 +1953,38 @@ const ODDS_DATA = {
         "Michael Wacha": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": -125,
-            "under": -106,
-            "overStr": "-125",
-            "underStr": "-106"
+            "over": -120,
+            "under": -110,
+            "overStr": "-120",
+            "underStr": "-110"
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
-            "over": -124,
-            "under": -107,
-            "overStr": "-124",
-            "underStr": "-107"
+            "over": -120,
+            "under": -111,
+            "overStr": "-120",
+            "underStr": "-111"
           },
           "pitcher_outs": {
             "point": 17.5,
-            "over": -172,
-            "under": 129,
-            "overStr": "-172",
-            "underStr": "+129"
+            "over": -150,
+            "under": 113,
+            "overStr": "-150",
+            "underStr": "+113"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -131,
-            "under": 103,
-            "overStr": "-131",
-            "underStr": "+103"
+            "over": -112,
+            "under": -113,
+            "overStr": "-112",
+            "underStr": "-113"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": 104,
-            "under": -138,
-            "overStr": "+104",
-            "underStr": "-138"
+            "over": 101,
+            "under": -134,
+            "overStr": "+101",
+            "underStr": "-134"
           }
         }
       }
@@ -2040,35 +2076,35 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Colorado Rockies +163 / San Diego Padres -199",
-        "spread": "Colorado Rockies +1.5 (+104)",
-        "total": "O/U 11.5 (Over -106 / Under -114)",
+        "ml": "Colorado Rockies +158 / San Diego Padres -192",
+        "spread": "Colorado Rockies +1.5 (+102)",
+        "total": "O/U 11.0 (Over -117 / Under -103)",
         "raw": {
-          "homeML": 163,
-          "awayML": -199,
+          "homeML": 158,
+          "awayML": -192,
           "homeSpread": 1.5,
-          "homeSpreadOdds": 104,
+          "homeSpreadOdds": 102,
           "awaySpread": -1.5,
-          "awaySpreadOdds": -126,
-          "total": 11.5,
-          "overOdds": -106,
-          "underOdds": -114
+          "awaySpreadOdds": -122,
+          "total": 11.0,
+          "overOdds": -117,
+          "underOdds": -103
         }
       },
       "props": {
         "Walker Buehler": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": -104,
-            "under": -128,
-            "overStr": "-104",
-            "underStr": "-128"
+            "over": -101,
+            "under": -132,
+            "overStr": "-101",
+            "underStr": "-132"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": -163,
+            "over": -162,
             "under": 122,
-            "overStr": "-163",
+            "overStr": "-162",
             "underStr": "+122"
           },
           "pitcher_outs": {
@@ -2080,54 +2116,54 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": 108,
-            "under": -138,
-            "overStr": "+108",
-            "underStr": "-138"
+            "over": 107,
+            "under": -136,
+            "overStr": "+107",
+            "underStr": "-136"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": 141,
-            "under": -188,
-            "overStr": "+141",
-            "underStr": "-188"
+            "over": 136,
+            "under": -182,
+            "overStr": "+136",
+            "underStr": "-182"
           }
         },
         "Kyle Freeland": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": -132,
-            "under": 100,
-            "overStr": "-132",
-            "underStr": "+100"
+            "over": -120,
+            "under": -110,
+            "overStr": "-120",
+            "underStr": "-110"
           },
           "pitcher_hits_allowed": {
             "point": 5.5,
-            "over": 122,
-            "under": -162,
-            "overStr": "+122",
-            "underStr": "-162"
+            "over": 108,
+            "under": -144,
+            "overStr": "+108",
+            "underStr": "-144"
           },
           "pitcher_outs": {
             "point": 11.5,
-            "over": -133,
-            "under": 100,
-            "overStr": "-133",
-            "underStr": "+100"
+            "over": -177,
+            "under": 133,
+            "overStr": "-177",
+            "underStr": "+133"
           },
           "pitcher_strikeouts": {
             "point": 2.5,
-            "over": -110,
-            "under": -116,
-            "overStr": "-110",
-            "underStr": "-116"
+            "over": -114,
+            "under": -112,
+            "overStr": "-114",
+            "underStr": "-112"
           },
           "pitcher_walks": {
-            "point": 1.5,
-            "over": 186,
-            "under": -252,
-            "overStr": "+186",
-            "underStr": "-252"
+            "point": 0.5,
+            "over": -230,
+            "under": 170,
+            "overStr": "-230",
+            "underStr": "+170"
           }
         }
       }
@@ -2255,62 +2291,62 @@ const ODDS_DATA = {
             "underStr": "-116"
           },
           "pitcher_outs": {
-            "point": 18.5,
-            "over": 120,
-            "under": -160,
-            "overStr": "+120",
-            "underStr": "-160"
+            "point": 17.5,
+            "over": -172,
+            "under": 129,
+            "overStr": "-172",
+            "underStr": "+129"
           },
           "pitcher_strikeouts": {
             "point": 6.5,
-            "over": -131,
-            "under": 103,
-            "overStr": "-131",
-            "underStr": "+103"
+            "over": -136,
+            "under": 107,
+            "overStr": "-136",
+            "underStr": "+107"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -106,
-            "under": -125,
-            "overStr": "-106",
-            "underStr": "-125"
+            "over": -105,
+            "under": -126,
+            "overStr": "-105",
+            "underStr": "-126"
           }
         },
         "Ryan Johnson": {
           "pitcher_earned_runs": {
             "point": 2.5,
-            "over": -107,
-            "under": -124,
-            "overStr": "-107",
-            "underStr": "-124"
+            "over": -103,
+            "under": -128,
+            "overStr": "-103",
+            "underStr": "-128"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": -158,
-            "under": 119,
-            "overStr": "-158",
-            "underStr": "+119"
+            "over": -144,
+            "under": 109,
+            "overStr": "-144",
+            "underStr": "+109"
           },
           "pitcher_outs": {
             "point": 15.5,
-            "over": -110,
-            "under": -121,
-            "overStr": "-110",
-            "underStr": "-121"
+            "over": 110,
+            "under": -146,
+            "overStr": "+110",
+            "underStr": "-146"
           },
           "pitcher_strikeouts": {
-            "point": 4.5,
-            "over": 132,
-            "under": -169,
-            "overStr": "+132",
-            "underStr": "-169"
+            "point": 3.5,
+            "over": -172,
+            "under": 134,
+            "overStr": "-172",
+            "underStr": "+134"
           },
           "pitcher_walks": {
             "point": 2.5,
-            "over": 144,
-            "under": -193,
-            "overStr": "+144",
-            "underStr": "-193"
+            "over": 152,
+            "under": -204,
+            "overStr": "+152",
+            "underStr": "-204"
           }
         }
       }
@@ -2406,18 +2442,18 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Arizona Diamondbacks -156 / Miami Marlins +129",
-        "spread": "Arizona Diamondbacks -1.5 (+141)",
-        "total": "O/U 8.5 (Over -114 / Under -105)",
+        "ml": "Arizona Diamondbacks -150 / Miami Marlins +124",
+        "spread": "Arizona Diamondbacks -1.5 (+139)",
+        "total": "O/U 8.5 (Over -115 / Under -105)",
         "raw": {
-          "homeML": -156,
-          "awayML": 129,
+          "homeML": -150,
+          "awayML": 124,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 141,
+          "homeSpreadOdds": 139,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -171,
+          "awaySpreadOdds": -168,
           "total": 8.5,
-          "overOdds": -114,
+          "overOdds": -115,
           "underOdds": -105
         }
       },
@@ -2425,75 +2461,75 @@ const ODDS_DATA = {
         "Michael Soroka": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -150,
-            "under": 113,
-            "overStr": "-150",
-            "underStr": "+113"
+            "over": -155,
+            "under": 116,
+            "overStr": "-155",
+            "underStr": "+116"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": 100,
-            "under": -133,
-            "overStr": "+100",
-            "underStr": "-133"
+            "over": 102,
+            "under": -135,
+            "overStr": "+102",
+            "underStr": "-135"
           },
           "pitcher_outs": {
             "point": 14.5,
-            "over": -129,
-            "under": -103,
-            "overStr": "-129",
-            "underStr": "-103"
-          },
-          "pitcher_strikeouts": {
-            "point": 4.5,
-            "over": 110,
-            "under": -140,
-            "overStr": "+110",
-            "underStr": "-140"
-          },
-          "pitcher_walks": {
-            "point": 1.5,
-            "over": 116,
-            "under": -154,
-            "overStr": "+116",
-            "underStr": "-154"
-          }
-        },
-        "Janson Junk": {
-          "pitcher_earned_runs": {
-            "point": 2.5,
-            "over": 111,
-            "under": -147,
-            "overStr": "+111",
-            "underStr": "-147"
-          },
-          "pitcher_hits_allowed": {
-            "point": 4.5,
-            "over": -151,
-            "under": 114,
-            "overStr": "-151",
-            "underStr": "+114"
-          },
-          "pitcher_outs": {
-            "point": 13.5,
             "over": -135,
             "under": 102,
             "overStr": "-135",
             "underStr": "+102"
           },
           "pitcher_strikeouts": {
-            "point": 2.5,
-            "over": -116,
-            "under": -110,
-            "overStr": "-116",
-            "underStr": "-110"
+            "point": 4.5,
+            "over": 126,
+            "under": -162,
+            "overStr": "+126",
+            "underStr": "-162"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": 169,
-            "under": -228,
-            "overStr": "+169",
-            "underStr": "-228"
+            "over": 109,
+            "under": -144,
+            "overStr": "+109",
+            "underStr": "-144"
+          }
+        },
+        "Janson Junk": {
+          "pitcher_earned_runs": {
+            "point": 2.5,
+            "over": 122,
+            "under": -163,
+            "overStr": "+122",
+            "underStr": "-163"
+          },
+          "pitcher_hits_allowed": {
+            "point": 4.5,
+            "over": -154,
+            "under": 116,
+            "overStr": "-154",
+            "underStr": "+116"
+          },
+          "pitcher_outs": {
+            "point": 14.5,
+            "over": -101,
+            "under": -132,
+            "overStr": "-101",
+            "underStr": "-132"
+          },
+          "pitcher_strikeouts": {
+            "point": 2.5,
+            "over": -125,
+            "under": -102,
+            "overStr": "-125",
+            "underStr": "-102"
+          },
+          "pitcher_walks": {
+            "point": 1.5,
+            "over": 149,
+            "under": -199,
+            "overStr": "+149",
+            "underStr": "-199"
           }
         }
       }

@@ -1,12 +1,12 @@
 {
   "2026-09-15": {
-    "generated_at": "2026-09-15T13:11:23Z",
+    "generated_at": "2026-09-15T21:04:35Z",
     "game_count": 15,
     "picks": [
       {
         "game": "ATH@RAY",
         "pick": "Over 8.0",
-        "odds": "-108",
+        "odds": "-112",
         "grade": "A-",
         "src": "era",
         "parlay": false,
@@ -16,7 +16,7 @@
       {
         "game": "ATH@RAY",
         "pick": "Over 1.5 BB",
-        "odds": "-171",
+        "odds": "-177",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -26,7 +26,7 @@
       {
         "game": "ATH@RAY",
         "pick": "Under 14.5 outs",
-        "odds": "+137",
+        "odds": "+128",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -46,7 +46,7 @@
       {
         "game": "YAN@TWI",
         "pick": "Under 1.5 ER",
-        "odds": "-108",
+        "odds": "-114",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -56,7 +56,7 @@
       {
         "game": "YAN@TWI",
         "pick": "Under 16.5 outs",
-        "odds": "-113",
+        "odds": "-111",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -66,7 +66,7 @@
       {
         "game": "ROY@AST",
         "pick": "Under 2.5 ER",
-        "odds": "-106",
+        "odds": "-110",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -76,7 +76,7 @@
       {
         "game": "PAD@ROC",
         "pick": "Over 11.5 outs",
-        "odds": "-143",
+        "odds": "-177",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -86,7 +86,17 @@
       {
         "game": "ATH@RAY",
         "pick": "Rays ML",
-        "odds": "-232",
+        "odds": "-227",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@GUA",
+        "pick": "Guardians ML",
+        "odds": "-156",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -96,7 +106,7 @@
       {
         "game": "DOD@RED",
         "pick": "Dodgers ML",
-        "odds": "-241",
+        "odds": "-245",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -106,7 +116,7 @@
       {
         "game": "BRE@PIR",
         "pick": "Brewers ML",
-        "odds": "-260",
+        "odds": "-215",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -116,7 +126,7 @@
       {
         "game": "PHI@NAT",
         "pick": "Phillies ML",
-        "odds": "-224",
+        "odds": "-231",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -126,7 +136,7 @@
       {
         "game": "YAN@TWI",
         "pick": "Yankees ML",
-        "odds": "-180",
+        "odds": "-175",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -136,7 +146,7 @@
       {
         "game": "PAD@ROC",
         "pick": "Padres ML",
-        "odds": "-204",
+        "odds": "-192",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -155,12 +165,12 @@
       }
     ],
     "summary": {
-      "total": 15,
+      "total": 16,
       "by_grade": {
         "A-": 8,
-        "C": 7
+        "C": 8
       },
-      "parlay_count": 7
+      "parlay_count": 8
     }
   },
   "2026-09-14": {
