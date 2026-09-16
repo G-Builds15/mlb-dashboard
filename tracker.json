@@ -1,4 +1,128 @@
 {
+  "2026-09-16": {
+    "generated_at": "2026-09-16T13:25:50Z",
+    "game_count": 15,
+    "picks": [
+      {
+        "game": "DOD@RED",
+        "pick": "Under 14.5 outs",
+        "odds": "-102",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "ORI@MET",
+        "pick": "Over 8.5",
+        "odds": "-128",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@RAN",
+        "pick": "Over 1.5 BB",
+        "odds": "-183",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "ROY@AST",
+        "pick": "Over 14.5 outs",
+        "odds": "-160",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@GUA",
+        "pick": "Guardians ML",
+        "odds": "-172",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "YAN@TWI",
+        "pick": "Yankees ML",
+        "odds": "-148",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "ATH@RAY",
+        "pick": "Rays ML",
+        "odds": "-188",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "DOD@RED",
+        "pick": "Dodgers ML",
+        "odds": "-220",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "BRE@PIR",
+        "pick": "Brewers ML",
+        "odds": "-136",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "PHI@NAT",
+        "pick": "Phillies ML",
+        "odds": "-196",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "PAD@ROC",
+        "pick": "Padres ML",
+        "odds": "-166",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 11,
+      "by_grade": {
+        "A-": 4,
+        "C": 7
+      },
+      "parlay_count": 7
+    }
+  },
   "2026-09-15": {
     "generated_at": "2026-09-15T21:04:35Z",
     "game_count": 15,
