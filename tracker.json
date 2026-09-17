@@ -1,34 +1,14 @@
 {
   "2026-09-17": {
-    "generated_at": "2026-09-17T14:11:06Z",
-    "game_count": 9,
+    "generated_at": "2026-09-17T21:04:37Z",
+    "game_count": 6,
     "picks": [
       {
-        "game": "BRE@PIR",
-        "pick": "Over 8.5",
-        "odds": "-122",
+        "game": "PAD@ROC",
+        "pick": "Under 13.5",
+        "odds": "-118",
         "grade": "A-",
         "src": "era",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "BRE@PIR",
-        "pick": "Under 14.5 outs",
-        "odds": "-136",
-        "grade": "A-",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "ATH@RAY",
-        "pick": "Under 1.5 ER",
-        "odds": "-124",
-        "grade": "A-",
-        "src": "MLB Stats API",
         "parlay": false,
         "result": null,
         "hit": null
@@ -40,46 +20,6 @@
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "BRE@PIR",
-        "pick": "Brewers ML",
-        "odds": "-142",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "DOD@RED",
-        "pick": "Dodgers ML",
-        "odds": "-166",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "ATH@RAY",
-        "pick": "Rays ML",
-        "odds": "-285",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "PAD@ROC",
-        "pick": "Padres ML",
-        "odds": "-191",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
         "result": null,
         "hit": null
       },
@@ -96,7 +36,7 @@
       {
         "game": "TWI@ANG",
         "pick": "Angels ML",
-        "odds": "-104",
+        "odds": "-108",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -105,12 +45,12 @@
       }
     ],
     "summary": {
-      "total": 10,
+      "total": 4,
       "by_grade": {
-        "A-": 4,
-        "C": 6
+        "A-": 2,
+        "C": 2
       },
-      "parlay_count": 6
+      "parlay_count": 2
     }
   },
   "2026-09-16": {
