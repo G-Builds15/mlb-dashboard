@@ -1,4 +1,118 @@
 {
+  "2026-09-18": {
+    "generated_at": "2026-09-18T14:10:04Z",
+    "game_count": 15,
+    "picks": [
+      {
+        "game": "ROY@PIR",
+        "pick": "Under 8.5",
+        "odds": "-132",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "ATH@GUA",
+        "pick": "Over 8.5",
+        "odds": "-108",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "TWI@ANG",
+        "pick": "Over 14.5 outs",
+        "odds": "-200",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "CUB@RED",
+        "pick": "Cubs ML",
+        "odds": "-126",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "BRE@ORI",
+        "pick": "Brewers ML",
+        "odds": "-138",
+        "grade": "C",
+        "src": "bullpen_pivot",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "ATH@GUA",
+        "pick": "Guardians ML",
+        "odds": "-215",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "TIG@SOX",
+        "pick": "Tigers ML",
+        "odds": "+110",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "JAY@RAN",
+        "pick": "Jays ML",
+        "odds": "-136",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "MAR@ROC",
+        "pick": "Mariners ML",
+        "odds": "-186",
+        "grade": "C",
+        "src": "bullpen_pivot",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "MAR@PAD",
+        "pick": "Padres ML",
+        "odds": "-200",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 10,
+      "by_grade": {
+        "A-": 3,
+        "C": 7
+      },
+      "parlay_count": 7
+    }
+  },
   "2026-09-17": {
     "generated_at": "2026-09-17T21:04:37Z",
     "game_count": 6,
