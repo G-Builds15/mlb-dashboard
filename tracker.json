@@ -1,12 +1,32 @@
 {
   "2026-09-19": {
-    "generated_at": "2026-09-19T14:09:11Z",
+    "generated_at": "2026-09-19T21:04:10Z",
     "game_count": 15,
     "picks": [
       {
+        "game": "TIG@SOX",
+        "pick": "Over 4.5",
+        "odds": "+580",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
         "game": "BRE@ORI",
-        "pick": "Over 7.5",
-        "odds": "-118",
+        "pick": "Over 5.5",
+        "odds": "-102",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@RAY",
+        "pick": "Over 5.5",
+        "odds": "-122",
         "grade": "A-",
         "src": "era",
         "parlay": false,
@@ -16,7 +36,7 @@
       {
         "game": "YAN@DIA",
         "pick": "Under 1.5 ER",
-        "odds": "+104",
+        "odds": "-111",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -36,7 +56,7 @@
       {
         "game": "TWI@ANG",
         "pick": "Under 1.5 ER",
-        "odds": "+112",
+        "odds": "+116",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -44,9 +64,9 @@
         "hit": null
       },
       {
-        "game": "TIG@SOX",
-        "pick": "Tigers ML",
-        "odds": "+110",
+        "game": "BRE@ORI",
+        "pick": "Brewers ML",
+        "odds": "-184",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -54,9 +74,9 @@
         "hit": null
       },
       {
-        "game": "BRE@ORI",
-        "pick": "Brewers ML",
-        "odds": "-118",
+        "game": "SOX@RAY",
+        "pick": "Rays ML",
+        "odds": "+130",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -76,17 +96,7 @@
       {
         "game": "CUB@RED",
         "pick": "Cubs ML",
-        "odds": "-138",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "BRA@AST",
-        "pick": "Braves ML",
-        "odds": "+110",
+        "odds": "-146",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -96,7 +106,7 @@
       {
         "game": "YAN@DIA",
         "pick": "Yankees ML",
-        "odds": "-148",
+        "odds": "-168",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -106,7 +116,7 @@
       {
         "game": "MAR@ROC",
         "pick": "Mariners ML",
-        "odds": "-162",
+        "odds": "-154",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -125,12 +135,12 @@
       }
     ],
     "summary": {
-      "total": 12,
+      "total": 13,
       "by_grade": {
-        "A-": 4,
-        "C": 8
+        "A-": 6,
+        "C": 7
       },
-      "parlay_count": 8
+      "parlay_count": 7
     }
   },
   "2026-09-18": {
