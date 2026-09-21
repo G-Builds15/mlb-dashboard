@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-09-21T14:09:21.101161+00:00",
+  "fetched_at": "2026-09-21T21:03:49.277429+00:00",
   "date": "2026-09-21",
   "games": [
     {
@@ -85,41 +85,34 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Baltimore Orioles -112 / Toronto Blue Jays -104",
-        "spread": "Baltimore Orioles +1.5 (-188)",
-        "total": "O/U 7.5 (Over -115 / Under -105)",
+        "ml": "Baltimore Orioles -108 / Toronto Blue Jays -108",
+        "spread": "Baltimore Orioles +1.5 (-192)",
+        "total": "O/U 7.5 (Over -102 / Under -120)",
         "raw": {
-          "homeML": -112,
-          "awayML": -104,
+          "homeML": -108,
+          "awayML": -108,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -188,
+          "homeSpreadOdds": -192,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 155,
+          "awaySpreadOdds": 158,
           "total": 7.5,
-          "overOdds": -115,
-          "underOdds": -105
+          "overOdds": -102,
+          "underOdds": -120
         }
       },
       "props": {
-        "Shane Baz": {
-          "pitcher_outs": {
-            "point": 17.5,
-            "over": -106,
-            "under": -130,
-            "overStr": "-106",
-            "underStr": "-130"
-          },
-          "pitcher_strikeouts": {
-            "point": 3.5,
-            "over": -162,
-            "under": 126,
-            "overStr": "-162",
-            "underStr": "+126"
-          }
-        },
         "Trey Yesavage": {
           "pitcher_strikeouts": {
             "point": 3.5,
+            "over": 112,
+            "under": -142,
+            "overStr": "+112",
+            "underStr": "-142"
+          }
+        },
+        "Shane Baz": {
+          "pitcher_strikeouts": {
+            "point": 4.5,
             "over": 132,
             "under": -170,
             "overStr": "+132",
@@ -186,24 +179,33 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Detroit Tigers -134 / Washington Nationals +114",
-        "spread": "Detroit Tigers -1.5 (+160)",
-        "total": "O/U 8.5 (Over +102 / Under -124)",
+        "spread": "Detroit Tigers -1.5 (+155)",
+        "total": "O/U 8.5 (Over -110 / Under -110)",
         "raw": {
           "homeML": -134,
           "awayML": 114,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 160,
+          "homeSpreadOdds": 155,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -194,
+          "awaySpreadOdds": -188,
           "total": 8.5,
-          "overOdds": 102,
-          "underOdds": -124
+          "overOdds": -110,
+          "underOdds": -110
         }
       },
       "props": {
         "DJ Herz": {
           "pitcher_strikeouts": {
-            "point": 3.5,
+            "point": 4.5,
+            "over": 130,
+            "under": -166,
+            "overStr": "+130",
+            "underStr": "-166"
+          }
+        },
+        "River Ryan": {
+          "pitcher_strikeouts": {
+            "point": 2.5,
             "over": -113,
             "under": -113,
             "overStr": "-113",
@@ -304,18 +306,18 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "San Francisco Giants +108 / Minnesota Twins -126",
-        "spread": "San Francisco Giants +1.5 (-164)",
-        "total": "O/U 8.5 (Over +104 / Under -128)",
+        "spread": "San Francisco Giants +1.5 (-156)",
+        "total": "O/U 8.5 (Over -105 / Under -115)",
         "raw": {
           "homeML": 108,
           "awayML": -126,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -164,
+          "homeSpreadOdds": -156,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 136,
+          "awaySpreadOdds": 130,
           "total": 8.5,
-          "overOdds": 104,
-          "underOdds": -128
+          "overOdds": -105,
+          "underOdds": -115
         }
       },
       "props": {
@@ -329,26 +331,26 @@ const ODDS_DATA = {
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -148,
-            "under": 116,
-            "overStr": "-148",
-            "underStr": "+116"
+            "over": -158,
+            "under": 124,
+            "overStr": "-158",
+            "underStr": "+124"
           }
         },
         "Zebby Matthews": {
           "pitcher_outs": {
             "point": 15.5,
-            "over": -110,
-            "under": -120,
-            "overStr": "-110",
-            "underStr": "-120"
+            "over": -125,
+            "under": -108,
+            "overStr": "-125",
+            "underStr": "-108"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -128,
-            "under": 100,
-            "overStr": "-128",
-            "underStr": "+100"
+            "over": -108,
+            "under": -118,
+            "overStr": "-108",
+            "underStr": "-118"
           }
         }
       }

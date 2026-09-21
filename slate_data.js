@@ -13,7 +13,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Trey Yesavage (?HP) vs Shane Baz (?HP)",
     overview:{
-      lines:{ ml:"Baltimore Orioles -112 / Toronto Blue Jays -104", spread:"Baltimore Orioles +1.5 (-188)", total:"O/U 7.5 (Over -115 / Under -105)", movement:"" },
+      lines:{ ml:"Baltimore Orioles -108 / Toronto Blue Jays -108", spread:"Baltimore Orioles +1.5 (-192)", total:"O/U 7.5 (Over -102 / Under -120)", movement:"" },
       away:{ teamName:"Toronto Blue Jays", abbr:"JAY",
         offStats:{"avg": ".248", "ops": ".694", "kPct": "19.1", "rPerG": "4.03", "rPerG_L10": "4.03", "rPerG_L5": "4.14"},
         defStats:{"era": "3.65", "bullpenERA_L14": "3.78", "whip": "1.14"},
@@ -27,7 +27,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 21, 2026",cards:[{"lbl": "Baz — Outs Recorded", "pick": "Under 17.5 outs", "odds": "-130", "grade": "B", "rat": "Projects 16.8 outs (5.6 IP) vs 17.5 line", "chips": ["Proj 16.8 outs · blended 5.6 avgIP vs 5.8 IP line", "⚠ Trending shorter (L3 avg 5.3 IP vs season 5.8 IP)", "Season avgIP 5.8 · 30 GS · 173 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.11, "l5ERA": 4.54, "l3ERA": 5.06, "avgIP": 5.8, "bb9": 3.12}}]},
+      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -39,7 +39,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"DJ Herz (?HP) vs River Ryan (?HP)",
     overview:{
-      lines:{ ml:"Detroit Tigers -134 / Washington Nationals +114", spread:"Detroit Tigers -1.5 (+160)", total:"O/U 8.5 (Over +102 / Under -124)", movement:"" },
+      lines:{ ml:"Detroit Tigers -134 / Washington Nationals +114", spread:"Detroit Tigers -1.5 (+155)", total:"O/U 8.5 (Over -110 / Under -110)", movement:"" },
       away:{ teamName:"Washington Nationals", abbr:"NAT",
         offStats:{"avg": ".247", "ops": ".747", "kPct": "21.7", "rPerG": "5.12", "rPerG_L10": "5.12", "rPerG_L5": "5.33"},
         defStats:{"era": "TBD", "bullpenERA_L14": "3.86", "whip": "TBD"},
@@ -65,7 +65,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Zebby Matthews (?HP) vs Blade Tidwell (?HP)",
     overview:{
-      lines:{ ml:"San Francisco Giants +108 / Minnesota Twins -126", spread:"San Francisco Giants +1.5 (-164)", total:"O/U 8.5 (Over +104 / Under -128)", movement:"" },
+      lines:{ ml:"San Francisco Giants +108 / Minnesota Twins -126", spread:"San Francisco Giants +1.5 (-156)", total:"O/U 8.5 (Over -105 / Under -115)", movement:"" },
       away:{ teamName:"Minnesota Twins", abbr:"TWI",
         offStats:{"avg": ".244", "ops": ".720", "kPct": "21.2", "rPerG": "4.56", "rPerG_L10": "4.56", "rPerG_L5": "3.88"},
         defStats:{"era": "4.74", "bullpenERA_L14": "3.87", "whip": "1.24"},
@@ -79,7 +79,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Sep 21, 2026",cards:[{"lbl": "Matthews — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-128", "grade": "B", "rat": "Blended K% 21.7% — projects 5.3 Ks vs 4.5 line", "chips": ["Blended K%: 21.7% · proj 5.3 Ks vs 4.5 line", "ERA 4.74 · BB/9 2.80 · avgIP 5.7 · trend HOT", "L5 ERA: 3.15 · L3 ERA: 6.08"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.74, "l5ERA": 3.15, "l3ERA": 6.08, "avgIP": 5.7, "bb9": 2.8}}, {"lbl": "Matthews — Outs Recorded", "pick": "Under 15.5 outs", "odds": "-120", "grade": "B+", "rat": "Projects 16.3 outs (5.4 IP) vs 15.5 line", "chips": ["Proj 16.3 outs · blended 5.4 avgIP vs 5.2 IP line", "⚠ Trending shorter (L3 avg 4.4 IP vs season 5.7 IP)", "Season avgIP 5.7 · 22 GS · 125 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.74, "l5ERA": 3.15, "l3ERA": 6.08, "avgIP": 5.7, "bb9": 2.8}}]},
+      pitcher:{intro:"Props graded Sep 21, 2026",cards:[{"lbl": "Matthews — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-108", "grade": "B", "rat": "Blended K% 21.7% — projects 5.3 Ks vs 4.5 line", "chips": ["Blended K%: 21.7% · proj 5.3 Ks vs 4.5 line", "ERA 4.74 · BB/9 2.80 · avgIP 5.7 · trend HOT", "L5 ERA: 3.15 · L3 ERA: 6.08"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.74, "l5ERA": 3.15, "l3ERA": 6.08, "avgIP": 5.7, "bb9": 2.8}}, {"lbl": "Matthews — Outs Recorded", "pick": "Under 15.5 outs", "odds": "-108", "grade": "B+", "rat": "Projects 16.3 outs (5.4 IP) vs 15.5 line", "chips": ["Proj 16.3 outs · blended 5.4 avgIP vs 5.2 IP line", "⚠ Trending shorter (L3 avg 4.4 IP vs season 5.7 IP)", "Season avgIP 5.7 · 22 GS · 125 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.74, "l5ERA": 3.15, "l3ERA": 6.08, "avgIP": 5.7, "bb9": 2.8}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
