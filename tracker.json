@@ -1,4 +1,108 @@
 {
+  "2026-09-22": {
+    "generated_at": "2026-09-22T14:10:04Z",
+    "game_count": 16,
+    "picks": [
+      {
+        "game": "MAR@CUB",
+        "pick": "Over 6.5",
+        "odds": "-118",
+        "grade": "A-",
+        "src": "bullpen_pivot",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "MAR@CUB",
+        "pick": "Under 14.5 outs",
+        "odds": "-133",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "MET@RAN",
+        "pick": "Over 1.5 BB",
+        "odds": "-143",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "DIA@ROC",
+        "pick": "Over 14.5 outs",
+        "odds": "-160",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "NAT@TIG",
+        "pick": "Tigers ML",
+        "odds": "-158",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "GUA@SOX",
+        "pick": "Guardians ML",
+        "odds": "+110",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "RED@BRA",
+        "pick": "Braves ML",
+        "odds": "-184",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "MAR@CUB",
+        "pick": "Cubs ML",
+        "odds": "-218",
+        "grade": "C",
+        "src": "bullpen_pivot",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "AST@MAR",
+        "pick": "Mariners ML",
+        "odds": "-142",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 9,
+      "by_grade": {
+        "A-": 4,
+        "C": 5
+      },
+      "parlay_count": 5
+    }
+  },
   "2026-09-21": {
     "generated_at": "2026-09-21T14:09:21Z",
     "game_count": 3,
