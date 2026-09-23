@@ -1,14 +1,14 @@
 {
   "2026-09-23": {
-    "generated_at": "2026-09-23T14:10:31Z",
-    "game_count": 16,
+    "generated_at": "2026-09-23T21:05:10Z",
+    "game_count": 14,
     "picks": [
       {
-        "game": "TWI@GIA",
-        "pick": "Over 14.5 outs",
-        "odds": "-192",
+        "game": "RAY@YAN",
+        "pick": "Over 6.5",
+        "odds": "-118",
         "grade": "A-",
-        "src": "MLB Stats API",
+        "src": "era",
         "parlay": false,
         "result": null,
         "hit": null
@@ -16,7 +16,7 @@
       {
         "game": "RED@BRA",
         "pick": "Under 14.5 outs",
-        "odds": "+118",
+        "odds": "+132",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -26,7 +26,7 @@
       {
         "game": "RED@BRA",
         "pick": "Over 15.5 outs",
-        "odds": "-114",
+        "odds": "+120",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -44,11 +44,21 @@
         "hit": null
       },
       {
+        "game": "MET@RAN",
+        "pick": "Over 12.5 outs",
+        "odds": "-120",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
         "game": "JAY@ORI",
         "pick": "Orioles ML",
-        "odds": "-122",
+        "odds": "-120",
         "grade": "C",
-        "src": "bullpen_pivot",
+        "src": "era",
         "parlay": true,
         "result": null,
         "hit": null
@@ -57,6 +67,16 @@
         "game": "CAR@PIR",
         "pick": "Pirates ML",
         "odds": "-134",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "RAY@YAN",
+        "pick": "Yankees ML",
+        "odds": "-144",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -95,12 +115,12 @@
       }
     ],
     "summary": {
-      "total": 9,
+      "total": 11,
       "by_grade": {
-        "A-": 4,
-        "C": 5
+        "A-": 5,
+        "C": 6
       },
-      "parlay_count": 5
+      "parlay_count": 6
     }
   },
   "2026-09-22": {
