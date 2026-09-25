@@ -1,4 +1,68 @@
 {
+  "2026-09-25": {
+    "generated_at": "2026-09-25T14:10:58Z",
+    "game_count": 17,
+    "picks": [
+      {
+        "game": "GUA@ROY",
+        "pick": "Over 6.5 Ks",
+        "odds": "-132",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "DIA@PAD",
+        "pick": "Over 7.5",
+        "odds": "-110",
+        "grade": "A-",
+        "src": "bullpen_pivot",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "ROC@SOX",
+        "pick": "Sox ML",
+        "odds": "-238",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "DIA@PAD",
+        "pick": "Diamondbacks ML",
+        "odds": "+114",
+        "grade": "C",
+        "src": "bullpen_pivot",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "DOD@GIA",
+        "pick": "Dodgers ML",
+        "odds": "-350",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 5,
+      "by_grade": {
+        "A-": 2,
+        "C": 3
+      },
+      "parlay_count": 3
+    }
+  },
   "2026-09-24": {
     "generated_at": "2026-09-24T14:10:01Z",
     "game_count": 12,
