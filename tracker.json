@@ -1,12 +1,42 @@
 {
   "2026-09-25": {
-    "generated_at": "2026-09-25T14:10:58Z",
-    "game_count": 17,
+    "generated_at": "2026-09-25T23:42:24Z",
+    "game_count": 15,
     "picks": [
+      {
+        "game": "CUB@SOX",
+        "pick": "Over 1.5",
+        "odds": "-114",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "BRA@MAR",
+        "pick": "Under 17.5 outs",
+        "odds": "-125",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "ORI@YAN",
+        "pick": "Over 5.5",
+        "odds": "-146",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
       {
         "game": "GUA@ROY",
         "pick": "Over 6.5 Ks",
-        "odds": "-132",
+        "odds": "-111",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -16,17 +46,17 @@
       {
         "game": "DIA@PAD",
         "pick": "Over 7.5",
-        "odds": "-110",
+        "odds": "-115",
         "grade": "A-",
-        "src": "bullpen_pivot",
+        "src": "era",
         "parlay": false,
         "result": null,
         "hit": null
       },
       {
-        "game": "ROC@SOX",
-        "pick": "Sox ML",
-        "odds": "-238",
+        "game": "MET@NAT",
+        "pick": "Nationals ML",
+        "odds": "+200",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -34,11 +64,21 @@
         "hit": null
       },
       {
-        "game": "DIA@PAD",
-        "pick": "Diamondbacks ML",
-        "odds": "+114",
+        "game": "BRA@MAR",
+        "pick": "Braves ML",
+        "odds": "-113",
         "grade": "C",
-        "src": "bullpen_pivot",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "ROC@SOX",
+        "pick": "Sox ML",
+        "odds": "-268",
+        "grade": "C",
+        "src": "era",
         "parlay": true,
         "result": null,
         "hit": null
@@ -46,7 +86,7 @@
       {
         "game": "DOD@GIA",
         "pick": "Dodgers ML",
-        "odds": "-350",
+        "odds": "-330",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -55,12 +95,12 @@
       }
     ],
     "summary": {
-      "total": 5,
+      "total": 9,
       "by_grade": {
-        "A-": 2,
-        "C": 3
+        "A-": 5,
+        "C": 4
       },
-      "parlay_count": 3
+      "parlay_count": 4
     }
   },
   "2026-09-24": {
