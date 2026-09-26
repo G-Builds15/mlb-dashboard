@@ -1,52 +1,22 @@
 {
   "2026-09-26": {
-    "generated_at": "2026-09-26T17:36:41Z",
-    "game_count": 13,
+    "generated_at": "2026-09-26T23:15:20Z",
+    "game_count": 8,
     "picks": [
       {
-        "game": "PIR@TIG",
-        "pick": "Over 7.5",
-        "odds": "-106",
-        "grade": "A-",
-        "src": "era",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "RED@JAY",
-        "pick": "Under 14.5 outs",
+        "game": "RAN@TWI",
+        "pick": "Under 10.5",
         "odds": "+102",
         "grade": "A-",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "BRA@MAR",
-        "pick": "Over 8.5",
-        "odds": "-114",
-        "grade": "A-",
         "src": "era",
         "parlay": false,
         "result": null,
         "hit": null
       },
       {
-        "game": "BRA@MAR",
-        "pick": "Under 0.5 ER",
-        "odds": "-130",
-        "grade": "A-",
-        "src": "MLB Stats API",
-        "parlay": false,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "ROC@SOX",
-        "pick": "Over 14.5 outs",
-        "odds": "-136",
+        "game": "GUA@ROY",
+        "pick": "Under 18.5 outs",
+        "odds": "-125",
         "grade": "A-",
         "src": "MLB Stats API",
         "parlay": false,
@@ -64,39 +34,9 @@
         "hit": null
       },
       {
-        "game": "PIR@TIG",
-        "pick": "Tigers ML",
-        "odds": "-142",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "DOD@GIA",
-        "pick": "Dodgers ML",
-        "odds": "-300",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
-        "game": "BRA@MAR",
-        "pick": "Marlins ML",
-        "odds": "+100",
-        "grade": "C",
-        "src": "era",
-        "parlay": true,
-        "result": null,
-        "hit": null
-      },
-      {
         "game": "ROC@SOX",
         "pick": "Sox ML",
-        "odds": "-235",
+        "odds": "-150",
         "grade": "C",
         "src": "era",
         "parlay": true,
@@ -105,12 +45,12 @@
       }
     ],
     "summary": {
-      "total": 10,
+      "total": 4,
       "by_grade": {
-        "A-": 6,
-        "C": 4
+        "A-": 3,
+        "C": 1
       },
-      "parlay_count": 4
+      "parlay_count": 1
     }
   },
   "2026-09-25": {
