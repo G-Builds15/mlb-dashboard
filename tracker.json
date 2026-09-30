@@ -1,4 +1,27 @@
 {
+  "2026-09-30": {
+    "generated_at": "2026-09-30T00:00:03Z",
+    "game_count": 3,
+    "picks": [
+      {
+        "game": "SOX@YAN",
+        "pick": "Over 6.0",
+        "odds": "-108",
+        "grade": "A-",
+        "src": "bullpen_pivot",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "by_grade": {
+        "A-": 1
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-09-29": {
     "generated_at": "2026-09-29T19:06:20Z",
     "game_count": 4,
