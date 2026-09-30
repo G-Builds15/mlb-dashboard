@@ -586,80 +586,106 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 const games = {
 
-  "sox-ast": {
-    away:"Chicago White Sox", home:"Houston Astros",
-    time:"5:10 PM ET", venue:"TBD",
+  "phi-bra": {
+    away:"Philadelphia Phillies", home:"Atlanta Braves",
+    time:"2:16 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
+    starters:"Cristopher Sánchez (?HP) vs Tyler Mahle (?HP)",
     overview:{
-      lines:{ ml:"Houston Astros +800 / Chicago White Sox -2000", spread:"Houston Astros +2.5 (+172)", total:"O/U 9.5 (Over -142 / Under +109)", movement:"" },
-      away:{ teamName:"Chicago White Sox", abbr:"SOX",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      lines:{ ml:"Atlanta Braves -130 / Philadelphia Phillies +102", spread:"Atlanta Braves -1.5 (+210)", total:"O/U 7.5 (Over -118 / Under -112)", movement:"" },
+      away:{ teamName:"Philadelphia Phillies", abbr:"PHI",
+        offStats:{"avg": ".240", "ops": ".707", "kPct": "21.7", "rPerG": "4.4", "rPerG_L10": "4.4", "rPerG_L5": "2.67"},
+        defStats:{"era": "2.91", "bullpenERA_L14": "4.45", "whip": "1.2"},
+        starter:{"name": "Cristopher S\u00e1nchez", "hand": "?HP", "era": "2.91", "whip": "1.2", "k9": "10.04", "bb9": "1.96", "era_L3": "5.26", "avgIP": "6.3"},
         injuries:[] },
-      home:{ teamName:"Houston Astros", abbr:"AST",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      home:{ teamName:"Atlanta Braves", abbr:"BRA",
+        offStats:{"avg": ".246", "ops": ".718", "kPct": "21.6", "rPerG": "4.58", "rPerG_L10": "4.58", "rPerG_L5": "3.33"},
+        defStats:{"era": "3.99", "bullpenERA_L14": "3.99", "whip": "1.23"},
+        starter:{"name": "Tyler Mahle", "hand": "?HP", "era": "3.99", "whip": "1.23", "k9": "8.28", "bb9": "2.78", "era_L3": "3.5", "avgIP": "5.5"},
         injuries:[] }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
+      pitcher:{intro:"Props graded Sep 30, 2026",cards:[{"lbl": "Mahle — Strikeouts", "pick": "Over 4.5 Ks", "odds": "+110", "grade": "B", "rat": "Blended K% 21.6% — projects 5.1 Ks vs 4.5 line", "chips": ["Blended K%: 21.6% · proj 5.1 Ks vs 4.5 line", "ERA 3.99 · BB/9 2.78 · avgIP 5.5 · trend NEUTRAL", "L5 ERA: 2.35 · L3 ERA: 3.50"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.99, "l5ERA": 2.35, "l3ERA": 3.5, "avgIP": 5.5, "bb9": 2.78}}, {"lbl": "Mahle — Outs Recorded", "pick": "Over 13.5 outs", "odds": "-110", "grade": "A-", "rat": "Projects 17.2 outs (5.7 IP) vs 13.5 line", "chips": ["Proj 17.2 outs · blended 5.7 avgIP vs 4.5 IP line", "↗ Going deeper (L3 avg 6.0 IP vs season 5.5 IP)", "Season avgIP 5.5 · 27 GS · 149 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.99, "l5ERA": 2.35, "l3ERA": 3.5, "avgIP": 5.5, "bb9": 2.78}}]},
+      batter:{intro:"HRR props — lineup position pending",cards:[]}
+    }
+  },
+
+  "sox-ast": {
+    away:"Chicago White Sox", home:"Houston Astros",
+    time:"5:00 PM ET", venue:"TBD",
+    awayRec:"TBD", homeRec:"TBD",
+    wx:"⛅ Weather TBD",
+    starters:"Sean Burke (?HP) vs Hunter Brown (?HP)",
+    overview:{
+      lines:{ ml:"Houston Astros -155 / Chicago White Sox +129", spread:"Houston Astros -1.5 (+144)", total:"O/U 7.5 (Over -108 / Under -112)", movement:"" },
+      away:{ teamName:"Chicago White Sox", abbr:"SOX",
+        offStats:{"avg": ".236", "ops": ".726", "kPct": "24.1", "rPerG": "4.79", "rPerG_L10": "4.79", "rPerG_L5": "7.17"},
+        defStats:{"era": "3.34", "bullpenERA_L14": "4.18", "whip": "1.2"},
+        starter:{"name": "Sean Burke", "hand": "?HP", "era": "3.34", "whip": "1.2", "k9": "9.66", "bb9": "3.24", "era_L3": "1.1", "avgIP": "6.4"},
+        injuries:[] },
+      home:{ teamName:"Houston Astros", abbr:"AST",
+        offStats:{"avg": ".242", "ops": ".732", "kPct": "21.9", "rPerG": "4.53", "rPerG_L10": "4.53", "rPerG_L5": "7.67"},
+        defStats:{"era": "3.19", "bullpenERA_L14": "3.39", "whip": "1.27"},
+        starter:{"name": "Hunter Brown", "hand": "?HP", "era": "3.19", "whip": "1.27", "k9": "10.4", "bb9": "4.61", "era_L3": "2.66", "avgIP": "5.4"},
+        injuries:[] }
+    },
+    tabs:{
+      overview:{intro:"",cards:[]},
+      pitcher:{intro:"Props graded Sep 30, 2026",cards:[{"lbl": "Burke — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-156", "grade": "B", "rat": "Blended K% 24.0% — projects 6.5 Ks vs 4.5 line", "chips": ["Blended K%: 24.0% · proj 6.5 Ks vs 4.5 line", "ERA 3.34 · BB/9 3.24 · avgIP 6.4 · trend NEUTRAL", "L5 ERA: 3.76 · L3 ERA: 1.10"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.34, "l5ERA": 3.76, "l3ERA": 1.1, "avgIP": 6.4, "bb9": 3.24}}, {"lbl": "Burke — Earned Runs", "pick": "Under 1.5 ER", "odds": "+123", "grade": "B+", "rat": "Blended ERA 3.02 — season 3.34 · L5 3.76 · L3 1.10", "chips": ["Blended ERA: 3.02 · 6.3 avg IP", "Season 3.34 · L5 3.76 · L3 1.1", "BB/9 3.2 — IP adj 6.4→6.3"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.34, "l5ERA": 3.76, "l3ERA": 1.1, "avgIP": 6.4, "bb9": 3.24}}, {"lbl": "Burke — Outs Recorded", "pick": "Over 14.5 outs", "odds": "-138", "grade": "A-", "rat": "Projects 19.1 outs (6.4 IP) vs 14.5 line", "chips": ["Proj 19.1 outs · blended 6.4 avgIP vs 4.8 IP line", "↗ Going deeper (L3 avg 8.1 IP vs season 6.4 IP)", "Season avgIP 6.4 · 27 GS · 172 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.34, "l5ERA": 3.76, "l3ERA": 1.1, "avgIP": 6.4, "bb9": 3.24}}, {"lbl": "Brown — Earned Runs", "pick": "Under 1.5 ER", "odds": "-122", "grade": "B+", "rat": "Blended ERA 2.86 — season 3.19 · L5 2.45 · L3 2.66", "chips": ["Blended ERA: 2.86 · 4.8 avg IP", "Season 3.19 · L5 2.45 · L3 2.66", "BB/9 4.6 — IP adj 5.4→4.8"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.19, "l5ERA": 2.45, "l3ERA": 2.66, "avgIP": 5.4, "bb9": 4.61}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
 
   "sox-yan": {
     away:"Boston Red Sox", home:"New York Yankees",
-    time:"8:10 PM ET", venue:"TBD",
+    time:"8:00 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
+    starters:"Sonny Gray (?HP) vs Max Fried (?HP)",
     overview:{
-      lines:{ ml:"New York Yankees -140 / Boston Red Sox +116", spread:"New York Yankees -1.5 (+159)", total:"O/U 6.0 (Over -108 / Under -111)", movement:"" },
+      lines:{ ml:"New York Yankees -138 / Boston Red Sox +118", spread:"New York Yankees -1.5 (+168)", total:"O/U 6.5 (Over -122 / Under +100)", movement:"" },
       away:{ teamName:"Boston Red Sox", abbr:"SOX",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+        offStats:{"avg": ".245", "ops": ".716", "kPct": "21.7", "rPerG": "4.25", "rPerG_L10": "4.25", "rPerG_L5": "1.83"},
+        defStats:{"era": "2.72", "bullpenERA_L14": "2.79", "whip": "1.15"},
+        starter:{"name": "Sonny Gray", "hand": "?HP", "era": "2.72", "whip": "1.15", "k9": "7.93", "bb9": "2.45", "era_L3": "2.95", "avgIP": "5.8"},
         injuries:[] },
       home:{ teamName:"New York Yankees", abbr:"YAN",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+        offStats:{"avg": ".235", "ops": ".720", "kPct": "24.7", "rPerG": "4.59", "rPerG_L10": "4.59", "rPerG_L5": "4.33"},
+        defStats:{"era": "2.8", "bullpenERA_L14": "3.74", "whip": "0.99"},
+        starter:{"name": "Max Fried", "hand": "?HP", "era": "2.8", "whip": "0.99", "k9": "8.31", "bb9": "2.64", "era_L3": "3.18", "avgIP": "5.6"},
         injuries:[] }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
+      pitcher:{intro:"Props graded Sep 30, 2026",cards:[{"lbl": "Gray — Outs Recorded", "pick": "Over 14.5 outs", "odds": "-178", "grade": "A-", "rat": "Projects 17.7 outs (5.9 IP) vs 14.5 line", "chips": ["Proj 17.7 outs · blended 5.9 avgIP vs 4.8 IP line", "Stable depth (5.8 avgIP · L3 6.0 IP)", "Season avgIP 5.8 · 29 GS · 169 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.72, "l5ERA": 2.37, "l3ERA": 2.95, "avgIP": 5.8, "bb9": 2.45}}, {"lbl": "Fried — Strikeouts", "pick": "Over 5.5 Ks", "odds": "-102", "grade": "B", "rat": "Blended K% 24.4% — projects 5.9 Ks vs 5.5 line", "chips": ["Blended K%: 24.4% · proj 5.9 Ks vs 5.5 line", "ERA 2.80 · BB/9 2.64 · avgIP 5.6 · trend NEUTRAL", "L5 ERA: 2.73 · L3 ERA: 3.18"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.8, "l5ERA": 2.73, "l3ERA": 3.18, "avgIP": 5.6, "bb9": 2.64}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
 
   "cub-pad": {
     away:"Chicago Cubs", home:"San Diego Padres",
-    time:"10:10 PM ET", venue:"TBD",
+    time:"10:00 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
+    starters:"Kevin Gausman (?HP) vs Nick Pivetta (?HP)",
     overview:{
-      lines:{ ml:"San Diego Padres -134 / Chicago Cubs +116", spread:"San Diego Padres -1.5 (+164)", total:"O/U 7.5 (Over -108 / Under -112)", movement:"" },
+      lines:{ ml:"San Diego Padres -144 / Chicago Cubs +122", spread:"San Diego Padres -1.5 (+150)", total:"O/U 7.5 (Over +102 / Under -124)", movement:"" },
       away:{ teamName:"Chicago Cubs", abbr:"CUB",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+        offStats:{"avg": ".251", "ops": ".767", "kPct": "21.1", "rPerG": "5.25", "rPerG_L10": "5.25", "rPerG_L5": "2.5"},
+        defStats:{"era": "4.51", "bullpenERA_L14": "3.0", "whip": "1.27"},
+        starter:{"name": "Kevin Gausman", "hand": "?HP", "era": "4.51", "whip": "1.27", "k9": "9.32", "bb9": "2.38", "era_L3": "5.87", "avgIP": "5.5"},
         injuries:[] },
       home:{ teamName:"San Diego Padres", abbr:"PAD",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+        offStats:{"avg": ".244", "ops": ".717", "kPct": "21.6", "rPerG": "4.46", "rPerG_L10": "4.46", "rPerG_L5": "5.33"},
+        defStats:{"era": "2.86", "bullpenERA_L14": "4.27", "whip": "1.01"},
+        starter:{"name": "Nick Pivetta", "hand": "?HP", "era": "2.86", "whip": "1.01", "k9": "10.9", "bb9": "2.08", "era_L3": "1.98", "avgIP": "4.3"},
         injuries:[] }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
+      pitcher:{intro:"Props graded Sep 30, 2026",cards:[{"lbl": "Gausman — Strikeouts", "pick": "Over 4.5 Ks", "odds": "+104", "grade": "B", "rat": "Blended K% 26.4% — projects 6.3 Ks vs 4.5 line", "chips": ["Blended K%: 26.4% · proj 6.3 Ks vs 4.5 line", "ERA 4.51 · BB/9 2.38 · avgIP 5.5 · trend NEUTRAL", "L5 ERA: 5.27 · L3 ERA: 5.87"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.51, "l5ERA": 5.27, "l3ERA": 5.87, "avgIP": 5.5, "bb9": 2.38}}, {"lbl": "Gausman — Outs Recorded", "pick": "Over 14.5 outs", "odds": "+110", "grade": "B+", "rat": "Projects 16.1 outs (5.4 IP) vs 14.5 line", "chips": ["Proj 16.1 outs · blended 5.4 avgIP vs 4.8 IP line", "⚠ Trending shorter (L3 avg 5.0 IP vs season 5.5 IP)", "Season avgIP 5.5 · 32 GS · 177 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.51, "l5ERA": 5.27, "l3ERA": 5.87, "avgIP": 5.5, "bb9": 2.38}}, {"lbl": "Pivetta — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-122", "grade": "B", "rat": "Blended K% 28.3% — projects 5.2 Ks vs 4.5 line", "chips": ["Blended K%: 28.3% · proj 5.2 Ks vs 4.5 line", "ERA 2.86 · BB/9 2.08 · avgIP 4.3 · trend NEUTRAL", "L5 ERA: 1.45 · L3 ERA: 1.98"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.86, "l5ERA": 1.45, "l3ERA": 1.98, "avgIP": 4.3, "bb9": 2.08}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -667,7 +693,11 @@ const games = {
 };
 
 const bestBets = [
-  {game:"SOX@YAN", pick:"Over 6.0", odds:"-108", grade:"A-", src:"bullpen_pivot"}
+  {game:"PHI@BRA", pick:"Over 13.5 outs", odds:"-110", grade:"A-", src:"MLB Stats API"},
+  {game:"SOX@AST", pick:"Over 7.5", odds:"-108", grade:"A-", src:"era"},
+  {game:"SOX@AST", pick:"Over 14.5 outs", odds:"-138", grade:"A-", src:"MLB Stats API"},
+  {game:"SOX@YAN", pick:"Over 14.5 outs", odds:"-178", grade:"A-", src:"MLB Stats API"},
+  {game:"CUB@PAD", pick:"Padres ML", odds:"-144", grade:"C", parlay:true, src:"era"}
 ];
 
 

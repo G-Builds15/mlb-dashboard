@@ -1,25 +1,66 @@
 {
   "2026-09-30": {
-    "generated_at": "2026-09-30T00:00:03Z",
-    "game_count": 3,
+    "generated_at": "2026-09-30T18:49:21Z",
+    "game_count": 4,
     "picks": [
       {
-        "game": "SOX@YAN",
-        "pick": "Over 6.0",
+        "game": "PHI@BRA",
+        "pick": "Over 13.5 outs",
+        "odds": "-110",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@AST",
+        "pick": "Over 7.5",
         "odds": "-108",
         "grade": "A-",
-        "src": "bullpen_pivot",
+        "src": "era",
         "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@AST",
+        "pick": "Over 14.5 outs",
+        "odds": "-138",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@YAN",
+        "pick": "Over 14.5 outs",
+        "odds": "-178",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "CUB@PAD",
+        "pick": "Padres ML",
+        "odds": "-144",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
         "result": null,
         "hit": null
       }
     ],
     "summary": {
-      "total": 1,
+      "total": 5,
       "by_grade": {
-        "A-": 1
+        "A-": 4,
+        "C": 1
       },
-      "parlay_count": 0
+      "parlay_count": 1
     }
   },
   "2026-09-29": {
