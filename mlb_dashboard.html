@@ -586,75 +586,23 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 const games = {
 
-  "sox-ast": {
-    away:"Chicago White Sox", home:"Houston Astros",
-    time:"5:11 PM ET", venue:"TBD",
+  "phi-bra": {
+    away:"Philadelphia Phillies", home:"Atlanta Braves",
+    time:"8:11 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
+    starters:"Aaron Nola (?HP) vs Ray Kerr (?HP)",
     overview:{
-      lines:{ ml:"Houston Astros N/A / Chicago White Sox N/A", spread:"Houston Astros +3.5 (+1040)", total:"O/U 10.5 (Over +1040 / Under -4200)", movement:"" },
-      away:{ teamName:"Chicago White Sox", abbr:"SOX",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      lines:{ ml:"Atlanta Braves -106 / Philadelphia Phillies -110", spread:"Atlanta Braves +1.5 (-192)", total:"O/U 7.5 (Over -104 / Under -118)", movement:"" },
+      away:{ teamName:"Philadelphia Phillies", abbr:"PHI",
+        offStats:{"avg": ".240", "ops": ".707", "kPct": "21.7", "rPerG": "4.4", "rPerG_L10": "4.4", "rPerG_L5": "2.0"},
+        defStats:{"era": "4.67", "bullpenERA_L14": "4.91", "whip": "1.35"},
+        starter:{"name": "Aaron Nola", "hand": "?HP", "era": "4.67", "whip": "1.35", "k9": "9.09", "bb9": "3.03", "era_L3": "3.98", "avgIP": "5.3"},
         injuries:[] },
-      home:{ teamName:"Houston Astros", abbr:"AST",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "sox-yan": {
-    away:"Boston Red Sox", home:"New York Yankees",
-    time:"8:15 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
-    overview:{
-      lines:{ ml:"New York Yankees -142 / Boston Red Sox +120", spread:"New York Yankees -1.5 (+152)", total:"O/U 6.5 (Over -122 / Under +100)", movement:"" },
-      away:{ teamName:"Boston Red Sox", abbr:"SOX",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
-        injuries:[] },
-      home:{ teamName:"New York Yankees", abbr:"YAN",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "cub-pad": {
-    away:"Chicago Cubs", home:"San Diego Padres",
-    time:"10:00 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
-    overview:{
-      lines:{ ml:"San Diego Padres -144 / Chicago Cubs +122", spread:"San Diego Padres -1.5 (+146)", total:"O/U 7.5 (Over +102 / Under -124)", movement:"" },
-      away:{ teamName:"Chicago Cubs", abbr:"CUB",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
-        injuries:[] },
-      home:{ teamName:"San Diego Padres", abbr:"PAD",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      home:{ teamName:"Atlanta Braves", abbr:"BRA",
+        offStats:{"avg": ".246", "ops": ".718", "kPct": "21.6", "rPerG": "4.58", "rPerG_L10": "4.58", "rPerG_L5": "4.0"},
+        defStats:{"era": "1.47", "bullpenERA_L14": "3.49", "whip": "0.6"},
+        starter:{"name": "Ray Kerr", "hand": "?HP", "era": "1.47", "whip": "0.6", "k9": "5.4", "bb9": "0.98", "era_L3": "1.29", "avgIP": "18.1"},
         injuries:[] }
     },
     tabs:{
@@ -667,7 +615,7 @@ const games = {
 };
 
 const bestBets = [
-  {game:"SOX@YAN", pick:"Over 6.5", odds:"-122", grade:"A-", src:"bullpen_pivot"}
+  {game:"PHI@BRA", pick:"Braves ML", odds:"-106", grade:"C", parlay:true, src:"era"}
 ];
 
 
