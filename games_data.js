@@ -1,308 +1,7 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-03T17:44:58.626737+00:00",
+  "fetched_at": "2026-10-03T23:26:20.173049+00:00",
   "date": "2026-10-03",
   "games": [
-    {
-      "id": "5d13b613a334039f0694d8c95af28728",
-      "home": "Cleveland Guardians",
-      "away": "Chicago White Sox",
-      "time": "1:07 PM ET",
-      "commence": "2026-10-03T17:07:00Z",
-      "starters": {
-        "away": {
-          "name": "Hagen Smith",
-          "id": 696146,
-          "hand": "?",
-          "confirmed": true
-        },
-        "home": {
-          "name": "Parker Messick",
-          "id": 800048,
-          "hand": "?",
-          "confirmed": true
-        }
-      },
-      "pitcher_stats": {
-        "away": {
-          "era": 1.29,
-          "whip": 0.96,
-          "k9": 13.18,
-          "bb9": 5.14,
-          "h9": 3.54,
-          "ip": 28.0,
-          "avgIP": 28.0,
-          "gs": 1,
-          "kPct": 37.3,
-          "_source": "mlb_stats_api",
-          "l5ERA": 1.59,
-          "l5KPct": 39.1,
-          "l5BB9": 3.18,
-          "l5AvgIP": 17.0,
-          "l3ERA": 2.7,
-          "l3KPct": 37.5,
-          "l3BB9": 5.4,
-          "l3AvgIP": 10.0,
-          "name": "Hagen Smith",
-          "pid": 696146
-        },
-        "home": {
-          "era": 2.56,
-          "whip": 1.06,
-          "k9": 9.32,
-          "bb9": 2.37,
-          "h9": 7.2,
-          "ip": 186.1,
-          "avgIP": 5.8,
-          "gs": 32,
-          "kPct": 25.8,
-          "_source": "mlb_stats_api",
-          "l5ERA": 2.87,
-          "l5KPct": 27.4,
-          "l5BB9": 2.3,
-          "l5AvgIP": 5.2,
-          "l3ERA": 3.21,
-          "l3KPct": 24.2,
-          "l3BB9": 1.29,
-          "l3AvgIP": 4.7,
-          "name": "Parker Messick",
-          "pid": 800048
-        }
-      },
-      "team_stats": {
-        "away": {
-          "name": "Chicago White Sox",
-          "_source": "mlb_stats_api",
-          "rPerG": 4.79,
-          "avg": ".236",
-          "ops": ".726",
-          "kPct": 24.1,
-          "bbPct": 9.5,
-          "rPerG_L5": 5.33,
-          "bullpenERA_L14": 3.68
-        },
-        "home": {
-          "name": "Cleveland Guardians",
-          "_source": "mlb_stats_api",
-          "rPerG": 4.19,
-          "avg": ".239",
-          "ops": ".696",
-          "kPct": 20.8,
-          "bbPct": 9.4,
-          "rPerG_L5": 8.33,
-          "bullpenERA_L14": 3.34
-        }
-      },
-      "lines": {
-        "ml": "Cleveland Guardians -162 / Chicago White Sox +126",
-        "spread": "Cleveland Guardians -1.5 (+168)",
-        "total": "O/U 4.5 (Over -136 / Under +102)",
-        "raw": {
-          "homeML": -162,
-          "awayML": 126,
-          "homeSpread": -1.5,
-          "homeSpreadOdds": 168,
-          "awaySpread": 1.5,
-          "awaySpreadOdds": -230,
-          "total": 4.5,
-          "overOdds": -136,
-          "underOdds": 102
-        }
-      },
-      "props": {
-        "Hagen Smith": {
-          "pitcher_earned_runs": {
-            "point": 0.5,
-            "over": 165,
-            "under": -225,
-            "overStr": "+165",
-            "underStr": "-225"
-          },
-          "pitcher_hits_allowed": {
-            "point": 1.5,
-            "over": 125,
-            "under": -175,
-            "overStr": "+125",
-            "underStr": "-175"
-          },
-          "pitcher_outs": {
-            "point": 10.5,
-            "over": -130,
-            "under": -105,
-            "overStr": "-130",
-            "underStr": "-105"
-          },
-          "pitcher_strikeouts": {
-            "point": 4.5,
-            "over": -115,
-            "under": -115,
-            "overStr": "-115",
-            "underStr": "-115"
-          },
-          "pitcher_walks": {
-            "point": 0.5,
-            "over": -110,
-            "under": -125,
-            "overStr": "-110",
-            "underStr": "-125"
-          }
-        },
-        "Parker Messick": {
-          "pitcher_strikeouts": {
-            "point": 8.5,
-            "over": -130,
-            "under": -105,
-            "overStr": "-130",
-            "underStr": "-105"
-          }
-        }
-      }
-    },
-    {
-      "id": "1632ced04d65127cf6172d3a2c2e2d16",
-      "home": "Los Angeles Dodgers",
-      "away": "Atlanta Braves",
-      "time": "4:00 PM ET",
-      "commence": "2026-10-03T20:00:00Z",
-      "starters": {
-        "away": {
-          "name": "Dylan Dodd",
-          "id": 689266,
-          "hand": "?",
-          "confirmed": true
-        },
-        "home": {
-          "name": "Tarik Skubal",
-          "id": 669373,
-          "hand": "?",
-          "confirmed": true
-        }
-      },
-      "pitcher_stats": {
-        "away": {
-          "era": 2.54,
-          "whip": 0.91,
-          "k9": 9.6,
-          "bb9": 2.54,
-          "h9": 5.62,
-          "ip": 49.2,
-          "avgIP": 49.2,
-          "gs": 1,
-          "kPct": 27.3,
-          "_source": "mlb_stats_api",
-          "l5ERA": 5.4,
-          "l5KPct": 33.3,
-          "l5BB9": 1.35,
-          "l5AvgIP": 6.2,
-          "l3ERA": 4.15,
-          "l3KPct": 35.3,
-          "l3BB9": null,
-          "l3AvgIP": 4.1,
-          "name": "Dylan Dodd",
-          "pid": 689266
-        },
-        "home": {
-          "era": 2.72,
-          "whip": 0.96,
-          "k9": 10.55,
-          "bb9": 1.53,
-          "h9": 7.15,
-          "ip": 158.2,
-          "avgIP": 6.1,
-          "gs": 26,
-          "kPct": 30.0,
-          "_source": "mlb_stats_api",
-          "l5ERA": 2.25,
-          "l5KPct": 26.4,
-          "l5BB9": 1.69,
-          "l5AvgIP": 6.4,
-          "l3ERA": 1.89,
-          "l3KPct": 30.6,
-          "l3BB9": 1.42,
-          "l3AvgIP": 6.3,
-          "name": "Tarik Skubal",
-          "pid": 669373
-        }
-      },
-      "team_stats": {
-        "away": {
-          "name": "Atlanta Braves",
-          "_source": "mlb_stats_api",
-          "rPerG": 4.58,
-          "avg": ".246",
-          "ops": ".718",
-          "kPct": 21.6,
-          "bbPct": 7.7,
-          "rPerG_L5": 3.67,
-          "bullpenERA_L14": 3.68
-        },
-        "home": {
-          "name": "Los Angeles Dodgers",
-          "_source": "mlb_stats_api",
-          "rPerG": 4.94,
-          "avg": ".257",
-          "ops": ".762",
-          "kPct": 20.4,
-          "bbPct": 10.1,
-          "rPerG_L5": 3.67,
-          "bullpenERA_L14": 1.97
-        }
-      },
-      "lines": {
-        "ml": "Los Angeles Dodgers -212 / Atlanta Braves +173",
-        "spread": "Los Angeles Dodgers -1.5 (-102)",
-        "total": "O/U 8.5 (Over -103 / Under -117)",
-        "raw": {
-          "homeML": -212,
-          "awayML": 173,
-          "homeSpread": -1.5,
-          "homeSpreadOdds": -102,
-          "awaySpread": 1.5,
-          "awaySpreadOdds": -119,
-          "total": 8.5,
-          "overOdds": -103,
-          "underOdds": -117
-        }
-      },
-      "props": {
-        "Tarik Skubal": {
-          "pitcher_earned_runs": {
-            "point": 1.5,
-            "over": -124,
-            "under": -107,
-            "overStr": "-124",
-            "underStr": "-107"
-          },
-          "pitcher_hits_allowed": {
-            "point": 4.5,
-            "over": -119,
-            "under": -112,
-            "overStr": "-119",
-            "underStr": "-112"
-          },
-          "pitcher_outs": {
-            "point": 17.5,
-            "over": -197,
-            "under": 147,
-            "overStr": "-197",
-            "underStr": "+147"
-          },
-          "pitcher_strikeouts": {
-            "point": 6.5,
-            "over": -153,
-            "under": 120,
-            "overStr": "-153",
-            "underStr": "+120"
-          },
-          "pitcher_walks": {
-            "point": 0.5,
-            "over": -190,
-            "under": 142,
-            "overStr": "-190",
-            "underStr": "+142"
-          }
-        }
-      }
-    },
     {
       "id": "cb4d07dc15440acf3d9ebe1ad41756c1",
       "home": "Tampa Bay Rays",
@@ -393,52 +92,66 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Tampa Bay Rays -134 / New York Yankees +114",
-        "spread": "Tampa Bay Rays -1.5 (+172)",
-        "total": "O/U 6.5 (Over -140 / Under +114)",
+        "ml": "Tampa Bay Rays -162 / New York Yankees +126",
+        "spread": "Tampa Bay Rays -1.5 (+178)",
+        "total": "O/U 5.5 (Over +118 / Under -158)",
         "raw": {
-          "homeML": -134,
-          "awayML": 114,
+          "homeML": -162,
+          "awayML": 126,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 172,
+          "homeSpreadOdds": 178,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -210,
-          "total": 6.5,
-          "overOdds": -140,
-          "underOdds": 114
+          "awaySpreadOdds": -245,
+          "total": 5.5,
+          "overOdds": 118,
+          "underOdds": -158
         }
       },
       "props": {
         "Gerrit Cole": {
+          "pitcher_earned_runs": {
+            "point": 1.5,
+            "over": 115,
+            "under": -155,
+            "overStr": "+115",
+            "underStr": "-155"
+          },
+          "pitcher_hits_allowed": {
+            "point": 4.5,
+            "over": -190,
+            "under": 140,
+            "overStr": "-190",
+            "underStr": "+140"
+          },
           "pitcher_outs": {
             "point": 16.5,
-            "over": -138,
-            "under": 104,
-            "overStr": "-138",
-            "underStr": "+104"
+            "over": -105,
+            "under": -130,
+            "overStr": "-105",
+            "underStr": "-130"
           },
           "pitcher_strikeouts": {
-            "point": 5.5,
-            "over": 134,
-            "under": -172,
-            "overStr": "+134",
-            "underStr": "-172"
+            "point": 4.5,
+            "over": -155,
+            "under": 115,
+            "overStr": "-155",
+            "underStr": "+115"
+          },
+          "pitcher_walks": {
+            "point": 1.5,
+            "over": -150,
+            "under": 110,
+            "overStr": "-150",
+            "underStr": "+110"
           }
         },
         "Drew Rasmussen": {
-          "pitcher_outs": {
-            "point": 16.5,
-            "over": -120,
-            "under": -112,
-            "overStr": "-120",
-            "underStr": "-112"
-          },
           "pitcher_strikeouts": {
-            "point": 6.5,
-            "over": 112,
-            "under": -142,
-            "overStr": "+112",
-            "underStr": "-142"
+            "point": 5.5,
+            "over": -160,
+            "under": 115,
+            "overStr": "-160",
+            "underStr": "+115"
           }
         }
       }
@@ -534,94 +247,94 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Milwaukee Brewers -219 / San Diego Padres +178",
-        "spread": "Milwaukee Brewers -1.5 (+104)",
-        "total": "O/U 7.0 (Over -107 / Under -112)",
+        "ml": "Milwaukee Brewers -218 / San Diego Padres +178",
+        "spread": "Milwaukee Brewers -1.5 (+102)",
+        "total": "O/U 7.0 (Over -103 / Under -117)",
         "raw": {
-          "homeML": -219,
+          "homeML": -218,
           "awayML": 178,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 104,
+          "homeSpreadOdds": 102,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -126,
+          "awaySpreadOdds": -123,
           "total": 7.0,
-          "overOdds": -107,
-          "underOdds": -112
+          "overOdds": -103,
+          "underOdds": -117
         }
       },
       "props": {
         "Jacob Misiorowski": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": 123,
-            "under": -163,
-            "overStr": "+123",
-            "underStr": "-163"
+            "over": 126,
+            "under": -168,
+            "overStr": "+126",
+            "underStr": "-168"
           },
           "pitcher_hits_allowed": {
             "point": 3.5,
-            "over": -127,
-            "under": -105,
-            "overStr": "-127",
-            "underStr": "-105"
+            "over": -133,
+            "under": 100,
+            "overStr": "-133",
+            "underStr": "+100"
           },
           "pitcher_outs": {
             "point": 17.5,
-            "over": -136,
-            "under": 103,
-            "overStr": "-136",
-            "underStr": "+103"
+            "over": -147,
+            "under": 111,
+            "overStr": "-147",
+            "underStr": "+111"
           },
           "pitcher_strikeouts": {
-            "point": 8.5,
-            "over": 107,
-            "under": -136,
-            "overStr": "+107",
-            "underStr": "-136"
+            "point": 7.5,
+            "over": -150,
+            "under": 118,
+            "overStr": "-150",
+            "underStr": "+118"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": 127,
-            "under": -169,
-            "overStr": "+127",
-            "underStr": "-169"
+            "over": 116,
+            "under": -155,
+            "overStr": "+116",
+            "underStr": "-155"
           }
         },
         "Robbie Ray": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -168,
-            "under": 126,
-            "overStr": "-168",
-            "underStr": "+126"
+            "over": -152,
+            "under": 114,
+            "overStr": "-152",
+            "underStr": "+114"
           },
           "pitcher_hits_allowed": {
             "point": 3.5,
-            "over": -143,
-            "under": 107,
-            "overStr": "-143",
-            "underStr": "+107"
+            "over": -105,
+            "under": -126,
+            "overStr": "-105",
+            "underStr": "-126"
           },
           "pitcher_outs": {
             "point": 11.5,
-            "over": -110,
-            "under": -120,
-            "overStr": "-110",
-            "underStr": "-120"
+            "over": -114,
+            "under": -116,
+            "overStr": "-114",
+            "underStr": "-116"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": -149,
-            "under": 117,
-            "overStr": "-149",
-            "underStr": "+117"
+            "over": -136,
+            "under": 106,
+            "overStr": "-136",
+            "underStr": "+106"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -140,
-            "under": 105,
-            "overStr": "-140",
-            "underStr": "+105"
+            "over": -142,
+            "under": 107,
+            "overStr": "-142",
+            "underStr": "+107"
           }
         }
       }

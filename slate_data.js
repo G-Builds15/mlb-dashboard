@@ -6,58 +6,6 @@
 
 const games = {
 
-  "sox-gua": {
-    away:"Chicago White Sox", home:"Cleveland Guardians",
-    time:"1:07 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Hagen Smith (?HP) vs Parker Messick (?HP)",
-    overview:{
-      lines:{ ml:"Cleveland Guardians -162 / Chicago White Sox +126", spread:"Cleveland Guardians -1.5 (+168)", total:"O/U 4.5 (Over -136 / Under +102)", movement:"" },
-      away:{ teamName:"Chicago White Sox", abbr:"SOX",
-        offStats:{"avg": ".236", "ops": ".726", "kPct": "24.1", "rPerG": "4.79", "rPerG_L10": "4.79", "rPerG_L5": "5.33"},
-        defStats:{"era": "1.29", "bullpenERA_L14": "3.68", "whip": "0.96"},
-        starter:{"name": "Hagen Smith", "hand": "?HP", "era": "1.29", "whip": "0.96", "k9": "13.18", "bb9": "5.14", "era_L3": "2.7", "avgIP": "28.0"},
-        injuries:[] },
-      home:{ teamName:"Cleveland Guardians", abbr:"GUA",
-        offStats:{"avg": ".239", "ops": ".696", "kPct": "20.8", "rPerG": "4.19", "rPerG_L10": "4.19", "rPerG_L5": "8.33"},
-        defStats:{"era": "2.56", "bullpenERA_L14": "3.34", "whip": "1.06"},
-        starter:{"name": "Parker Messick", "hand": "?HP", "era": "2.56", "whip": "1.06", "k9": "9.32", "bb9": "2.37", "era_L3": "3.21", "avgIP": "5.8"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 03, 2026",cards:[{"lbl": "Smith — Earned Runs", "pick": "Under 0.5 ER", "odds": "-225", "grade": "A-", "rat": "Blended ERA 1.66 — season 1.29 · L5 1.59 · L3 2.70", "chips": ["Blended ERA: 1.66 · 27.1 avg IP", "Season 1.29 · L5 1.59 · L3 2.7", "BB/9 5.1 — IP adj 28.0→27.1"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.29, "l5ERA": 1.59, "l3ERA": 2.7, "avgIP": 28.0, "bb9": 5.14}}]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "bra-dod": {
-    away:"Atlanta Braves", home:"Los Angeles Dodgers",
-    time:"4:00 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Dylan Dodd (?HP) vs Tarik Skubal (?HP)",
-    overview:{
-      lines:{ ml:"Los Angeles Dodgers -212 / Atlanta Braves +173", spread:"Los Angeles Dodgers -1.5 (-102)", total:"O/U 8.5 (Over -103 / Under -117)", movement:"" },
-      away:{ teamName:"Atlanta Braves", abbr:"BRA",
-        offStats:{"avg": ".246", "ops": ".718", "kPct": "21.6", "rPerG": "4.58", "rPerG_L10": "4.58", "rPerG_L5": "3.67"},
-        defStats:{"era": "2.54", "bullpenERA_L14": "3.68", "whip": "0.91"},
-        starter:{"name": "Dylan Dodd", "hand": "?HP", "era": "2.54", "whip": "0.91", "k9": "9.6", "bb9": "2.54", "era_L3": "4.15", "avgIP": "49.2"},
-        injuries:[] },
-      home:{ teamName:"Los Angeles Dodgers", abbr:"DOD",
-        offStats:{"avg": ".257", "ops": ".762", "kPct": "20.4", "rPerG": "4.94", "rPerG_L10": "4.94", "rPerG_L5": "3.67"},
-        defStats:{"era": "2.72", "bullpenERA_L14": "1.97", "whip": "0.96"},
-        starter:{"name": "Tarik Skubal", "hand": "?HP", "era": "2.72", "whip": "0.96", "k9": "10.55", "bb9": "1.53", "era_L3": "1.89", "avgIP": "6.1"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 03, 2026",cards:[{"lbl": "Skubal — Strikeouts", "pick": "Over 6.5 Ks", "odds": "-153", "grade": "B+", "rat": "Blended K% 29.2% — projects 7.7 Ks vs 6.5 line", "chips": ["Blended K%: 29.2% · proj 7.7 Ks vs 6.5 line", "ERA 2.72 · BB/9 1.53 · avgIP 6.1 · trend NEUTRAL", "L5 ERA: 2.25 · L3 ERA: 1.89"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.72, "l5ERA": 2.25, "l3ERA": 1.89, "avgIP": 6.1, "bb9": 1.53}}, {"lbl": "Skubal — Earned Runs", "pick": "Under 1.5 ER", "odds": "-107", "grade": "A-", "rat": "Blended ERA 2.41 — season 2.72 · L5 2.25 · L3 1.89", "chips": ["Blended ERA: 2.41 · 6.1 avg IP", "Season 2.72 · L5 2.25 · L3 1.89", "BB/9 1.53 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.72, "l5ERA": 2.25, "l3ERA": 1.89, "avgIP": 6.1, "bb9": 1.53}}, {"lbl": "Skubal — Outs Recorded", "pick": "Over 17.5 outs", "odds": "-197", "grade": "B", "rat": "Projects 18.7 outs (6.2 IP) vs 17.5 line", "chips": ["Proj 18.7 outs · blended 6.2 avgIP vs 5.8 IP line", "Stable depth (6.1 avgIP · L3 6.3 IP)", "Season avgIP 6.1 · 26 GS · 158 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.72, "l5ERA": 2.25, "l3ERA": 1.89, "avgIP": 6.1, "bb9": 1.53}}]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
   "yan-ray": {
     away:"New York Yankees", home:"Tampa Bay Rays",
     time:"6:31 PM ET", venue:"TBD",
@@ -65,7 +13,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Gerrit Cole (?HP) vs Drew Rasmussen (?HP)",
     overview:{
-      lines:{ ml:"Tampa Bay Rays -134 / New York Yankees +114", spread:"Tampa Bay Rays -1.5 (+172)", total:"O/U 6.5 (Over -140 / Under +114)", movement:"" },
+      lines:{ ml:"Tampa Bay Rays -162 / New York Yankees +126", spread:"Tampa Bay Rays -1.5 (+178)", total:"O/U 5.5 (Over +118 / Under -158)", movement:"" },
       away:{ teamName:"New York Yankees", abbr:"YAN",
         offStats:{"avg": ".235", "ops": ".720", "kPct": "24.7", "rPerG": "4.59", "rPerG_L10": "4.59", "rPerG_L5": "4.59"},
         defStats:{"era": "3.61", "bullpenERA_L14": "4.22", "whip": "1.1"},
@@ -79,7 +27,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 03, 2026",cards:[{"lbl": "Cole — Strikeouts", "pick": "Over 5.5 Ks", "odds": "+134", "grade": "B", "rat": "Blended K% 24.8% — projects 6.2 Ks vs 5.5 line", "chips": ["Blended K%: 24.8% · proj 6.2 Ks vs 5.5 line", "ERA 3.61 · BB/9 1.77 · avgIP 5.8 · trend NEUTRAL", "L5 ERA: 5.08 · L3 ERA: 5.06"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.61, "l5ERA": 5.08, "l3ERA": 5.06, "avgIP": 5.8, "bb9": 1.77}}, {"lbl": "Rasmussen — Strikeouts", "pick": "Over 6.5 Ks", "odds": "+112", "grade": "B", "rat": "Blended K% 26.9% — projects 6.6 Ks vs 6.5 line", "chips": ["Blended K%: 26.9% · proj 6.6 Ks vs 6.5 line", "ERA 2.67 · BB/9 1.67 · avgIP 5.7 · trend HOT", "L5 ERA: 1.42 · L3 ERA: 0.77"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.67, "l5ERA": 1.42, "l3ERA": 0.77, "avgIP": 5.7, "bb9": 1.67}}, {"lbl": "Rasmussen — Outs Recorded", "pick": "Over 16.5 outs", "odds": "-120", "grade": "B", "rat": "Projects 17.5 outs (5.8 IP) vs 16.5 line", "chips": ["Proj 17.5 outs · blended 5.8 avgIP vs 5.5 IP line", "Stable depth (5.7 avgIP · L3 5.6 IP)", "Season avgIP 5.7 · 30 GS · 172 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.67, "l5ERA": 1.42, "l3ERA": 0.77, "avgIP": 5.7, "bb9": 1.67}}]},
+      pitcher:{intro:"Props graded Oct 03, 2026",cards:[{"lbl": "Cole — Strikeouts", "pick": "Over 4.5 Ks", "odds": "-155", "grade": "B", "rat": "Blended K% 24.8% — projects 6.2 Ks vs 4.5 line", "chips": ["Blended K%: 24.8% · proj 6.2 Ks vs 4.5 line", "ERA 3.61 · BB/9 1.77 · avgIP 5.8 · trend NEUTRAL", "L5 ERA: 5.08 · L3 ERA: 5.06"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.61, "l5ERA": 5.08, "l3ERA": 5.06, "avgIP": 5.8, "bb9": 1.77}}, {"lbl": "Cole — Walks", "pick": "Under 1.5 BB", "odds": "+110", "grade": "B", "rat": "BB/9 1.77 — projects 1.1 walks vs 1.5 line", "chips": ["BB/9: 1.8 · adj 1.7 · proj 1.1 walks vs 1.5 line", "L3 BB/9: 1.7", "Blended ERA 4.34 · 22 GS · 127.0 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.61, "l5ERA": 5.08, "l3ERA": 5.06, "avgIP": 5.8, "bb9": 1.77}}, {"lbl": "Rasmussen — Strikeouts", "pick": "Over 5.5 Ks", "odds": "-160", "grade": "B", "rat": "Blended K% 26.9% — projects 6.6 Ks vs 5.5 line", "chips": ["Blended K%: 26.9% · proj 6.6 Ks vs 5.5 line", "ERA 2.67 · BB/9 1.67 · avgIP 5.7 · trend HOT", "L5 ERA: 1.42 · L3 ERA: 0.77"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.67, "l5ERA": 1.42, "l3ERA": 0.77, "avgIP": 5.7, "bb9": 1.67}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   },
@@ -91,7 +39,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Robbie Ray (?HP) vs Jacob Misiorowski (?HP)",
     overview:{
-      lines:{ ml:"Milwaukee Brewers -219 / San Diego Padres +178", spread:"Milwaukee Brewers -1.5 (+104)", total:"O/U 7.0 (Over -107 / Under -112)", movement:"" },
+      lines:{ ml:"Milwaukee Brewers -218 / San Diego Padres +178", spread:"Milwaukee Brewers -1.5 (+102)", total:"O/U 7.0 (Over -103 / Under -117)", movement:"" },
       away:{ teamName:"San Diego Padres", abbr:"PAD",
         offStats:{"avg": ".244", "ops": ".717", "kPct": "21.6", "rPerG": "4.46", "rPerG_L10": "4.46", "rPerG_L5": "7.67"},
         defStats:{"era": "3.59", "bullpenERA_L14": "5.0", "whip": "1.35"},
@@ -105,7 +53,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 03, 2026",cards:[{"lbl": "Ray — Walks", "pick": "Over 1.5 BB", "odds": "-140", "grade": "B", "rat": "BB/9 4.56 — projects 2.1 walks vs 1.5 line", "chips": ["BB/9: 4.6 · adj 3.9 · proj 2.1 walks vs 1.5 line", "↗ Improving command", "Blended ERA 4.36 · 30 GS · 165.2 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.59, "l5ERA": 5.96, "l3ERA": 3.86, "avgIP": 5.5, "bb9": 4.56}}, {"lbl": "Misiorowski — Strikeouts", "pick": "Over 8.5 Ks", "odds": "+107", "grade": "B+", "rat": "Blended K% 35.6% — projects 8.9 Ks vs 8.5 line", "chips": ["Blended K%: 35.6% · proj 8.9 Ks vs 8.5 line", "ERA 1.80 · BB/9 2.27 · avgIP 5.8 · trend COLD", "L5 ERA: 2.28 · L3 ERA: 1.80"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.8, "l5ERA": 2.28, "l3ERA": 1.8, "avgIP": 5.8, "bb9": 2.27}}, {"lbl": "Misiorowski — Earned Runs", "pick": "Under 1.5 ER", "odds": "-163", "grade": "A-", "rat": "Blended ERA 1.94 — season 1.80 · L5 2.28 · L3 1.80", "chips": ["Blended ERA: 1.94 · 5.8 avg IP", "Season 1.8 · L5 2.28 · L3 1.8", "BB/9 2.27 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.8, "l5ERA": 2.28, "l3ERA": 1.8, "avgIP": 5.8, "bb9": 2.27}}, {"lbl": "Misiorowski — Outs Recorded", "pick": "Under 17.5 outs", "odds": "+103", "grade": "A-", "rat": "Projects 15.5 outs (5.2 IP) vs 17.5 line", "chips": ["Proj 15.5 outs · blended 5.2 avgIP vs 5.8 IP line", "⚠ Trending shorter (L3 avg 4.4 IP vs season 5.8 IP)", "Season avgIP 5.8 · 30 GS · 174 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.8, "l5ERA": 2.28, "l3ERA": 1.8, "avgIP": 5.8, "bb9": 2.27}}]},
+      pitcher:{intro:"Props graded Oct 03, 2026",cards:[{"lbl": "Ray — Walks", "pick": "Over 1.5 BB", "odds": "-142", "grade": "B", "rat": "BB/9 4.56 — projects 2.1 walks vs 1.5 line", "chips": ["BB/9: 4.6 · adj 3.9 · proj 2.1 walks vs 1.5 line", "↗ Improving command", "Blended ERA 4.36 · 30 GS · 165.2 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.59, "l5ERA": 5.96, "l3ERA": 3.86, "avgIP": 5.5, "bb9": 4.56}}, {"lbl": "Misiorowski — Strikeouts", "pick": "Over 7.5 Ks", "odds": "-150", "grade": "A-", "rat": "Blended K% 35.6% — projects 8.9 Ks vs 7.5 line", "chips": ["Blended K%: 35.6% · proj 8.9 Ks vs 7.5 line", "ERA 1.80 · BB/9 2.27 · avgIP 5.8 · trend COLD", "L5 ERA: 2.28 · L3 ERA: 1.80"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.8, "l5ERA": 2.28, "l3ERA": 1.8, "avgIP": 5.8, "bb9": 2.27}}, {"lbl": "Misiorowski — Earned Runs", "pick": "Under 1.5 ER", "odds": "-168", "grade": "A-", "rat": "Blended ERA 1.94 — season 1.80 · L5 2.28 · L3 1.80", "chips": ["Blended ERA: 1.94 · 5.8 avg IP", "Season 1.8 · L5 2.28 · L3 1.8", "BB/9 2.27 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.8, "l5ERA": 2.28, "l3ERA": 1.8, "avgIP": 5.8, "bb9": 2.27}}, {"lbl": "Misiorowski — Outs Recorded", "pick": "Under 17.5 outs", "odds": "+111", "grade": "A-", "rat": "Projects 15.5 outs (5.2 IP) vs 17.5 line", "chips": ["Proj 15.5 outs · blended 5.2 avgIP vs 5.8 IP line", "⚠ Trending shorter (L3 avg 4.4 IP vs season 5.8 IP)", "Season avgIP 5.8 · 30 GS · 174 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.8, "l5ERA": 2.28, "l3ERA": 1.8, "avgIP": 5.8, "bb9": 2.27}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -113,13 +61,10 @@ const games = {
 };
 
 const bestBets = [
-  {game:"SOX@GUA", pick:"Over 4.5", odds:"-136", grade:"A-", src:"era"},
-  {game:"SOX@GUA", pick:"Under 0.5 ER", odds:"-225", grade:"A-", src:"MLB Stats API"},
-  {game:"BRA@DOD", pick:"Over 8.5", odds:"-103", grade:"A-", src:"era"},
-  {game:"BRA@DOD", pick:"Under 1.5 ER", odds:"-107", grade:"A-", src:"MLB Stats API"},
-  {game:"PAD@BRE", pick:"Over 7.0", odds:"-107", grade:"A-", src:"era"},
-  {game:"PAD@BRE", pick:"Under 1.5 ER", odds:"-163", grade:"A-", src:"MLB Stats API"},
-  {game:"PAD@BRE", pick:"Under 17.5 outs", odds:"+103", grade:"A-", src:"MLB Stats API"},
-  {game:"SOX@GUA", pick:"Guardians ML", odds:"-162", grade:"C", parlay:true, src:"era"},
-  {game:"YAN@RAY", pick:"Rays ML", odds:"-134", grade:"C", parlay:true, src:"era"}
+  {game:"YAN@RAY", pick:"Over 5.5", odds:"+118", grade:"A-", src:"era"},
+  {game:"PAD@BRE", pick:"Over 7.0", odds:"-103", grade:"A-", src:"era"},
+  {game:"PAD@BRE", pick:"Over 7.5 Ks", odds:"-150", grade:"A-", src:"MLB Stats API"},
+  {game:"PAD@BRE", pick:"Under 1.5 ER", odds:"-168", grade:"A-", src:"MLB Stats API"},
+  {game:"PAD@BRE", pick:"Under 17.5 outs", odds:"+111", grade:"A-", src:"MLB Stats API"},
+  {game:"YAN@RAY", pick:"Rays ML", odds:"-162", grade:"C", parlay:true, src:"era"}
 ];
