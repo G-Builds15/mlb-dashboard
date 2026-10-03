@@ -1,12 +1,106 @@
 {
   "2026-10-03": {
-    "generated_at": "2026-10-03T00:03:49Z",
-    "game_count": 1,
-    "picks": [],
+    "generated_at": "2026-10-03T17:44:59Z",
+    "game_count": 4,
+    "picks": [
+      {
+        "game": "SOX@GUA",
+        "pick": "Over 4.5",
+        "odds": "-136",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@GUA",
+        "pick": "Under 0.5 ER",
+        "odds": "-225",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "BRA@DOD",
+        "pick": "Over 8.5",
+        "odds": "-103",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "BRA@DOD",
+        "pick": "Under 1.5 ER",
+        "odds": "-107",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "PAD@BRE",
+        "pick": "Over 7.0",
+        "odds": "-107",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "PAD@BRE",
+        "pick": "Under 1.5 ER",
+        "odds": "-163",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "PAD@BRE",
+        "pick": "Under 17.5 outs",
+        "odds": "+103",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "SOX@GUA",
+        "pick": "Guardians ML",
+        "odds": "-162",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "YAN@RAY",
+        "pick": "Rays ML",
+        "odds": "-134",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      }
+    ],
     "summary": {
-      "total": 0,
-      "by_grade": {},
-      "parlay_count": 0
+      "total": 9,
+      "by_grade": {
+        "A-": 7,
+        "C": 2
+      },
+      "parlay_count": 2
     }
   },
   "2026-10-02": {
