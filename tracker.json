@@ -1,4 +1,48 @@
 {
+  "2026-10-04": {
+    "generated_at": "2026-10-04T17:58:13Z",
+    "game_count": 2,
+    "picks": [
+      {
+        "game": "BRA@DOD",
+        "pick": "Under 16.5 outs",
+        "odds": "+100",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "PAD@BRE",
+        "pick": "Brewers ML",
+        "odds": "-134",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "BRA@DOD",
+        "pick": "Dodgers ML",
+        "odds": "-152",
+        "grade": "C",
+        "src": "bullpen_pivot",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 3,
+      "by_grade": {
+        "A-": 1,
+        "C": 2
+      },
+      "parlay_count": 2
+    }
+  },
   "2026-10-03": {
     "generated_at": "2026-10-03T23:26:20Z",
     "game_count": 2,
