@@ -6,44 +6,18 @@
 
 const games = {
 
-  "pad-bre": {
-    away:"San Diego Padres", home:"Milwaukee Brewers",
-    time:"4:00 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Michael King (?HP) vs Logan Henderson (?HP)",
-    overview:{
-      lines:{ ml:"Milwaukee Brewers -134 / San Diego Padres +114", spread:"Milwaukee Brewers -1.5 (+162)", total:"O/U 7.5 (Over +106 / Under -130)", movement:"" },
-      away:{ teamName:"San Diego Padres", abbr:"PAD",
-        offStats:{"avg": ".244", "ops": ".717", "kPct": "21.6", "rPerG": "4.46", "rPerG_L10": "4.46", "rPerG_L5": "4.46"},
-        defStats:{"era": "3.21", "bullpenERA_L14": "4.94", "whip": "1.18"},
-        starter:{"name": "Michael King", "hand": "?HP", "era": "3.21", "whip": "1.18", "k9": "7.74", "bb9": "3.41", "era_L3": "6.3", "avgIP": "5.8"},
-        injuries:[] },
-      home:{ teamName:"Milwaukee Brewers", abbr:"BRE",
-        offStats:{"avg": ".258", "ops": ".744", "kPct": "22.0", "rPerG": "5.14", "rPerG_L10": "5.14", "rPerG_L5": "5.14"},
-        defStats:{"era": "2.47", "bullpenERA_L14": "2.47", "whip": "0.84"},
-        starter:{"name": "Logan Henderson", "hand": "?HP", "era": "2.47", "whip": "0.84", "k9": "10.07", "bb9": "1.74", "era_L3": "3.6", "avgIP": "5.4"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 04, 2026",cards:[{"lbl": "King — Outs Recorded", "pick": "Over 14.5 outs", "odds": "-136", "grade": "B", "rat": "Projects 16.9 outs (5.6 IP) vs 14.5 line", "chips": ["Proj 16.9 outs · blended 5.6 avgIP vs 4.8 IP line", "⚠ Trending shorter (L3 avg 5.0 IP vs season 5.8 IP)", "Season avgIP 5.8 · 32 GS · 185 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.21, "l5ERA": 3.1, "l3ERA": 6.3, "avgIP": 5.8, "bb9": 3.41}}, {"lbl": "Henderson — Strikeouts", "pick": "Over 6.5 Ks", "odds": "+130", "grade": "B", "rat": "Blended K% 28.7% — projects 6.7 Ks vs 6.5 line", "chips": ["Blended K%: 28.7% · proj 6.7 Ks vs 6.5 line", "ERA 2.47 · BB/9 1.74 · avgIP 5.4 · trend NEUTRAL", "L5 ERA: 2.45 · L3 ERA: 3.60"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.47, "l5ERA": 2.45, "l3ERA": 3.6, "avgIP": 5.4, "bb9": 1.74}}]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
   "bra-dod": {
     away:"Atlanta Braves", home:"Los Angeles Dodgers",
     time:"8:00 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs Blake Snell (?HP)",
+    starters:"Ray Kerr (?HP) vs Blake Snell (?HP)",
     overview:{
-      lines:{ ml:"Los Angeles Dodgers -152 / Atlanta Braves +128", spread:"Los Angeles Dodgers -1.5 (+150)", total:"O/U 7.5 (Over +114 / Under -140)", movement:"" },
+      lines:{ ml:"Los Angeles Dodgers -230 / Atlanta Braves +198", spread:"Los Angeles Dodgers -1.5 (-104)", total:"O/U 7.5 (Over -122 / Under +100)", movement:"" },
       away:{ teamName:"Atlanta Braves", abbr:"BRA",
         offStats:{"avg": ".246", "ops": ".718", "kPct": "21.6", "rPerG": "4.58", "rPerG_L10": "4.58", "rPerG_L5": "4.58"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "3.77", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+        defStats:{"era": "1.47", "bullpenERA_L14": "3.77", "whip": "0.6"},
+        starter:{"name": "Ray Kerr", "hand": "?HP", "era": "1.47", "whip": "0.6", "k9": "5.4", "bb9": "0.98", "era_L3": "1.29", "avgIP": "18.1"},
         injuries:[] },
       home:{ teamName:"Los Angeles Dodgers", abbr:"DOD",
         offStats:{"avg": ".257", "ops": ".762", "kPct": "20.4", "rPerG": "4.94", "rPerG_L10": "4.94", "rPerG_L5": "4.94"},
@@ -53,7 +27,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 04, 2026",cards:[{"lbl": "Snell — Outs Recorded", "pick": "Under 16.5 outs", "odds": "+100", "grade": "A-", "rat": "Projects 12.1 outs (4.0 IP) vs 16.5 line", "chips": ["Proj 12.1 outs · blended 4.0 avgIP vs 5.5 IP line", "⚠ Trending shorter (L3 avg 2.5 IP vs season 4.7 IP)", "Season avgIP 4.7 · 9 GS · 42 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.9, "l5ERA": 1.08, "l3ERA": 1.8, "avgIP": 4.7, "bb9": 3.38}}]},
+      pitcher:{intro:"Props graded Oct 04, 2026",cards:[{"lbl": "Snell — Outs Recorded", "pick": "Under 16.5 outs", "odds": "-106", "grade": "A-", "rat": "Projects 12.1 outs (4.0 IP) vs 16.5 line", "chips": ["Proj 12.1 outs · blended 4.0 avgIP vs 5.5 IP line", "⚠ Trending shorter (L3 avg 2.5 IP vs season 4.7 IP)", "Season avgIP 4.7 · 9 GS · 42 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.9, "l5ERA": 1.08, "l3ERA": 1.8, "avgIP": 4.7, "bb9": 3.38}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -61,7 +35,5 @@ const games = {
 };
 
 const bestBets = [
-  {game:"BRA@DOD", pick:"Under 16.5 outs", odds:"+100", grade:"A-", src:"MLB Stats API"},
-  {game:"PAD@BRE", pick:"Brewers ML", odds:"-134", grade:"C", parlay:true, src:"era"},
-  {game:"BRA@DOD", pick:"Dodgers ML", odds:"-152", grade:"C", parlay:true, src:"bullpen_pivot"}
+  {game:"BRA@DOD", pick:"Under 16.5 outs", odds:"-106", grade:"A-", src:"MLB Stats API"}
 ];
