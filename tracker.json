@@ -1,4 +1,37 @@
 {
+  "2026-10-05": {
+    "generated_at": "2026-10-05T21:29:48Z",
+    "game_count": 2,
+    "picks": [
+      {
+        "game": "SOX@GUA",
+        "pick": "Over 7.5 Ks",
+        "odds": "-140",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "YAN@RAY",
+        "pick": "Under 17.5 outs",
+        "odds": "+116",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 2,
+      "by_grade": {
+        "A-": 2
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-04": {
     "generated_at": "2026-10-04T23:42:28Z",
     "game_count": 1,
