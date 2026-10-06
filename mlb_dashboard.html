@@ -586,28 +586,54 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 const games = {
 
-  "yan-ray": {
-    away:"New York Yankees", home:"Tampa Bay Rays",
-    time:"8:09 PM ET", venue:"TBD",
+  "dod-bra": {
+    away:"Los Angeles Dodgers", home:"Atlanta Braves",
+    time:"6:00 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
+    starters:"Yoshinobu Yamamoto (?HP) vs Chris Sale (?HP)",
     overview:{
-      lines:{ ml:"Tampa Bay Rays +100 / New York Yankees -128", spread:"Tampa Bay Rays +1.5 (-250)", total:"O/U 5.5 (Over +114 / Under -152)", movement:"" },
-      away:{ teamName:"New York Yankees", abbr:"YAN",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      lines:{ ml:"Atlanta Braves -109 / Los Angeles Dodgers -110", spread:"Atlanta Braves +1.5 (-194)", total:"O/U 6.5 (Over -112 / Under -108)", movement:"" },
+      away:{ teamName:"Los Angeles Dodgers", abbr:"DOD",
+        offStats:{"avg": ".257", "ops": ".762", "kPct": "20.4", "rPerG": "4.94", "rPerG_L10": "4.94", "rPerG_L5": "4.94"},
+        defStats:{"era": "2.53", "bullpenERA_L14": "1.8", "whip": "0.87"},
+        starter:{"name": "Yoshinobu Yamamoto", "hand": "?HP", "era": "2.53", "whip": "0.87", "k9": "8.85", "bb9": "2.04", "era_L3": "1.38", "avgIP": "6.6"},
         injuries:[] },
-      home:{ teamName:"Tampa Bay Rays", abbr:"RAY",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      home:{ teamName:"Atlanta Braves", abbr:"BRA",
+        offStats:{"avg": ".246", "ops": ".718", "kPct": "21.6", "rPerG": "4.58", "rPerG_L10": "4.58", "rPerG_L5": "4.58"},
+        defStats:{"era": "2.16", "bullpenERA_L14": "4.08", "whip": "0.98"},
+        starter:{"name": "Chris Sale", "hand": "?HP", "era": "2.16", "whip": "0.98", "k9": "11.07", "bb9": "1.72", "era_L3": "1.59", "avgIP": "6.0"},
         injuries:[] }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
+      pitcher:{intro:"Props graded Oct 06, 2026",cards:[{"lbl": "Yamamoto — Strikeouts", "pick": "Over 6.5 Ks", "odds": "+112", "grade": "B", "rat": "Blended K% 25.9% — projects 7.3 Ks vs 6.5 line", "chips": ["Blended K%: 25.9% · proj 7.3 Ks vs 6.5 line", "ERA 2.53 · BB/9 2.04 · avgIP 6.6 · trend NEUTRAL", "L5 ERA: 2.33 · L3 ERA: 1.38"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.53, "l5ERA": 2.33, "l3ERA": 1.38, "avgIP": 6.6, "bb9": 2.04}}, {"lbl": "Yamamoto — Earned Runs", "pick": "Under 1.5 ER", "odds": "+108", "grade": "A-", "rat": "Blended ERA 2.24 — season 2.53 · L5 2.33 · L3 1.38", "chips": ["Blended ERA: 2.24 · 6.6 avg IP", "Season 2.53 · L5 2.33 · L3 1.38", "BB/9 2.04 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.53, "l5ERA": 2.33, "l3ERA": 1.38, "avgIP": 6.6, "bb9": 2.04}}, {"lbl": "Yamamoto — Outs Recorded", "pick": "Over 17.5 outs", "odds": "-223", "grade": "B+", "rat": "Projects 19.9 outs (6.6 IP) vs 17.5 line", "chips": ["Proj 19.9 outs · blended 6.6 avgIP vs 5.8 IP line", "Stable depth (6.6 avgIP · L3 6.5 IP)", "Season avgIP 6.6 · 28 GS · 185 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.53, "l5ERA": 2.33, "l3ERA": 1.38, "avgIP": 6.6, "bb9": 2.04}}, {"lbl": "Sale — Strikeouts", "pick": "Over 7.5 Ks", "odds": "+122", "grade": "A-", "rat": "Blended K% 33.7% — projects 8.7 Ks vs 7.5 line", "chips": ["Blended K%: 33.7% · proj 8.7 Ks vs 7.5 line", "ERA 2.16 · BB/9 1.72 · avgIP 6.0 · trend HOT", "L5 ERA: 2.89 · L3 ERA: 1.59"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.16, "l5ERA": 2.89, "l3ERA": 1.59, "avgIP": 6.0, "bb9": 1.72}}, {"lbl": "Sale — Earned Runs", "pick": "Under 1.5 ER", "odds": "-108", "grade": "A-", "rat": "Blended ERA 2.27 — season 2.16 · L5 2.89 · L3 1.59", "chips": ["Blended ERA: 2.27 · 6.0 avg IP", "Season 2.16 · L5 2.89 · L3 1.59", "BB/9 1.72 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.16, "l5ERA": 2.89, "l3ERA": 1.59, "avgIP": 6.0, "bb9": 1.72}}, {"lbl": "Sale — Walks", "pick": "Under 1.5 BB", "odds": "-164", "grade": "B", "rat": "BB/9 1.72 — projects 1.1 walks vs 1.5 line", "chips": ["BB/9: 1.7 · adj 1.7 · proj 1.1 walks vs 1.5 line", "L3 BB/9: 1.7", "Blended ERA 2.27 · 27 GS · 162.2 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.16, "l5ERA": 2.89, "l3ERA": 1.59, "avgIP": 6.0, "bb9": 1.72}}, {"lbl": "Sale — Outs Recorded", "pick": "Under 18.5 outs", "odds": "-214", "grade": "B+", "rat": "Projects 17.6 outs (5.9 IP) vs 18.5 line", "chips": ["Proj 17.6 outs · blended 5.9 avgIP vs 6.2 IP line", "⚠ Trending shorter (L3 avg 5.2 IP vs season 6.0 IP)", "Season avgIP 6.0 · 27 GS · 162 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.16, "l5ERA": 2.89, "l3ERA": 1.59, "avgIP": 6.0, "bb9": 1.72}}]},
+      batter:{intro:"HRR props — lineup position pending",cards:[]}
+    }
+  },
+
+  "bre-pad": {
+    away:"Milwaukee Brewers", home:"San Diego Padres",
+    time:"9:30 PM ET", venue:"TBD",
+    awayRec:"TBD", homeRec:"TBD",
+    wx:"⛅ Weather TBD",
+    starters:"Dustin May (?HP) vs Nick Pivetta (?HP)",
+    overview:{
+      lines:{ ml:"San Diego Padres -142 / Milwaukee Brewers +120", spread:"San Diego Padres -1.5 (+150)", total:"O/U 7.5 (Over -102 / Under -120)", movement:"" },
+      away:{ teamName:"Milwaukee Brewers", abbr:"BRE",
+        offStats:{"avg": ".258", "ops": ".744", "kPct": "22.0", "rPerG": "5.14", "rPerG_L10": "5.14", "rPerG_L5": "5.14"},
+        defStats:{"era": "4.7", "bullpenERA_L14": "2.89", "whip": "1.32"},
+        starter:{"name": "Dustin May", "hand": "?HP", "era": "4.7", "whip": "1.32", "k9": "8.9", "bb9": "3.09", "era_L3": "8.59", "avgIP": "4.7"},
+        injuries:[] },
+      home:{ teamName:"San Diego Padres", abbr:"PAD",
+        offStats:{"avg": ".244", "ops": ".717", "kPct": "21.6", "rPerG": "4.46", "rPerG_L10": "4.46", "rPerG_L5": "4.46"},
+        defStats:{"era": "2.86", "bullpenERA_L14": "5.26", "whip": "1.01"},
+        starter:{"name": "Nick Pivetta", "hand": "?HP", "era": "2.86", "whip": "1.01", "k9": "10.9", "bb9": "2.08", "era_L3": "0.93", "avgIP": "4.3"},
+        injuries:[] }
+    },
+    tabs:{
+      overview:{intro:"",cards:[]},
+      pitcher:{intro:"Props graded Oct 06, 2026",cards:[{"lbl": "May — Strikeouts", "pick": "Over 2.5 Ks", "odds": "-154", "grade": "B", "rat": "Blended K% 25.5% — projects 5.2 Ks vs 2.5 line", "chips": ["Blended K%: 25.5% · proj 5.2 Ks vs 2.5 line", "ERA 4.70 · BB/9 3.09 · avgIP 4.7 · trend HOT", "L5 ERA: 4.76 · L3 ERA: 8.59"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.7, "l5ERA": 4.76, "l3ERA": 8.59, "avgIP": 4.7, "bb9": 3.09}}, {"lbl": "Pivetta — Strikeouts", "pick": "Over 4.5 Ks", "odds": "+134", "grade": "B", "rat": "Blended K% 28.2% — projects 5.2 Ks vs 4.5 line", "chips": ["Blended K%: 28.2% · proj 5.2 Ks vs 4.5 line", "ERA 2.86 · BB/9 2.08 · avgIP 4.3 · trend NEUTRAL", "L5 ERA: 1.45 · L3 ERA: 0.93"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.86, "l5ERA": 1.45, "l3ERA": 0.93, "avgIP": 4.3, "bb9": 2.08}}, {"lbl": "Pivetta — Outs Recorded", "pick": "Over 10.5 outs", "odds": "+102", "grade": "B+", "rat": "Projects 13.3 outs (4.4 IP) vs 10.5 line", "chips": ["Proj 13.3 outs · blended 4.4 avgIP vs 3.5 IP line", "Stable depth (4.3 avgIP · L3 4.6 IP)", "Season avgIP 4.3 · 8 GS · 34 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.86, "l5ERA": 1.45, "l3ERA": 0.93, "avgIP": 4.3, "bb9": 2.08}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -615,7 +641,9 @@ const games = {
 };
 
 const bestBets = [
-  {game:"YAN@RAY", pick:"Over 5.5", odds:"+114", grade:"A-", src:"bullpen_pivot"}
+  {game:"DOD@BRA", pick:"Under 1.5 ER", odds:"+108", grade:"A-", src:"MLB Stats API"},
+  {game:"DOD@BRA", pick:"Over 7.5 Ks", odds:"+122", grade:"A-", src:"MLB Stats API"},
+  {game:"DOD@BRA", pick:"Under 1.5 ER", odds:"-108", grade:"A-", src:"MLB Stats API"}
 ];
 
 
