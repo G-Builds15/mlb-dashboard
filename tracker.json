@@ -1,4 +1,27 @@
 {
+  "2026-10-06": {
+    "generated_at": "2026-10-06T01:36:27Z",
+    "game_count": 1,
+    "picks": [
+      {
+        "game": "YAN@RAY",
+        "pick": "Over 5.5",
+        "odds": "+114",
+        "grade": "A-",
+        "src": "bullpen_pivot",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "by_grade": {
+        "A-": 1
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-05": {
     "generated_at": "2026-10-05T21:29:48Z",
     "game_count": 2,
