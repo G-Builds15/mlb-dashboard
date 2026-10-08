@@ -586,80 +586,28 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 const games = {
 
-  "dod-bra": {
-    away:"Los Angeles Dodgers", home:"Atlanta Braves",
-    time:"6:09 PM ET", venue:"TBD",
+  "gua-sox": {
+    away:"Cleveland Guardians", home:"Chicago White Sox",
+    time:"8:00 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
+    starters:"Parker Messick (?HP) vs Hagen Smith (?HP)",
     overview:{
-      lines:{ ml:"Atlanta Braves +680 / Los Angeles Dodgers -1480", spread:"Atlanta Braves +2.5 (-255)", total:"O/U 5.5 (Over +130 / Under -170)", movement:"" },
-      away:{ teamName:"Los Angeles Dodgers", abbr:"DOD",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      lines:{ ml:"Chicago White Sox -105 / Cleveland Guardians -115", spread:"Chicago White Sox +1.5 (-185)", total:"O/U 7.0 (Over -117 / Under -102)", movement:"" },
+      away:{ teamName:"Cleveland Guardians", abbr:"GUA",
+        offStats:{"avg": ".239", "ops": ".696", "kPct": "20.8", "rPerG": "4.19", "rPerG_L10": "4.19", "rPerG_L5": "4.19"},
+        defStats:{"era": "2.56", "bullpenERA_L14": "4.37", "whip": "1.06"},
+        starter:{"name": "Parker Messick", "hand": "?HP", "era": "2.56", "whip": "1.06", "k9": "9.32", "bb9": "2.37", "era_L3": "2.25", "avgIP": "5.8"},
         injuries:[] },
-      home:{ teamName:"Atlanta Braves", abbr:"BRA",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      home:{ teamName:"Chicago White Sox", abbr:"SOX",
+        offStats:{"avg": ".236", "ops": ".726", "kPct": "24.1", "rPerG": "4.79", "rPerG_L10": "4.79", "rPerG_L5": "4.79"},
+        defStats:{"era": "1.29", "bullpenERA_L14": "3.0", "whip": "0.96"},
+        starter:{"name": "Hagen Smith", "hand": "?HP", "era": "1.29", "whip": "0.96", "k9": "13.18", "bb9": "5.14", "era_L3": "2.08", "avgIP": "28.0"},
         injuries:[] }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "ray-yan": {
-    away:"Tampa Bay Rays", home:"New York Yankees",
-    time:"8:15 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
-    overview:{
-      lines:{ ml:"New York Yankees -225 / Tampa Bay Rays +172", spread:"New York Yankees -1.5 (+116)", total:"O/U 5.5 (Over -136 / Under +102)", movement:"" },
-      away:{ teamName:"Tampa Bay Rays", abbr:"RAY",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
-        injuries:[] },
-      home:{ teamName:"New York Yankees", abbr:"YAN",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
-  "bre-pad": {
-    away:"Milwaukee Brewers", home:"San Diego Padres",
-    time:"10:00 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
-    overview:{
-      lines:{ ml:"San Diego Padres -110 / Milwaukee Brewers -106", spread:"San Diego Padres +1.5 (-200)", total:"O/U 7.5 (Over -108 / Under -112)", movement:"" },
-      away:{ teamName:"Milwaukee Brewers", abbr:"BRE",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
-        injuries:[] },
-      home:{ teamName:"San Diego Padres", abbr:"PAD",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
+      pitcher:{intro:"Props graded Oct 08, 2026",cards:[{"lbl": "Messick — Earned Runs", "pick": "Under 1.5 ER", "odds": "-110", "grade": "A-", "rat": "Blended ERA 2.69 — season 2.56 · L5 3.20 · L3 2.25", "chips": ["Blended ERA: 2.69 · 5.8 avg IP", "Season 2.56 · L5 3.2 · L3 2.25", "BB/9 2.37 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.56, "l5ERA": 3.2, "l3ERA": 2.25, "avgIP": 5.8, "bb9": 2.37}}, {"lbl": "Messick — Outs Recorded", "pick": "Under 14.5 outs", "odds": "+158", "grade": "B+", "rat": "Projects 15.6 outs (5.2 IP) vs 14.5 line", "chips": ["Proj 15.6 outs · blended 5.2 avgIP vs 4.8 IP line", "⚠ Trending shorter (L3 avg 4.0 IP vs season 5.8 IP)", "Season avgIP 5.8 · 32 GS · 186 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.56, "l5ERA": 3.2, "l3ERA": 2.25, "avgIP": 5.8, "bb9": 2.37}}, {"lbl": "Smith — Earned Runs", "pick": "Under 0.5 ER", "odds": "-217", "grade": "A-", "rat": "Blended ERA 1.54 — season 1.29 · L5 1.59 · L3 2.08", "chips": ["Blended ERA: 1.54 · 27.1 avg IP", "Season 1.29 · L5 1.59 · L3 2.08", "BB/9 5.1 — IP adj 28.0→27.1"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.29, "l5ERA": 1.59, "l3ERA": 2.08, "avgIP": 28.0, "bb9": 5.14}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -667,8 +615,8 @@ const games = {
 };
 
 const bestBets = [
-  {game:"DOD@BRA", pick:"Over 5.5", odds:"+130", grade:"A-", src:"bullpen_pivot"},
-  {game:"RAY@YAN", pick:"Over 5.5", odds:"-136", grade:"A-", src:"bullpen_pivot"}
+  {game:"GUA@SOX", pick:"Under 1.5 ER", odds:"-110", grade:"A-", src:"MLB Stats API"},
+  {game:"GUA@SOX", pick:"Under 0.5 ER", odds:"-217", grade:"A-", src:"MLB Stats API"}
 ];
 
 
