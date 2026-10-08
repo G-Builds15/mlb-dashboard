@@ -1,4 +1,37 @@
 {
+  "2026-10-08": {
+    "generated_at": "2026-10-08T00:35:10Z",
+    "game_count": 3,
+    "picks": [
+      {
+        "game": "DOD@BRA",
+        "pick": "Over 5.5",
+        "odds": "+130",
+        "grade": "A-",
+        "src": "bullpen_pivot",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "RAY@YAN",
+        "pick": "Over 5.5",
+        "odds": "-136",
+        "grade": "A-",
+        "src": "bullpen_pivot",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 2,
+      "by_grade": {
+        "A-": 2
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-07": {
     "generated_at": "2026-10-07T19:43:23Z",
     "game_count": 4,
