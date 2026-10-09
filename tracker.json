@@ -1,4 +1,27 @@
 {
+  "2026-10-09": {
+    "generated_at": "2026-10-09T00:50:19Z",
+    "game_count": 1,
+    "picks": [
+      {
+        "game": "GUA@SOX",
+        "pick": "Over 5.5",
+        "odds": "-120",
+        "grade": "A-",
+        "src": "bullpen_pivot",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "by_grade": {
+        "A-": 1
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-08": {
     "generated_at": "2026-10-08T00:35:10Z",
     "game_count": 3,
