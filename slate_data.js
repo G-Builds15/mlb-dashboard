@@ -13,7 +13,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Sean Burke (?HP) vs Gavin Williams (?HP)",
     overview:{
-      lines:{ ml:"Cleveland Guardians -142 / Chicago White Sox +120", spread:"Cleveland Guardians -1.5 (+155)", total:"O/U 7.5 (Over +108 / Under -132)", movement:"" },
+      lines:{ ml:"Cleveland Guardians -134 / Chicago White Sox +120", spread:"Cleveland Guardians -1.5 (+155)", total:"O/U 7.5 (Over +108 / Under -132)", movement:"" },
       away:{ teamName:"Chicago White Sox", abbr:"SOX",
         offStats:{"avg": ".236", "ops": ".726", "kPct": "24.1", "rPerG": "4.79", "rPerG_L10": "4.79", "rPerG_L5": "4.79"},
         defStats:{"era": "3.34", "bullpenERA_L14": "5.0", "whip": "1.2"},
@@ -27,7 +27,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 10, 2026",cards:[{"lbl": "Burke — Strikeouts", "pick": "Over 3.5 Ks", "odds": "-142", "grade": "B", "rat": "Blended K% 24.1% — projects 6.5 Ks vs 3.5 line", "chips": ["Blended K%: 24.1% · proj 6.5 Ks vs 3.5 line", "ERA 3.34 · BB/9 3.24 · avgIP 6.4 · trend NEUTRAL", "L5 ERA: 4.58 · L3 ERA: 1.59"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.34, "l5ERA": 4.58, "l3ERA": 1.59, "avgIP": 6.4, "bb9": 3.24}}, {"lbl": "Williams — Strikeouts", "pick": "Over 6.5 Ks", "odds": "-136", "grade": "A-", "rat": "Blended K% 33.4% — projects 8.3 Ks vs 6.5 line", "chips": ["Blended K%: 33.4% · proj 8.3 Ks vs 6.5 line", "ERA 3.76 · BB/9 2.98 · avgIP 5.8 · trend NEUTRAL", "L5 ERA: 3.38 · L3 ERA: 3.48"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.76, "l5ERA": 3.38, "l3ERA": 3.48, "avgIP": 5.8, "bb9": 2.98}}]},
+      pitcher:{intro:"Props graded Oct 10, 2026",cards:[{"lbl": "Burke — Strikeouts", "pick": "Over 3.5 Ks", "odds": "-142", "grade": "B", "rat": "Blended K% 24.1% — projects 6.5 Ks vs 3.5 line", "chips": ["Blended K%: 24.1% · proj 6.5 Ks vs 3.5 line", "ERA 3.34 · BB/9 3.24 · avgIP 6.4 · trend NEUTRAL", "L5 ERA: 4.58 · L3 ERA: 1.59"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.34, "l5ERA": 4.58, "l3ERA": 1.59, "avgIP": 6.4, "bb9": 3.24}}, {"lbl": "Williams — Strikeouts", "pick": "Over 6.5 Ks", "odds": "-130", "grade": "A-", "rat": "Blended K% 33.4% — projects 8.3 Ks vs 6.5 line", "chips": ["Blended K%: 33.4% · proj 8.3 Ks vs 6.5 line", "ERA 3.76 · BB/9 2.98 · avgIP 5.8 · trend NEUTRAL", "L5 ERA: 3.38 · L3 ERA: 3.48"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.76, "l5ERA": 3.38, "l3ERA": 3.48, "avgIP": 5.8, "bb9": 2.98}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -35,5 +35,5 @@ const games = {
 };
 
 const bestBets = [
-  {game:"SOX@GUA", pick:"Over 6.5 Ks", odds:"-136", grade:"A-", src:"MLB Stats API"}
+  {game:"SOX@GUA", pick:"Over 6.5 Ks", odds:"-130", grade:"A-", src:"MLB Stats API"}
 ];

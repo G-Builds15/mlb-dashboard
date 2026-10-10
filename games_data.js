@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-10T18:12:57.863671+00:00",
+  "fetched_at": "2026-10-10T23:58:49.996498+00:00",
   "date": "2026-10-10",
   "games": [
     {
@@ -91,11 +91,11 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Cleveland Guardians -142 / Chicago White Sox +120",
+        "ml": "Cleveland Guardians -134 / Chicago White Sox +120",
         "spread": "Cleveland Guardians -1.5 (+155)",
         "total": "O/U 7.5 (Over +108 / Under -132)",
         "raw": {
-          "homeML": -142,
+          "homeML": -134,
           "awayML": 120,
           "homeSpread": -1.5,
           "homeSpreadOdds": 155,
@@ -119,10 +119,10 @@ const ODDS_DATA = {
         "Gavin Williams": {
           "pitcher_strikeouts": {
             "point": 6.5,
-            "over": -136,
-            "under": 106,
-            "overStr": "-136",
-            "underStr": "+106"
+            "over": -130,
+            "under": 102,
+            "overStr": "-130",
+            "underStr": "+102"
           }
         }
       }
