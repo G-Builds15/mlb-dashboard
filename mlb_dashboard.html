@@ -586,28 +586,28 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 const games = {
 
-  "gua-sox": {
-    away:"Cleveland Guardians", home:"Chicago White Sox",
-    time:"8:08 PM ET", venue:"TBD",
+  "sox-gua": {
+    away:"Chicago White Sox", home:"Cleveland Guardians",
+    time:"8:01 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
+    starters:"Sean Burke (?HP) vs Gavin Williams (?HP)",
     overview:{
-      lines:{ ml:"Chicago White Sox -113 / Cleveland Guardians -115", spread:"Chicago White Sox +1.5 (-211)", total:"O/U 5.5 (Over -120 / Under -108)", movement:"" },
-      away:{ teamName:"Cleveland Guardians", abbr:"GUA",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      lines:{ ml:"Cleveland Guardians -142 / Chicago White Sox +120", spread:"Cleveland Guardians -1.5 (+155)", total:"O/U 7.5 (Over +108 / Under -132)", movement:"" },
+      away:{ teamName:"Chicago White Sox", abbr:"SOX",
+        offStats:{"avg": ".236", "ops": ".726", "kPct": "24.1", "rPerG": "4.79", "rPerG_L10": "4.79", "rPerG_L5": "4.79"},
+        defStats:{"era": "3.34", "bullpenERA_L14": "5.0", "whip": "1.2"},
+        starter:{"name": "Sean Burke", "hand": "?HP", "era": "3.34", "whip": "1.2", "k9": "9.66", "bb9": "3.24", "era_L3": "1.59", "avgIP": "6.4"},
         injuries:[] },
-      home:{ teamName:"Chicago White Sox", abbr:"SOX",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+      home:{ teamName:"Cleveland Guardians", abbr:"GUA",
+        offStats:{"avg": ".239", "ops": ".696", "kPct": "20.8", "rPerG": "4.19", "rPerG_L10": "4.19", "rPerG_L5": "4.19"},
+        defStats:{"era": "3.76", "bullpenERA_L14": "4.24", "whip": "1.11"},
+        starter:{"name": "Gavin Williams", "hand": "?HP", "era": "3.76", "whip": "1.11", "k9": "12.11", "bb9": "2.98", "era_L3": "3.48", "avgIP": "5.8"},
         injuries:[] }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
+      pitcher:{intro:"Props graded Oct 10, 2026",cards:[{"lbl": "Burke — Strikeouts", "pick": "Over 3.5 Ks", "odds": "-142", "grade": "B", "rat": "Blended K% 24.1% — projects 6.5 Ks vs 3.5 line", "chips": ["Blended K%: 24.1% · proj 6.5 Ks vs 3.5 line", "ERA 3.34 · BB/9 3.24 · avgIP 6.4 · trend NEUTRAL", "L5 ERA: 4.58 · L3 ERA: 1.59"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.34, "l5ERA": 4.58, "l3ERA": 1.59, "avgIP": 6.4, "bb9": 3.24}}, {"lbl": "Williams — Strikeouts", "pick": "Over 6.5 Ks", "odds": "-136", "grade": "A-", "rat": "Blended K% 33.4% — projects 8.3 Ks vs 6.5 line", "chips": ["Blended K%: 33.4% · proj 8.3 Ks vs 6.5 line", "ERA 3.76 · BB/9 2.98 · avgIP 5.8 · trend NEUTRAL", "L5 ERA: 3.38 · L3 ERA: 3.48"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.76, "l5ERA": 3.38, "l3ERA": 3.48, "avgIP": 5.8, "bb9": 2.98}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -615,7 +615,7 @@ const games = {
 };
 
 const bestBets = [
-  {game:"GUA@SOX", pick:"Over 5.5", odds:"-120", grade:"A-", src:"bullpen_pivot"}
+  {game:"SOX@GUA", pick:"Over 6.5 Ks", odds:"-136", grade:"A-", src:"MLB Stats API"}
 ];
 
 
