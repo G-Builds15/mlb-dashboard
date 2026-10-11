@@ -1,128 +1,142 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-10T23:58:49.996498+00:00",
-  "date": "2026-10-10",
+  "fetched_at": "2026-10-11T18:36:14.181061+00:00",
+  "date": "2026-10-11",
   "games": [
     {
-      "id": "62bf363a77455f7a8b48838e7792f60b",
-      "home": "Cleveland Guardians",
-      "away": "Chicago White Sox",
-      "time": "8:01 PM ET",
-      "commence": "2026-10-11T00:01:00Z",
+      "id": "c43e98d4effc9181f21e21225fcbd47a",
+      "home": "Milwaukee Brewers",
+      "away": "Los Angeles Dodgers",
+      "time": "8:00 PM ET",
+      "commence": "2026-10-12T00:00:00Z",
       "starters": {
         "away": {
-          "name": "Sean Burke",
-          "id": 680732,
+          "name": "Tarik Skubal",
+          "id": 669373,
           "hand": "?",
           "confirmed": true
         },
         "home": {
-          "name": "Gavin Williams",
-          "id": 668909,
+          "name": "Jacob Misiorowski",
+          "id": 694819,
           "hand": "?",
           "confirmed": true
         }
       },
       "pitcher_stats": {
         "away": {
-          "era": 3.34,
-          "whip": 1.2,
-          "k9": 9.66,
-          "bb9": 3.24,
-          "h9": 7.52,
-          "ip": 172.1,
-          "avgIP": 6.4,
-          "gs": 27,
-          "kPct": 25.8,
+          "era": 2.72,
+          "whip": 0.96,
+          "k9": 10.55,
+          "bb9": 1.53,
+          "h9": 7.15,
+          "ip": 158.2,
+          "avgIP": 6.1,
+          "gs": 26,
+          "kPct": 30.0,
           "_source": "mlb_stats_api",
-          "l5ERA": 4.58,
-          "l5KPct": 22.2,
-          "l5BB9": 4.08,
-          "l5AvgIP": 5.7,
-          "l3ERA": 1.59,
-          "l3KPct": 25.5,
-          "l3BB9": 3.18,
-          "l3AvgIP": 5.5,
-          "name": "Sean Burke",
-          "pid": 680732
+          "l5ERA": 2.05,
+          "l5KPct": 27.3,
+          "l5BB9": 1.71,
+          "l5AvgIP": 6.5,
+          "l3ERA": null,
+          "l3KPct": 43.5,
+          "l3BB9": null,
+          "l3AvgIP": 7.0,
+          "name": "Tarik Skubal",
+          "pid": 669373
         },
         "home": {
-          "era": 3.76,
-          "whip": 1.11,
-          "k9": 12.11,
-          "bb9": 2.98,
-          "h9": 7.03,
-          "ip": 184.1,
+          "era": 1.8,
+          "whip": 0.8,
+          "k9": 12.98,
+          "bb9": 2.27,
+          "h9": 4.95,
+          "ip": 174.2,
           "avgIP": 5.8,
-          "gs": 32,
-          "kPct": 33.2,
+          "gs": 30,
+          "kPct": 37.9,
           "_source": "mlb_stats_api",
-          "l5ERA": 3.38,
-          "l5KPct": 34.8,
-          "l5BB9": 4.64,
-          "l5AvgIP": 5.3,
-          "l3ERA": 3.48,
-          "l3KPct": 31.7,
-          "l3BB9": 4.35,
-          "l3AvgIP": 5.0,
-          "name": "Gavin Williams",
-          "pid": 668909
+          "l5ERA": 0.46,
+          "l5KPct": 34.2,
+          "l5BB9": 2.29,
+          "l5AvgIP": 4.8,
+          "l3ERA": null,
+          "l3KPct": 31.0,
+          "l3BB9": 2.16,
+          "l3AvgIP": 4.0,
+          "name": "Jacob Misiorowski",
+          "pid": 694819
         }
       },
       "team_stats": {
         "away": {
-          "name": "Chicago White Sox",
+          "name": "Los Angeles Dodgers",
           "_source": "mlb_stats_api",
-          "rPerG": 4.79,
-          "avg": ".236",
-          "ops": ".726",
-          "kPct": 24.1,
-          "bbPct": 9.5,
-          "bullpenERA_L14": 5.0
+          "rPerG": 4.94,
+          "avg": ".257",
+          "ops": ".762",
+          "kPct": 20.4,
+          "bbPct": 10.1,
+          "bullpenERA_L14": 0.9
         },
         "home": {
-          "name": "Cleveland Guardians",
+          "name": "Milwaukee Brewers",
           "_source": "mlb_stats_api",
-          "rPerG": 4.19,
-          "avg": ".239",
-          "ops": ".696",
-          "kPct": 20.8,
-          "bbPct": 9.4,
-          "bullpenERA_L14": 4.24
+          "rPerG": 5.14,
+          "avg": ".258",
+          "ops": ".744",
+          "kPct": 22.0,
+          "bbPct": 10.6,
+          "bullpenERA_L14": 4.0
         }
       },
       "lines": {
-        "ml": "Cleveland Guardians -134 / Chicago White Sox +120",
-        "spread": "Cleveland Guardians -1.5 (+155)",
-        "total": "O/U 7.5 (Over +108 / Under -132)",
+        "ml": "Milwaukee Brewers -110 / Los Angeles Dodgers -106",
+        "spread": "Milwaukee Brewers +1.5 (-196)",
+        "total": "O/U 6.5 (Over +114 / Under -140)",
         "raw": {
-          "homeML": -134,
-          "awayML": 120,
-          "homeSpread": -1.5,
-          "homeSpreadOdds": 155,
-          "awaySpread": 1.5,
-          "awaySpreadOdds": -188,
-          "total": 7.5,
-          "overOdds": 108,
-          "underOdds": -132
+          "homeML": -110,
+          "awayML": -106,
+          "homeSpread": 1.5,
+          "homeSpreadOdds": -196,
+          "awaySpread": -1.5,
+          "awaySpreadOdds": 162,
+          "total": 6.5,
+          "overOdds": 114,
+          "underOdds": -140
         }
       },
       "props": {
-        "Sean Burke": {
+        "Tarik Skubal": {
+          "pitcher_outs": {
+            "point": 17.5,
+            "over": -154,
+            "under": 114,
+            "overStr": "-154",
+            "underStr": "+114"
+          },
           "pitcher_strikeouts": {
-            "point": 3.5,
-            "over": -142,
-            "under": 112,
-            "overStr": "-142",
-            "underStr": "+112"
+            "point": 7.5,
+            "over": 116,
+            "under": -148,
+            "overStr": "+116",
+            "underStr": "-148"
           }
         },
-        "Gavin Williams": {
+        "Jacob Misiorowski": {
+          "pitcher_outs": {
+            "point": 16.5,
+            "over": -125,
+            "under": -110,
+            "overStr": "-125",
+            "underStr": "-110"
+          },
           "pitcher_strikeouts": {
-            "point": 6.5,
-            "over": -130,
-            "under": 102,
-            "overStr": "-130",
-            "underStr": "+102"
+            "point": 7.5,
+            "over": 108,
+            "under": -138,
+            "overStr": "+108",
+            "underStr": "-138"
           }
         }
       }

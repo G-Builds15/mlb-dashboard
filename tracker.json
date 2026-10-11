@@ -1,4 +1,37 @@
 {
+  "2026-10-11": {
+    "generated_at": "2026-10-11T18:36:14Z",
+    "game_count": 1,
+    "picks": [
+      {
+        "game": "DOD@BRE",
+        "pick": "Over 7.5 Ks",
+        "odds": "+108",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "DOD@BRE",
+        "pick": "Under 16.5 outs",
+        "odds": "-110",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 2,
+      "by_grade": {
+        "A-": 2
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-10": {
     "generated_at": "2026-10-10T00:23:19Z",
     "game_count": 1,
