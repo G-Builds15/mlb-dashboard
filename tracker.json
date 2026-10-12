@@ -1,4 +1,27 @@
 {
+  "2026-10-12": {
+    "generated_at": "2026-10-12T00:06:41Z",
+    "game_count": 1,
+    "picks": [
+      {
+        "game": "DOD@BRE",
+        "pick": "Over 6.5",
+        "odds": "+104",
+        "grade": "A-",
+        "src": "bullpen_pivot",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "by_grade": {
+        "A-": 1
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-11": {
     "generated_at": "2026-10-11T18:36:14Z",
     "game_count": 1,
