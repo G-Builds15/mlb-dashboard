@@ -588,26 +588,26 @@ const games = {
 
   "gua-ray": {
     away:"Cleveland Guardians", home:"Tampa Bay Rays",
-    time:"8:08 PM ET", venue:"TBD",
+    time:"8:00 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
-    starters:"TBD (?HP) vs TBD (?HP)",
+    starters:"Parker Messick (?HP) vs Freddy Peralta (?HP)",
     overview:{
-      lines:{ ml:"Tampa Bay Rays +106 / Cleveland Guardians -136", spread:"Tampa Bay Rays +1.5 (-320)", total:"O/U 5.5 (Over -114 / Under -114)", movement:"" },
+      lines:{ ml:"Tampa Bay Rays -132 / Cleveland Guardians +112", spread:"Tampa Bay Rays -1.5 (+176)", total:"O/U 6.5 (Over -132 / Under +108)", movement:"" },
       away:{ teamName:"Cleveland Guardians", abbr:"GUA",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+        offStats:{"avg": ".239", "ops": ".696", "kPct": "20.8", "rPerG": "4.19", "rPerG_L10": "4.19", "rPerG_L5": "4.19"},
+        defStats:{"era": "2.56", "bullpenERA_L14": "TBD", "whip": "1.06"},
+        starter:{"name": "Parker Messick", "hand": "?HP", "era": "2.56", "whip": "1.06", "k9": "9.32", "bb9": "2.37", "era_L3": "2.25", "avgIP": "5.8"},
         injuries:[] },
       home:{ teamName:"Tampa Bay Rays", abbr:"RAY",
-        offStats:{"avg": "TBD", "ops": "TBD", "kPct": "TBD", "rPerG": "TBD", "rPerG_L10": "TBD", "rPerG_L5": "TBD"},
-        defStats:{"era": "TBD", "bullpenERA_L14": "TBD", "whip": "TBD"},
-        starter:{"name": "TBD", "hand": "?HP", "era": "TBD", "whip": "TBD", "k9": "TBD", "bb9": "TBD", "era_L3": "TBD", "avgIP": "5.5"},
+        offStats:{"avg": ".258", "ops": ".728", "kPct": "18.8", "rPerG": "4.54", "rPerG_L10": "4.54", "rPerG_L5": "4.54"},
+        defStats:{"era": "4.42", "bullpenERA_L14": "TBD", "whip": "1.33"},
+        starter:{"name": "Freddy Peralta", "hand": "?HP", "era": "4.42", "whip": "1.33", "k9": "8.31", "bb9": "3.36", "era_L3": "4.42", "avgIP": "5.3"},
         injuries:[] }
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props auto-graded from MLB Stats API",cards:[]},
+      pitcher:{intro:"Props graded Oct 13, 2026",cards:[{"lbl": "Messick — Outs Recorded", "pick": "Under 14.5 outs", "odds": "+100", "grade": "B+", "rat": "Projects 15.4 outs (5.1 IP) vs 14.5 line", "chips": ["Proj 15.4 outs · blended 5.1 avgIP vs 4.8 IP line", "⚠ Trending shorter (L3 avg 4.0 IP vs season 5.8 IP)", "Season avgIP 5.8 · 32 GS · 186 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.56, "l5ERA": 2.79, "l3ERA": 2.25, "avgIP": 5.8, "bb9": 2.37}}, {"lbl": "Peralta — Outs Recorded", "pick": "Over 13.5 outs", "odds": "-132", "grade": "B+", "rat": "Projects 16.0 outs (5.3 IP) vs 13.5 line", "chips": ["Proj 16.0 outs · blended 5.3 avgIP vs 4.5 IP line", "Stable depth (5.3 avgIP · L3 5.1 IP)", "Season avgIP 5.3 · 32 GS · 169 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.42, "l5ERA": 0.82, "l3ERA": 4.42, "avgIP": 5.3, "bb9": 3.36}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -615,7 +615,7 @@ const games = {
 };
 
 const bestBets = [
-  {game:"GUA@RAY", pick:"Over 5.5", odds:"-114", grade:"A-", src:"bullpen_pivot"}
+  
 ];
 
 
