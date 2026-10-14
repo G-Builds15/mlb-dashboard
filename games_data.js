@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-14T18:17:44.648800+00:00",
+  "fetched_at": "2026-10-14T23:32:37.368718+00:00",
   "date": "2026-10-14",
   "games": [
     {
@@ -89,45 +89,45 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Los Angeles Dodgers -174 / Milwaukee Brewers +146",
-        "spread": "Los Angeles Dodgers -1.5 (+125)",
-        "total": "O/U 7.5 (Over -105 / Under -115)",
+        "ml": "Los Angeles Dodgers -178 / Milwaukee Brewers +158",
+        "spread": "Los Angeles Dodgers -1.5 (+116)",
+        "total": "O/U 7.5 (Over -102 / Under -120)",
         "raw": {
-          "homeML": -174,
-          "awayML": 146,
+          "homeML": -178,
+          "awayML": 158,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 125,
+          "homeSpreadOdds": 116,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -150,
+          "awaySpreadOdds": -140,
           "total": 7.5,
-          "overOdds": -105,
-          "underOdds": -115
+          "overOdds": -102,
+          "underOdds": -120
         }
       },
       "props": {
         "Robert Gasser": {
           "pitcher_outs": {
             "point": 11.5,
-            "over": -132,
-            "under": -102,
-            "overStr": "-132",
-            "underStr": "-102"
+            "over": -136,
+            "under": 100,
+            "overStr": "-136",
+            "underStr": "+100"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
-            "over": 100,
-            "under": -128,
-            "overStr": "+100",
-            "underStr": "-128"
+            "over": 114,
+            "under": -146,
+            "overStr": "+114",
+            "underStr": "-146"
           }
         },
         "Blake Snell": {
           "pitcher_outs": {
             "point": 14.5,
-            "over": -166,
-            "under": 124,
-            "overStr": "-166",
-            "underStr": "+124"
+            "over": -178,
+            "under": 132,
+            "overStr": "-178",
+            "underStr": "+132"
           },
           "pitcher_strikeouts": {
             "point": 6.5,

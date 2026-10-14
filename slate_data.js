@@ -13,7 +13,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Robert Gasser (?HP) vs Blake Snell (?HP)",
     overview:{
-      lines:{ ml:"Los Angeles Dodgers -174 / Milwaukee Brewers +146", spread:"Los Angeles Dodgers -1.5 (+125)", total:"O/U 7.5 (Over -105 / Under -115)", movement:"" },
+      lines:{ ml:"Los Angeles Dodgers -178 / Milwaukee Brewers +158", spread:"Los Angeles Dodgers -1.5 (+116)", total:"O/U 7.5 (Over -102 / Under -120)", movement:"" },
       away:{ teamName:"Milwaukee Brewers", abbr:"BRE",
         offStats:{"avg": ".258", "ops": ".744", "kPct": "22.0", "rPerG": "5.14", "rPerG_L10": "5.14", "rPerG_L5": "5.14"},
         defStats:{"era": "3.87", "bullpenERA_L14": "TBD", "whip": "1.19"},
@@ -27,7 +27,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 14, 2026",cards:[{"lbl": "Gasser — Strikeouts", "pick": "Over 3.5 Ks", "odds": "+100", "grade": "B", "rat": "Blended K% 26.1% — projects 6.2 Ks vs 3.5 line", "chips": ["Blended K%: 26.1% · proj 6.2 Ks vs 3.5 line", "ERA 3.87 · BB/9 2.88 · avgIP 5.5 · trend HOT", "L5 ERA: 1.00 · L3 ERA: 1.50"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.87, "l5ERA": 1.0, "l3ERA": 1.5, "avgIP": 5.5, "bb9": 2.88}}, {"lbl": "Gasser — Outs Recorded", "pick": "Over 11.5 outs", "odds": "-132", "grade": "A-", "rat": "Projects 17.2 outs (5.7 IP) vs 11.5 line", "chips": ["Proj 17.2 outs · blended 5.7 avgIP vs 3.8 IP line", "↗ Going deeper (L3 avg 6.0 IP vs season 5.5 IP)", "Season avgIP 5.5 · 20 GS · 109 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.87, "l5ERA": 1.0, "l3ERA": 1.5, "avgIP": 5.5, "bb9": 2.88}}, {"lbl": "Snell — Outs Recorded", "pick": "Under 14.5 outs", "odds": "+124", "grade": "B+", "rat": "Projects 12.5 outs (4.2 IP) vs 14.5 line", "chips": ["Proj 12.5 outs · blended 4.2 avgIP vs 4.8 IP line", "⚠ Trending shorter (L3 avg 4.0 IP vs season 4.7 IP)", "Season avgIP 4.7 · 9 GS · 42 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.9, "l5ERA": 1.69, "l3ERA": 2.25, "avgIP": 4.7, "bb9": 3.38}}]},
+      pitcher:{intro:"Props graded Oct 14, 2026",cards:[{"lbl": "Gasser — Strikeouts", "pick": "Over 3.5 Ks", "odds": "+114", "grade": "B", "rat": "Blended K% 26.1% — projects 6.2 Ks vs 3.5 line", "chips": ["Blended K%: 26.1% · proj 6.2 Ks vs 3.5 line", "ERA 3.87 · BB/9 2.88 · avgIP 5.5 · trend HOT", "L5 ERA: 1.00 · L3 ERA: 1.50"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.87, "l5ERA": 1.0, "l3ERA": 1.5, "avgIP": 5.5, "bb9": 2.88}}, {"lbl": "Gasser — Outs Recorded", "pick": "Over 11.5 outs", "odds": "-136", "grade": "A-", "rat": "Projects 17.2 outs (5.7 IP) vs 11.5 line", "chips": ["Proj 17.2 outs · blended 5.7 avgIP vs 3.8 IP line", "↗ Going deeper (L3 avg 6.0 IP vs season 5.5 IP)", "Season avgIP 5.5 · 20 GS · 109 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.87, "l5ERA": 1.0, "l3ERA": 1.5, "avgIP": 5.5, "bb9": 2.88}}, {"lbl": "Snell — Outs Recorded", "pick": "Under 14.5 outs", "odds": "+132", "grade": "B+", "rat": "Projects 12.5 outs (4.2 IP) vs 14.5 line", "chips": ["Proj 12.5 outs · blended 4.2 avgIP vs 4.8 IP line", "⚠ Trending shorter (L3 avg 4.0 IP vs season 4.7 IP)", "Season avgIP 4.7 · 9 GS · 42 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 1.9, "l5ERA": 1.69, "l3ERA": 2.25, "avgIP": 4.7, "bb9": 3.38}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -35,5 +35,5 @@ const games = {
 };
 
 const bestBets = [
-  {game:"BRE@DOD", pick:"Over 11.5 outs", odds:"-132", grade:"A-", src:"MLB Stats API"}
+  {game:"BRE@DOD", pick:"Over 11.5 outs", odds:"-136", grade:"A-", src:"MLB Stats API"}
 ];
