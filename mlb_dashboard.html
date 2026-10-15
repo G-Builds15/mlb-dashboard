@@ -586,32 +586,6 @@ select optgroup{color:var(--dim);background:var(--bg);}
 
 const games = {
 
-  "ray-gua": {
-    away:"Tampa Bay Rays", home:"Cleveland Guardians",
-    time:"1:10 PM ET", venue:"TBD",
-    awayRec:"TBD", homeRec:"TBD",
-    wx:"⛅ Weather TBD",
-    starters:"Griffin Jax (?HP) vs Gavin Williams (?HP)",
-    overview:{
-      lines:{ ml:"Cleveland Guardians -290 / Tampa Bay Rays +215", spread:"Cleveland Guardians -1.5 (+116)", total:"O/U 5.5 (Over +108 / Under -144)", movement:"" },
-      away:{ teamName:"Tampa Bay Rays", abbr:"RAY",
-        offStats:{"avg": ".258", "ops": ".728", "kPct": "18.8", "rPerG": "4.54", "rPerG_L10": "4.54", "rPerG_L5": "4.54"},
-        defStats:{"era": "3.53", "bullpenERA_L14": "TBD", "whip": "1.18"},
-        starter:{"name": "Griffin Jax", "hand": "?HP", "era": "3.53", "whip": "1.18", "k9": "9.29", "bb9": "2.8", "era_L3": "3.53", "avgIP": "4.9"},
-        injuries:[] },
-      home:{ teamName:"Cleveland Guardians", abbr:"GUA",
-        offStats:{"avg": ".239", "ops": ".696", "kPct": "20.8", "rPerG": "4.19", "rPerG_L10": "4.19", "rPerG_L5": "4.19"},
-        defStats:{"era": "3.76", "bullpenERA_L14": "TBD", "whip": "1.11"},
-        starter:{"name": "Gavin Williams", "hand": "?HP", "era": "3.76", "whip": "1.11", "k9": "12.11", "bb9": "2.98", "era_L3": "10.8", "avgIP": "5.8"},
-        injuries:[] }
-    },
-    tabs:{
-      overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 15, 2026",cards:[{"lbl": "Jax — Strikeouts", "pick": "Over 2.5 Ks", "odds": "-105", "grade": "B", "rat": "Blended K% 26.0% — projects 5.5 Ks vs 2.5 line", "chips": ["Blended K%: 26.0% · proj 5.5 Ks vs 2.5 line", "ERA 3.53 · BB/9 2.80 · avgIP 4.9 · trend NEUTRAL", "L5 ERA: 3.53 · L3 ERA: 3.53"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.53, "l5ERA": 3.53, "l3ERA": 3.53, "avgIP": 4.9, "bb9": 2.8}}, {"lbl": "Jax — Outs Recorded", "pick": "Under 12.5 outs", "odds": "-115", "grade": "A-", "rat": "Projects 13.0 outs (4.3 IP) vs 12.5 line", "chips": ["Proj 13.0 outs · blended 4.3 avgIP vs 4.2 IP line", "⚠ Trending shorter (L3 avg 3.0 IP vs season 4.9 IP)", "Season avgIP 4.9 · 23 GS · 112 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.53, "l5ERA": 3.53, "l3ERA": 3.53, "avgIP": 4.9, "bb9": 2.8}}]},
-      batter:{intro:"HRR props — lineup position pending",cards:[]}
-    }
-  },
-
   "bre-dod": {
     away:"Milwaukee Brewers", home:"Los Angeles Dodgers",
     time:"8:00 PM ET", venue:"TBD",
@@ -619,7 +593,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Shane Drohan (?HP) vs Tyler Glasnow (?HP)",
     overview:{
-      lines:{ ml:"Los Angeles Dodgers -157 / Milwaukee Brewers +130", spread:"Los Angeles Dodgers -1.5 (+138)", total:"O/U 7.5 (Over -117 / Under -103)", movement:"" },
+      lines:{ ml:"Los Angeles Dodgers -150 / Milwaukee Brewers +134", spread:"Los Angeles Dodgers -1.5 (+139)", total:"O/U 8.0 (Over -107 / Under -113)", movement:"" },
       away:{ teamName:"Milwaukee Brewers", abbr:"BRE",
         offStats:{"avg": ".258", "ops": ".744", "kPct": "22.0", "rPerG": "5.14", "rPerG_L10": "5.14", "rPerG_L5": "5.14"},
         defStats:{"era": "4.19", "bullpenERA_L14": "TBD", "whip": "1.32"},
@@ -633,7 +607,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 15, 2026",cards:[{"lbl": "Glasnow — Strikeouts", "pick": "Over 6.5 Ks", "odds": "+122", "grade": "A-", "rat": "Blended K% 37.3% — projects 9.1 Ks vs 6.5 line", "chips": ["Blended K%: 37.3% · proj 9.1 Ks vs 6.5 line", "ERA 3.53 · BB/9 3.04 · avgIP 5.7 · trend HOT", "L5 ERA: 4.96 · L3 ERA: 4.26"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.53, "l5ERA": 4.96, "l3ERA": 4.26, "avgIP": 5.7, "bb9": 3.04}}, {"lbl": "Glasnow — Outs Recorded", "pick": "Over 14.5 outs", "odds": "-143", "grade": "B+", "rat": "Projects 17.1 outs (5.7 IP) vs 14.5 line", "chips": ["Proj 17.1 outs · blended 5.7 avgIP vs 4.8 IP line", "Stable depth (5.7 avgIP · L3 6.1 IP)", "Season avgIP 5.7 · 13 GS · 74 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.53, "l5ERA": 4.96, "l3ERA": 4.26, "avgIP": 5.7, "bb9": 3.04}}]},
+      pitcher:{intro:"Props graded Oct 15, 2026",cards:[{"lbl": "Drohan — Strikeouts", "pick": "Over 2.5 Ks", "odds": "+106", "grade": "B", "rat": "Blended K% 22.7% — projects 6.2 Ks vs 2.5 line", "chips": ["Blended K%: 22.7% · proj 6.2 Ks vs 2.5 line", "ERA 4.19 · BB/9 3.18 · avgIP 6.5 · trend NEUTRAL", "L5 ERA: 5.23 · L3 ERA: 2.08"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 4.19, "l5ERA": 5.23, "l3ERA": 2.08, "avgIP": 6.5, "bb9": 3.18}}, {"lbl": "Glasnow — Strikeouts", "pick": "Over 5.5 Ks", "odds": "-155", "grade": "A-", "rat": "Blended K% 37.3% — projects 9.1 Ks vs 5.5 line", "chips": ["Blended K%: 37.3% · proj 9.1 Ks vs 5.5 line", "ERA 3.53 · BB/9 3.04 · avgIP 5.7 · trend HOT", "L5 ERA: 4.96 · L3 ERA: 4.26"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.53, "l5ERA": 4.96, "l3ERA": 4.26, "avgIP": 5.7, "bb9": 3.04}}, {"lbl": "Glasnow — Outs Recorded", "pick": "Over 14.5 outs", "odds": "-161", "grade": "B+", "rat": "Projects 17.1 outs (5.7 IP) vs 14.5 line", "chips": ["Proj 17.1 outs · blended 5.7 avgIP vs 4.8 IP line", "Stable depth (5.7 avgIP · L3 6.1 IP)", "Season avgIP 5.7 · 13 GS · 74 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.53, "l5ERA": 4.96, "l3ERA": 4.26, "avgIP": 5.7, "bb9": 3.04}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -641,9 +615,7 @@ const games = {
 };
 
 const bestBets = [
-  {game:"RAY@GUA", pick:"Over 5.5", odds:"+108", grade:"A-", src:"era"},
-  {game:"RAY@GUA", pick:"Under 12.5 outs", odds:"-115", grade:"A-", src:"MLB Stats API"},
-  {game:"BRE@DOD", pick:"Over 6.5 Ks", odds:"+122", grade:"A-", src:"MLB Stats API"}
+  {game:"BRE@DOD", pick:"Over 5.5 Ks", odds:"-155", grade:"A-", src:"MLB Stats API"}
 ];
 
 
