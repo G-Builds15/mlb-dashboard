@@ -1,182 +1,145 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-15T23:26:05.124349+00:00",
-  "date": "2026-10-15",
+  "fetched_at": "2026-10-16T17:47:48.862993+00:00",
+  "date": "2026-10-16",
   "games": [
     {
-      "id": "ab3e5655be6b32e0853d683e51a60baa",
-      "home": "Los Angeles Dodgers",
-      "away": "Milwaukee Brewers",
+      "id": "b9d2e07cf437b5643307aba274c45a74",
+      "home": "Cleveland Guardians",
+      "away": "Tampa Bay Rays",
       "time": "8:00 PM ET",
-      "commence": "2026-10-16T00:00:00Z",
+      "commence": "2026-10-17T00:00:00Z",
       "starters": {
         "away": {
-          "name": "Shane Drohan",
-          "id": 675660,
+          "name": "Nick Martinez",
+          "id": 607259,
           "hand": "?",
           "confirmed": true
         },
         "home": {
-          "name": "Tyler Glasnow",
-          "id": 607192,
+          "name": "Shawn Armstrong",
+          "id": 542888,
           "hand": "?",
           "confirmed": true
         }
       },
       "pitcher_stats": {
         "away": {
-          "era": 4.19,
-          "whip": 1.32,
-          "k9": 9.02,
-          "bb9": 3.18,
-          "h9": 8.74,
-          "ip": 124.2,
-          "avgIP": 6.5,
-          "gs": 19,
-          "kPct": 23.7,
+          "era": 3.1,
+          "whip": 1.09,
+          "k9": 5.45,
+          "bb9": 1.3,
+          "h9": 8.55,
+          "ip": 180.0,
+          "avgIP": 5.8,
+          "gs": 31,
+          "kPct": 15.1,
           "_source": "mlb_stats_api",
-          "l5ERA": 5.23,
-          "l5KPct": 22.7,
-          "l5BB9": 4.35,
-          "l5AvgIP": 5.0,
-          "l3ERA": 2.08,
-          "l3KPct": 22.2,
-          "l3BB9": 4.15,
-          "l3AvgIP": 4.1,
-          "name": "Shane Drohan",
-          "pid": 675660
+          "l5ERA": 5.27,
+          "l5KPct": 18.6,
+          "l5BB9": 1.32,
+          "l5AvgIP": 4.4,
+          "l3ERA": 13.5,
+          "l3KPct": 6.2,
+          "l3BB9": 3.38,
+          "l3AvgIP": 2.2,
+          "name": "Nick Martinez",
+          "pid": 607259
         },
         "home": {
-          "era": 3.53,
-          "whip": 0.95,
-          "k9": 11.92,
-          "bb9": 3.04,
-          "h9": 5.47,
-          "ip": 74.0,
-          "avgIP": 5.7,
-          "gs": 13,
-          "kPct": 34.0,
+          "era": 4.58,
+          "whip": 1.39,
+          "k9": 8.66,
+          "bb9": 4.84,
+          "h9": 7.64,
+          "ip": 35.1,
+          "avgIP": 35.1,
+          "gs": 1,
+          "kPct": 22.1,
           "_source": "mlb_stats_api",
-          "l5ERA": 4.96,
-          "l5KPct": 40.6,
-          "l5BB9": 4.41,
-          "l5AvgIP": 5.4,
-          "l3ERA": 4.26,
-          "l3KPct": 45.8,
-          "l3BB9": 2.84,
-          "l3AvgIP": 6.1,
-          "name": "Tyler Glasnow",
-          "pid": 607192
+          "l5ERA": null,
+          "l5KPct": null,
+          "l5BB9": null,
+          "l5AvgIP": 2.1,
+          "l3ERA": null,
+          "l3KPct": null,
+          "l3BB9": null,
+          "l3AvgIP": 2.0,
+          "name": "Shawn Armstrong",
+          "pid": 542888
         }
       },
       "team_stats": {
         "away": {
-          "name": "Milwaukee Brewers",
+          "name": "Tampa Bay Rays",
           "_source": "mlb_stats_api",
-          "rPerG": 5.14,
+          "rPerG": 4.54,
           "avg": ".258",
-          "ops": ".744",
-          "kPct": 22.0,
-          "bbPct": 10.6
+          "ops": ".728",
+          "kPct": 18.8,
+          "bbPct": 8.4
         },
         "home": {
-          "name": "Los Angeles Dodgers",
+          "name": "Cleveland Guardians",
           "_source": "mlb_stats_api",
-          "rPerG": 4.94,
-          "avg": ".257",
-          "ops": ".762",
-          "kPct": 20.4,
-          "bbPct": 10.1
+          "rPerG": 4.19,
+          "avg": ".239",
+          "ops": ".696",
+          "kPct": 20.8,
+          "bbPct": 9.4
         }
       },
       "lines": {
-        "ml": "Los Angeles Dodgers -150 / Milwaukee Brewers +134",
-        "spread": "Los Angeles Dodgers -1.5 (+139)",
-        "total": "O/U 8.0 (Over -107 / Under -113)",
+        "ml": "Cleveland Guardians -108 / Tampa Bay Rays -112",
+        "spread": "Cleveland Guardians +1.5 (-197)",
+        "total": "O/U 6.5 (Over -118 / Under -102)",
         "raw": {
-          "homeML": -150,
-          "awayML": 134,
-          "homeSpread": -1.5,
-          "homeSpreadOdds": 139,
-          "awaySpread": 1.5,
-          "awaySpreadOdds": -168,
-          "total": 8.0,
-          "overOdds": -107,
-          "underOdds": -113
+          "homeML": -108,
+          "awayML": -112,
+          "homeSpread": 1.5,
+          "homeSpreadOdds": -197,
+          "awaySpread": -1.5,
+          "awaySpreadOdds": 162,
+          "total": 6.5,
+          "overOdds": -118,
+          "underOdds": -102
         }
       },
       "props": {
-        "Shane Drohan": {
-          "pitcher_earned_runs": {
-            "point": 0.5,
-            "over": -144,
-            "under": 108,
-            "overStr": "-144",
-            "underStr": "+108"
-          },
-          "pitcher_hits_allowed": {
-            "point": 2.5,
-            "over": 129,
-            "under": -172,
-            "overStr": "+129",
-            "underStr": "-172"
-          },
-          "pitcher_outs": {
-            "point": 7.5,
-            "over": -122,
-            "under": -109,
-            "overStr": "-122",
-            "underStr": "-109"
-          },
-          "pitcher_strikeouts": {
-            "point": 2.5,
-            "over": 106,
-            "under": -135,
-            "overStr": "+106",
-            "underStr": "-135"
-          },
-          "pitcher_walks": {
-            "point": 0.5,
-            "over": -203,
-            "under": 151,
-            "overStr": "-203",
-            "underStr": "+151"
-          }
-        },
-        "Tyler Glasnow": {
+        "Nick Martinez": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -121,
-            "under": -109,
-            "overStr": "-121",
-            "underStr": "-109"
+            "over": 147,
+            "under": -197,
+            "overStr": "+147",
+            "underStr": "-197"
           },
           "pitcher_hits_allowed": {
             "point": 3.5,
-            "over": -128,
-            "under": -103,
-            "overStr": "-128",
-            "underStr": "-103"
+            "over": 114,
+            "under": -152,
+            "overStr": "+114",
+            "underStr": "-152"
           },
           "pitcher_outs": {
-            "point": 14.5,
-            "over": -161,
-            "under": 121,
-            "overStr": "-161",
-            "underStr": "+121"
+            "point": 11.5,
+            "over": -138,
+            "under": 104,
+            "overStr": "-138",
+            "underStr": "+104"
           },
           "pitcher_strikeouts": {
-            "point": 5.5,
-            "over": -155,
-            "under": 121,
-            "overStr": "-155",
-            "underStr": "+121"
+            "point": 2.5,
+            "over": 118,
+            "under": -150,
+            "overStr": "+118",
+            "underStr": "-150"
           },
           "pitcher_walks": {
-            "point": 2.5,
-            "over": 130,
-            "under": -174,
-            "overStr": "+130",
-            "underStr": "-174"
+            "point": 0.5,
+            "over": -184,
+            "under": 138,
+            "overStr": "-184",
+            "underStr": "+138"
           }
         }
       }
