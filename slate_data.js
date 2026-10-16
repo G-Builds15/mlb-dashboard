@@ -13,7 +13,7 @@ const games = {
     wx:"⛅ Weather TBD",
     starters:"Nick Martinez (?HP) vs Shawn Armstrong (?HP)",
     overview:{
-      lines:{ ml:"Cleveland Guardians -108 / Tampa Bay Rays -112", spread:"Cleveland Guardians +1.5 (-197)", total:"O/U 6.5 (Over -118 / Under -102)", movement:"" },
+      lines:{ ml:"Cleveland Guardians -101 / Tampa Bay Rays -110", spread:"Cleveland Guardians +1.5 (-193)", total:"O/U 6.5 (Over -107 / Under -112)", movement:"" },
       away:{ teamName:"Tampa Bay Rays", abbr:"RAY",
         offStats:{"avg": ".258", "ops": ".728", "kPct": "18.8", "rPerG": "4.54", "rPerG_L10": "4.54", "rPerG_L5": "4.54"},
         defStats:{"era": "3.1", "bullpenERA_L14": "TBD", "whip": "1.09"},
@@ -27,7 +27,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 16, 2026",cards:[{"lbl": "Martinez — Outs Recorded", "pick": "Under 11.5 outs", "odds": "+104", "grade": "A-", "rat": "Projects 14.0 outs (4.7 IP) vs 11.5 line", "chips": ["Proj 14.0 outs · blended 4.7 avgIP vs 3.8 IP line", "⚠ Trending shorter (L3 avg 2.2 IP vs season 5.8 IP)", "Season avgIP 5.8 · 31 GS · 180 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.1, "l5ERA": 5.27, "l3ERA": 13.5, "avgIP": 5.8, "bb9": 1.3}}]},
+      pitcher:{intro:"Props graded Oct 16, 2026",cards:[{"lbl": "Martinez — Outs Recorded", "pick": "Under 11.5 outs", "odds": "-103", "grade": "A-", "rat": "Projects 14.0 outs (4.7 IP) vs 11.5 line", "chips": ["Proj 14.0 outs · blended 4.7 avgIP vs 3.8 IP line", "⚠ Trending shorter (L3 avg 2.2 IP vs season 5.8 IP)", "Season avgIP 5.8 · 31 GS · 180 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 3.1, "l5ERA": 5.27, "l3ERA": 13.5, "avgIP": 5.8, "bb9": 1.3}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -35,7 +35,7 @@ const games = {
 };
 
 const bestBets = [
-  {game:"RAY@GUA", pick:"Over 6.5", odds:"-118", grade:"A-", src:"era"},
-  {game:"RAY@GUA", pick:"Under 11.5 outs", odds:"+104", grade:"A-", src:"MLB Stats API"},
-  {game:"RAY@GUA", pick:"Rays ML", odds:"-112", grade:"C", parlay:true, src:"era"}
+  {game:"RAY@GUA", pick:"Over 6.5", odds:"-107", grade:"A-", src:"era"},
+  {game:"RAY@GUA", pick:"Under 11.5 outs", odds:"-103", grade:"A-", src:"MLB Stats API"},
+  {game:"RAY@GUA", pick:"Rays ML", odds:"-110", grade:"C", parlay:true, src:"era"}
 ];

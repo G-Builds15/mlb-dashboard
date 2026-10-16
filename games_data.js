@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-16T17:47:48.862993+00:00",
+  "fetched_at": "2026-10-16T23:08:25.974302+00:00",
   "date": "2026-10-16",
   "games": [
     {
@@ -89,57 +89,57 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Cleveland Guardians -108 / Tampa Bay Rays -112",
-        "spread": "Cleveland Guardians +1.5 (-197)",
-        "total": "O/U 6.5 (Over -118 / Under -102)",
+        "ml": "Cleveland Guardians -101 / Tampa Bay Rays -110",
+        "spread": "Cleveland Guardians +1.5 (-193)",
+        "total": "O/U 6.5 (Over -107 / Under -112)",
         "raw": {
-          "homeML": -108,
-          "awayML": -112,
+          "homeML": -101,
+          "awayML": -110,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -197,
+          "homeSpreadOdds": -193,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 162,
+          "awaySpreadOdds": 158,
           "total": 6.5,
-          "overOdds": -118,
-          "underOdds": -102
+          "overOdds": -107,
+          "underOdds": -112
         }
       },
       "props": {
         "Nick Martinez": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": 147,
-            "under": -197,
-            "overStr": "+147",
-            "underStr": "-197"
+            "over": 128,
+            "under": -171,
+            "overStr": "+128",
+            "underStr": "-171"
           },
           "pitcher_hits_allowed": {
             "point": 3.5,
-            "over": 114,
-            "under": -152,
-            "overStr": "+114",
-            "underStr": "-152"
+            "over": 106,
+            "under": -140,
+            "overStr": "+106",
+            "underStr": "-140"
           },
           "pitcher_outs": {
             "point": 11.5,
-            "over": -138,
-            "under": 104,
-            "overStr": "-138",
-            "underStr": "+104"
+            "over": -129,
+            "under": -103,
+            "overStr": "-129",
+            "underStr": "-103"
           },
           "pitcher_strikeouts": {
             "point": 2.5,
-            "over": 118,
-            "under": -150,
-            "overStr": "+118",
-            "underStr": "-150"
+            "over": 127,
+            "under": -163,
+            "overStr": "+127",
+            "underStr": "-163"
           },
           "pitcher_walks": {
             "point": 0.5,
-            "over": -184,
-            "under": 138,
-            "overStr": "-184",
-            "underStr": "+138"
+            "over": -182,
+            "under": 136,
+            "overStr": "-182",
+            "underStr": "+136"
           }
         }
       }
