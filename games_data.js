@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-17T16:49:51.080845+00:00",
+  "fetched_at": "2026-10-17T22:46:29.184904+00:00",
   "date": "2026-10-17",
   "games": [
     {
@@ -89,36 +89,36 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Cleveland Guardians -102 / Tampa Bay Rays -116",
+        "ml": "Cleveland Guardians -106 / Tampa Bay Rays -110",
         "spread": "Cleveland Guardians +1.5 (-192)",
-        "total": "O/U 6.5 (Over -112 / Under -108)",
+        "total": "O/U 6.5 (Over -114 / Under -106)",
         "raw": {
-          "homeML": -102,
-          "awayML": -116,
+          "homeML": -106,
+          "awayML": -110,
           "homeSpread": 1.5,
           "homeSpreadOdds": -192,
           "awaySpread": -1.5,
           "awaySpreadOdds": 158,
           "total": 6.5,
-          "overOdds": -112,
-          "underOdds": -108
+          "overOdds": -114,
+          "underOdds": -106
         }
       },
       "props": {
         "Nick Martinez": {
           "pitcher_outs": {
             "point": 11.5,
-            "over": -136,
-            "under": 102,
-            "overStr": "-136",
-            "underStr": "+102"
+            "over": -122,
+            "under": -108,
+            "overStr": "-122",
+            "underStr": "-108"
           },
           "pitcher_strikeouts": {
             "point": 2.5,
-            "over": 128,
-            "under": -164,
-            "overStr": "+128",
-            "underStr": "-164"
+            "over": 134,
+            "under": -172,
+            "overStr": "+134",
+            "underStr": "-172"
           }
         }
       }
