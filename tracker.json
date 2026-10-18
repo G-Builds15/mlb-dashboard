@@ -1,4 +1,37 @@
 {
+  "2026-10-18": {
+    "generated_at": "2026-10-18T17:03:49Z",
+    "game_count": 1,
+    "picks": [
+      {
+        "game": "RAY@GUA",
+        "pick": "Under 1.5 ER",
+        "odds": "-122",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "RAY@GUA",
+        "pick": "Under 15.5 outs",
+        "odds": "-167",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 2,
+      "by_grade": {
+        "A-": 2
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-17": {
     "generated_at": "2026-10-17T16:49:51Z",
     "game_count": 1,
