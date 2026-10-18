@@ -588,12 +588,12 @@ const games = {
 
   "ray-gua": {
     away:"Tampa Bay Rays", home:"Cleveland Guardians",
-    time:"5:10 PM ET", venue:"TBD",
+    time:"5:08 PM ET", venue:"TBD",
     awayRec:"TBD", homeRec:"TBD",
     wx:"⛅ Weather TBD",
     starters:"Drew Rasmussen (?HP) vs Parker Messick (?HP)",
     overview:{
-      lines:{ ml:"Cleveland Guardians +110 / Tampa Bay Rays -132", spread:"Cleveland Guardians +1.5 (-164)", total:"O/U 6.5 (Over -102 / Under -118)", movement:"" },
+      lines:{ ml:"Cleveland Guardians +650 / Tampa Bay Rays -1340", spread:"Cleveland Guardians +3.5 (-160)", total:"O/U 5.5 (Over -143 / Under +110)", movement:"" },
       away:{ teamName:"Tampa Bay Rays", abbr:"RAY",
         offStats:{"avg": ".258", "ops": ".728", "kPct": "18.8", "rPerG": "4.54", "rPerG_L10": "4.54", "rPerG_L5": "4.54"},
         defStats:{"era": "2.67", "bullpenERA_L14": "TBD", "whip": "0.91"},
@@ -607,7 +607,7 @@ const games = {
     },
     tabs:{
       overview:{intro:"",cards:[]},
-      pitcher:{intro:"Props graded Oct 18, 2026",cards:[{"lbl": "Rasmussen — Strikeouts", "pick": "Over 5.5 Ks", "odds": "+107", "grade": "B+", "rat": "Blended K% 27.4% — projects 6.7 Ks vs 5.5 line", "chips": ["Blended K%: 27.4% · proj 6.7 Ks vs 5.5 line", "ERA 2.67 · BB/9 1.67 · avgIP 5.7 · trend NEUTRAL", "L5 ERA: 0.77 · L3 ERA: 2.67"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.67, "l5ERA": 0.77, "l3ERA": 2.67, "avgIP": 5.7, "bb9": 1.67}}, {"lbl": "Rasmussen — Earned Runs", "pick": "Under 1.5 ER", "odds": "-122", "grade": "A-", "rat": "Blended ERA 2.10 — season 2.67 · L5 0.77 · L3 2.67", "chips": ["Blended ERA: 2.1 · 5.7 avg IP", "Season 2.67 · L5 0.77 · L3 2.67", "BB/9 1.67 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.67, "l5ERA": 0.77, "l3ERA": 2.67, "avgIP": 5.7, "bb9": 1.67}}, {"lbl": "Messick — Earned Runs", "pick": "Under 1.5 ER", "odds": "-109", "grade": "B+", "rat": "Blended ERA 2.84 — season 2.56 · L5 3.21 · L3 3.00", "chips": ["Blended ERA: 2.84 · 5.8 avg IP", "Season 2.56 · L5 3.21 · L3 3.0", "BB/9 2.37 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.56, "l5ERA": 3.21, "l3ERA": 3.0, "avgIP": 5.8, "bb9": 2.37}}, {"lbl": "Messick — Outs Recorded", "pick": "Under 15.5 outs", "odds": "-167", "grade": "A-", "rat": "Projects 14.7 outs (4.9 IP) vs 15.5 line", "chips": ["Proj 14.7 outs · blended 4.9 avgIP vs 5.2 IP line", "⚠ Trending shorter (L3 avg 3.0 IP vs season 5.8 IP)", "Season avgIP 5.8 · 32 GS · 186 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.56, "l5ERA": 3.21, "l3ERA": 3.0, "avgIP": 5.8, "bb9": 2.37}}]},
+      pitcher:{intro:"Props graded Oct 18, 2026",cards:[{"lbl": "Rasmussen — Earned Runs", "pick": "Under 0.5 ER", "odds": "-185", "grade": "A-", "rat": "Blended ERA 2.10 — season 2.67 · L5 0.77 · L3 2.67", "chips": ["Blended ERA: 2.1 · 5.7 avg IP", "Season 2.67 · L5 0.77 · L3 2.67", "BB/9 1.67 · park factor 1.0"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.67, "l5ERA": 0.77, "l3ERA": 2.67, "avgIP": 5.7, "bb9": 1.67}}, {"lbl": "Rasmussen — Walks", "pick": "Under 1.5 BB", "odds": "-180", "grade": "B", "rat": "BB/9 1.67 — projects 1.1 walks vs 1.5 line", "chips": ["BB/9: 1.7 · adj 1.7 · proj 1.1 walks vs 1.5 line", "L3 BB/9: 1.7", "Blended ERA 2.10 · 30 GS · 172.0 IP"], "src": "MLB Stats API", "pitcherRecency": {"seasonERA": 2.67, "l5ERA": 0.77, "l3ERA": 2.67, "avgIP": 5.7, "bb9": 1.67}}]},
       batter:{intro:"HRR props — lineup position pending",cards:[]}
     }
   }
@@ -615,8 +615,7 @@ const games = {
 };
 
 const bestBets = [
-  {game:"RAY@GUA", pick:"Under 1.5 ER", odds:"-122", grade:"A-", src:"MLB Stats API"},
-  {game:"RAY@GUA", pick:"Under 15.5 outs", odds:"-167", grade:"A-", src:"MLB Stats API"}
+  {game:"RAY@GUA", pick:"Under 0.5 ER", odds:"-185", grade:"A-", src:"MLB Stats API"}
 ];
 
 

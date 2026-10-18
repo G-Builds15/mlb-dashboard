@@ -1,13 +1,13 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-18T17:03:49.575937+00:00",
+  "fetched_at": "2026-10-18T22:40:43.233528+00:00",
   "date": "2026-10-18",
   "games": [
     {
       "id": "f4ca2d8a09898a94722dde0633e0a7e1",
       "home": "Cleveland Guardians",
       "away": "Tampa Bay Rays",
-      "time": "5:10 PM ET",
-      "commence": "2026-10-18T21:10:00Z",
+      "time": "5:08 PM ET",
+      "commence": "2026-10-18T21:08:16Z",
       "starters": {
         "away": {
           "name": "Drew Rasmussen",
@@ -85,94 +85,57 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Cleveland Guardians +110 / Tampa Bay Rays -132",
-        "spread": "Cleveland Guardians +1.5 (-164)",
-        "total": "O/U 6.5 (Over -102 / Under -118)",
+        "ml": "Cleveland Guardians +650 / Tampa Bay Rays -1340",
+        "spread": "Cleveland Guardians +3.5 (-160)",
+        "total": "O/U 5.5 (Over -143 / Under +110)",
         "raw": {
-          "homeML": 110,
-          "awayML": -132,
-          "homeSpread": 1.5,
-          "homeSpreadOdds": -164,
-          "awaySpread": -1.5,
-          "awaySpreadOdds": 135,
-          "total": 6.5,
-          "overOdds": -102,
-          "underOdds": -118
+          "homeML": 650,
+          "awayML": -1340,
+          "homeSpread": 3.5,
+          "homeSpreadOdds": -160,
+          "awaySpread": -3.5,
+          "awaySpreadOdds": 123,
+          "total": 5.5,
+          "overOdds": -143,
+          "underOdds": 110
         }
       },
       "props": {
         "Drew Rasmussen": {
           "pitcher_earned_runs": {
-            "point": 1.5,
-            "over": -108,
-            "under": -122,
-            "overStr": "-108",
-            "underStr": "-122"
+            "point": 0.5,
+            "over": 135,
+            "under": -185,
+            "overStr": "+135",
+            "underStr": "-185"
           },
           "pitcher_hits_allowed": {
-            "point": 4.5,
-            "over": -118,
-            "under": -113,
-            "overStr": "-118",
-            "underStr": "-113"
+            "point": 2.5,
+            "over": -155,
+            "under": 110,
+            "overStr": "-155",
+            "underStr": "+110"
           },
           "pitcher_outs": {
-            "point": 17.5,
-            "over": -145,
-            "under": 109,
-            "overStr": "-145",
-            "underStr": "+109"
+            "point": 18.5,
+            "over": -120,
+            "under": -115,
+            "overStr": "-120",
+            "underStr": "-115"
           },
           "pitcher_strikeouts": {
-            "point": 5.5,
-            "over": 107,
-            "under": -137,
-            "overStr": "+107",
-            "underStr": "-137"
+            "point": 7.5,
+            "over": -170,
+            "under": 125,
+            "overStr": "-170",
+            "underStr": "+125"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": 149,
-            "under": -200,
-            "overStr": "+149",
-            "underStr": "-200"
-          }
-        },
-        "Parker Messick": {
-          "pitcher_earned_runs": {
-            "point": 1.5,
-            "over": -122,
-            "under": -109,
-            "overStr": "-122",
-            "underStr": "-109"
-          },
-          "pitcher_hits_allowed": {
-            "point": 4.5,
-            "over": -122,
-            "under": -109,
-            "overStr": "-122",
-            "underStr": "-109"
-          },
-          "pitcher_outs": {
-            "point": 15.5,
-            "over": 126,
-            "under": -167,
-            "overStr": "+126",
-            "underStr": "-167"
-          },
-          "pitcher_strikeouts": {
-            "point": 4.5,
-            "over": -130,
-            "under": 102,
-            "overStr": "-130",
-            "underStr": "+102"
-          },
-          "pitcher_walks": {
-            "point": 1.5,
-            "over": 105,
-            "under": -139,
-            "overStr": "+105",
-            "underStr": "-139"
+            "over": 130,
+            "under": -180,
+            "overStr": "+130",
+            "underStr": "-180"
           }
         }
       }
