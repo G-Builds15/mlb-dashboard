@@ -1,4 +1,38 @@
 {
+  "2026-10-19": {
+    "generated_at": "2026-10-19T19:38:13Z",
+    "game_count": 1,
+    "picks": [
+      {
+        "game": "GUA@RAY",
+        "pick": "Over 6.5",
+        "odds": "-128",
+        "grade": "A-",
+        "src": "era",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "GUA@RAY",
+        "pick": "Rays ML",
+        "odds": "-156",
+        "grade": "C",
+        "src": "era",
+        "parlay": true,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 2,
+      "by_grade": {
+        "A-": 1,
+        "C": 1
+      },
+      "parlay_count": 1
+    }
+  },
   "2026-10-18": {
     "generated_at": "2026-10-18T22:40:43Z",
     "game_count": 1,
