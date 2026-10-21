@@ -1,4 +1,27 @@
 {
+  "2026-10-21": {
+    "generated_at": "2026-10-21T18:21:39Z",
+    "game_count": 1,
+    "picks": [
+      {
+        "game": "GUA@RAY",
+        "pick": "Over 6.5",
+        "odds": "-128",
+        "grade": "A-",
+        "src": "bullpen_pivot",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "by_grade": {
+        "A-": 1
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-20": {
     "generated_at": "2026-10-20T00:02:35Z",
     "game_count": 1,
