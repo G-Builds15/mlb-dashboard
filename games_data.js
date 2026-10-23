@@ -1,60 +1,132 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-20T00:02:35.436107+00:00",
-  "date": "2026-10-20",
+  "fetched_at": "2026-10-23T18:05:03.660280+00:00",
+  "date": "2026-10-23",
   "games": [
     {
-      "id": "be50f6c59c20efa430eec6f146a0fcb1",
-      "home": "Tampa Bay Rays",
-      "away": "Cleveland Guardians",
-      "time": "8:10 PM ET",
-      "commence": "2026-10-20T00:10:00Z",
+      "id": "e4c03eec29795f56b6b06c313d3af271",
+      "home": "Milwaukee Brewers",
+      "away": "Tampa Bay Rays",
+      "time": "8:00 PM ET",
+      "commence": "2026-10-24T00:00:00Z",
       "starters": {
         "away": {
-          "name": "TBD",
-          "id": null,
+          "name": "Nick Martinez",
+          "id": 607259,
           "hand": "?",
-          "confirmed": false
+          "confirmed": true
         },
         "home": {
-          "name": "TBD",
-          "id": null,
+          "name": "Jacob Misiorowski",
+          "id": 694819,
           "hand": "?",
-          "confirmed": false
+          "confirmed": true
         }
       },
-      "pitcher_stats": {},
-      "team_stats": {},
+      "pitcher_stats": {
+        "away": {
+          "era": 3.1,
+          "whip": 1.09,
+          "k9": 5.45,
+          "bb9": 1.3,
+          "h9": 8.55,
+          "ip": 180.0,
+          "avgIP": 5.8,
+          "gs": 31,
+          "kPct": 15.1,
+          "_source": "mlb_stats_api",
+          "l5ERA": 6.23,
+          "l5KPct": 20.0,
+          "l5BB9": 2.08,
+          "l5AvgIP": 4.1,
+          "name": "Nick Martinez",
+          "pid": 607259
+        },
+        "home": {
+          "era": 1.8,
+          "whip": 0.8,
+          "k9": 12.98,
+          "bb9": 2.27,
+          "h9": 4.95,
+          "ip": 174.2,
+          "avgIP": 5.8,
+          "gs": 30,
+          "kPct": 37.9,
+          "_source": "mlb_stats_api",
+          "l5ERA": null,
+          "l5KPct": 31.0,
+          "l5BB9": 2.16,
+          "l5AvgIP": 4.0,
+          "name": "Jacob Misiorowski",
+          "pid": 694819
+        }
+      },
+      "team_stats": {
+        "away": {
+          "name": "Tampa Bay Rays",
+          "_source": "mlb_stats_api",
+          "rPerG": 4.54,
+          "avg": ".258",
+          "ops": ".728",
+          "kPct": 18.8,
+          "bbPct": 8.4
+        },
+        "home": {
+          "name": "Milwaukee Brewers",
+          "_source": "mlb_stats_api",
+          "rPerG": 5.14,
+          "avg": ".258",
+          "ops": ".744",
+          "kPct": 22.0,
+          "bbPct": 10.6
+        }
+      },
       "lines": {
-        "ml": "Tampa Bay Rays -158 / Cleveland Guardians +138",
-        "spread": "Tampa Bay Rays -1.5 (+146)",
-        "total": "O/U 6.5 (Over -128 / Under +104)",
+        "ml": "Milwaukee Brewers -196 / Tampa Bay Rays +164",
+        "spread": "Milwaukee Brewers -1.5 (+125)",
+        "total": "O/U 6.5 (Over -110 / Under -110)",
         "raw": {
-          "homeML": -158,
-          "awayML": 138,
+          "homeML": -196,
+          "awayML": 164,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 146,
+          "homeSpreadOdds": 125,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -176,
+          "awaySpreadOdds": -150,
           "total": 6.5,
-          "overOdds": -128,
-          "underOdds": 104
+          "overOdds": -110,
+          "underOdds": -110
         }
       },
       "props": {
-        "Freddy Peralta": {
+        "Jacob Misiorowski": {
           "pitcher_outs": {
-            "point": 13.5,
-            "over": -192,
-            "under": 140,
-            "overStr": "-192",
-            "underStr": "+140"
+            "point": 16.5,
+            "over": -108,
+            "under": -125,
+            "overStr": "-108",
+            "underStr": "-125"
           },
           "pitcher_strikeouts": {
-            "point": 4.5,
-            "over": 128,
-            "under": -164,
-            "overStr": "+128",
-            "underStr": "-164"
+            "point": 6.5,
+            "over": -130,
+            "under": 102,
+            "overStr": "-130",
+            "underStr": "+102"
+          }
+        },
+        "Nick Martinez": {
+          "pitcher_outs": {
+            "point": 13.5,
+            "over": -102,
+            "under": -132,
+            "overStr": "-102",
+            "underStr": "-132"
+          },
+          "pitcher_strikeouts": {
+            "point": 3.5,
+            "over": 148,
+            "under": -192,
+            "overStr": "+148",
+            "underStr": "-192"
           }
         }
       }

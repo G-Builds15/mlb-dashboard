@@ -1,4 +1,27 @@
 {
+  "2026-10-23": {
+    "generated_at": "2026-10-23T18:05:06Z",
+    "game_count": 1,
+    "picks": [
+      {
+        "game": "RAY@BRE",
+        "pick": "Over 6.5 Ks",
+        "odds": "-130",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "by_grade": {
+        "A-": 1
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-22": {
     "generated_at": "2026-10-22T18:16:35Z",
     "game_count": 1,
