@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-23T18:05:03.660280+00:00",
+  "fetched_at": "2026-10-23T23:40:34.624030+00:00",
   "date": "2026-10-23",
   "games": [
     {
@@ -81,16 +81,16 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Milwaukee Brewers -196 / Tampa Bay Rays +164",
-        "spread": "Milwaukee Brewers -1.5 (+125)",
+        "ml": "Milwaukee Brewers -184 / Tampa Bay Rays +164",
+        "spread": "Milwaukee Brewers -1.5 (+126)",
         "total": "O/U 6.5 (Over -110 / Under -110)",
         "raw": {
-          "homeML": -196,
+          "homeML": -184,
           "awayML": 164,
           "homeSpread": -1.5,
-          "homeSpreadOdds": 125,
+          "homeSpreadOdds": 126,
           "awaySpread": 1.5,
-          "awaySpreadOdds": -150,
+          "awaySpreadOdds": -152,
           "total": 6.5,
           "overOdds": -110,
           "underOdds": -110
@@ -100,26 +100,26 @@ const ODDS_DATA = {
         "Jacob Misiorowski": {
           "pitcher_outs": {
             "point": 16.5,
-            "over": -108,
-            "under": -125,
-            "overStr": "-108",
-            "underStr": "-125"
+            "over": -110,
+            "under": -122,
+            "overStr": "-110",
+            "underStr": "-122"
           },
           "pitcher_strikeouts": {
             "point": 6.5,
-            "over": -130,
-            "under": 102,
-            "overStr": "-130",
-            "underStr": "+102"
+            "over": -138,
+            "under": 108,
+            "overStr": "-138",
+            "underStr": "+108"
           }
         },
         "Nick Martinez": {
           "pitcher_outs": {
             "point": 13.5,
-            "over": -102,
-            "under": -132,
-            "overStr": "-102",
-            "underStr": "-132"
+            "over": 102,
+            "under": -136,
+            "overStr": "+102",
+            "underStr": "-136"
           },
           "pitcher_strikeouts": {
             "point": 3.5,
