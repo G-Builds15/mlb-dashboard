@@ -1,63 +1,63 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-23T23:40:34.624030+00:00",
-  "date": "2026-10-23",
+  "fetched_at": "2026-10-24T17:11:22.935509+00:00",
+  "date": "2026-10-24",
   "games": [
     {
-      "id": "e4c03eec29795f56b6b06c313d3af271",
+      "id": "238f598685f7210fbfbbe3de39289264",
       "home": "Milwaukee Brewers",
       "away": "Tampa Bay Rays",
       "time": "8:00 PM ET",
-      "commence": "2026-10-24T00:00:00Z",
+      "commence": "2026-10-25T00:00:00Z",
       "starters": {
         "away": {
-          "name": "Nick Martinez",
-          "id": 607259,
+          "name": "Drew Rasmussen",
+          "id": 656876,
           "hand": "?",
           "confirmed": true
         },
         "home": {
-          "name": "Jacob Misiorowski",
-          "id": 694819,
+          "name": "Logan Henderson",
+          "id": 701656,
           "hand": "?",
           "confirmed": true
         }
       },
       "pitcher_stats": {
         "away": {
-          "era": 3.1,
-          "whip": 1.09,
-          "k9": 5.45,
-          "bb9": 1.3,
-          "h9": 8.55,
-          "ip": 180.0,
-          "avgIP": 5.8,
-          "gs": 31,
-          "kPct": 15.1,
+          "era": 2.67,
+          "whip": 0.91,
+          "k9": 9.1,
+          "bb9": 1.67,
+          "h9": 6.54,
+          "ip": 172.0,
+          "avgIP": 5.7,
+          "gs": 30,
+          "kPct": 26.0,
           "_source": "mlb_stats_api",
-          "l5ERA": 6.23,
-          "l5KPct": 20.0,
-          "l5BB9": 2.08,
-          "l5AvgIP": 4.1,
-          "name": "Nick Martinez",
-          "pid": 607259
+          "l5ERA": 1.35,
+          "l5KPct": 45.8,
+          "l5BB9": 4.05,
+          "l5AvgIP": 6.2,
+          "name": "Drew Rasmussen",
+          "pid": 656876
         },
         "home": {
-          "era": 1.8,
-          "whip": 0.8,
-          "k9": 12.98,
-          "bb9": 2.27,
-          "h9": 4.95,
-          "ip": 174.2,
-          "avgIP": 5.8,
-          "gs": 30,
-          "kPct": 37.9,
+          "era": 2.47,
+          "whip": 0.84,
+          "k9": 10.07,
+          "bb9": 1.74,
+          "h9": 5.86,
+          "ip": 98.1,
+          "avgIP": 5.4,
+          "gs": 18,
+          "kPct": 29.6,
           "_source": "mlb_stats_api",
-          "l5ERA": null,
-          "l5KPct": 31.0,
-          "l5BB9": 2.16,
-          "l5AvgIP": 4.0,
-          "name": "Jacob Misiorowski",
-          "pid": 694819
+          "l5ERA": 1.8,
+          "l5KPct": 13.6,
+          "l5BB9": 5.4,
+          "l5AvgIP": 5.0,
+          "name": "Logan Henderson",
+          "pid": 701656
         }
       },
       "team_stats": {
@@ -81,52 +81,94 @@ const ODDS_DATA = {
         }
       },
       "lines": {
-        "ml": "Milwaukee Brewers -184 / Tampa Bay Rays +164",
-        "spread": "Milwaukee Brewers -1.5 (+126)",
+        "ml": "Milwaukee Brewers -120 / Tampa Bay Rays +100",
+        "spread": "Milwaukee Brewers +1.5 (-219)",
         "total": "O/U 6.5 (Over -110 / Under -110)",
         "raw": {
-          "homeML": -184,
-          "awayML": 164,
-          "homeSpread": -1.5,
-          "homeSpreadOdds": 126,
-          "awaySpread": 1.5,
-          "awaySpreadOdds": -152,
+          "homeML": -120,
+          "awayML": 100,
+          "homeSpread": 1.5,
+          "homeSpreadOdds": -219,
+          "awaySpread": -1.5,
+          "awaySpreadOdds": 178,
           "total": 6.5,
           "overOdds": -110,
           "underOdds": -110
         }
       },
       "props": {
-        "Jacob Misiorowski": {
+        "Logan Henderson": {
+          "pitcher_earned_runs": {
+            "point": 1.5,
+            "over": 106,
+            "under": -141,
+            "overStr": "+106",
+            "underStr": "-141"
+          },
+          "pitcher_hits_allowed": {
+            "point": 3.5,
+            "over": -145,
+            "under": 109,
+            "overStr": "-145",
+            "underStr": "+109"
+          },
           "pitcher_outs": {
-            "point": 16.5,
-            "over": -110,
-            "under": -122,
-            "overStr": "-110",
-            "underStr": "-122"
+            "point": 14.5,
+            "over": -137,
+            "under": 103,
+            "overStr": "-137",
+            "underStr": "+103"
           },
           "pitcher_strikeouts": {
-            "point": 6.5,
-            "over": -138,
-            "under": 108,
-            "overStr": "-138",
-            "underStr": "+108"
+            "point": 4.5,
+            "over": -134,
+            "under": 105,
+            "overStr": "-134",
+            "underStr": "+105"
+          },
+          "pitcher_walks": {
+            "point": 0.5,
+            "over": -203,
+            "under": 152,
+            "overStr": "-203",
+            "underStr": "+152"
           }
         },
-        "Nick Martinez": {
-          "pitcher_outs": {
-            "point": 13.5,
+        "Drew Rasmussen": {
+          "pitcher_earned_runs": {
+            "point": 1.5,
+            "over": -124,
+            "under": -107,
+            "overStr": "-124",
+            "underStr": "-107"
+          },
+          "pitcher_hits_allowed": {
+            "point": 4.5,
             "over": 102,
-            "under": -136,
+            "under": -135,
             "overStr": "+102",
-            "underStr": "-136"
+            "underStr": "-135"
+          },
+          "pitcher_outs": {
+            "point": 17.5,
+            "over": 108,
+            "under": -143,
+            "overStr": "+108",
+            "underStr": "-143"
           },
           "pitcher_strikeouts": {
-            "point": 3.5,
-            "over": 148,
-            "under": -192,
-            "overStr": "+148",
-            "underStr": "-192"
+            "point": 5.5,
+            "over": -149,
+            "under": 117,
+            "overStr": "-149",
+            "underStr": "+117"
+          },
+          "pitcher_walks": {
+            "point": 1.5,
+            "over": -103,
+            "under": -128,
+            "overStr": "-103",
+            "underStr": "-128"
           }
         }
       }
