@@ -1,5 +1,5 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-24T17:11:22.935509+00:00",
+  "fetched_at": "2026-10-24T22:47:14.095700+00:00",
   "date": "2026-10-24",
   "games": [
     {
@@ -82,93 +82,93 @@ const ODDS_DATA = {
       },
       "lines": {
         "ml": "Milwaukee Brewers -120 / Tampa Bay Rays +100",
-        "spread": "Milwaukee Brewers +1.5 (-219)",
-        "total": "O/U 6.5 (Over -110 / Under -110)",
+        "spread": "Milwaukee Brewers +1.5 (-222)",
+        "total": "O/U 6.5 (Over -108 / Under -111)",
         "raw": {
           "homeML": -120,
           "awayML": 100,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -219,
+          "homeSpreadOdds": -222,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 178,
+          "awaySpreadOdds": 181,
           "total": 6.5,
-          "overOdds": -110,
-          "underOdds": -110
+          "overOdds": -108,
+          "underOdds": -111
         }
       },
       "props": {
         "Logan Henderson": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": 106,
-            "under": -141,
-            "overStr": "+106",
-            "underStr": "-141"
+            "over": 114,
+            "under": -152,
+            "overStr": "+114",
+            "underStr": "-152"
           },
           "pitcher_hits_allowed": {
             "point": 3.5,
-            "over": -145,
-            "under": 109,
-            "overStr": "-145",
-            "underStr": "+109"
+            "over": -140,
+            "under": 105,
+            "overStr": "-140",
+            "underStr": "+105"
           },
           "pitcher_outs": {
             "point": 14.5,
-            "over": -137,
-            "under": 103,
-            "overStr": "-137",
-            "underStr": "+103"
+            "over": -141,
+            "under": 106,
+            "overStr": "-141",
+            "underStr": "+106"
           },
           "pitcher_strikeouts": {
             "point": 4.5,
-            "over": -134,
-            "under": 105,
-            "overStr": "-134",
-            "underStr": "+105"
+            "over": -129,
+            "under": 101,
+            "overStr": "-129",
+            "underStr": "+101"
           },
           "pitcher_walks": {
             "point": 0.5,
-            "over": -203,
-            "under": 152,
-            "overStr": "-203",
-            "underStr": "+152"
+            "over": -219,
+            "under": 163,
+            "overStr": "-219",
+            "underStr": "+163"
           }
         },
         "Drew Rasmussen": {
           "pitcher_earned_runs": {
             "point": 1.5,
-            "over": -124,
-            "under": -107,
-            "overStr": "-124",
-            "underStr": "-107"
+            "over": -121,
+            "under": -110,
+            "overStr": "-121",
+            "underStr": "-110"
           },
           "pitcher_hits_allowed": {
             "point": 4.5,
-            "over": 102,
-            "under": -135,
-            "overStr": "+102",
-            "underStr": "-135"
+            "over": 107,
+            "under": -142,
+            "overStr": "+107",
+            "underStr": "-142"
           },
           "pitcher_outs": {
             "point": 17.5,
-            "over": 108,
-            "under": -143,
-            "overStr": "+108",
-            "underStr": "-143"
+            "over": 110,
+            "under": -146,
+            "overStr": "+110",
+            "underStr": "-146"
           },
           "pitcher_strikeouts": {
             "point": 5.5,
-            "over": -149,
-            "under": 117,
-            "overStr": "-149",
-            "underStr": "+117"
+            "over": -159,
+            "under": 125,
+            "overStr": "-159",
+            "underStr": "+125"
           },
           "pitcher_walks": {
             "point": 1.5,
-            "over": -103,
-            "under": -128,
-            "overStr": "-103",
-            "underStr": "-128"
+            "over": 103,
+            "under": -136,
+            "overStr": "+103",
+            "underStr": "-136"
           }
         }
       }
