@@ -1,4 +1,37 @@
 {
+  "2026-10-25": {
+    "generated_at": "2026-10-25T17:23:29Z",
+    "game_count": 1,
+    "picks": [
+      {
+        "game": "RAY@BRE",
+        "pick": "Under 1.5 ER",
+        "odds": "-110",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      },
+      {
+        "game": "RAY@BRE",
+        "pick": "Under 1.5 ER",
+        "odds": "-152",
+        "grade": "A-",
+        "src": "MLB Stats API",
+        "parlay": false,
+        "result": null,
+        "hit": null
+      }
+    ],
+    "summary": {
+      "total": 2,
+      "by_grade": {
+        "A-": 2
+      },
+      "parlay_count": 0
+    }
+  },
   "2026-10-24": {
     "generated_at": "2026-10-24T17:11:23Z",
     "game_count": 1,
