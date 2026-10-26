@@ -1,76 +1,67 @@
 const ODDS_DATA = {
-  "fetched_at": "2026-10-24T22:47:14.095700+00:00",
-  "date": "2026-10-24",
+  "fetched_at": "2026-10-26T19:43:42.060339+00:00",
+  "date": "2026-10-26",
   "games": [
     {
-      "id": "238f598685f7210fbfbbe3de39289264",
-      "home": "Milwaukee Brewers",
-      "away": "Tampa Bay Rays",
-      "time": "8:00 PM ET",
-      "commence": "2026-10-25T00:00:00Z",
+      "id": "82812d5c946d4e055002fcb42673a38b",
+      "home": "Tampa Bay Rays",
+      "away": "Milwaukee Brewers",
+      "time": "8:10 PM ET",
+      "commence": "2026-10-27T00:10:00Z",
       "starters": {
         "away": {
-          "name": "Drew Rasmussen",
-          "id": 656876,
+          "name": "Robert Gasser",
+          "id": 688107,
           "hand": "?",
           "confirmed": true
         },
         "home": {
-          "name": "Logan Henderson",
-          "id": 701656,
+          "name": "Freddy Peralta",
+          "id": 642547,
           "hand": "?",
           "confirmed": true
         }
       },
       "pitcher_stats": {
         "away": {
-          "era": 2.67,
-          "whip": 0.91,
-          "k9": 9.1,
-          "bb9": 1.67,
-          "h9": 6.54,
-          "ip": 172.0,
-          "avgIP": 5.7,
-          "gs": 30,
-          "kPct": 26.0,
+          "era": 3.87,
+          "whip": 1.19,
+          "k9": 8.48,
+          "bb9": 2.88,
+          "h9": 7.82,
+          "ip": 109.1,
+          "avgIP": 5.5,
+          "gs": 20,
+          "kPct": 22.2,
           "_source": "mlb_stats_api",
-          "l5ERA": 1.35,
-          "l5KPct": 45.8,
-          "l5BB9": 4.05,
-          "l5AvgIP": 6.2,
-          "name": "Drew Rasmussen",
-          "pid": 656876
+          "l5ERA": 1.5,
+          "l5KPct": 45.0,
+          "l5BB9": 1.5,
+          "l5AvgIP": 6.0,
+          "name": "Robert Gasser",
+          "pid": 688107
         },
         "home": {
-          "era": 2.47,
-          "whip": 0.84,
-          "k9": 10.07,
-          "bb9": 1.74,
-          "h9": 5.86,
-          "ip": 98.1,
-          "avgIP": 5.4,
-          "gs": 18,
-          "kPct": 29.6,
+          "era": 4.42,
+          "whip": 1.33,
+          "k9": 8.31,
+          "bb9": 3.36,
+          "h9": 8.57,
+          "ip": 169.0,
+          "avgIP": 5.3,
+          "gs": 32,
+          "kPct": 21.4,
           "_source": "mlb_stats_api",
-          "l5ERA": 1.8,
-          "l5KPct": 13.6,
-          "l5BB9": 5.4,
-          "l5AvgIP": 5.0,
-          "name": "Logan Henderson",
-          "pid": 701656
+          "l5ERA": null,
+          "l5KPct": 18.2,
+          "l5BB9": 5.06,
+          "l5AvgIP": 5.1,
+          "name": "Freddy Peralta",
+          "pid": 642547
         }
       },
       "team_stats": {
         "away": {
-          "name": "Tampa Bay Rays",
-          "_source": "mlb_stats_api",
-          "rPerG": 4.54,
-          "avg": ".258",
-          "ops": ".728",
-          "kPct": 18.8,
-          "bbPct": 8.4
-        },
-        "home": {
           "name": "Milwaukee Brewers",
           "_source": "mlb_stats_api",
           "rPerG": 5.14,
@@ -78,97 +69,64 @@ const ODDS_DATA = {
           "ops": ".744",
           "kPct": 22.0,
           "bbPct": 10.6
+        },
+        "home": {
+          "name": "Tampa Bay Rays",
+          "_source": "mlb_stats_api",
+          "rPerG": 4.54,
+          "avg": ".258",
+          "ops": ".728",
+          "kPct": 18.8,
+          "bbPct": 8.4
         }
       },
       "lines": {
-        "ml": "Milwaukee Brewers -120 / Tampa Bay Rays +100",
-        "spread": "Milwaukee Brewers +1.5 (-222)",
-        "total": "O/U 6.5 (Over -108 / Under -111)",
+        "ml": "Tampa Bay Rays -120 / Milwaukee Brewers +102",
+        "spread": "Tampa Bay Rays +1.5 (-200)",
+        "total": "O/U 7.5 (Over +112 / Under -138)",
         "raw": {
           "homeML": -120,
-          "awayML": 100,
+          "awayML": 102,
           "homeSpread": 1.5,
-          "homeSpreadOdds": -222,
+          "homeSpreadOdds": -200,
           "awaySpread": -1.5,
-          "awaySpreadOdds": 181,
-          "total": 6.5,
-          "overOdds": -108,
-          "underOdds": -111
+          "awaySpreadOdds": 164,
+          "total": 7.5,
+          "overOdds": 112,
+          "underOdds": -138
         }
       },
       "props": {
-        "Logan Henderson": {
-          "pitcher_earned_runs": {
-            "point": 1.5,
-            "over": 114,
-            "under": -152,
-            "overStr": "+114",
-            "underStr": "-152"
-          },
-          "pitcher_hits_allowed": {
-            "point": 3.5,
-            "over": -140,
-            "under": 105,
-            "overStr": "-140",
-            "underStr": "+105"
-          },
+        "Robert Gasser": {
           "pitcher_outs": {
-            "point": 14.5,
-            "over": -141,
-            "under": 106,
-            "overStr": "-141",
-            "underStr": "+106"
+            "point": 12.5,
+            "over": -102,
+            "under": -132,
+            "overStr": "-102",
+            "underStr": "-132"
           },
           "pitcher_strikeouts": {
-            "point": 4.5,
-            "over": -129,
-            "under": 101,
-            "overStr": "-129",
-            "underStr": "+101"
-          },
-          "pitcher_walks": {
-            "point": 0.5,
-            "over": -219,
-            "under": 163,
-            "overStr": "-219",
-            "underStr": "+163"
+            "point": 3.5,
+            "over": 118,
+            "under": -148,
+            "overStr": "+118",
+            "underStr": "-148"
           }
         },
-        "Drew Rasmussen": {
-          "pitcher_earned_runs": {
-            "point": 1.5,
-            "over": -121,
-            "under": -110,
-            "overStr": "-121",
-            "underStr": "-110"
-          },
-          "pitcher_hits_allowed": {
-            "point": 4.5,
-            "over": 107,
-            "under": -142,
-            "overStr": "+107",
-            "underStr": "-142"
-          },
+        "Freddy Peralta": {
           "pitcher_outs": {
-            "point": 17.5,
-            "over": 110,
-            "under": -146,
-            "overStr": "+110",
-            "underStr": "-146"
+            "point": 14.5,
+            "over": -160,
+            "under": 118,
+            "overStr": "-160",
+            "underStr": "+118"
           },
           "pitcher_strikeouts": {
-            "point": 5.5,
-            "over": -159,
-            "under": 125,
-            "overStr": "-159",
-            "underStr": "+125"
-          },
-          "pitcher_walks": {
-            "point": 1.5,
-            "over": 103,
-            "under": -136,
-            "overStr": "+103",
-            "underStr": "-136"
+            "point": 4.5,
+            "over": -128,
+            "under": 100,
+            "overStr": "-128",
+            "underStr": "+100"
           }
         }
       }
